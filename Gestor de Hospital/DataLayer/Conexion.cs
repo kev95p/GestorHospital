@@ -24,19 +24,38 @@ namespace DataLayer
 
         private void Connect()
         {
-            if(connection.State == System.Data.ConnectionState.Closed)
+            try
             {
-                connection.Open();
+                if (connection.State == System.Data.ConnectionState.Closed)
+                {
+                    connection.Open();
+                }
             }
+            catch (MySqlException ex)
+            {
+
+                Console.WriteLine(ex.ToString());
+            }
+
         }
 
         private void Disconnect()
         {
- 
+
+            try
+            {
                 if (connection.State == System.Data.ConnectionState.Open)
                 {
                     connection.Close();
                 }
+            }
+            catch (MySqlException ex)
+            {
+
+                Console.WriteLine(ex.ToString());
+            }
+
+
 
         }
 
@@ -55,13 +74,12 @@ namespace DataLayer
             }
         }
 
-        public DataSet Consulta(string sentencia)
+        public DataTable Consulta(string sentencia)
         {
             this.Connect();
-            adapter = new MySqlDataAdapter(new MySqlCommand(sentencia));
+            adapter = new MySqlDataAdapter(sentencia , connection);
             MySqlCommandBuilder cmb = new MySqlCommandBuilder(adapter);
-            DataSet dt = new DataSet();
-
+            DataTable dt = new DataTable();
             adapter.Fill(dt);
             return dt;
         }

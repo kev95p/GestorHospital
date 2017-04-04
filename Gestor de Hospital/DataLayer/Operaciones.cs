@@ -9,14 +9,14 @@ namespace DataLayer
 {
     public static class Operaciones
     {
-        public static DataSet OBTENER_USUARIO(string usuario,string clave)
+        public static DataTable OBTENER_USUARIO(string usuario,string clave)
         {
             try
             {
                 Conexion con = Conexion.getInstance;
-                DataSet datos = new DataSet();
+                DataTable datos = new DataTable();
                 string sentencia = @"SELECT usuario
-                FROM usuarios WHERE clave=md5('" + clave + "') AND usuario = '" + usuario + "'";
+                FROM usuarios WHERE password=md5('" + clave + "') AND usuario = '" + usuario+"'";
                 datos = con.Consulta(sentencia);
                 return datos;
 
@@ -24,7 +24,7 @@ namespace DataLayer
             catch
             {
 
-                return new DataSet();
+                return new DataTable();
             }
         }
     }
