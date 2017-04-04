@@ -14,7 +14,8 @@ namespace App
             {
                 if (Login())
                 {
-
+                    MainForms.Principal frm = new MainForms.Principal();
+                    frm.Show();
                 }
             }
         }
