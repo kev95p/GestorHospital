@@ -12,6 +12,10 @@ namespace MainForms
 {
     public partial class Login : Form
     {
+
+        public bool verificado = false;
+
+
         public Login()
         {
             InitializeComponent();
