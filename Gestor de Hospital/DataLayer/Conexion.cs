@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,8 @@ namespace DataLayer
     public sealed class Conexion
     {
         private MySqlConnection connection = new MySqlConnection();
+        private MySqlDataAdapter adapter;
+
         private static Conexion instance = null;
         private static readonly object padlock = new object();
 
@@ -19,7 +22,7 @@ namespace DataLayer
             
         }
 
-        public void Connect()
+        private void Connect()
         {
             if(connection.State == System.Data.ConnectionState.Closed)
             {
@@ -27,7 +30,7 @@ namespace DataLayer
             }
         }
 
-        public void Disconnect()
+        private void Disconnect()
         {
  
                 if (connection.State == System.Data.ConnectionState.Open)
@@ -52,6 +55,15 @@ namespace DataLayer
             }
         }
 
+        public DataSet Consulta(string sentencia)
+        {
+            this.Connect();
+            adapter = new MySqlDataAdapter(new MySqlCommand(sentencia));
+            MySqlCommandBuilder cmb = new MySqlCommandBuilder(adapter);
+            DataSet dt = new DataSet();
 
+            adapter.Fill(dt);
+            return dt;
+        }
     }
 }
