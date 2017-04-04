@@ -13,7 +13,7 @@ namespace DataLayer
         private MySqlConnection connection = new MySqlConnection();
         private MySqlDataAdapter adapter;
 
-        private static Conexion instance = null;
+        private static Conexion instancia = null;
         private static readonly object padlock = new object();
 
         Conexion()
@@ -40,17 +40,17 @@ namespace DataLayer
 
         }
 
-        public static Conexion getInstance
+        public static Conexion getInstancia
         {
             get
             {
                 lock (padlock)
                 {
-                    if (instance == null)
+                    if (instancia == null)
                     {
-                        instance = new Conexion();
+                        instancia = new Conexion();
                     }
-                    return instance;
+                    return instancia;
                 }
             }
         }
