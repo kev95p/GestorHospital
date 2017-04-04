@@ -69,5 +69,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MainForms\MainForms.csproj">
+      <Project>{4a9875fd-c2f1-43fc-91f8-1870a049ad6a}</Project>
+      <Name>MainForms</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

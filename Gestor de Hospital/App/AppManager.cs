@@ -8,6 +8,32 @@ namespace App
 {
     class AppManager : System.Windows.Forms.ApplicationContext 
     {
-        
+        public AppManager()
+        {
+            if (Splash())
+            {
+                if (Login())
+                {
+
+                }
+            }
+        }
+
+        private bool Splash()
+        {
+            bool flag = true;
+            MainForms.Splash frm = new MainForms.Splash();
+            frm.ShowDialog();
+            return flag;
+        }
+
+        private bool Login()
+        {
+            bool verficado = false;
+            MainForms.Login frm = new MainForms.Login();
+            frm.ShowDialog();
+            verficado = frm.verificado;
+            return verficado;
+        }
     }
 }
