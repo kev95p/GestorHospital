@@ -1,5 +1,4 @@
-﻿using DataLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,24 +15,10 @@ namespace MainForms
 
         public bool verificado = false;
 
-        private void Autenticar()
-        {
-            DataTable datos = Operaciones.OBTENER_USUARIO(this.txtUsuario.Text, this.txtContrasena.Text);
-            if (datos.Rows.Count > 0)
-            {
-                verificado = true;
-            }
-        }
 
         public Login()
         {
             InitializeComponent();
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            Autenticar();
-            
         }
     }
 }

@@ -28,16 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.ControlError = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.ControlError)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -58,30 +55,29 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña";
             // 
-            // txtUsuario
+            // textBox1
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(179, 67);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(196, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.textBox1.Location = new System.Drawing.Point(179, 67);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(196, 20);
+            this.textBox1.TabIndex = 2;
             // 
-            // txtContrasena
+            // textBox2
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(179, 116);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.PasswordChar = '*';
-            this.txtContrasena.Size = new System.Drawing.Size(196, 20);
-            this.txtContrasena.TabIndex = 3;
+            this.textBox2.Location = new System.Drawing.Point(179, 116);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(196, 20);
+            this.textBox2.TabIndex = 3;
             // 
-            // btnEntrar
+            // button1
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(142, 171);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.button1.Location = new System.Drawing.Point(142, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Entrar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -92,10 +88,6 @@
             this.button2.Text = "Salir";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // ControlError
-            // 
-            this.ControlError.ContainerControl = this;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,16 +95,15 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(522, 228);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.ControlError)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,10 +113,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContrasena;
-        private System.Windows.Forms.Button btnEntrar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ErrorProvider ControlError;
     }
 }
