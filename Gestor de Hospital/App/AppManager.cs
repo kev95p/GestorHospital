@@ -8,15 +8,14 @@ namespace App
 {
     class AppManager : System.Windows.Forms.ApplicationContext 
     {
+        private MainForms.Principal principal = new MainForms.Principal();
+        private MainForms.Login login = new MainForms.Login();
+
         public AppManager()
         {
             if (Splash())
             {
-                if (Login())
-                {
-                    MainForms.Principal frm = new MainForms.Principal();
-                    frm.Show();
-                }
+                Login();
             }
         }
 
@@ -28,13 +27,27 @@ namespace App
             return flag;
         }
 
-        private bool Login()
-        {
-            bool verficado = false;
-            MainForms.Login frm = new MainForms.Login();
-            frm.ShowDialog();
-            verficado = frm.verificado;
-            return verficado;
+        private void Login()
+        {         
+            MainForm = login;
+            MainForm.Show();
         }
+
+        protected override void OnMainFormClosed(object sender,EventArgs e){
+
+            if (login.verificado)
+            {
+                login.verificado = false;
+                MainForm = principal;
+                MainForm.Show();
+            }
+            else
+            {
+               base.OnMainFormClosed(sender, e);
+            }
+           
+        }
+
+        
     }
 }

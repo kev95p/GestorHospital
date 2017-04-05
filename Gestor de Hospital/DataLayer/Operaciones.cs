@@ -15,9 +15,9 @@ namespace DataLayer
             {
                 Conexion con = Conexion.getInstance;
                 DataTable datos = new DataTable();
-                string sentencia = @"SELECT usuario
+                string query = @"SELECT usuario
                 FROM usuarios WHERE password=md5('" + clave + "') AND usuario = '" + usuario+"'";
-                datos = con.Consulta(sentencia);
+                datos = con.Consulta(query);
                 return datos;
 
             }
