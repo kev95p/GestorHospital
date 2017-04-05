@@ -19,7 +19,7 @@ namespace DataLayer
 
         Conexion()
         {
-            connection.ConnectionString = "Server="+server+";Database=hospital;Uid=root;Pwd=admin;";
+            connection.ConnectionString = "Server="+Server+";Database=hospital;Uid=root;Pwd=admin;";
             
         }
 
@@ -74,6 +74,8 @@ namespace DataLayer
                 }
             }
         }
+
+        public string Server { get => server; set => server = value; }
 
         public DataTable Consulta(string sentencia)
         {
