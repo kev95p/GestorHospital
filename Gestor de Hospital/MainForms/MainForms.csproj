@@ -88,5 +88,11 @@
       <Name>DataLayer</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491430955_status-online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1491430982_status-offline.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
