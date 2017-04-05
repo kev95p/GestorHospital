@@ -13,7 +13,7 @@ namespace DataLayer
     {
         private MySqlConnection connection = new MySqlConnection();
         private MySqlDataAdapter adapter;
-        public string server = Resources.ipserver;
+        private string server = Resources.ipserver;
         private static Conexion instance = null;
         private static readonly object padlock = new object();
 
