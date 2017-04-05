@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using DataLayer.Properties;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -12,13 +13,13 @@ namespace DataLayer
     {
         private MySqlConnection connection = new MySqlConnection();
         private MySqlDataAdapter adapter;
-
+        public string server = Resources.ipserver;
         private static Conexion instance = null;
         private static readonly object padlock = new object();
 
         Conexion()
         {
-            connection.ConnectionString = "Server=localhost;Database=hospital;Uid=root;Pwd=admin;";
+            connection.ConnectionString = "Server="+server+";Database=hospital;Uid=root;Pwd=admin;";
             
         }
 
@@ -76,11 +77,12 @@ namespace DataLayer
 
         public DataTable Consulta(string sentencia)
         {
-            this.Connect();
+            Connect();
             adapter = new MySqlDataAdapter(sentencia , connection);
             MySqlCommandBuilder cmb = new MySqlCommandBuilder(adapter);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
+            Disconnect();
             return dt;
         }
     }
