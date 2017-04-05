@@ -33,8 +33,19 @@ namespace MainForms
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Autenticar();
-            Close();
+            if (verificado)
+            {
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("El usuario o contraseña no son correctos", "Error Autenticacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContrasena.Text = "";
+                txtUsuario.Text = "";
+                txtUsuario.Focus();
+            }
             
         }
+
     }
 }
