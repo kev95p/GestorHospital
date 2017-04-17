@@ -27,5 +27,22 @@ namespace DataLayer
                 return new DataTable();
             }
         }
+
+        public static DataTable OBTENER_USUARIOS()
+        {
+            try
+            {
+                Conexion con = Conexion.getInstance;
+                DataTable datos = new DataTable();
+                string query = "select * from vistaUsuarios";
+                datos = con.Consulta(query);
+                return datos;
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
     }
 }
