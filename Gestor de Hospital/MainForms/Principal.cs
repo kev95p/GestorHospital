@@ -62,6 +62,7 @@ namespace MainForms
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UsuarioForms.UsuariosVista frm = new UsuarioForms.UsuariosVista();
+            
             frm.ShowDialog();
         }
     }

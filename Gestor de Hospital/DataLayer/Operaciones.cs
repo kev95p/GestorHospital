@@ -50,7 +50,7 @@ namespace DataLayer
             {
                 DataTable dt = new DataTable();
                 Conexion con = Conexion.getInstance;
-                var query = "SELECT Rol FROM roles";
+                var query = "SELECT idRol,Rol FROM roles";
                 dt = con.Consulta(query);
                 return dt;
             }
