@@ -76,11 +76,12 @@ namespace DataLayer
 
         public DataTable Consulta(string sentencia)
         {
-            this.Connect();
+            Connect();
             adapter = new MySqlDataAdapter(sentencia , connection);
             MySqlCommandBuilder cmb = new MySqlCommandBuilder(adapter);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
+            Disconnect();
             return dt;
         }
     }

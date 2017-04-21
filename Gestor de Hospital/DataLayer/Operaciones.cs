@@ -44,5 +44,21 @@ namespace DataLayer
             }
         }
 
+        public static DataTable OBTENER_ROLES()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                Conexion con = Conexion.getInstance;
+                var query = "SELECT Rol FROM roles";
+                dt = con.Consulta(query);
+                return dt;
+            }
+            catch
+            {
+
+                return new DataTable();
+            }
+        }
     }
 }
