@@ -16,6 +16,7 @@ namespace MainForms.UsuarioForms
         public UsuariosVista()
         {
             InitializeComponent();
+            
         }
 
         private void UsuariosVista_Load(object sender, EventArgs e)
@@ -23,8 +24,7 @@ namespace MainForms.UsuarioForms
             dgvUsuarios.RowHeadersVisible = false;
             dgvUsuarios.DataSource = Operaciones.OBTENER_USUARIOS();
             ColumnaWidth();
-            
-
+           
         }
 
         private void ColumnaWidth()
@@ -38,6 +38,13 @@ namespace MainForms.UsuarioForms
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             AgregarUsuario frm = new AgregarUsuario();
+            frm.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            AgregarUsuario frm = new AgregarUsuario(true);
+            frm.Fila = dgvUsuarios.CurrentRow;
             frm.ShowDialog();
         }
     }
