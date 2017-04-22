@@ -18,45 +18,8 @@ namespace DataLayer
 
         Conexion()
         {
-            connection.ConnectionString = "Server=localhost;Database=hospital;Uid=root;Pwd=admin;";
+            Connection.ConnectionString = "Server=localhost;Database=hospital;Uid=root;Pwd=admin;";
             
-        }
-
-        private void Connect()
-        {
-            try
-            {
-                if (connection.State == System.Data.ConnectionState.Closed)
-                {
-                    connection.Open();
-                }
-            }
-            catch (MySqlException ex)
-            {
-
-                Console.WriteLine(ex.ToString());
-            }
-
-        }
-
-        private void Disconnect()
-        {
-
-            try
-            {
-                if (connection.State == System.Data.ConnectionState.Open)
-                {
-                    connection.Close();
-                }
-            }
-            catch (MySqlException ex)
-            {
-
-                Console.WriteLine(ex.ToString());
-            }
-
-
-
         }
 
         public static Conexion getInstance
@@ -74,15 +37,6 @@ namespace DataLayer
             }
         }
 
-        public DataTable Consulta(string sentencia)
-        {
-            Connect();
-            adapter = new MySqlDataAdapter(sentencia , connection);
-            MySqlCommandBuilder cmb = new MySqlCommandBuilder(adapter);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            Disconnect();
-            return dt;
-        }
+        public MySqlConnection Connection { get => connection; set => connection = value; }
     }
 }

@@ -31,7 +31,7 @@ namespace MainForms.UsuarioForms
 
         private void LlenarRoles()
         {
-            cbRol.DataSource = Operaciones.OBTENER_ROLES();
+            cbRol.DataSource = Operaciones.OBTENER_ROLES().Tables[0];
             cbRol.DisplayMember = "Rol";
             cbRol.ValueMember = "idRol";
         }

@@ -19,7 +19,7 @@ namespace MainForms
 
         private void Autenticar()
         {
-            datos = Operaciones.OBTENER_USUARIO(this.txtUsuario.Text, this.txtContrasena.Text);
+            datos = Operaciones.OBTENER_USUARIO(this.txtUsuario.Text, this.txtContrasena.Text).Tables[0];
             if (datos.Rows.Count > 0)
             {
                 verificado = true;

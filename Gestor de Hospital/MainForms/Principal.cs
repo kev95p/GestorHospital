@@ -26,7 +26,7 @@ namespace MainForms
             bwCheckConnection.RunWorkerAsync();
 
             //cargar usuarios label
-            //lblUsuario.Text = Clases.SessionManager.GetInstance.Usuario;
+            lblUsuario.Text = Clases.SessionManager.GetInstance.Usuario;
             
         }
 

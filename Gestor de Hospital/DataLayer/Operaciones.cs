@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer.Intefaces;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -9,56 +10,64 @@ namespace DataLayer
 {
     public static class Operaciones
     {
-        public static DataTable OBTENER_USUARIO(string usuario,string clave)
+        public static DataSet OBTENER_USUARIO(string usuario,string clave)
         {
             try
             {
-                Conexion con = Conexion.getInstance;
-                DataTable datos = new DataTable();
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT usuario
                 FROM usuarios WHERE password=md5('" + clave + "') AND usuario = '" + usuario+"'";
-                datos = con.Consulta(query);
+                cb.CommandText = query;
+                datos = oc.Select(cb);
                 return datos;
 
             }
             catch
             {
 
-                return new DataTable();
+                return new DataSet();
             }
         }
 
-        public static DataTable OBTENER_USUARIOS()
+        public static DataSet OBTENER_USUARIOS()
         {
             try
             {
-                Conexion con = Conexion.getInstance;
-                DataTable datos = new DataTable();
-                string query = "select * from vistaUsuarios";
-                datos = con.Consulta(query);
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select * from vistausuarios";
+                cb.CommandText = query;
+                datos = oc.Select(cb);
                 return datos;
             }
             catch
             {
-                return new DataTable();
+                return new DataSet();
             }
         }
 
-        public static DataTable OBTENER_ROLES()
+        public static DataSet OBTENER_ROLES()
         {
             try
             {
-                DataTable dt = new DataTable();
-                Conexion con = Conexion.getInstance;
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
                 var query = "SELECT idRol,Rol FROM roles";
-                dt = con.Consulta(query);
-                return dt;
+                cb.CommandText = query;
+                datos = oc.Select(cb);
+                return datos;
             }
             catch
             {
 
-                return new DataTable();
+                return new DataSet();
             }
         }
+
+
     }
 }
