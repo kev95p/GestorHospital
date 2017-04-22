@@ -24,6 +24,9 @@ namespace MainForms
         {
             bwCheckConnection.DoWork += new DoWorkEventHandler(work);
             bwCheckConnection.RunWorkerAsync();
+
+            //cargar usuarios label
+            //lblUsuario.Text = Clases.SessionManager.GetInstance.Usuario;
             
         }
 
@@ -38,7 +41,7 @@ namespace MainForms
                 try
                 {
                     
-                    switch(Pings.Send("192.168.1.1", timeout).Status)
+                    switch(Pings.Send("127.0.0.1", timeout).Status)
                     {
                         case IPStatus.Success:
                             lblStateImage.Image = Resources.connected;

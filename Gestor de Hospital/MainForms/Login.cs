@@ -15,10 +15,11 @@ namespace MainForms
     {
 
         public bool verificado = false;
+        private DataTable datos;
 
         private void Autenticar()
         {
-            DataTable datos = Operaciones.OBTENER_USUARIO(this.txtUsuario.Text, this.txtContrasena.Text);
+            datos = Operaciones.OBTENER_USUARIO(this.txtUsuario.Text, this.txtContrasena.Text);
             if (datos.Rows.Count > 0)
             {
                 verificado = true;
@@ -28,6 +29,7 @@ namespace MainForms
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
@@ -35,6 +37,9 @@ namespace MainForms
             Autenticar();
             if (verificado)
             {
+                //guardar nombre de usuario
+                Clases.SessionManager sesion = Clases.SessionManager.GetInstance;
+                sesion.Usuario = datos.Rows[0][0].ToString();
                 Close();
             }
             else
@@ -50,6 +55,11 @@ namespace MainForms
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

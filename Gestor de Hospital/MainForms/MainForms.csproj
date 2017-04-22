@@ -60,6 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Clases\SessionManager.cs" />
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>

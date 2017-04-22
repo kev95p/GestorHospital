@@ -67,7 +67,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(106, 188);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(147, 20);
-            this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TabIndex = 0;
             // 
             // txtContrasena
             // 
@@ -75,14 +75,14 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(147, 20);
-            this.txtContrasena.TabIndex = 3;
+            this.txtContrasena.TabIndex = 1;
             // 
             // btnEntrar
             // 
             this.btnEntrar.Location = new System.Drawing.Point(84, 328);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrar.TabIndex = 4;
+            this.btnEntrar.TabIndex = 1;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -92,7 +92,7 @@
             this.btnSalir.Location = new System.Drawing.Point(210, 328);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TabIndex = 2;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -111,7 +111,7 @@
             this.groupBox1.Location = new System.Drawing.Point(33, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(305, 277);
-            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
@@ -140,6 +140,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ControlError)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
