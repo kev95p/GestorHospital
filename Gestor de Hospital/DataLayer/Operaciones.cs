@@ -26,7 +26,6 @@ namespace DataLayer
             }
             catch
             {
-
                 return new DataSet();
             }
         }

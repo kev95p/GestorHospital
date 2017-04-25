@@ -11,8 +11,6 @@ namespace DataLayer
     public sealed class Conexion
     {
         private MySqlConnection connection = new MySqlConnection();
-        private MySqlDataAdapter adapter;
-
         private static Conexion instance = null;
         private static readonly object padlock = new object();
 

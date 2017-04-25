@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    class OperacionesCrud : ICrud<IComando>
+    public class OperacionesCrud : ICrud<IComando>
     {
         public int Insert(IComando obj)
         {
+            
             return obj.Execute();
         }
 

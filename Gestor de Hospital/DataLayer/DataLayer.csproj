@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CommandBuilder.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Intefaces\IComando.cs" />
     <Compile Include="Intefaces\ICrud.cs" />
     <Compile Include="Operaciones.cs" />
