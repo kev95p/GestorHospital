@@ -8,8 +8,8 @@ namespace App
 {
     class AppManager : System.Windows.Forms.ApplicationContext 
     {
-        private MainForms.Principal principal = new MainForms.Principal();
-        private MainForms.Login login = new MainForms.Login();
+        private GUI.Principal principal = new GUI.Principal();
+        private GUI.Login login = new GUI.Login();
 
         public AppManager()
         {
@@ -22,7 +22,7 @@ namespace App
         private bool Splash()
         {
             bool flag = true;
-            MainForms.Splash frm = new MainForms.Splash();
+            GUI.Splash frm = new GUI.Splash();
             frm.ShowDialog();
             return flag;
         }
