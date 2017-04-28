@@ -67,6 +67,22 @@ namespace DataLayer
             }
         }
 
-
+        public static DataSet OBTENER_EMPLEADOS()
+        {
+            try
+            {
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select * from vistaempleados";
+                cb.CommandText = query;
+                datos = oc.Select(cb);
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+        }
     }
 }

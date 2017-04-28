@@ -13,17 +13,66 @@ namespace DataLayer.Entidades
         private string _idRol;
         private string _Password;
 
-        public string NombreUsuario { get => _NombreUsuario; set => _NombreUsuario = value; }
-        public string IdRol { get => _idRol; set => _idRol = value; }
-        public string Password { get => _Password; set => _Password = value; }
-        public string IdUsuario { get => _idUsuario; set => _idUsuario = value; }
+        #region Propiedades
+        public string IdUsuario
+        {
+            get
+            {
+                return _idUsuario;
+            }
+
+            set
+            {
+                _idUsuario = value;
+            }
+        }
+
+        public string NombreUsuario
+        {
+            get
+            {
+                return _NombreUsuario;
+            }
+
+            set
+            {
+                _NombreUsuario = value;
+            }
+        }
+
+        public string IdRol
+        {
+            get
+            {
+                return _idRol;
+            }
+
+            set
+            {
+                _idRol = value;
+            }
+        }
+
+        public string Password
+        {
+            get
+            {
+                return _Password;
+            }
+
+            set
+            {
+                _Password = value;
+            }
+        }
+        #endregion
 
         public bool Insertar()
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("INSERT INTO usuarios(usuario,password,idrol) VALUES(");
-            query.Append("'" + _NombreUsuario + "',md5('" + _Password + "')," + _idRol + ");");
+            query.Append("'" + NombreUsuario + "',md5('" + Password + "')," + IdRol + ");");
             cb.CommandText = query.ToString();
 
             int rowAffected = Insert(cb);
@@ -35,8 +84,8 @@ namespace DataLayer.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("UPDATE usuarios SET ");
-            query.Append("usuario = '"+_NombreUsuario+"', password = md5('"+_Password+"') ");
-            query.Append("WHERE idUsuario = " + _idUsuario + ";");
+            query.Append("usuario = '"+NombreUsuario+"', password = md5('"+Password+"') ");
+            query.Append("WHERE idUsuario = " + IdUsuario + ";");
             cb.CommandText = query.ToString();
 
             int rowAffected = Update(cb);
@@ -48,7 +97,7 @@ namespace DataLayer.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("DELETE FROM usuarios ");
-            query.Append("WHERE usuario = '" + _NombreUsuario + "';");
+            query.Append("WHERE usuario = '" + NombreUsuario + "';");
             cb.CommandText = query.ToString();
 
             int rowAffected = Delete(cb);

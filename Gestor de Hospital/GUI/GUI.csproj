@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,6 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionEmpleado\EdicionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionEmpleado\EdicionEmpleado.Designer.cs">
+      <DependentUpon>EdicionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionEmpleado\EmpleadosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionEmpleado\EmpleadosVista.Designer.cs">
+      <DependentUpon>EmpleadosVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +93,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GestionEmpleado\EdicionEmpleado.resx">
+      <DependentUpon>EdicionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionEmpleado\EmpleadosVista.resx">
+      <DependentUpon>EmpleadosVista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,5 +141,6 @@
   <ItemGroup>
     <None Include="Resources\1491430982_status-offline.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

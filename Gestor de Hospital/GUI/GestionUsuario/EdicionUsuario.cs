@@ -16,7 +16,6 @@ namespace GUI.GestionUsuario
     {
         private bool modificar;
         private DataGridViewRow fila;
-        public DataGridViewRow Fila { get => fila; set => fila = value; }
 
         public EdicionUsuario()
         {

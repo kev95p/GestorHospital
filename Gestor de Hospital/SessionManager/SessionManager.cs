@@ -34,6 +34,17 @@ namespace SessionManager
             }
         }
 
-        public string Usuario { get => usuario; set => usuario = value; }
+        public string Usuario
+        {
+            get
+            {
+                return usuario;
+            }
+
+            set
+            {
+                usuario = value;
+            }
+        }
     }
 }

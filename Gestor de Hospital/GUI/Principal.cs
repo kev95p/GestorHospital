@@ -65,8 +65,13 @@ namespace GUI
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GestionUsuario.UsuariosVista frm = new GUI.GestionUsuario.UsuariosVista();
-            
+            GestionUsuario.UsuariosVista frm = new GestionUsuario.UsuariosVista();         
+            frm.ShowDialog();
+        }
+
+        private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionEmpleado.EmpleadosVista frm = new GestionEmpleado.EmpleadosVista();
             frm.ShowDialog();
         }
     }

@@ -35,6 +35,17 @@ namespace DataLayer
             }
         }
 
-        public MySqlConnection Connection { get => connection; set => connection = value; }
+        public MySqlConnection Connection
+        {
+            get
+            {
+                return connection;
+            }
+
+            set
+            {
+                connection = value;
+            }
+        }
     }
 }

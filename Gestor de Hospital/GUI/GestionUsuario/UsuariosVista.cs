@@ -50,7 +50,7 @@ namespace GUI.GestionUsuario
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Esta seguro que quiere modificar este usuario","Advertencia",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if(MessageBox.Show(this,"Esta seguro que quiere modificar este usuario","Advertencia",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
                 EdicionUsuario frm = new EdicionUsuario(true);
                 frm.Fila = dgvUsuarios.CurrentRow;
@@ -62,7 +62,7 @@ namespace GUI.GestionUsuario
 
         private void toolStripButton3_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Esta Seguro que quiere eliminar este usuario", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if(MessageBox.Show(this, "Esta Seguro que quiere eliminar este usuario", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
                 DataLayer.Entidades.Usuario user = new DataLayer.Entidades.Usuario()
                 {
