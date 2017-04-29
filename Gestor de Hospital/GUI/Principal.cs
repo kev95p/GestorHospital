@@ -41,15 +41,17 @@ namespace GUI
             {
                 try
                 {
-                    
-                    switch(Pings.Send("127.0.0.1", timeout).Status)
-                    {
-                        case IPStatus.Success:
-                            lblStateImage.Image = Resources.connected;
-                            break;
-                        case IPStatus.TimedOut:
-                            lblStateImage.Image = Resources.disconnected;
-                            break;
+                    lock(Pings){
+
+                        switch (Pings.Send("127.0.0.1", timeout).Status)
+                        {
+                            case IPStatus.Success:
+                                lblStateImage.Image = Resources.connected;
+                                break;
+                            case IPStatus.TimedOut:
+                                lblStateImage.Image = Resources.disconnected;
+                                break;
+                        }
                     }
                 }
                 catch (PingException ex)

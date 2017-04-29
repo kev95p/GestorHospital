@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +15,8 @@ namespace DataLayer.Entidades
         private string _primer_Apellido;
         private string _segundo_Apellido;
         private string _DUI;
-        private string _IdDireccion;
-        private string _IdUsuario;
+        private Direccion direccion;
+        private int? _IdUsuario;
 
         #region Propiedades
 
@@ -97,20 +98,7 @@ namespace DataLayer.Entidades
             }
         }
 
-        public string IdDireccion
-        {
-            get
-            {
-                return _IdDireccion;
-            }
-
-            set
-            {
-                _IdDireccion = value;
-            }
-        }
-
-        public string IdUsuario
+        public int? IdUsuario
         {
             get
             {
@@ -122,48 +110,72 @@ namespace DataLayer.Entidades
                 _IdUsuario = value;
             }
         }
-#endregion 
+
+        public Direccion Direccion
+        {
+            get
+            {
+                return direccion;
+            }
+
+            set
+            {
+                direccion = value;
+            }
+        }
+        #endregion
+
+
+        private List<MySqlParameter> ParametrosInsertar()
+        {
+            List<MySqlParameter> parametros = new List<MySqlParameter>
+            {
+                new MySqlParameter("pPrimer_nombre", MySqlDbType.VarChar) { Value = Primer_Nombre },
+                new MySqlParameter("pSegundo_nombre", MySqlDbType.VarChar) { Value = Segundo_Nombre },
+                new MySqlParameter("pPrimer_apellido", MySqlDbType.VarChar) { Value = Primer_Apellido },
+                new MySqlParameter("pSegundo_apellido", MySqlDbType.VarChar) { Value = Segundo_Apellido },
+                new MySqlParameter("pDUI", MySqlDbType.VarChar) { Value = DUI },
+                new MySqlParameter("pIdUsuario", MySqlDbType.Int32) { Value = IdUsuario },
+                new MySqlParameter("pMunicipio", MySqlDbType.Int32) { Value = direccion.IdMunicipio },
+                new MySqlParameter("pDireccion", MySqlDbType.VarChar) { Value = direccion.DireccionDescripcion }
+            };
+            return parametros;
+
+        }
+
+        private List<MySqlParameter> ParametrosActualizar()
+        {
+            List<MySqlParameter> parametros = new List<MySqlParameter>
+            {
+                new MySqlParameter("pIdEmpleado", MySqlDbType.Int32) { Value = IdEmpleado },
+                new MySqlParameter("pPrimer_nombre", MySqlDbType.VarChar) { Value = Primer_Nombre },
+                new MySqlParameter("pSegundo_nombre", MySqlDbType.VarChar) { Value = Segundo_Nombre },
+                new MySqlParameter("pPrimer_apellido", MySqlDbType.VarChar) { Value = Primer_Apellido },
+                new MySqlParameter("pSegundo_apellido", MySqlDbType.VarChar) { Value = Segundo_Apellido },
+                new MySqlParameter("pDUI", MySqlDbType.VarChar) { Value = DUI },
+                new MySqlParameter("pIdUsuario", MySqlDbType.Int32) { Value = IdUsuario },
+                new MySqlParameter("pMunicipio", MySqlDbType.Int32) { Value = direccion.IdMunicipio },
+                new MySqlParameter("pDireccion", MySqlDbType.VarChar) { Value = direccion.DireccionDescripcion }
+            };
+            return parametros;
+
+        }
 
         public bool Insertar()
         {
             CommandBuilder cb = new CommandBuilder();
-            StringBuilder query = new StringBuilder();
-            query.Append("INSERT INTO empleados(primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,DUI,idDireccion,idUsuario) VALUES(");
-            query.Append("'" + Primer_Nombre + "','" + Segundo_Nombre + "','"+Primer_Apellido+"','"+Segundo_Apellido+"','" + DUI + "',"+IdDireccion+",");
-            if(IdUsuario == String.Empty)
-            {
-                query.Append("null);");
-            }
-            else
-            {
-                query.Append(IdUsuario+");");
-            }
-            cb.CommandText = query.ToString();
-
-            int rowAffected = Insert(cb);
-            return (rowAffected > 0);
+            cb.StoredProcerudeName = "Insertar_Empleado;";
+            cb.SqlParams = ParametrosInsertar();
+            return (cb.Execute() > 0);
+            
         }
 
         public bool Actualizar()
         {
             CommandBuilder cb = new CommandBuilder();
-            StringBuilder query = new StringBuilder();
-            query.Append("UPDATE empleados SET ");
-            query.Append("primer_nombre = '" + Primer_Nombre + "', segundo_nombre = '" + Segundo_Nombre + "' , ");
-            query.Append("primer_apellido = '" + Primer_Apellido + "', segundo_apellido = '"+Segundo_Apellido+"' , DUI = '" + DUI + "', idDireccion = " + IdDireccion + " , ");
-            if (IdUsuario == String.Empty)
-            {
-                query.Append("idUsuario = null");
-            }
-            else
-            {
-                query.Append("idUsuario = "+IdUsuario+" ");
-            }
-            query.Append("WHERE idUsuario = " + IdEmpleado + ";");
-            cb.CommandText = query.ToString();
-
-            int rowAffected = Update(cb);
-            return (rowAffected > 0);
+            cb.StoredProcerudeName = "Actualizar_Empleado";
+            cb.SqlParams = ParametrosActualizar();
+            return (cb.Execute() > 0);
         }
 
         public bool Eliminar()
@@ -171,7 +183,7 @@ namespace DataLayer.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("DELETE FROM empleados ");
-            query.Append("WHERE usuario = '" + IdEmpleado + "';");
+            query.Append("WHERE idEmpleado = " + IdEmpleado + ";");
             cb.CommandText = query.ToString();
 
             int rowAffected = Delete(cb);

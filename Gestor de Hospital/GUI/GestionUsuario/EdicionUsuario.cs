@@ -17,6 +17,19 @@ namespace GUI.GestionUsuario
         private bool modificar;
         private DataGridViewRow fila;
 
+        public DataGridViewRow Fila
+        {
+            get
+            {
+                return fila;
+            }
+
+            set
+            {
+                fila = value;
+            }
+        }
+
         public EdicionUsuario()
         {
             InitializeComponent();
@@ -42,9 +55,9 @@ namespace GUI.GestionUsuario
             if (modificar)
             {
                 this.Text = "Modificar Usuario";
-                txtIdUsuario.Text = fila.Cells["ID"].Value.ToString();
-                txtUsuario.Text = fila.Cells["usuario"].Value.ToString();
-                cbRol.SelectedText = fila.Cells["rol"].Value.ToString();
+                txtIdUsuario.Text = Fila.Cells["ID"].Value.ToString();
+                txtUsuario.Text = Fila.Cells["usuario"].Value.ToString();
+                cbRol.SelectedText = Fila.Cells["rol"].Value.ToString();
                 txtClave.Text = "********";
                 txtClaveComprobacion.Text = "********";
 

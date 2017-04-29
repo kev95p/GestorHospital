@@ -33,6 +33,7 @@ namespace GUI.GestionEmpleado
             }
         }
 
+        #region Eventos
         private void EmpleadosVista_Load(object sender, EventArgs e)
         {
             CargarEmpleados();
@@ -44,13 +45,31 @@ namespace GUI.GestionEmpleado
         {
             EdicionEmpleado frm = new EdicionEmpleado();
             frm.ShowDialog();
+            CargarEmpleados();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            EdicionEmpleado frm = new EdicionEmpleado();
-            frm.Modificar = true;
-            frm.ShowDialog();
+            if (MessageBox.Show(this, "Esta seguro que quiere modificar este empleado", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                EdicionEmpleado frm = new EdicionEmpleado();
+                frm.Modificar = true;
+                frm.ID_Empleado = (Int32)dgvEmpleados.CurrentRow.Cells["ID"].Value;
+                frm.ShowDialog();
+                CargarEmpleados();
+            }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(this, "Esta Seguro que quiere eliminar este empleado", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                DataLayer.Entidades.Empleado em = new DataLayer.Entidades.Empleado();
+                em.IdEmpleado = dgvEmpleados.CurrentRow.Cells["ID"].Value.ToString();
+                em.Eliminar();
+                CargarEmpleados();
+            }
+        }
+#endregion
     }
 }
