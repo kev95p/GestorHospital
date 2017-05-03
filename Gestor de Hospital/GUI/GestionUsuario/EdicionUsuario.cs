@@ -57,7 +57,7 @@ namespace GUI.GestionUsuario
                 this.Text = "Modificar Usuario";
                 txtIdUsuario.Text = Fila.Cells["ID"].Value.ToString();
                 txtUsuario.Text = Fila.Cells["usuario"].Value.ToString();
-                cbRol.SelectedText = Fila.Cells["rol"].Value.ToString();
+                cbRol.SelectedIndex = cbRol.FindStringExact(Fila.Cells["rol"].Value.ToString());
                 txtClave.Text = "********";
                 txtClaveComprobacion.Text = "********";
 

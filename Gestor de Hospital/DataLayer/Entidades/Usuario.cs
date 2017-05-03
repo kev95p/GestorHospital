@@ -84,7 +84,7 @@ namespace DataLayer.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("UPDATE usuarios SET ");
-            query.Append("usuario = '"+NombreUsuario+"', password = md5('"+Password+"') ");
+            query.Append("usuario = '"+NombreUsuario+"', password = md5('"+Password+"') , idrol = '"+IdRol+"' ");
             query.Append("WHERE idUsuario = " + IdUsuario + ";");
             cb.CommandText = query.ToString();
 

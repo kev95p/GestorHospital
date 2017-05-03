@@ -161,5 +161,45 @@ namespace DataLayer
             }
 
         }
+
+        public static DataSet OBTENER_USUARIOS_SIN_ASIGNAR()
+        {
+            try
+            {
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"SELECT ID,usuario,rol
+                                FROM vistausuarios left join empleados on vistausuarios.ID = empleados.idUsuario 
+                                WHERE idEmpleado is null ;";
+                cb.CommandText = query;
+                datos = oc.Select(cb);
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+
+        }
+        public static DataSet CONSULTA(string query)
+        {
+            try
+            {
+                OperacionesCrud oc = new OperacionesCrud();
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                cb.CommandText = query;
+                datos = oc.Select(cb);
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+
+        }
+
+
     }
 }

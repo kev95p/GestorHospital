@@ -66,8 +66,16 @@ namespace GUI.GestionEmpleado
             {
                 DataLayer.Entidades.Empleado em = new DataLayer.Entidades.Empleado();
                 em.IdEmpleado = dgvEmpleados.CurrentRow.Cells["ID"].Value.ToString();
-                em.Eliminar();
+                if (em.Eliminar())
+                {
+                    MessageBox.Show("Empleado Eliminado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error al Eliminar Empleado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 CargarEmpleados();
+                
             }
         }
 #endregion

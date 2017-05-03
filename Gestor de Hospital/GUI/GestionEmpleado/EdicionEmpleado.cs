@@ -25,7 +25,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarUsuarios()
         {
-            DataTable dt = Operaciones.OBTENER_USUARIOS().Tables[0];
+            DataTable dt = Operaciones.OBTENER_USUARIOS_SIN_ASIGNAR().Tables[0];
             dt = new DataView(dt).ToTable(false, "ID", "usuario", "rol");
             dgvUsuarios.DataSource = dt;
             ColumnaWidth();
@@ -216,5 +216,6 @@ namespace GUI.GestionEmpleado
         }
         #endregion
 
+        
     }
 }

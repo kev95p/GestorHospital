@@ -181,12 +181,13 @@ namespace DataLayer.Entidades
         public bool Eliminar()
         {
             CommandBuilder cb = new CommandBuilder();
-            StringBuilder query = new StringBuilder();
-            query.Append("DELETE FROM empleados ");
-            query.Append("WHERE idEmpleado = " + IdEmpleado + ";");
-            cb.CommandText = query.ToString();
+            cb.StoredProcerudeName = "Eliminar_Empleado";
+            cb.SqlParams = new List<MySqlParameter>
+            {
+                new MySqlParameter("pIdEmpleado", MySqlDbType.Int32) { Value = IdEmpleado }
+            };
 
-            int rowAffected = Delete(cb);
+            int rowAffected = cb.Execute();
             return (rowAffected > 0);
         }
     }
