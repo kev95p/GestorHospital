@@ -14,13 +14,12 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT usuario
                 FROM usuarios WHERE password=md5('" + clave + "') AND usuario = '" + usuario + "'";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
 
             }
@@ -34,12 +33,11 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"select * from vistausuarios";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -52,12 +50,11 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 var query = "SELECT idRol,Rol FROM roles";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -71,14 +68,13 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT idEmpleado,primer_nombre,segundo_nombre,
                 primer_apellido,segundo_apellido,idUsuario,DUI,idDireccion 
                 from empleados where idEmpleado = " + idEmpleado + ";";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -91,13 +87,12 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT direccion,direcciones.idMunicipio,municipios.idDepartamento from direcciones,municipios 
                                 where direcciones.idMunicipio = municipios.idMunicipio and idDireccion = " + idDireccion + " ;";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -110,12 +105,11 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"select * from vistaempleados";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -128,12 +122,11 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"select * from departamentos";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -147,12 +140,11 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"select * from municipios";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -166,14 +158,13 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT ID,usuario,rol
                                 FROM vistausuarios left join empleados on vistausuarios.ID = empleados.idUsuario 
                                 WHERE idEmpleado is null ;";
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
@@ -187,11 +178,10 @@ namespace CacheManager
         {
             try
             {
-                OperacionesCrud oc = new OperacionesCrud();
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 cb.CommandText = query;
-                datos = oc.Select(cb);
+                datos = cb.Select();
                 return datos;
             }
             catch
