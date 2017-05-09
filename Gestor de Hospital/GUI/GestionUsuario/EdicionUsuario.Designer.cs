@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIdUsuario = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbRol = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.errorUsuario = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtIdUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorUsuario)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,23 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
+            // 
+            // txtIdUsuario
+            // 
+            this.txtIdUsuario.Location = new System.Drawing.Point(97, 29);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.ReadOnly = true;
+            this.txtIdUsuario.Size = new System.Drawing.Size(40, 20);
+            this.txtIdUsuario.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(68, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "ID";
             // 
             // label4
             // 
@@ -97,6 +114,7 @@
             // 
             this.txtClaveComprobacion.Location = new System.Drawing.Point(97, 212);
             this.txtClaveComprobacion.Name = "txtClaveComprobacion";
+            this.txtClaveComprobacion.PasswordChar = '*';
             this.txtClaveComprobacion.Size = new System.Drawing.Size(123, 20);
             this.txtClaveComprobacion.TabIndex = 4;
             // 
@@ -113,6 +131,7 @@
             // 
             this.txtClave.Location = new System.Drawing.Point(97, 162);
             this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
             this.txtClave.Size = new System.Drawing.Size(123, 20);
             this.txtClave.TabIndex = 2;
             // 
@@ -155,23 +174,6 @@
             // errorUsuario
             // 
             this.errorUsuario.ContainerControl = this;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(68, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "ID";
-            // 
-            // txtIdUsuario
-            // 
-            this.txtIdUsuario.Location = new System.Drawing.Point(97, 29);
-            this.txtIdUsuario.Name = "txtIdUsuario";
-            this.txtIdUsuario.ReadOnly = true;
-            this.txtIdUsuario.Size = new System.Drawing.Size(40, 20);
-            this.txtIdUsuario.TabIndex = 9;
             // 
             // EdicionUsuario
             // 

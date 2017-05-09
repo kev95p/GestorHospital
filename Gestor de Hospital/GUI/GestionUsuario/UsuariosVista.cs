@@ -16,29 +16,20 @@ namespace GUI.GestionUsuario
         public UsuariosVista()
         {
             InitializeComponent();
-            dgvUsuarios.RowHeadersVisible = false;
-
         }
 
         private void  CargarUsuarios()
         {
-            
+
+            dgvUsuarios.AutoGenerateColumns = false;
             dgvUsuarios.DataSource = CacheManager.Cache.OBTENER_USUARIOS().Tables[0];
-            ColumnaWidth();
+
         }
 
         private void UsuariosVista_Load(object sender, EventArgs e)
         {
             CargarUsuarios();
            
-        }
-
-        private void ColumnaWidth()
-        {
-            foreach(DataGridViewColumn c in dgvUsuarios.Columns)
-            {
-                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
