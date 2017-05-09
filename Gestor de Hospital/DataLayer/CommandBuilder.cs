@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace DataLayer
 {
-    class CommandBuilder : Intefaces.IComando
+    public class CommandBuilder : Intefaces.IComando
     {
         private MySqlConnection conn = Conexion.getInstance.Connection;
         public string CommandText { get; set; }
@@ -64,6 +64,11 @@ namespace DataLayer
                 return new DataSet();
             }
             
+        }
+
+        public void AddParam()
+        {
+
         }
     }
 }
