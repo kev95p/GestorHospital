@@ -1,5 +1,4 @@
-﻿using DataLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +24,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarUsuarios()
         {
-            DataTable dt = Operaciones.OBTENER_USUARIOS_SIN_ASIGNAR().Tables[0];
+            DataTable dt = CacheManager.Cache.OBTENER_USUARIOS_SIN_ASIGNAR().Tables[0];
             dt = new DataView(dt).ToTable(false, "ID", "usuario", "rol");
             dgvUsuarios.DataSource = dt;
             ColumnaWidth();
@@ -33,7 +32,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarDepartamentos()
         {
-            DataTable dt = Operaciones.OBTENER_DEPARTAMENTOS().Tables[0];
+            DataTable dt = CacheManager.Cache.OBTENER_DEPARTAMENTOS().Tables[0];
             cbDepartamento.DataSource = dt;
             cbDepartamento.DisplayMember = "departamento";
             cbDepartamento.ValueMember = "idDepartamento";
@@ -42,7 +41,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarMunicipios()
         {
-            DataTable dt = Operaciones.OBTENER_MUNICIPIOS().Tables[0];
+            DataTable dt = CacheManager.Cache.OBTENER_MUNICIPIOS().Tables[0];
             cbMunicipio.DataSource = dt.Select("idDepartamento = " + cbDepartamento.SelectedValue).CopyToDataTable();
             cbMunicipio.DisplayMember = "municipio";
             cbMunicipio.ValueMember = "idMunicipio";
@@ -50,8 +49,8 @@ namespace GUI.GestionEmpleado
 
         private void CargarDatos()
         {
-            DataTable dt = Operaciones.OBTENER_EMPLEADO(ID_Empleado).Tables[0];
-            DataTable dtdir = Operaciones.OBTENER_DIRECCION(Convert.ToInt32(dt.Rows[0]["idDireccion"])).Tables[0];
+            DataTable dt = CacheManager.Cache.OBTENER_EMPLEADO(ID_Empleado).Tables[0];
+            DataTable dtdir = CacheManager.Cache.OBTENER_DIRECCION(Convert.ToInt32(dt.Rows[0]["idDireccion"])).Tables[0];
             txtID.Text = dt.Rows[0]["idEmpleado"].ToString();
             txtPrimerNombre.Text = dt.Rows[0]["primer_nombre"].ToString();
             txtSegundoNombre.Text = dt.Rows[0]["segundo_nombre"].ToString();
@@ -103,8 +102,8 @@ namespace GUI.GestionEmpleado
         {
             if (Modificar)
             {
-                DataLayer.Entidades.Empleado em = new DataLayer.Entidades.Empleado();
-                DataLayer.Entidades.Direccion dir = new DataLayer.Entidades.Direccion();
+                CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
+                CRUDManager.Entidades.Direccion dir = new CRUDManager.Entidades.Direccion();
                 em.IdEmpleado = txtID.Text;
                 em.Primer_Nombre = txtPrimerNombre.Text;
                 em.Segundo_Nombre = txtSegundoNombre.Text;
@@ -132,8 +131,8 @@ namespace GUI.GestionEmpleado
             }
             else
             {
-                DataLayer.Entidades.Empleado em = new DataLayer.Entidades.Empleado();
-                DataLayer.Entidades.Direccion dir = new DataLayer.Entidades.Direccion();
+                CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
+                CRUDManager.Entidades.Direccion dir = new CRUDManager.Entidades.Direccion();
 
                 em.Primer_Nombre = txtPrimerNombre.Text;
                 em.Segundo_Nombre = txtSegundoNombre.Text;

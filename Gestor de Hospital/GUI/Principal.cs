@@ -16,6 +16,7 @@ namespace GUI
 {
     public partial class Principal : Form
     {
+        volatile bool conectado = false;
         public Principal()
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace GUI
         private void Principal_Load(object sender, EventArgs e)
         {
             bwCheckConnection.DoWork += new DoWorkEventHandler(work);
-            bwCheckConnection.RunWorkerAsync();
-
+            bwCheckConnection.RunWorkerCompleted += new RunWorkerCompletedEventHandler(workComplete);
+            Intervalo.Start();
             //cargar usuarios label
             lblUsuario.Text = SessionManager.SessionManager.GetInstance.Usuario;
             
@@ -36,33 +37,41 @@ namespace GUI
             Ping Pings = new Ping();
             int timeout = 200;
             BackgroundWorker worker = sender as BackgroundWorker;
-            int delay = 1000;
-            while (!worker.CancellationPending)
-            {
                 try
                 {
-                    lock(Pings){
+                    
 
-                        switch (Pings.Send("127.0.0.1", timeout).Status)
+                        
+                        switch (Pings.Send("192.168.1.1", timeout).Status)
                         {
                             case IPStatus.Success:
-                                lblStateImage.Image = Resources.connected;
+                                conectado = true;
                                 break;
                             case IPStatus.TimedOut:
-                                lblStateImage.Image = Resources.disconnected;
+                                conectado = false;
                                 break;
                         }
-                    }
+                    
                 }
                 catch (PingException ex)
                 {
 
-                    lblStateImage.Image = Resources.disconnected;
+                    conectado = false;
                 }
-
-                Thread.Sleep(delay);
+            
+        }
+        
+        private void workComplete(object sender,RunWorkerCompletedEventArgs e)
+        {
+            if (conectado)
+            {
+                lblStateImage.Image = Resources.connected;
             }
-            e.Cancel = true;
+            else
+            {
+                lblStateImage.Image = Resources.disconnected;
+            }
+            Console.WriteLine("Entro");
         }
 
         private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -75,6 +84,18 @@ namespace GUI
         {
             GestionEmpleado.EmpleadosVista frm = new GestionEmpleado.EmpleadosVista();
             frm.ShowDialog();
+        }
+
+        private void pacientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModuloPacientes.GUI.PacientesForm frm = new ModuloPacientes.GUI.PacientesForm();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void Intervalo_Tick(object sender, EventArgs e)
+        {
+            bwCheckConnection.RunWorkerAsync();
         }
     }
 }

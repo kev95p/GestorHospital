@@ -1,5 +1,4 @@
-﻿using DataLayer;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +43,7 @@ namespace GUI.GestionUsuario
 
         private void LlenarRoles()
         {
-            cbRol.DataSource = Operaciones.OBTENER_ROLES().Tables[0];
+            cbRol.DataSource = CacheManager.Cache.OBTENER_ROLES().Tables[0];
             cbRol.DisplayMember = "Rol";
             cbRol.ValueMember = "idRol";
         }
@@ -70,7 +69,7 @@ namespace GUI.GestionUsuario
             
             if (Validar())
             {
-                DataLayer.Entidades.Usuario user = new DataLayer.Entidades.Usuario();
+                CRUDManager.Entidades.Usuario user = new CRUDManager.Entidades.Usuario();
                 user.IdUsuario = txtIdUsuario.Text;
                 user.NombreUsuario = txtUsuario.Text;
                 user.Password = txtClave.Text;

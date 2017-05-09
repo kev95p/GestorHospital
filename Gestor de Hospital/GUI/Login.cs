@@ -21,7 +21,7 @@ namespace GUI
         {
             try
             {
-                datos = Operaciones.OBTENER_USUARIO(txtUsuario.Text, txtContrasena.Text).Tables[0];
+                datos = CacheManager.Cache.OBTENER_USUARIO(txtUsuario.Text, txtContrasena.Text).Tables[0];
                 if (datos.Rows.Count > 0)
                 {
                     verificado = true;

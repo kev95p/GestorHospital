@@ -1,4 +1,4 @@
-﻿using DataLayer;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +21,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarEmpleados()
         {
-            dgvEmpleados.DataSource = Operaciones.OBTENER_EMPLEADOS().Tables[0];
+            dgvEmpleados.DataSource = CacheManager.Cache.OBTENER_EMPLEADOS().Tables[0];
         }
 
         private void ColumnaWidth()
@@ -64,7 +64,7 @@ namespace GUI.GestionEmpleado
         {
             if (MessageBox.Show(this, "Esta Seguro que quiere eliminar este empleado", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
-                DataLayer.Entidades.Empleado em = new DataLayer.Entidades.Empleado();
+                CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
                 em.IdEmpleado = dgvEmpleados.CurrentRow.Cells["ID"].Value.ToString();
                 if (em.Eliminar())
                 {

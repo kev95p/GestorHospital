@@ -43,9 +43,9 @@
             // 
             // statusStrip
             // 
-            this.statusStrip.Location = new System.Drawing.Point(0, 330);
+            this.statusStrip.Location = new System.Drawing.Point(0, 342);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(540, 22);
+            this.statusStrip.Size = new System.Drawing.Size(574, 22);
             this.statusStrip.TabIndex = 1;
             this.statusStrip.Text = "statusStrip1";
             // 
@@ -59,7 +59,7 @@
             this.btnEliminar});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(540, 25);
+            this.toolStrip.Size = new System.Drawing.Size(574, 25);
             this.toolStrip.TabIndex = 2;
             this.toolStrip.Text = "toolStrip1";
             // 
@@ -114,14 +114,14 @@
             this.dgvEmpleados.ReadOnly = true;
             this.dgvEmpleados.RowHeadersVisible = false;
             this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmpleados.Size = new System.Drawing.Size(540, 305);
+            this.dgvEmpleados.Size = new System.Drawing.Size(574, 317);
             this.dgvEmpleados.TabIndex = 3;
             // 
             // EmpleadosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(540, 352);
+            this.ClientSize = new System.Drawing.Size(574, 364);
             this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.statusStrip);

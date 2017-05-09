@@ -126,9 +126,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
-      <Project>{85cdfbfb-d767-49ca-8245-7bb92290ebb9}</Project>
-      <Name>DataLayer</Name>
+    <ProjectReference Include="..\CacheManager\CacheManager.csproj">
+      <Project>{e010f1df-ed01-4b05-a19c-4d3c9377e9b4}</Project>
+      <Name>CacheManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRUDManager\CRUDManager.csproj">
+      <Project>{ad9f9521-d34a-41f6-b0bc-82299b588ccc}</Project>
+      <Name>CRUDManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModuloPacientes\ModuloPacientes.csproj">
+      <Project>{ff085832-d01a-415a-9b51-6d2ddf1b3db5}</Project>
+      <Name>ModuloPacientes</Name>
     </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{D7A2FA1C-512D-48D8-BD65-E64501B942F4}</Project>

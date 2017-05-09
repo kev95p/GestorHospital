@@ -1,4 +1,4 @@
-﻿using DataLayer;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +23,7 @@ namespace GUI.GestionUsuario
         private void  CargarUsuarios()
         {
             
-            dgvUsuarios.DataSource = Operaciones.OBTENER_USUARIOS().Tables[0];
+            dgvUsuarios.DataSource = CacheManager.Cache.OBTENER_USUARIOS().Tables[0];
             ColumnaWidth();
         }
 
@@ -64,7 +64,7 @@ namespace GUI.GestionUsuario
         {
             if(MessageBox.Show(this, "Esta Seguro que quiere eliminar este usuario", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
-                DataLayer.Entidades.Usuario user = new DataLayer.Entidades.Usuario()
+                CRUDManager.Entidades.Usuario user = new CRUDManager.Entidades.Usuario()
                 {
                     NombreUsuario = dgvUsuarios.CurrentRow.Cells["usuario"].Value.ToString()
                 };
