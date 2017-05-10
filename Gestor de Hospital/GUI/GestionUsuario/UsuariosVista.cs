@@ -20,10 +20,9 @@ namespace GUI.GestionUsuario
 
         private void  CargarUsuarios()
         {
-
             dgvUsuarios.AutoGenerateColumns = false;
             dgvUsuarios.DataSource = CacheManager.Cache.OBTENER_USUARIOS().Tables[0];
-
+            lblFilas.Text = dgvUsuarios.RowCount.ToString();
         }
 
         private void UsuariosVista_Load(object sender, EventArgs e)

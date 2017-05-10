@@ -71,13 +71,6 @@ namespace GUI
             {
                 lblStateImage.Image = Resources.disconnected;
             }
-            Console.WriteLine("Entro");
-        }
-
-        private void UsuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GestionUsuario.UsuariosVista frm = new GestionUsuario.UsuariosVista();         
-            frm.ShowDialog();
         }
 
         private void EmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -96,6 +89,18 @@ namespace GUI
         private void Intervalo_Tick(object sender, EventArgs e)
         {
             bwCheckConnection.RunWorkerAsync();
+        }
+
+        private void gestionRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionRol.RolesVista frm = new GestionRol.RolesVista();
+            frm.ShowDialog();
+        }
+
+        private void gestionUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionUsuario.UsuariosVista frm = new GestionUsuario.UsuariosVista();
+            frm.ShowDialog();
         }
     }
 }

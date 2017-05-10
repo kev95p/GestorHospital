@@ -25,7 +25,6 @@ namespace GUI.GestionEmpleado
         private void CargarUsuarios()
         {
             DataTable dt = CacheManager.Cache.OBTENER_USUARIOS_SIN_ASIGNAR().Tables[0];
-            dt = new DataView(dt).ToTable(false, "ID", "usuario", "rol");
             dgvUsuarios.DataSource = dt;
             ColumnaWidth();
         }
@@ -60,8 +59,7 @@ namespace GUI.GestionEmpleado
             txtDireccion.Text = dtdir.Rows[0]["direccion"].ToString();
             cbDepartamento.SelectedValue = (Int32)dtdir.Rows[0]["idDepartamento"];
             cbMunicipio.SelectedValue = (Int32)dtdir.Rows[0]["idMunicipio"];
-            
-            
+                      
 
             if (dt.Rows[0]["idUsuario"].ToString() == String.Empty)
             {

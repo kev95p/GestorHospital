@@ -55,6 +55,18 @@
     <Compile Include="GestionEmpleado\EmpleadosVista.Designer.cs">
       <DependentUpon>EmpleadosVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionRol\EdicionRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionRol\EdicionRol.Designer.cs">
+      <DependentUpon>EdicionRol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionRol\RolesVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionRol\RolesVista.Designer.cs">
+      <DependentUpon>RolesVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionEmpleado\EmpleadosVista.resx">
       <DependentUpon>EmpleadosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionRol\EdicionRol.resx">
+      <DependentUpon>EdicionRol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionRol\RolesVista.resx">
+      <DependentUpon>RolesVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

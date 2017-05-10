@@ -21,23 +21,15 @@ namespace GUI.GestionEmpleado
 
         private void CargarEmpleados()
         {
+            dgvEmpleados.AutoGenerateColumns = false;
             dgvEmpleados.DataSource = CacheManager.Cache.OBTENER_EMPLEADOS().Tables[0];
-        }
-
-        private void ColumnaWidth()
-        {
-            foreach (DataGridViewColumn c in dgvEmpleados.Columns)
-            {
-                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-                
-            }
+            lblFilas.Text = dgvEmpleados.RowCount.ToString();           
         }
 
         #region Eventos
         private void EmpleadosVista_Load(object sender, EventArgs e)
         {
             CargarEmpleados();
-            ColumnaWidth();
             
         }
 
@@ -79,5 +71,6 @@ namespace GUI.GestionEmpleado
             }
         }
 #endregion
+
     }
 }
