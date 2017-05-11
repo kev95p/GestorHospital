@@ -16,5 +16,11 @@ namespace ModuloPacientes.GUI
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            EdicionPaciente frm = new EdicionPaciente();
+            frm.ShowDialog();
+        }
     }
 }
