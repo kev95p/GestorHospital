@@ -16,10 +16,12 @@ namespace CRUDManager.Entidades
         private string _primer_Apellido;
         private string _segundo_Apellido;
         private string _DUI;
-        private Direccion direccion;
-        private int? _IdUsuario;
-
-        #region Propiedades
+        private string _residencia;
+        private string _email;
+        private string _telefono;
+        private string _idMunicipio;
+        private Usuario usuario = new Usuario();
+        bool asignarUsuario;
 
         public string IdEmpleado
         {
@@ -99,97 +101,140 @@ namespace CRUDManager.Entidades
             }
         }
 
-        public int? IdUsuario
+        public string Residencia
         {
             get
             {
-                return _IdUsuario;
+                return _residencia;
             }
 
             set
             {
-                _IdUsuario = value;
+                _residencia = value;
             }
         }
 
-        public Direccion Direccion
+        public string Email
         {
             get
             {
-                return direccion;
+                return _email;
             }
 
             set
             {
-                direccion = value;
+                _email = value;
             }
         }
-        #endregion
 
-
-        private List<MySqlParameter> ParametrosInsertar()
+        public string Telefono
         {
-            List<MySqlParameter> parametros = new List<MySqlParameter>
+            get
             {
-                new MySqlParameter("pPrimer_nombre", MySqlDbType.VarChar) { Value = Primer_Nombre },
-                new MySqlParameter("pSegundo_nombre", MySqlDbType.VarChar) { Value = Segundo_Nombre },
-                new MySqlParameter("pPrimer_apellido", MySqlDbType.VarChar) { Value = Primer_Apellido },
-                new MySqlParameter("pSegundo_apellido", MySqlDbType.VarChar) { Value = Segundo_Apellido },
-                new MySqlParameter("pDUI", MySqlDbType.VarChar) { Value = DUI },
-                new MySqlParameter("pIdUsuario", MySqlDbType.Int32) { Value = IdUsuario },
-                new MySqlParameter("pMunicipio", MySqlDbType.Int32) { Value = direccion.IdMunicipio },
-                new MySqlParameter("pDireccion", MySqlDbType.VarChar) { Value = direccion.DireccionDescripcion }
-            };
-            return parametros;
+                return _telefono;
+            }
 
+            set
+            {
+                _telefono = value;
+            }
         }
 
-        private List<MySqlParameter> ParametrosActualizar()
+        public string IdMunicipio
         {
-            List<MySqlParameter> parametros = new List<MySqlParameter>
+            get
             {
-                new MySqlParameter("pIdEmpleado", MySqlDbType.Int32) { Value = IdEmpleado },
-                new MySqlParameter("pPrimer_nombre", MySqlDbType.VarChar) { Value = Primer_Nombre },
-                new MySqlParameter("pSegundo_nombre", MySqlDbType.VarChar) { Value = Segundo_Nombre },
-                new MySqlParameter("pPrimer_apellido", MySqlDbType.VarChar) { Value = Primer_Apellido },
-                new MySqlParameter("pSegundo_apellido", MySqlDbType.VarChar) { Value = Segundo_Apellido },
-                new MySqlParameter("pDUI", MySqlDbType.VarChar) { Value = DUI },
-                new MySqlParameter("pIdUsuario", MySqlDbType.Int32) { Value = IdUsuario },
-                new MySqlParameter("pMunicipio", MySqlDbType.Int32) { Value = direccion.IdMunicipio },
-                new MySqlParameter("pDireccion", MySqlDbType.VarChar) { Value = direccion.DireccionDescripcion }
-            };
-            return parametros;
+                return _idMunicipio;
+            }
 
+            set
+            {
+                _idMunicipio = value;
+            }
+        }
+
+        public bool AsignarUsuario
+        {
+            get
+            {
+                return asignarUsuario;
+            }
+
+            set
+            {
+                asignarUsuario = value;
+            }
+        }
+
+        public Usuario Usuario
+        {
+            get
+            {
+                return usuario;
+            }
+
+            set
+            {
+                usuario = value;
+            }
         }
 
         public bool Insertar()
         {
             CommandBuilder cb = new CommandBuilder();
-            cb.StoredProcerudeName = "Insertar_Empleado;";
-            cb.SqlParams = ParametrosInsertar();
-            return (cb.Execute() > 0);
-            
+            cb.SqlParams = new List<MySqlParameter>
+            {
+                new MySqlParameter("AsignarUsuario",AsignarUsuario),
+                new MySqlParameter("pPrimer_Nombre",Primer_Nombre),
+                new MySqlParameter("pSegundo_Nombre", Segundo_Nombre),
+                new MySqlParameter("pPrimer_Apellido",Primer_Apellido),
+                new MySqlParameter("pSegundo_Apellido",Segundo_Apellido),
+                new MySqlParameter("pMunicipio",IdMunicipio),
+                new MySqlParameter("pDUI",DUI),
+                new MySqlParameter("pEmail",Email),
+                new MySqlParameter("pTelefono",Telefono),
+                new MySqlParameter("pUsuario",Usuario.NombreUsuario),
+                new MySqlParameter("pPassword",Usuario.Password),
+                new MySqlParameter("pRol",Usuario.IdRol),
+                new MySqlParameter("pResidencia",Residencia)
+            };
+            cb.StoredProcerudeName = "Insertar_Empleado";
+            return (Insert(cb)>0);
         }
 
         public bool Actualizar()
         {
             CommandBuilder cb = new CommandBuilder();
+            cb.SqlParams = new List<MySqlParameter>
+            {
+                new MySqlParameter("pAsignarUsuario",AsignarUsuario),
+                new MySqlParameter("pIdEmpleado",IdEmpleado),
+                new MySqlParameter("pPrimer_Nombre",Primer_Nombre),
+                new MySqlParameter("pSegundo_Nombre", Segundo_Nombre),
+                new MySqlParameter("pPrimer_Apellido",Primer_Apellido),
+                new MySqlParameter("pSegundo_Apellido",Segundo_Apellido),
+                new MySqlParameter("pMunicipio",IdMunicipio),
+                new MySqlParameter("pDUI",DUI),
+                new MySqlParameter("pEmail",Email),
+                new MySqlParameter("pTelefono",Telefono),
+                new MySqlParameter("pUsuario",Usuario.NombreUsuario),
+                new MySqlParameter("pPassword",Usuario.Password),
+                new MySqlParameter("pRol",Usuario.IdRol),
+                new MySqlParameter("pResidencia",Residencia)
+            };
             cb.StoredProcerudeName = "Actualizar_Empleado";
-            cb.SqlParams = ParametrosActualizar();
-            return (cb.Execute() > 0);
+            return (Update(cb) > 0);
         }
 
         public bool Eliminar()
         {
             CommandBuilder cb = new CommandBuilder();
-            cb.StoredProcerudeName = "Eliminar_Empleado";
             cb.SqlParams = new List<MySqlParameter>
             {
-                new MySqlParameter("pIdEmpleado", MySqlDbType.Int32) { Value = IdEmpleado }
+                new MySqlParameter("pIdEmpleado",IdEmpleado)
             };
-
-            int rowAffected = cb.Execute();
-            return (rowAffected > 0);
+            cb.StoredProcerudeName = "Eliminar_Empleado";
+            return (Delete(cb) > 0);
         }
     }
 }

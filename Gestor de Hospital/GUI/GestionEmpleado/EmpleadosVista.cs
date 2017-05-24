@@ -45,9 +45,36 @@ namespace GUI.GestionEmpleado
             if (MessageBox.Show(this, "Esta seguro que quiere modificar este empleado", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
                 EdicionEmpleado frm = new EdicionEmpleado();
-                frm.Modificar = true;
-                frm.ID_Empleado = (Int32)dgvEmpleados.CurrentRow.Cells["ID"].Value;
+
+                frm.IdEmpleado = dgvEmpleados.CurrentRow.Cells["ID"].Value.ToString();
+
+                string[] Nombres = dgvEmpleados.CurrentRow.Cells["Nombres"].Value.ToString().Split(' ');
+                string[] Apellidos = dgvEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString().Split(' ');
+
+                frm.txtPrimerNombre.Text = Nombres[0];
+                frm.txtSegundoNombre.Text = Nombres[1];
+                frm.txtPrimerApellido.Text = Apellidos[0];
+                frm.txtSegundoApellido.Text = Apellidos[1];
+
+                frm.txtDui.Text = dgvEmpleados.CurrentRow.Cells["DUI"].Value.ToString();
+                frm.txtEmail.Text = dgvEmpleados.CurrentRow.Cells["telefono"].Value.ToString();
+                frm.txtTelefono.Text = dgvEmpleados.CurrentRow.Cells["email"].Value.ToString();
+                frm.txtResidencia.Text = dgvEmpleados.CurrentRow.Cells["Residencia"].Value.ToString();
+                frm.cbMunicipios.SelectedValue = dgvEmpleados.CurrentRow.Cells["idMunicipio"].Value.ToString();
+                frm.cbDepartamento.SelectedValue = dgvEmpleados.CurrentRow.Cells["idDepartamento"].Value.ToString();
+                if (dgvEmpleados.CurrentRow.Cells["Usuario"].Value.ToString() == "No Aplica")
+                {
+                    frm.chkAsignarUsuario.CheckState = CheckState.Unchecked;
+                }
+                else
+                {
+                    frm.chkAsignarUsuario.CheckState = CheckState.Checked;
+                    frm.txtUsuario.Text = dgvEmpleados.CurrentRow.Cells["Usuario"].Value.ToString();
+                    frm.cbRol.SelectedValue = dgvEmpleados.CurrentRow.Cells["idRol"].Value.ToString();
+                    frm.txtPassword.Text = "********";
+                }
                 frm.ShowDialog();
+
                 CargarEmpleados();
             }
         }

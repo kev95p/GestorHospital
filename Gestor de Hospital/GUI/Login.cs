@@ -41,6 +41,7 @@ namespace GUI
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Cursor = Cursors.AppStarting;
             Autenticar();
             if (verificado)
             {
@@ -67,6 +68,11 @@ namespace GUI
         private void Login_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void PrecargarDatos()
+        {
+
         }
     }
 }

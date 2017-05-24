@@ -36,6 +36,7 @@ namespace DataLayer
             catch (MySqlException ex)
             {
                 Console.WriteLine(ex.Message);
+                conn.Close();
                 return ex.Number * -1;
             }
         }
@@ -66,9 +67,5 @@ namespace DataLayer
             
         }
 
-        public void AddParam()
-        {
-
-        }
     }
 }

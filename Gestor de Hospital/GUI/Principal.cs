@@ -53,7 +53,7 @@ namespace GUI
                         }
                     
                 }
-                catch (PingException ex)
+                catch
                 {
 
                     conectado = false;

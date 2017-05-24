@@ -13,6 +13,7 @@ namespace CRUDManager.Entidades
         private string _NombreUsuario;
         private string _idRol;
         private string _Password;
+        private string _idEmpleado;
 
         #region Propiedades
         public string IdUsuario
@@ -66,14 +67,28 @@ namespace CRUDManager.Entidades
                 _Password = value;
             }
         }
+
+        public string IdEmpleado
+        {
+            get
+            {
+                return _idEmpleado;
+            }
+
+            set
+            {
+                _idEmpleado = value;
+            }
+        }
         #endregion
 
         public bool Insertar()
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
-            query.Append("INSERT INTO usuarios(usuario,password,idrol) VALUES(");
-            query.Append("'" + NombreUsuario + "',md5('" + Password + "')," + IdRol + ");");
+            query.Append("INSERT INTO usuarios(usuario,password,idrol,idEmpleado) VALUES(");
+            query.Append("'" + NombreUsuario + "',md5('" + Password + "')," + IdRol + "");
+            query.Append("," + _idEmpleado + ");");
             cb.CommandText = query.ToString();
 
             int rowAffected = Insert(cb);
@@ -85,7 +100,7 @@ namespace CRUDManager.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("UPDATE usuarios SET ");
-            query.Append("usuario = '"+NombreUsuario+"', password = md5('"+Password+"') , idrol = '"+IdRol+"' ");
+            query.Append("usuario = '"+NombreUsuario+"', password = md5('"+Password+"') , idrol = "+IdRol+" , idEmpleado = "+IdEmpleado+" ");
             query.Append("WHERE idUsuario = " + IdUsuario + ";");
             cb.CommandText = query.ToString();
 

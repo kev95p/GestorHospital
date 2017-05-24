@@ -64,43 +64,6 @@ namespace CacheManager
             }
         }
 
-        public static DataSet OBTENER_EMPLEADO(int idEmpleado)
-        {
-            try
-            {
-                DataSet datos = new DataSet();
-                CommandBuilder cb = new CommandBuilder();
-                string query = @"SELECT idEmpleado,primer_nombre,segundo_nombre,
-                primer_apellido,segundo_apellido,idUsuario,DUI,idDireccion 
-                from empleados where idEmpleado = " + idEmpleado + ";";
-                cb.CommandText = query;
-                datos = cb.Select();
-                return datos;
-            }
-            catch
-            {
-                return new DataSet();
-            }
-        }
-
-        public static DataSet OBTENER_DIRECCION(int idDireccion)
-        {
-            try
-            {
-                DataSet datos = new DataSet();
-                CommandBuilder cb = new CommandBuilder();
-                string query = @"SELECT direccion,direcciones.idMunicipio,municipios.idDepartamento from direcciones,municipios 
-                                where direcciones.idMunicipio = municipios.idMunicipio and idDireccion = " + idDireccion + " ;";
-                cb.CommandText = query;
-                datos = cb.Select();
-                return datos;
-            }
-            catch
-            {
-                return new DataSet();
-            }
-        }
-
         public static DataSet OBTENER_EMPLEADOS()
         {
             try

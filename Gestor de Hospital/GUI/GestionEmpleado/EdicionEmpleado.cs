@@ -12,207 +12,143 @@ namespace GUI.GestionEmpleado
 {
     public partial class EdicionEmpleado : Form
     {
-        int primera = 0;
-        public bool Modificar { get; set; }
-        public int ID_Empleado { get; set; }
+        private string idEmpleado;
+
+        public string IdEmpleado
+        {
+            get
+            {
+                return idEmpleado;
+            }
+
+            set
+            {
+                idEmpleado = value;
+            }
+        }
 
         public EdicionEmpleado()
         {
             InitializeComponent();
-           
+            CargarDepartamentos();
+            CargarMunicipios();
+            CargarRoles();
+            VerificarAsignarUsuario();
         }
 
-        private void CargarUsuarios()
+        private void CargarRoles()
         {
-            DataTable dt = CacheManager.Cache.OBTENER_USUARIOS_SIN_ASIGNAR().Tables[0];
-            dgvUsuarios.DataSource = dt;
-            ColumnaWidth();
+            cbRol.DataSource = SessionManager.DatosCargados.Instancia.Roles;
+            cbRol.ValueMember = "idRol";
+            cbRol.DisplayMember = "rol";
         }
 
         private void CargarDepartamentos()
         {
-            DataTable dt = CacheManager.Cache.OBTENER_DEPARTAMENTOS().Tables[0];
-            cbDepartamento.DataSource = dt;
+            cbDepartamento.DataSource = SessionManager.DatosCargados.Instancia.Departamentos;
             cbDepartamento.DisplayMember = "departamento";
             cbDepartamento.ValueMember = "idDepartamento";
-
         }
 
         private void CargarMunicipios()
         {
-            DataTable dt = CacheManager.Cache.OBTENER_MUNICIPIOS().Tables[0];
-            cbMunicipio.DataSource = dt.Select("idDepartamento = " + cbDepartamento.SelectedValue).CopyToDataTable();
-            cbMunicipio.DisplayMember = "municipio";
-            cbMunicipio.ValueMember = "idMunicipio";
+            DataView dv = new DataView(SessionManager.DatosCargados.Instancia.Munipicipios);
+            dv.RowFilter = "idDepartamento = " + (cbDepartamento.SelectedIndex+1);
+            cbMunicipios.DataSource = dv.ToTable();
+            cbMunicipios.DisplayMember = "municipio";
+            cbMunicipios.ValueMember = "idMunicipio";
         }
 
-        private void CargarDatos()
+        private void VerificarAsignarUsuario()
         {
-            DataTable dt = CacheManager.Cache.OBTENER_EMPLEADO(ID_Empleado).Tables[0];
-            DataTable dtdir = CacheManager.Cache.OBTENER_DIRECCION(Convert.ToInt32(dt.Rows[0]["idDireccion"])).Tables[0];
-            txtID.Text = dt.Rows[0]["idEmpleado"].ToString();
-            txtPrimerNombre.Text = dt.Rows[0]["primer_nombre"].ToString();
-            txtSegundoNombre.Text = dt.Rows[0]["segundo_nombre"].ToString();
-            txtPrimerApellido.Text = dt.Rows[0]["primer_apellido"].ToString();
-            txtSegundoApellido.Text = dt.Rows[0]["segundo_apellido"].ToString();
-            txtDUI.Text = dt.Rows[0]["DUI"].ToString();
-            txtDireccion.Text = dtdir.Rows[0]["direccion"].ToString();
-            cbDepartamento.SelectedValue = (Int32)dtdir.Rows[0]["idDepartamento"];
-            cbMunicipio.SelectedValue = (Int32)dtdir.Rows[0]["idMunicipio"];
-                      
-
-            if (dt.Rows[0]["idUsuario"].ToString() == String.Empty)
+            if (chkAsignarUsuario.CheckState == CheckState.Unchecked)
             {
-                chkAsignarUsuario.CheckState = CheckState.Unchecked;
+                txtUsuario.Enabled = false;
+                cbRol.Enabled = false;
+                txtPassword.Enabled = false;
             }
-            else
+            else if(chkAsignarUsuario.CheckState == CheckState.Checked)
             {
-                foreach (DataGridViewRow item in dgvUsuarios.Rows)
-                {
-                    if (Convert.ToInt32(item.Cells["ID"].Value) == Convert.ToInt32(dt.Rows[0]["idUsuario"]))
-                    {
-                        item.Cells["ID"].Selected = true;
-                    }
-                    else
-                    {
-                        item.Cells["ID"].Selected = false;
-                    }
-                    
-                }
-            }
-            
-        }
-
-        private void ColumnaWidth()
-        {
-            foreach (DataGridViewColumn c in dgvUsuarios.Columns)
-            {
-                if(c.Name == "ID")
-                {
-                    c.Width = 30;
-                }
-                c.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
+                txtUsuario.Enabled = true;
+                cbRol.Enabled = true;
+                txtPassword.Enabled = true;
             }
         }
 
-        private void ProcesarEmpleado()
+        private void Procesar()
         {
-            if (Modificar)
-            {
-                CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
-                CRUDManager.Entidades.Direccion dir = new CRUDManager.Entidades.Direccion();
-                em.IdEmpleado = txtID.Text;
-                em.Primer_Nombre = txtPrimerNombre.Text;
-                em.Segundo_Nombre = txtSegundoNombre.Text;
-                em.Primer_Apellido = txtPrimerApellido.Text;
-                em.Segundo_Apellido = txtSegundoApellido.Text;
-                em.DUI = txtDUI.Text;
-                dir.DireccionDescripcion = txtDireccion.Text;
-                dir.IdMunicipio = Convert.ToInt32(cbMunicipio.SelectedValue);
-                em.Direccion = dir;
+            CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
+            em.AsignarUsuario = (chkAsignarUsuario.CheckState == CheckState.Checked);
+            em.IdEmpleado = idEmpleado;
+            em.Primer_Nombre = txtPrimerNombre.Text;
+            em.Segundo_Nombre = txtSegundoNombre.Text;
+            em.Primer_Apellido = txtPrimerApellido.Text;
+            em.Segundo_Apellido = txtSegundoNombre.Text;
+            em.DUI = txtDui.Text;
+            em.Telefono = txtTelefono.Text;
+            em.Email = txtEmail.Text;
+            em.Residencia = txtResidencia.Text;
+            em.IdMunicipio = cbMunicipios.SelectedValue.ToString();
+            em.Usuario.NombreUsuario = txtUsuario.Text;
+            em.Usuario.Password = txtPassword.Text;
+            em.Usuario.IdRol = cbRol.SelectedValue.ToString();
 
-                if (chkAsignarUsuario.CheckState == CheckState.Checked)
+            if(idEmpleado == String.Empty)
+            {
+                if (em.Insertar())
                 {
-                    em.IdUsuario = Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["ID"].Value);
+                    MessageBox.Show("Empleado agregado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
                 }
                 else
                 {
-                    em.IdUsuario = null;
+                    MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-                
-                bool resultado = em.Actualizar();
-
-                if (resultado) MessageBox.Show("Empleado Modificado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if(!resultado) MessageBox.Show("Error al Modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
             else
             {
-                CRUDManager.Entidades.Empleado em = new CRUDManager.Entidades.Empleado();
-                CRUDManager.Entidades.Direccion dir = new CRUDManager.Entidades.Direccion();
-
-                em.Primer_Nombre = txtPrimerNombre.Text;
-                em.Segundo_Nombre = txtSegundoNombre.Text;
-                em.Primer_Apellido = txtPrimerApellido.Text;
-                em.Segundo_Apellido = txtSegundoApellido.Text;
-                em.DUI = txtDUI.Text;
-                dir.DireccionDescripcion = txtDireccion.Text;
-                dir.IdMunicipio = Convert.ToInt32(cbMunicipio.SelectedValue);
-                em.Direccion = dir;
-
-
-                if (chkAsignarUsuario.CheckState == CheckState.Checked)
+                if (em.Actualizar())
                 {
-                    em.IdUsuario =Convert.ToInt32(dgvUsuarios.CurrentRow.Cells["ID"].Value);
+                    MessageBox.Show("Empleado modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
                 }
                 else
                 {
-                    em.IdUsuario =null;
+                    MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-                bool resultado = em.Insertar();
 
-                if (resultado) MessageBox.Show("Empleado Agregado Correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (!resultado) MessageBox.Show("Error al Agregar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            Close();
-        }
 
-        #region Eventos
-
-        private void EdicionEmpleado_Load(object sender, EventArgs e)
-        {
-            CargarUsuarios();
-            CargarDepartamentos();
-            CargarMunicipios();
-            if (Modificar) CargarDatos();
-
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            ProcesarEmpleado();
+            Procesar();
         }
 
         private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (primera < 2)
-            {
-
-            }
-            else
+            if(cbDepartamento.Items.Count > 0)
             {
                 CargarMunicipios();
-                Console.WriteLine("entro");
             }
-            primera++;
+                    
         }
 
-        private void ChkAsignarUsuario_CheckStateChanged(object sender, EventArgs e)
+        private void chkAsignarUsuario_CheckStateChanged(object sender, EventArgs e)
         {
-            if (chkAsignarUsuario.CheckState == CheckState.Checked)
-            {
-
-                dgvUsuarios.Enabled = true;
-                CargarUsuarios();
-
-            }
-            else if (chkAsignarUsuario.CheckState == CheckState.Unchecked)
-            {
-                DataTable dt = (DataTable)dgvUsuarios.DataSource;
-                dt.Clear();
-                dgvUsuarios.Enabled = false;
-
-
-            }
+            VerificarAsignarUsuario();
         }
-        #endregion
 
-        
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Esta seguro que desea cerrar la ve" +
+                "ntana sin guardar los cambios","Aviso",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                Close();
+            }      
+        }
     }
 }

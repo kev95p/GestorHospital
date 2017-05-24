@@ -74,6 +74,7 @@ namespace GUI.GestionUsuario
                 user.NombreUsuario = txtUsuario.Text;
                 user.Password = txtClave.Text;
                 user.IdRol = cbRol.SelectedValue.ToString();
+                user.IdEmpleado = "null";
 
                 if (modificar)
                 {
