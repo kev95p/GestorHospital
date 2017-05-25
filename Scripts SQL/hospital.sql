@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `hospital` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `hospital`;
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
 -- Host: localhost    Database: hospital
@@ -31,7 +33,7 @@ CREATE TABLE `citas` (
   KEY `fk_citas_pacientes1_idx` (`idPaciente`),
   KEY `fk_citas_medicos1_idx` (`idMedico`),
   CONSTRAINT `fk_citas_medicos1` FOREIGN KEY (`idMedico`) REFERENCES `medicos` (`idMedico`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_citas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idpaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_citas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,7 +62,7 @@ CREATE TABLE `consultas` (
   KEY `fk_consultas_pacientes1_idx` (`idPaciente`),
   KEY `fk_consultas_medicos1_idx` (`idMedico`),
   CONSTRAINT `fk_consultas_medicos1` FOREIGN KEY (`idMedico`) REFERENCES `medicos` (`idMedico`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_consultas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idpaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_consultas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -192,10 +194,11 @@ DROP TABLE IF EXISTS `imagenes_perfiles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `imagenes_perfiles` (
-  `idimagenes_perfiles` int(11) NOT NULL AUTO_INCREMENT,
-  `imagenes_perfilescol` tinyblob NOT NULL,
-  PRIMARY KEY (`idimagenes_perfiles`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `idimagenes_perfil` int(11) NOT NULL AUTO_INCREMENT,
+  `imagen` blob NOT NULL,
+  `tipo` varchar(10) NOT NULL,
+  PRIMARY KEY (`idimagenes_perfil`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -204,6 +207,7 @@ CREATE TABLE `imagenes_perfiles` (
 
 LOCK TABLES `imagenes_perfiles` WRITE;
 /*!40000 ALTER TABLE `imagenes_perfiles` DISABLE KEYS */;
+INSERT INTO `imagenes_perfiles` VALUES (1,'‰PNG\r\n\Z\n\0\0\0\rIHDR\0\0\0\0\0\0\0\0\0ôx\Ôú\0\0\0sBIT|dˆ\0\0\0	pHYs\0\0\Ä\0\0\Ä•+\0\0\0tEXtSoftware\0Adobe ImageReadyq\Ée<\0\0 \0IDATxœ\í\İKs]\×y&\àom@²K\ê‰Ke9+\İ\ã@ƒ$ƒn\Å\åD\0)²“‘À_@²’SwR$\á‘\ÉÀ\îD6E\Å»{’ô@È°\ËNJœ¤riò%–(`=\0)“/\0y°\×>g?O«Dß’m\î÷|k­½\"\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0 ¦R;\0\ĞO/^Û™k÷b\æö_k¦c÷µgØ¬•	\0\ä«\×vf÷öb6šf!\"¢D\ÌGDd\ÆL)1÷0\ß33¶K‰íˆˆŒÜŒ(\ïd–Í’û»\ß|ö‰\Ñ$FM€	ôâµ¹ıı©\ÙRr®DşJD™‰ˆ…*a2v£\ÄfF\\\Ï,›M\íoş\é3OlW\É|@€1÷\Õk;³\ï\ïOÍ•\ÒÎ—(sQ\ëA»Qr#²\\/S\í†e\è\0cfñ\Ú\Î\Ì\ãû\ÍR[r>²,”³µ3=²Œ\İ,¹\Ù\\ŞŸ\Úß¸ü\Ì»µ#Á¤S\0`¼xmg®m\ËK7øµV?^r½d¹|cª]W\àx(\0\ĞSÏ¿ùÃ¥R\ÚÅ’e)Ê»ñ\ã\æd \Úüš\r…0Z\n\0ôˆ‡ş½e\Æv‰¸øşT»j*\0N€Ê¾zmgv¯-§\"\Ë\ÒD¬\ç·ƒ©À\êt“&€‡§\0@%/¾ù\ÎJ–x)\Æa\×~Oe\ä\êt“\ç8:\0:t\ë\Ó~É²b\Ä?:Š\0\0x\á\ê\ÎBiÊ©ˆ²T;\Ë\Ä\Ê\Ø\Í÷šö‚=ğ`\n\0£\ç\ßü\áRSòTów\'c·Dœy\í7?¹Z;\nô™\0\Ç\à\Å7\ßYi#\Î\Ú\ÔW\Õ\ÆTÓ´,\0w§\0Àyğ÷OFœû\æ>ùr\í\Ğ7\n\0ŒÀÁ\Zs6Œú{)36§§\Úe\Ó\0ø\0ÁW¯\í\Ì\î·Í¥ğ\à\ï?{\à\n\0<„\Åk;3\Óm9QN\×\Î\ÂQ\å\ê^“gœ`\è\08¢\ç\ß|g¥Dœw|e\Æ\æ\ÔT{\Ò5\Ä™\0‡´xmgvj¿\\*\Æı“!c7\"—]2\ÄP5µÀ8x\á\ê\Î\Ë\Óûe\Ë\Ã‚”˜‰R®=ÿ\æ\ÎJ\í(Pƒ	\0\ÜÇ‹Wv\æö§Ê¥1W;\Ç(\ã\Â7Ÿ9S;tI€{X~s\çt\å|\ít$cõ›\ÏÎœ¬º¢\0À‡,^Û™™\Ú/k\Æı¤0 ö\0Àmsgiz\ÏZÿ`•Xy\á\ê\î¥\Ú1 \n\0\Üô\ÂÕ—K”5\ÇûN	` ,0xFşÜ•\å\0&œÀ ½xeg®m\ÊZ¸¼‡»Q˜`–\0¬\ç\ß\ÜYj›r\ÍÃŸ{*±ò\ÂÕ—kÇ€\ã`À =ÿ\æ\ÎJ‰b—C\ÉÈ“ö›O¬\Ö\Î£¤\008/\\\İ=%\\\âÃ‘4ûùôk_tw\0“C`P^¸º{)J¬\Ô\ÎÁ\Ê\Øİ›\ÎndR\ØÀ`xøóHJ\ÌL\í—kµcÀ¨˜\00ñóc¤\ÜÀ„P\0˜h7ş\×\\\æ\Ã(e\äòŸı\æ\ëµsÀ£P\0˜h\Ëo\î^óÉŸ‘\Ë\Øİ·€1g\0kù\ê.yøs,J\Ì4\ï\çZ\íğ(L\0˜Hÿ²R;“-3Î¬ı\Öjç€‡¡\00q<ü\éL\æ\îş~yúò—Ø®\Ê\0\åù+;+şt¦”™f*½Q’±dÀ\ÄxşÍ¥È°.K÷J8À\ØQ\0˜‹Wv\æ¦J^‹Rfjga€2w÷+N0V,0ö¯\í\ÌL5¹\æ\áO5¥\ÌL\í\å\Ù\Ú1\à(\0\Æ\ŞÁq¬2[9ƒWN/~kg¶v\n8,€±¶|u\ç\åR\ÊB\íaC \ã\Ä\0\Æ\ÖWw2\Â\å,ôJ‰x\æ›\Ï>±Q;<ˆ	\0ciñ\Ú\ÎL¦7±\Ñ?m\ÚÀxP\0K\Íû6ı\ÑO¥”…\ç\ß\ÜYªD`\ì,¿±sÚº?½–y¾vx{\0+‹\ßÚ™šÊ·|ú§÷¼ˆ3`¬4Sy\ÉÃŸqmª\îG`lı3NJ)/\\\İY¨\îeºv\08Œ\Åk;3ñ~M«VŒ‘<8°Q;Ü	\0c¡\Ù\ËóFÿŒR¼¾R\0\è½Å«;\áŠ_\ÆT3\í½\0ô“@\ï5\áHc,ciñÚ\é½c\0½¶xeg%2\ç\"²vxX3\Íû±jÛ™\0\Ğ[‹\×vfš\Ò\ZŸ2ZG\é€\Şjn´§]ó\Ëd(³‹\Ò3\n\0½ts\ÍÔ§&&F“\íKµ3À\í\0z©¹Ñvì‰b3 =£\0\Ğ;>ı3‘J™‰\á–@zC w|úgR5¥]¬nñ^Uzeñ\Ú\ÎLs£\İR\0˜T\íc\å‰\Ë\Ï<±[;˜\0\Ğ/7b\ÉÃŸ‰f€P\0\è\çş™t–\èK\0ô\Æ\â·w–š&\×j\ç€\ãf€>0 7š\Æ9i\Â2\0= \0\ĞW¦)2Mi\çkg\0€^hšv¥v\èLš\0PŸ=\0ô\Â\Òÿo\Ë{ÿ’\Ìòô\å/>±Y;\Ãe@u‹\ß\ŞYòğgxZS\0ªR\0¨®4E1<¥„ÿ\İS•%\0ªZ¼¶3S¼ùJ\Ç©\È€º¼ù!{/jG`¸¦k`\ØJ´‹‘µS@¥\ä|D¬\×\ÎÁ0™\0P›PW\æB\í—@5‹\ßşW†­”¹\Ú.€jJ4vA3x‹\ßú×…\Ú&€Š\Ò\0šf¡v†I Š\Å+;svÿCD‰ø•\Ú&€:r¡v\è©D ŠRŠõˆˆ(e\æ\à6L\è–@-µ@o”=§\èœ@\ç\ìz†)@\ç\0ºg\×3\ÜÁF@jP\0\è\\‰˜¯ú%M\0èœ»\0\è\\›9WŠ‹(\ág\Êl\å\0	\0Z¼²3Wœÿ‡°7†®)\0tlß¨\î¦)³µ#0,\n\0\Ê(6;Á]•\Ù\Ê€®™\0À]¤Í±tL [m«\0Àİ´ior\n€\Î,^Û™‰÷ög\"³v\èRL\Ç\è–	\0\İy\×\ëN\á~\Ü	@—\0ºSŠ\0÷µ7[;Ã¡\0Ğ™\Ìül\í\Ğoe¶r\0D ;&\0ğ\09[;Ã¡\0Ğ»œ\á>²„)Q\0\èŒ]\Îğ e¶r\0D ‹\×v|ú‡1%£C\n\0\İpÈ”Œ.)\0\00@\n\0h#2\"üğÃûÿX¼òÏ¦\0tB\0è“¶±€N(\0t¢D|²v\0~F \é%@p(m\ÄB\íƒ\0\0¤\0\0À\0)\0t#\Ó\0B‰ò+µ30\n\0(¥\Ø\Ù‡\Å\Û\0\é†\0\04];\0‘Y;Œÿ_¡#&\0\0½Rf+` \0€)%fkg`\0\İ\â·şi¶v\0\î¤\0Ğ\é\Ù\Ú	\0¸“\0\0¤\0\0À\0)\0\0=c\ß]P\0\0zÇ¾Ÿq\ìöBÓ„£Ø¯€Ağ÷2\0\0\0¤\0\0À\0)\0\00@\n\0\0À±\Ëıv·v\0\î¤\0p\ì^\îS›µ3\0p\'\0\0H\0€ò&@º‘Y;ŒRj\'`\0L\0\0`€\0\0 €®8	\0\Ğ#\n\0\İ\Èô.\0€Q\0\0`€\0€™~wÚ’\Ç\Î1@:‘{\0j\ç€qpyù	Kf;\0:‘\ï\Ô\Î\0À\Ï(\0\00@\n\0\İ(\ÅH G\0ºQŠMM\0=¢\0\0ô‹²L\'\0:\áX’—f\Ñ€N8\Ö\Ğ/\n\0\Éğ\É /\0:S\Ò\Ú&<HFÙ®aP\0\0z%ß®€ağ*`:“\×K\æB\í\0˜\0\0ôKk¯\İP\0\èN\ÛnÔ\0ı—ö\Ê\Ğ	\0\0H 3ñ\å\'7jg€¾›\í\Ú€Ny\0\Ü\ß\å/=¹];Ã \0Ğ©.\è\Ç\0\éT±Y\"j\ç€>Êˆ\Ú\0:U\"Ş©\0€®9\n÷c‰Œ\Î(\0tj\Ïg¸\'2º¤\0Ğ©+_zr\ÛI\0¸»L™\î(\0T\à$\0\ÜM\Év»v†C \0\î\Â]R\0\è^\Æ\ßÔ\0}t\ÅK€\è@\r&\0ğ.¢[\n\0{ı¹Où‹>$£\ØK§\0ªğ\Æ3¸S‰¸^;Ã¢\0P‹)\0Ü®u<–n¹€:²ı›ˆR;ôˆ=\0t\Ë€*ö§,À\í¦÷>®\0\Ğ)Á¨\æ·ÿüŸvJ”™\Ú9 ¶Œ\Ü}ı¹\'Ÿ¨ƒa1 ¦\Ú ¼“\î)\0TS²\ØõaıŸ\Zl¤š,e#\"kÇ€>ğvL:g@5¯?÷©M7BDq (\0TU\ì€ø‹/?¹Q;Ã£\0P•}\0]¦õ\êP\0¨\ê`\0™\0Ô¡\0P\Õ\ë\Ï}j3¬2`\r€T¢\0P‹2S0jQ\0¨/\ãr\íP‹ë±©E º\Ç÷?¶Q;\Ô`úEM\n\0\Õ]^~b7\"\×k\ç€\Îe:C5\n\0½\à8 ƒ”N\0P@/\ìM›\00<–¿¨\ÉuÀôÆ—şû?½UJ\Ì\Õ\Î]ÈŒ\Íoı\î“O\×\ÎÁp™\0\ĞMi¿V;th£v\0†M 7öö\Z\Ë\0Hk\ßU)\0ôÆ•\å\'·3Ã¦(\áñıµ30lÓµÀí²´_‹h\ì`²en\\^>\á*lª2 W\Ò2\0CP{¥>€^±À”²¯\èR@\ïd\Æ\Å\Ú\à¸d\Ä\î\ë\Ï=¥\äR@\ï|¼}×§#&Vñ\ÚkzB w6G\åj\íp\Ú\Öú?ı \0\ĞO™®f\"™p\Ñ^Lo}\éü\ãVD™­F&#Ö¿ı\å\'—k\ç€\0z­x50%\Û0Ù¢7\0z«İ‹\Õ\Ú`¤Z\ïÿ§?\0z\ë\Êò“\Ûa½”‰›W–ŸÜ®nQ\0\èµ\ï`B¸í’Q\0\èµ+_~r#\"·k\ç€Gõ±½«µ3À\í\0z¯mË¹\Ú\àQdÄº\Ë\è€\Şûxû\îzFøË“±e÷?}¤\0\Ğ{——O\ì{S±\ë\å?ô\Ñt\í\0p\ï½{\á\Æ\Ô\Ç\Î\Ö\ÎGU\"ÿ\é%\0\Æ\Â\å\å»¹š\á‡\ãô£-\İÿô’À\Ø\Èı\Æf@\ÆLnœdşQ\0/QqK c$\í]¡¿\0ÆŠ)\0\ã\äc\í\Õ\Ú\à^\0ÆŠ)\0\ã#Wmş£\Ï\0Æ)\0\ã mş£\ç\0Æ)\0}—›6ÿ\Ñw\n\0c\É€~+6ÿ\Ñ{\n\0c\é\æUÁjç€\Ê\í+‹O®\ÖN¢\00¶>¾ÿŞ¹tG\0=“\Öş\n\0c\ëòò‰\İ\È4j¥72b÷\ã\í\r“)Æ‚ÀX»²ø\é—#r»vˆˆˆÌ‹ş1.\0\Æ^‰8S;øôÏ¸Q\0{\ßú\İO¯G\æF\íœOÿŒ€‰\ĞL¥)\0\Õøô\Ï8R\0˜¯?÷Ô¦cT\ã\Ó?cH`b8H\r>ı3®\0&\Æ\å\å»M\ä\É\Ú9ŸşS¥v\0µßºü\×J\ÄB\í\Â\î»\í\×\0Æ	\0§´\ÍÉ°@\'òŒ‡?\ãJ`\âÜ¼\'ÀeA·\Í+‹O­\ÖK`\"½±ø\é±Q;¬m=e¬)\0L,K›\Ìõ+ËŸÙ¨…ÀÄ²À1ÙœòéŸ±§\00\Ñ\ŞXüô…\È\\¯ƒÉ‘\ç®,?¹];<*€‰÷n¾o)€Q\Ù|cñ\Ó^ú\ÃDP\0˜x×—O\ìF\Û.\×\ÎÁøk[/šbr(\0\Â\Í\r[öğ(\Î]]~j³vodP¼%‡´yeñ\ÓO\×£dÀ ¼\×\ŞXû8\"£&‘À \\_>±Û¶ùL\íŒŒ8cô\Ï$R\0œ«\ËOmf„s\Ü<PFl\ØõÏ¤R\0¤7?}!3Vk\ç \×vo.ÁD²	Aû\â\åx+\"\æj\ç \Ú6Ÿ6úg’™\00h\ï¶7\É\È\í\Ú9\è\ëş	\0ƒ÷\ì\Ú÷\çJ‰k1S;}«o,}Æ®&\0ñA	x«vj\Ë\Í7–>\ã¼?ƒ`	\0\â\æÉ€Ÿú-7\ß\Ë=GD\0¸Í³k\ß_)%.\Õ\ÎA\çv3\ã\ëş‰	\0\Ü\æ\êòS«™\éÎ€añğgL\0\à.~kı\ï/E”•\Ú98vş–\0÷ L<M€ûP&–‡?ƒg\0\Ü\ÇÁyğ\\­ƒ\Ñ*™\Ëş\0 L–\Ì<weù3µs@m–\0\à±qu\é)gı!L\0\à\ĞzY\Ğ\Ûmr\Êp“\0Gpuù©\ÕÈ²»µ³pD™\ç®,?¹];ô…%\0xÏ®}.J®•(³•£pFÿğQ&\0ğ®.?µy#÷Îˆ\ÚYx0£ø(\0xD\Ş\Ğoq\á\ê\ÒSgjç€¾1€Gtó\îx{úi÷F¾\ïn¸\0F\"\×k\'\à£2ó\âõ\å\Ê\Ü\Åt\í\00²¹œ%Wj\Ç\à»7b\ïB\í\ĞW&\00o,z=,ô‹Oÿp_&\00\"\Ù\æF)±T;‘±{£øô÷c\0£R\âz\íÜ’«>ı\Ãı)\00\"%\ÊF\íh\Êş\Å\Ú \ï¼\0F\èÙµ¿\Ï\Ú†.37\ß|ş—®ú\Î\0F)s£v„¡+%}ú‡CP\0`„2Šu\ç\ÊnD\ëp\n\0ŒP)ñ7µ3Yfn\Úü‡£\0\0£”r¹v\n\0ŒP\ëvÀªüû‡\ÃS\0€‰ñ—ËŸÙ¨Æ…\0L„\ÌÜ¬Æ‰\0L„\â.8\0F¨D\Ì\Õ\Î0X¥x3\0#T\"fjg\08\0F(3>[;Àa¸F*g\ÓU¸„\Æ\0F©”…\Ú\0C€yv\íû6\0cC€\ÉÈ…\Ú-ó“µ#À8±\0F$\Ûö¥R¬ÿ\×R2M`\àL\0`¾¸¶5[Jñ\0ªÊ¿8\n\0F`¯mVjg¼3_\\Ûš­Æ…\0#P¢œªˆ6š…\Ê`l(\0ğˆ]{{%Š7\0öA¶±X;Œ;–\àÌ¯m\Í<\ÖNm)\0ı1UöO\\Y>±];ô	\0<‚\é¶9\í\á\ß/öcÀ\á˜\0ÀCzv\íûs™\í[µsğ!»\ï7û\'®/Ÿp=0Ü‡	\0<„ùµ­™¶İ¿T;wQbfºmN×}§\0ÀC˜n§\Î;÷\ß_¥”³\Âı)\0pDÏ®½½RJ¬\Ô\ÎÁıí·	\rÜ‡\0Gğ\ì\Ú\Û+™Åƒe”²ğ…o¾ır\í\ĞW6\Â!}~\í\í•\â\á?v²\Äòw–i½v\è\0`~mkf:§\ÎF„e\ã(c·išg®.?µY;\nô‰\0÷ğ\ì\Ú÷\çÚ¶=\ÖûÇŸ\0¡\0À‡|~\í\í•h\ã”]şF	€;(\0ók[³\Óm³QNy³\ß\ËØ¦,ÿ\åòg6jG\Ú\0\í¯m-DS^Š\âõ±C’™g¾ó\Âg/\Ô\Î5)\0\Îü\Ú\Ö\Ì\Ô~³§J	cşÁ\Êõ½&Oze0C¥\00ók[³\Óû\åTDq}/2¶#Û“ùâ‰\ÚQ k\n\0\ïó\ßø»¥RÚ—\"\ÊR\í,ôTæ…½©<g\ZÀ(\0L¤ùµ­™©¶Y)§¢\Äl\í<ŒŒ\íŒ8÷\ßû\ìj\í(\Ğ€‰ò\ì\Ú\Ö\\Û–S‘eÉ˜Ÿ‡‘¥m\ÏY`\Ò)\0L„\Ï\ã\í•(ñR‰X¨…É 0\é\0\Æ\Ög÷\Æü>\ís,&•ÀØ¹yvÿ”M}t)36#\â¢=L\n€±p\ë\ì~‰8kSUe\ìF\ä\ê\ŞT^¼¾|b»vxX\n\0½fS}vk*°?Õ®;BÈ¸Q\0\è%›ú?¹Y.+Œ€Ş°©I‘qy¿i\×-\ĞW\n\0\Õ}áµ­…¶)§ŠM}L¢Œ\íŒ\\/\Ñ\\ÿ\Î\ïı\Òz\í8p‹@·\Ş\Ô\Ş\Ô\ÇÀd\ÄF9˜l\\_>±Y;Ã¥\0Ğ©ùµ­¹¦-§ŠM}p0(¹Q²¹¼?µ¿a\ï\0]R\0\è\Ä\ç¿ñöJDœ\n\×\ï\Â=\İ6°w€c§\0pl\æ×¶f›ırª¸~\Î\Ş™À\È}ş·”¥}É¦>Œ\\/\Ç7L€‘˜_Ûši\Ú\æt\ÉxÉ¦>8f›Y\âr»ß®_ÿŠ„<€Gò…×¶\Ú(/•+µ³À elg\ÄF)yù;¿w\ÂR‡¦\0pd\ïå¥ˆr*Â¦>\è“\ÌX/%/\ïO…¥\îK\à\Ğ\æ×¶f›½r¶D8\Â\ãa3J~m¿	§\nø€úü7¶V2Š÷ò\Ã8;X*Xo3¿f\ß\0\n\0÷pği?VJ›ú`\Òd\ìf,\Ø70\\\n\0w°©\æ¶2psß€·„À\Ï6õe9\ë\Ó>\Ûm›]k<\á€³©¸e`²)\0dSpT\ÊÀ\äQ\0Â¦>`T”É \0L¸ù×¶šƒ‡şJ\í,À\ÊXoK^e`\ì(\0h~mk&öc©±©\è’20V€	2¿¶5[öÊ©\áú] Œİˆƒ2p\İ{zK˜\0ó\ß\ØZj\ŞË¿P;Àn•Ì‹\Ş@\Ø/\nÀ˜š_Ûš™jc%\ÛrÊ˜7_Gœ\Óy\Ñ\İõ)\0c\æ\Ö\Ùıpvo›\åà¢¢Uû\êP\0Æ„1?0±òƒı«µ£‰\Ğcók[3S\ï\ÇJ–<Qf+\Ç8^™»Qb½\Íb¿@€šek¶™Î³‘±¥ó”\Û%\Ë\Åı\Ç, Gæ¿±µÔ´y*JY¨ 72\×Û¦|Í‘\Â\ÑR\0*3\æ8¬Ü(_k÷bõú8Eğ¨€J\æ_Ùš-\Óyªd¬ó‘©À#S\0:6ÿ\Ú\ÖB“y*JYª`ü™\n<, #ó¯n­4cş¹\ÚY\0&’©À‘(\0\Çh~mk¦Ù‹\Óù’õ}€®8Ap\nÀ1pŒ n½W`¯œ³<ğQ\nÀÍ¿¶µ\Ğ|\Ú_©€\Ûdn´M¹hy\àg€˜uk¥‰|\Éù}€¾\Ë\í6Ë¹x,Ö‡¾< \0<‚ùW·VJÉ³\Ö÷\ÆL\æn–r1|z@8¢ùµ­™Ø‹\Ó\å\à(Ÿõ}€±—«9À}\nÀ!\İzqOxqÀd\Ê\\\ÏR.^ñ\ÄF\í(]P\0\à\æƒÿ¬}\0‘¹‘¥œ›ô\" \0\Ü\Ãü«[s\å\à\Å=+µ³\0PA\æFNğ\É\àC\æ_\ÛZ(™g\í\è\à@ng–s×¿rbµv’QR\0nò\à\àşr;K93)Á\0~\0dBö¶\0Ì¿¶µP\Úöl4\ÍB\í,\0Œ¡¶\İÈ¦\Û\"0¸ğÁƒ\ß\'~\0F!s#\Û\æä¸½G`0Àƒ€ã•«ùXsf\\^1<ñÀƒ€\Îd\îf\Ä\Åx¼¹\Ğ÷\"0±Àƒ€zr;\Û\æ\Ìõ\ß\ïï‰‰+\0ó¯lÍ–©ö|DYª€\Ë\Ü\ÈÒœ¹ş•›µ£|\Ø\Ä€›~¯\ì 2/\ä\ãÍ¹>-Œ}˜_Ûš‰\í\éR\Ê\Ù\ÚY\0\à2w3›“}Y\ë0ÿ\ê\Ö\é’\íY·ó06zrlp,Àü×·–²iÏ—(³•£\0À‘e\æn)Í¹\ë_9q¡V†±*\0ó¯n\Íe¶ç‹ı\0L€\Ì\Ü(•¦cQ\0\æ×¶fòF{¶”rºv\0¥ZÓ€\Ş€ùW·Ng¶g‹u~\0&XF®—Çš“]\èm˜mk!³=_¢\Ì\Õ\Î\0]\È\Ì\İ\Ò4\Ë]\\0Ô»`\ÜÀ\àe»ş\Õ_~ù8ÿˆ^€ù¯o-ei/÷0t™¹Qo–kI `ş•­\Ùl\ÚKv÷À\Ï\Ü\Ü ø\Ìq¼J¸õ7<ªùW·NgÓ¾\å\á\0w:˜ˆ\ç[ó¯n­Œü{ú–Oı\0px™y\á~õ—ÏŒ\êûU)\0ó_ÿ\Ş\é,\Å\Ñ>\08‚Œ\\-5gF±/ \Óps‡ÿ¥\áª^\0x™¹Y>6õÌ£–€\Î\nÀü+\ß]\ÈR\Ö|\ê€G3Š\Ğ\É&Àù?ıÛ—£i®yøÀ£+¥\Ì\å{û\×\æ×¶ú¹z¬€›#ÿµ±pœ\0Ñ£L­\0ùÀñ{\Øp,\às_ÿ\Ş\éR\Êù\ãø\Ş\0À2s³9b	yø¯ÿ\í¥(±2\ê\ï\0\Ü\ÛQKÀô¨ş\àùµ­™ö½ıkQ\Â\í}\0Ğ±ƒ\íùˆ8y˜¯\É)€ùW¶f\Û÷ö¯•\â\ê^\0¨¦\Ä\Ê\çşôo_>Ü—>¢ùW·\æ\Úv\ß?\0\è‰6\Û\åÿıûÿiı~_óHÀ\Ã\0ú\'3w›œzúúœØ¾\×\×<ô€‡?\0ôS)e¦m\ÚK÷ûš‡*\0ş\0\Ğo%b\á~û¼\à\á\0\ã\á~KGš\0xøÀø¸\ßRÀ¡\'\07\ÏùoyøÀx¹Û©€CM\0n½\ä\Ç\Ã\0\Æ\Ï\İ^\Ï¨	Ào|ı»—\"\Ê\Ê\È\0ÈŒ“ÿ\ëş\ãê­Ÿ?pğ¹¯ï´‡?\0Œ¹’goÿ\é}Àü«ÿw®D¸\Õ\0\Æ\\‰2û¹W¾·r\ë\ç÷,\0ók[3mÛ¬u\n\0\è@‰—nı\ã=@¾»w¶D™\í \0Ğ±0ÿ\Ê\Öl\Ä=\nÀ~\å»Q\Ê\éNS\0\Çn?öNEDL\ß\í7›(\ç³\Û<\0@J,EÄ™ü\Ü+\ß[‰÷½@\0\0_MNø\È@~\è˜\0\00YÚ²¿t\ÇÀ\Í\ã³U\Ò\0\0\İÈ˜¿c\à\Ó?\0L¾,9÷Aø/_ÿ\î’c\00ùJ”\Ù\n@\Éò\Ò}¾\0˜ %\âƒ\Ûşvj‡\0º\ÑDD´\ï\î/\Õ\0t\ç\ÖÀb\Õ\0@§šˆˆŒ\\¨œ\0\èP3ÿ\Ê\Öl)e¦v\0 ;\Í~Ù›«\0\èVS2\0\0˜\é\Ìøl	wÿÀ4\í\Î?\Ï\Ö\0t\ë#·\0“o:>ñs\0\0``L\0\0`€šfúcµ3\0\0kbú±\Ú\0€Y\0€j¢”\Í\Ú!\0€n59[;\0Ğ­¦d¸\0\Æ\0\0 \0\0¨\É(³•3\0\0kJ‰\Ù\Ú!\0€nY\0€R\0\0`€\0\0 \0\0h:2kg\0\0:f\0\04\íó?\0	\0\0\0\0¤\0\0À\05¹÷^\í\0@‡ò\ÆO£‰¶­\0\è˜%\0\0 &n¼[;\0Ğ¥\ï\Ú\0\0C“{\ïE“7~Z;\0Ğ¡6\æOT;\0Ğü\é\"\Úö` \0\0\Ãp\ë™P\0nü4ò½ŸT\r\0¯|\ï\'qk\é¿ÉŒİˆˆö‡ÿ‘\Ş	\0\0)Ûƒg}Dd\ÆnS\"7#\"b\ïƒ\ß\0\0&Kû\Ã‹\Øß‹ˆˆ¹9‘\×K\ÆBDDşû#ûx”OübÍŒ\0À\åOù\ï?ü\Ù\Ï#¯7SM®\ßşE\í;ÿbS \0Lˆüé¢}\ç_\îøµ©&\×KDÄ¯ÿñ\ëo7AB}\0\0\ÜIDATE‰¹\Û³ù…ÿ\å\è0\"\00Jù\ãhüƒıblş\Õıö\Ó7\ï(?üjüƒhğ¬\0\0cb/\Úü\ãGşq\ë™_nıônS€ˆˆhšh~n&\Ê\Ï2¢¸;\0z+\ÛÈŸ¼\í¿\ï\Æ]oû½ù\é?\"búÖ¯µS\íÉ¦m\Şú\È·\íAƒøñ¢|\â£|ü\ç£<ş	e\0\0ú Ûƒ÷ù¼û“\î\ák§Ú“·ş¹\Üş¿ö\'¯Ÿ.\çõNMG™z,¢i¢L\ìa\"\0!÷Ş‹h\Û\Èı÷½TŸgşúûÂ­Ÿ—Á¯ı\É_\\*QVF\0¨)#Wÿú\ç\ä\í¿ö‘¡\0À¤¸\Û\Ã?\â\æ]\0ö\×ø;\'3\â\Ìñ\Ç\0\ËÁ\Øÿ£ÿˆ{L\0nù\Õó>\×\ì7—\îz:\0\0è§Œ\Ívª=ù\Î<·y¯/¹o¸\å\×ÿø[+yJ\0€\ËØŒ(ÿê¾´ú /=T¸\åW\Ïÿù\\Ó–¥Œ˜/Q6\00\Z¹Q\"®·M®\ß\ïÿ‡©\0\ÜÍ¯ÿ·o-<\ê÷\0\0\æ¯ş\ë—6jg\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0€‡÷ÿ8µEG6›4\0\0\0\0IEND®B`‚','image/png');
 /*!40000 ALTER TABLE `imagenes_perfiles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -220,13 +224,13 @@ CREATE TABLE `ingresados` (
   `idMedico` int(11) NOT NULL,
   `FechaIngreso` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `Motivos` varchar(45) NOT NULL,
-  `idEnfermero` int(11) NOT NULL,
   `numeroHabitacion` int(11) NOT NULL,
+  `FechaAlta` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`idIngresado`),
   KEY `fk_Ingresados_pacientes1_idx` (`idPaciente`),
   KEY `fk_Ingresados_medicos1_idx` (`idMedico`),
   CONSTRAINT `fk_Ingresados_medicos1` FOREIGN KEY (`idMedico`) REFERENCES `medicos` (`idMedico`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Ingresados_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idpaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_Ingresados_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -328,25 +332,31 @@ DROP TABLE IF EXISTS `pacientes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pacientes` (
-  `idpaciente` int(11) NOT NULL AUTO_INCREMENT,
+  `idPaciente` int(11) NOT NULL AUTO_INCREMENT,
   `primerNombre` varchar(45) NOT NULL,
   `segundoNombre` varchar(45) NOT NULL,
   `primerApellido` varchar(45) NOT NULL,
   `segundoApellido` varchar(45) NOT NULL,
   `sexo` enum('M','F') NOT NULL,
   `fechanac` datetime NOT NULL,
-  `fecharegistro` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `DUI` varchar(10) DEFAULT NULL,
-  `idPaciente_Detalles` int(11) NOT NULL,
+  `fecharegistro` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `DUI` varchar(10) NOT NULL,
   `email` varchar(50) NOT NULL,
   `telefono` varchar(15) NOT NULL,
   `residencia` tinytext NOT NULL,
-  `idMunicipio` int(11) DEFAULT NULL,
-  PRIMARY KEY (`idpaciente`),
-  KEY `fk_pacientes_pacientes_detalles1_idx` (`idPaciente_Detalles`),
+  `idTipoSangre` int(11) NOT NULL,
+  `estatura` decimal(10,2) NOT NULL,
+  `idMunicipio` int(11) NOT NULL,
+  `estado_civil` enum('Soltero','Casado') NOT NULL,
+  `peso` decimal(10,2) NOT NULL,
+  `ocupacion` varchar(30) NOT NULL,
+  `telefono_emergencia` varchar(15) DEFAULT NULL,
+  `persona_emergencia` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`idPaciente`),
   KEY `idMunicipio` (`idMunicipio`),
+  KEY `idTipoSangre` (`idTipoSangre`),
   CONSTRAINT `fk_pacientes_municpio` FOREIGN KEY (`idMunicipio`) REFERENCES `municipios` (`idMunicipio`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_pacientes_pacientes_detalles1` FOREIGN KEY (`idPaciente_Detalles`) REFERENCES `pacientes_detalles` (`idPaciente_detalle`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_pacientes_sangretipo` FOREIGN KEY (`idTipoSangre`) REFERENCES `sangretipos` (`idTipoSangre`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -357,32 +367,6 @@ CREATE TABLE `pacientes` (
 LOCK TABLES `pacientes` WRITE;
 /*!40000 ALTER TABLE `pacientes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pacientes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `pacientes_detalles`
---
-
-DROP TABLE IF EXISTS `pacientes_detalles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `pacientes_detalles` (
-  `idPaciente_detalle` int(11) NOT NULL AUTO_INCREMENT,
-  `peso` decimal(3,2) NOT NULL,
-  `altura` decimal(3,2) NOT NULL,
-  `tipo_de_sangre` varchar(10) DEFAULT NULL,
-  `alergias` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`idPaciente_detalle`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `pacientes_detalles`
---
-
-LOCK TABLES `pacientes_detalles` WRITE;
-/*!40000 ALTER TABLE `pacientes_detalles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `pacientes_detalles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -427,7 +411,7 @@ CREATE TABLE `recetas_medicas` (
   `idPaciente` int(11) NOT NULL,
   PRIMARY KEY (`idReceta`),
   KEY `fk_recetas_medicas_pacientes1_idx` (`idPaciente`),
-  CONSTRAINT `fk_recetas_medicas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idpaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `fk_recetas_medicas_pacientes1` FOREIGN KEY (`idPaciente`) REFERENCES `pacientes` (`idPaciente`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -462,6 +446,30 @@ LOCK TABLES `roles` WRITE;
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` VALUES (1,'Administradores'),(2,'Doctor'),(3,'Enfermero');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sangretipos`
+--
+
+DROP TABLE IF EXISTS `sangretipos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sangretipos` (
+  `idTipoSangre` int(11) NOT NULL AUTO_INCREMENT,
+  `tipo` varchar(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`idTipoSangre`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sangretipos`
+--
+
+LOCK TABLES `sangretipos` WRITE;
+/*!40000 ALTER TABLE `sangretipos` DISABLE KEYS */;
+INSERT INTO `sangretipos` VALUES (1,'O-'),(2,'O+'),(3,'A-'),(4,'A+'),(5,'B-'),(6,'B+'),(7,'AB-'),(8,'AB+');
+/*!40000 ALTER TABLE `sangretipos` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -580,4 +588,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-23 21:56:20
+-- Dump completed on 2017-05-24 22:31:37
