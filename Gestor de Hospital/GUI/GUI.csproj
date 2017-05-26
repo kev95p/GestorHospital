@@ -55,6 +55,18 @@
     <Compile Include="GestionEmpleado\EmpleadosVista.Designer.cs">
       <DependentUpon>EmpleadosVista.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionMedicamentos\EdicionMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMedicamentos\EdicionMedicamentos.Designer.cs">
+      <DependentUpon>EdicionMedicamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionMedicamentos\MedicamentosVista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionMedicamentos\MedicamentosVista.Designer.cs">
+      <DependentUpon>MedicamentosVista.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionRol\EdicionRol.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionEmpleado\EmpleadosVista.resx">
       <DependentUpon>EmpleadosVista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMedicamentos\EdicionMedicamentos.resx">
+      <DependentUpon>EdicionMedicamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionMedicamentos\MedicamentosVista.resx">
+      <DependentUpon>MedicamentosVista.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionRol\EdicionRol.resx">
       <DependentUpon>EdicionRol.cs</DependentUpon>
