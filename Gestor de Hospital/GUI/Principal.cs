@@ -29,7 +29,8 @@ namespace GUI
             Intervalo.Start();
             //cargar usuarios label
             lblUsuario.Text = SessionManager.SessionManager.GetInstance.Usuario;
-            
+            lblmaquina.Text = Environment.MachineName.ToString();
+
         }
 
         private void work(object sender,DoWorkEventArgs e)
@@ -101,6 +102,26 @@ namespace GUI
         {
             GestionUsuario.UsuariosVista frm = new GestionUsuario.UsuariosVista();
             frm.ShowDialog();
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel4_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
