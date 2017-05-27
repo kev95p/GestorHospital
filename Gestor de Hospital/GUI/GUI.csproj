@@ -43,6 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GestionCitas\CitasVistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCitas\CitasVistas.Designer.cs">
+      <DependentUpon>CitasVistas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCitas\EdicionCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestionCitas\EdicionCitas.Designer.cs">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="GestionEmpleado\EdicionEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GestionCitas\CitasVistas.resx">
+      <DependentUpon>CitasVistas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCitas\EdicionCitas.resx">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionEmpleado\EdicionEmpleado.resx">
       <DependentUpon>EdicionEmpleado.cs</DependentUpon>
     </EmbeddedResource>
