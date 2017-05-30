@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbIDCita = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbPaciente = new System.Windows.Forms.TextBox();
-            this.txbMedico = new System.Windows.Forms.TextBox();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
+            this.txbMedico = new System.Windows.Forms.TextBox();
+            this.txbPaciente = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -85,19 +85,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalle de Cita";
             // 
-            // txbPaciente
+            // dtpFechaCita
             // 
-            this.txbPaciente.Location = new System.Drawing.Point(92, 56);
-            this.txbPaciente.Name = "txbPaciente";
-            this.txbPaciente.Size = new System.Drawing.Size(206, 20);
-            this.txbPaciente.TabIndex = 3;
+            this.dtpFechaCita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaCita.Location = new System.Drawing.Point(92, 115);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(103, 20);
+            this.dtpFechaCita.TabIndex = 7;
             // 
-            // txbMedico
+            // label4
             // 
-            this.txbMedico.Location = new System.Drawing.Point(92, 82);
-            this.txbMedico.Name = "txbMedico";
-            this.txbMedico.Size = new System.Drawing.Size(206, 20);
-            this.txbMedico.TabIndex = 4;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(38, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Fecha";
             // 
             // label2
             // 
@@ -117,22 +120,19 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Médico";
             // 
-            // label4
+            // txbMedico
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(38, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Fecha";
+            this.txbMedico.Location = new System.Drawing.Point(92, 82);
+            this.txbMedico.Name = "txbMedico";
+            this.txbMedico.Size = new System.Drawing.Size(206, 20);
+            this.txbMedico.TabIndex = 4;
             // 
-            // dtpFechaCita
+            // txbPaciente
             // 
-            this.dtpFechaCita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCita.Location = new System.Drawing.Point(92, 115);
-            this.dtpFechaCita.Name = "dtpFechaCita";
-            this.dtpFechaCita.Size = new System.Drawing.Size(103, 20);
-            this.dtpFechaCita.TabIndex = 7;
+            this.txbPaciente.Location = new System.Drawing.Point(92, 56);
+            this.txbPaciente.Name = "txbPaciente";
+            this.txbPaciente.Size = new System.Drawing.Size(206, 20);
+            this.txbPaciente.TabIndex = 3;
             // 
             // btnGuardar
             // 
@@ -151,6 +151,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EdicionCitas";
             this.Text = "Edicion de Citas";
             this.groupBox1.ResumeLayout(false);
