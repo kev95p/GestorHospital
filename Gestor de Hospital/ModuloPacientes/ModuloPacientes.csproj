@@ -96,6 +96,11 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SessionManager\SessionManager.csproj">
+      <Project>{d7a2fa1c-512d-48d8-bd65-e64501b942f4}</Project>
+      <Name>SessionManager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

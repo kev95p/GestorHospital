@@ -117,15 +117,13 @@ namespace CacheManager
 
         }
 
-        public static DataSet OBTENER_USUARIOS_SIN_ASIGNAR()
+        public static DataSet OBTENER_TIPO_SANGRE()
         {
             try
             {
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
-                string query = @"SELECT ID,usuario,rol
-                                FROM vistausuarios left join empleados on vistausuarios.ID = empleados.idUsuario 
-                                WHERE idEmpleado is null ;";
+                string query = @"select * from sangretipos";
                 cb.CommandText = query;
                 datos = cb.Select();
                 return datos;
@@ -134,24 +132,6 @@ namespace CacheManager
             {
                 return new DataSet();
             }
-
-        }
-
-        public static DataSet CONSULTA(string query)
-        {
-            try
-            {
-                DataSet datos = new DataSet();
-                CommandBuilder cb = new CommandBuilder();
-                cb.CommandText = query;
-                datos = cb.Select();
-                return datos;
-            }
-            catch
-            {
-                return new DataSet();
-            }
-
         }
 
     }

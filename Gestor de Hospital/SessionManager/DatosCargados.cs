@@ -13,6 +13,7 @@ namespace SessionManager
         private DataTable departamentos;
         private DataTable munipicipios;
         private DataTable roles;
+        private DataTable tipos_sangre;
         private static readonly object padlock = new object();
 
         public DataTable Departamentos
@@ -43,6 +44,18 @@ namespace SessionManager
                 roles = value;
             }
         }
+        public DataTable Tipos_sangre
+        {
+            get
+            {
+                return tipos_sangre;
+            }
+
+            set
+            {
+                tipos_sangre = value;
+            }
+        }
 
         public static DatosCargados Instancia
         {
@@ -59,13 +72,14 @@ namespace SessionManager
             }
         }
 
-
+       
 
         DatosCargados()
         {
             departamentos = CacheManager.Cache.OBTENER_DEPARTAMENTOS().Tables[0];
             munipicipios = CacheManager.Cache.OBTENER_MUNICIPIOS().Tables[0];
             roles = CacheManager.Cache.OBTENER_ROLES().Tables[0];
+            tipos_sangre = CacheManager.Cache.
         }
     }
 }
