@@ -32,14 +32,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbIDMedicamento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txbNombreMedicamento = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txbConcentracion = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.cbxVia = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txbPresentacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cbxVia = new System.Windows.Forms.ComboBox();
+            this.txbConcentracion = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txbNombreMedicamento = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,37 +89,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Medicamentos";
             // 
-            // txbNombreMedicamento
+            // cbxVia
             // 
-            this.txbNombreMedicamento.Location = new System.Drawing.Point(88, 55);
-            this.txbNombreMedicamento.Name = "txbNombreMedicamento";
-            this.txbNombreMedicamento.Size = new System.Drawing.Size(131, 20);
-            this.txbNombreMedicamento.TabIndex = 4;
+            this.cbxVia.FormattingEnabled = true;
+            this.cbxVia.Location = new System.Drawing.Point(88, 133);
+            this.cbxVia.Name = "cbxVia";
+            this.cbxVia.Size = new System.Drawing.Size(131, 21);
+            this.cbxVia.TabIndex = 10;
             // 
-            // label2
+            // label5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nombre";
-            // 
-            // txbConcentracion
-            // 
-            this.txbConcentracion.Location = new System.Drawing.Point(88, 81);
-            this.txbConcentracion.Name = "txbConcentracion";
-            this.txbConcentracion.Size = new System.Drawing.Size(131, 20);
-            this.txbConcentracion.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Concentración";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(60, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Via";
             // 
             // txbPresentacion
             // 
@@ -137,22 +122,37 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Presentación";
             // 
-            // label5
+            // txbConcentracion
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(60, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Via";
+            this.txbConcentracion.Location = new System.Drawing.Point(88, 81);
+            this.txbConcentracion.Name = "txbConcentracion";
+            this.txbConcentracion.Size = new System.Drawing.Size(131, 20);
+            this.txbConcentracion.TabIndex = 6;
             // 
-            // cbxVia
+            // label3
             // 
-            this.cbxVia.FormattingEnabled = true;
-            this.cbxVia.Location = new System.Drawing.Point(88, 133);
-            this.cbxVia.Name = "cbxVia";
-            this.cbxVia.Size = new System.Drawing.Size(131, 21);
-            this.cbxVia.TabIndex = 10;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Concentración";
+            // 
+            // txbNombreMedicamento
+            // 
+            this.txbNombreMedicamento.Location = new System.Drawing.Point(88, 55);
+            this.txbNombreMedicamento.Name = "txbNombreMedicamento";
+            this.txbNombreMedicamento.Size = new System.Drawing.Size(131, 20);
+            this.txbNombreMedicamento.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Nombre";
             // 
             // btnGuardar
             // 
@@ -171,6 +171,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EdicionMedicamentos";
             this.Text = "Edicion de Medicamentos";
             this.groupBox1.ResumeLayout(false);
