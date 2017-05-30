@@ -58,7 +58,8 @@
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtPersonaEmergencia = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -79,14 +80,14 @@
             this.pbxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImagen.Location = new System.Drawing.Point(6, 19);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(140, 160);
+            this.pbxImagen.Size = new System.Drawing.Size(124, 123);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 
             // btTomarFoto
             // 
-            this.btTomarFoto.Location = new System.Drawing.Point(152, 19);
+            this.btTomarFoto.Location = new System.Drawing.Point(147, 45);
             this.btTomarFoto.Name = "btTomarFoto";
             this.btTomarFoto.Size = new System.Drawing.Size(105, 23);
             this.btTomarFoto.TabIndex = 1;
@@ -96,7 +97,7 @@
             // 
             // btnSeleccionarFoto
             // 
-            this.btnSeleccionarFoto.Location = new System.Drawing.Point(152, 60);
+            this.btnSeleccionarFoto.Location = new System.Drawing.Point(147, 86);
             this.btnSeleccionarFoto.Name = "btnSeleccionarFoto";
             this.btnSeleccionarFoto.Size = new System.Drawing.Size(105, 23);
             this.btnSeleccionarFoto.TabIndex = 2;
@@ -111,7 +112,7 @@
             this.groupBox1.Controls.Add(this.btTomarFoto);
             this.groupBox1.Location = new System.Drawing.Point(569, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(271, 185);
+            this.groupBox1.Size = new System.Drawing.Size(271, 184);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Foto Perfil";
@@ -121,7 +122,7 @@
             this.groupBox2.Controls.Add(this.flowLayoutPanel1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(551, 185);
+            this.groupBox2.Size = new System.Drawing.Size(551, 184);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion Personal";
@@ -139,7 +140,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(545, 166);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(545, 165);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -351,12 +352,12 @@
             // flowLayoutPanel9
             // 
             this.flowLayoutPanel9.Controls.Add(this.label7);
-            this.flowLayoutPanel9.Controls.Add(this.comboBox1);
+            this.flowLayoutPanel9.Controls.Add(this.txtPersonaEmergencia);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel9.Location = new System.Drawing.Point(399, 48);
             this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(108, 49);
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(134, 39);
             this.flowLayoutPanel9.TabIndex = 8;
             // 
             // label7
@@ -364,23 +365,32 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(26, 13);
+            this.label7.Size = new System.Drawing.Size(110, 13);
             this.label7.TabIndex = 0;
-            this.label7.Text = "DUI";
+            this.label7.Text = "Persona Emergencias";
             // 
-            // comboBox1
+            // txtPersonaEmergencia
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(3, 16);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 1;
+            this.txtPersonaEmergencia.Location = new System.Drawing.Point(3, 16);
+            this.txtPersonaEmergencia.Name = "txtPersonaEmergencia";
+            this.txtPersonaEmergencia.Size = new System.Drawing.Size(110, 20);
+            this.txtPersonaEmergencia.TabIndex = 1;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Location = new System.Drawing.Point(15, 213);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(825, 189);
+            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Informacion Contacto";
             // 
             // EdicionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(852, 620);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -446,6 +456,7 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtPersonaEmergencia;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
