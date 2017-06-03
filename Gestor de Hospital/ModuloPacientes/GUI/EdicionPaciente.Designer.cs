@@ -36,13 +36,13 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrimerNombre = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSegundoNombre = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtPrimerApellido = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -199,7 +199,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
-            this.flowLayoutPanel2.Controls.Add(this.textBox1);
+            this.flowLayoutPanel2.Controls.Add(this.txtPrimerNombre);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 3);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -216,17 +216,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer Nombre";
             // 
-            // textBox1
+            // txtPrimerNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(3, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtPrimerNombre.Location = new System.Drawing.Point(3, 16);
+            this.txtPrimerNombre.Name = "txtPrimerNombre";
+            this.txtPrimerNombre.Size = new System.Drawing.Size(108, 20);
+            this.txtPrimerNombre.TabIndex = 1;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label2);
-            this.flowLayoutPanel3.Controls.Add(this.textBox2);
+            this.flowLayoutPanel3.Controls.Add(this.txtSegundoNombre);
             this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(137, 3);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -243,17 +243,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Segundo Nombre";
             // 
-            // textBox2
+            // txtSegundoNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(3, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(108, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtSegundoNombre.Location = new System.Drawing.Point(3, 16);
+            this.txtSegundoNombre.Name = "txtSegundoNombre";
+            this.txtSegundoNombre.Size = new System.Drawing.Size(108, 20);
+            this.txtSegundoNombre.TabIndex = 1;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label3);
-            this.flowLayoutPanel4.Controls.Add(this.textBox3);
+            this.flowLayoutPanel4.Controls.Add(this.txtPrimerApellido);
             this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(264, 3);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -270,12 +270,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Primer Apellido";
             // 
-            // textBox3
+            // txtPrimerApellido
             // 
-            this.textBox3.Location = new System.Drawing.Point(3, 16);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(108, 20);
-            this.textBox3.TabIndex = 1;
+            this.txtPrimerApellido.Location = new System.Drawing.Point(3, 16);
+            this.txtPrimerApellido.Name = "txtPrimerApellido";
+            this.txtPrimerApellido.Size = new System.Drawing.Size(108, 20);
+            this.txtPrimerApellido.TabIndex = 1;
             // 
             // flowLayoutPanel5
             // 
@@ -780,7 +780,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 490);
+            this.ClientSize = new System.Drawing.Size(852, 399);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -852,13 +852,13 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrimerNombre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSegundoNombre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtPrimerApellido;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
