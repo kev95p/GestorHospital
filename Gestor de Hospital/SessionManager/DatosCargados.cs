@@ -79,7 +79,7 @@ namespace SessionManager
             departamentos = CacheManager.Cache.OBTENER_DEPARTAMENTOS().Tables[0];
             munipicipios = CacheManager.Cache.OBTENER_MUNICIPIOS().Tables[0];
             roles = CacheManager.Cache.OBTENER_ROLES().Tables[0];
-            tipos_sangre = CacheManager.Cache.
+            tipos_sangre = CacheManager.Cache.OBTENER_TIPO_SANGRE().Tables[0];
         }
     }
 }

@@ -60,6 +60,9 @@ namespace ModuloPacientes.GUI
         private void CargarTipoSangre()
         {
             DataTable dt = SessionManager.DatosCargados.Instancia.Tipos_sangre;
+            cbTipoSangre.DataSource = dt;
+            cbTipoSangre.DisplayMember = "tipo";
+            cbTipoSangre.ValueMember = "idTipoSangre";
 
         }
 
