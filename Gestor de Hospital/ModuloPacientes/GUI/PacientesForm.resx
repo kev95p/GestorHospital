@@ -124,60 +124,60 @@
   <data name="btnAgregar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         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
-        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
+        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
 </value>
   </data>
   <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -257,19 +257,130 @@
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>122, 17</value>
   </metadata>
-  <metadata name="Imagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Nombres.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="Nombres.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="idPaciente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Apellidos.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="FechaRegistros.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="FechaRegistro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="Sexo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Imagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idImagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FechaNacimiento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DUI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="telefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="residencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idTipoSangre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="estatura.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idMunicipio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idDepartamento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="estado_civil.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="peso.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ocupacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="telefono_emergencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="persona_emergencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Nombres.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idPaciente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Apellidos.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FechaRegistro.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Sexo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Imagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idImagen.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FechaNacimiento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DUI.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="telefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="residencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idTipoSangre.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="estatura.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idMunicipio.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="idDepartamento.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="estado_civil.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="peso.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ocupacion.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="telefono_emergencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="persona_emergencia.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
 </root>

@@ -97,6 +97,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CacheManager\CacheManager.csproj">
+      <Project>{e010f1df-ed01-4b05-a19c-4d3c9377e9b4}</Project>
+      <Name>CacheManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CRUDManager\CRUDManager.csproj">
+      <Project>{ad9f9521-d34a-41f6-b0bc-82299b588ccc}</Project>
+      <Name>CRUDManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SessionManager\SessionManager.csproj">
       <Project>{d7a2fa1c-512d-48d8-bd65-e64501b942f4}</Project>
       <Name>SessionManager</Name>

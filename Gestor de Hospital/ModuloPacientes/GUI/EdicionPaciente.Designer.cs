@@ -45,17 +45,17 @@
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtSegundoApellido = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbMasculino = new System.Windows.Forms.RadioButton();
+            this.rbFemenino = new System.Windows.Forms.RadioButton();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.DUI = new System.Windows.Forms.MaskedTextBox();
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.cbEstadoCivil = new System.Windows.Forms.ComboBox();
@@ -64,7 +64,7 @@
             this.txtPersonaEmergencia = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtOcupacion = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
@@ -75,16 +75,16 @@
             this.cbMunicipios = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtResidencia = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoEmergencia = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel20 = new System.Windows.Forms.FlowLayoutPanel();
@@ -92,10 +92,12 @@
             this.cbTipoSangre = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel21 = new System.Windows.Forms.FlowLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtEstatura = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel22 = new System.Windows.Forms.FlowLayoutPanel();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtPeso = new System.Windows.Forms.TextBox();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -131,8 +133,7 @@
             this.pbxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImagen.Location = new System.Drawing.Point(6, 19);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(124, 123);
-            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxImagen.Size = new System.Drawing.Size(135, 131);
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 
@@ -163,7 +164,7 @@
             this.groupBox1.Controls.Add(this.btTomarFoto);
             this.groupBox1.Location = new System.Drawing.Point(569, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(271, 184);
+            this.groupBox1.Size = new System.Drawing.Size(271, 166);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Foto Perfil";
@@ -173,7 +174,7 @@
             this.groupBox2.Controls.Add(this.flowLayoutPanel1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(551, 184);
+            this.groupBox2.Size = new System.Drawing.Size(551, 166);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion Personal";
@@ -188,12 +189,11 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel10);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel9);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel11);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(545, 165);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(545, 147);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -280,7 +280,7 @@
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label4);
-            this.flowLayoutPanel5.Controls.Add(this.textBox4);
+            this.flowLayoutPanel5.Controls.Add(this.txtSegundoApellido);
             this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(391, 3);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -297,12 +297,12 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Segundo Apellido";
             // 
-            // textBox4
+            // txtSegundoApellido
             // 
-            this.textBox4.Location = new System.Drawing.Point(3, 16);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(108, 20);
-            this.textBox4.TabIndex = 1;
+            this.txtSegundoApellido.Location = new System.Drawing.Point(3, 16);
+            this.txtSegundoApellido.Name = "txtSegundoApellido";
+            this.txtSegundoApellido.Size = new System.Drawing.Size(108, 20);
+            this.txtSegundoApellido.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -316,40 +316,40 @@
             // 
             // flowLayoutPanel6
             // 
-            this.flowLayoutPanel6.Controls.Add(this.radioButton1);
-            this.flowLayoutPanel6.Controls.Add(this.radioButton2);
+            this.flowLayoutPanel6.Controls.Add(this.rbMasculino);
+            this.flowLayoutPanel6.Controls.Add(this.rbFemenino);
             this.flowLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(3, 16);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(156, 20);
             this.flowLayoutPanel6.TabIndex = 0;
             // 
-            // radioButton1
+            // rbMasculino
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(73, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Masculino";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbMasculino.AutoSize = true;
+            this.rbMasculino.Location = new System.Drawing.Point(3, 3);
+            this.rbMasculino.Name = "rbMasculino";
+            this.rbMasculino.Size = new System.Drawing.Size(73, 17);
+            this.rbMasculino.TabIndex = 0;
+            this.rbMasculino.TabStop = true;
+            this.rbMasculino.Text = "Masculino";
+            this.rbMasculino.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbFemenino
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(82, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(71, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Femenino";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbFemenino.AutoSize = true;
+            this.rbFemenino.Location = new System.Drawing.Point(82, 3);
+            this.rbFemenino.Name = "rbFemenino";
+            this.rbFemenino.Size = new System.Drawing.Size(71, 17);
+            this.rbFemenino.TabIndex = 1;
+            this.rbFemenino.TabStop = true;
+            this.rbFemenino.Text = "Femenino";
+            this.rbFemenino.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.label5);
-            this.flowLayoutPanel7.Controls.Add(this.dateTimePicker1);
+            this.flowLayoutPanel7.Controls.Add(this.dtpFechaNac);
             this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(178, 48);
             this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -366,18 +366,18 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Fecha de Nacimiento";
             // 
-            // dateTimePicker1
+            // dtpFechaNac
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 16);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(108, 20);
-            this.dateTimePicker1.TabIndex = 0;
+            this.dtpFechaNac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaNac.Location = new System.Drawing.Point(3, 16);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(108, 20);
+            this.dtpFechaNac.TabIndex = 0;
             // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.Controls.Add(this.label6);
-            this.flowLayoutPanel8.Controls.Add(this.maskedTextBox1);
+            this.flowLayoutPanel8.Controls.Add(this.DUI);
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(305, 48);
             this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -394,13 +394,13 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "DUI";
             // 
-            // maskedTextBox1
+            // DUI
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(3, 16);
-            this.maskedTextBox1.Mask = "00000000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(68, 20);
-            this.maskedTextBox1.TabIndex = 1;
+            this.DUI.Location = new System.Drawing.Point(3, 16);
+            this.DUI.Mask = "00000000-0";
+            this.DUI.Name = "DUI";
+            this.DUI.Size = new System.Drawing.Size(68, 20);
+            this.DUI.TabIndex = 1;
             // 
             // flowLayoutPanel10
             // 
@@ -435,7 +435,7 @@
             this.flowLayoutPanel9.Controls.Add(this.label7);
             this.flowLayoutPanel9.Controls.Add(this.txtPersonaEmergencia);
             this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 95);
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 50);
             this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(124, 39);
@@ -460,9 +460,9 @@
             // flowLayoutPanel11
             // 
             this.flowLayoutPanel11.Controls.Add(this.label9);
-            this.flowLayoutPanel11.Controls.Add(this.textBox5);
+            this.flowLayoutPanel11.Controls.Add(this.txtOcupacion);
             this.flowLayoutPanel11.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel11.Location = new System.Drawing.Point(147, 95);
+            this.flowLayoutPanel11.Location = new System.Drawing.Point(10, 95);
             this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(125, 39);
@@ -477,17 +477,17 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Ocupacion";
             // 
-            // textBox5
+            // txtOcupacion
             // 
-            this.textBox5.Location = new System.Drawing.Point(3, 16);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(110, 20);
-            this.textBox5.TabIndex = 1;
+            this.txtOcupacion.Location = new System.Drawing.Point(3, 16);
+            this.txtOcupacion.Name = "txtOcupacion";
+            this.txtOcupacion.Size = new System.Drawing.Size(110, 20);
+            this.txtOcupacion.TabIndex = 1;
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.flowLayoutPanel12);
-            this.groupBox4.Location = new System.Drawing.Point(15, 202);
+            this.groupBox4.Location = new System.Drawing.Point(15, 184);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(825, 112);
             this.groupBox4.TabIndex = 5;
@@ -501,6 +501,7 @@
             this.flowLayoutPanel12.Controls.Add(this.flowLayoutPanel15);
             this.flowLayoutPanel12.Controls.Add(this.flowLayoutPanel16);
             this.flowLayoutPanel12.Controls.Add(this.flowLayoutPanel17);
+            this.flowLayoutPanel12.Controls.Add(this.flowLayoutPanel9);
             this.flowLayoutPanel12.Controls.Add(this.flowLayoutPanel18);
             this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel12.Location = new System.Drawing.Point(3, 16);
@@ -568,7 +569,7 @@
             // flowLayoutPanel15
             // 
             this.flowLayoutPanel15.Controls.Add(this.label12);
-            this.flowLayoutPanel15.Controls.Add(this.textBox6);
+            this.flowLayoutPanel15.Controls.Add(this.txtResidencia);
             this.flowLayoutPanel15.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel15.Location = new System.Drawing.Point(296, 3);
             this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -585,17 +586,17 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Residencia";
             // 
-            // textBox6
+            // txtResidencia
             // 
-            this.textBox6.Location = new System.Drawing.Point(3, 16);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(200, 20);
-            this.textBox6.TabIndex = 1;
+            this.txtResidencia.Location = new System.Drawing.Point(3, 16);
+            this.txtResidencia.Name = "txtResidencia";
+            this.txtResidencia.Size = new System.Drawing.Size(200, 20);
+            this.txtResidencia.TabIndex = 1;
             // 
             // flowLayoutPanel16
             // 
             this.flowLayoutPanel16.Controls.Add(this.label13);
-            this.flowLayoutPanel16.Controls.Add(this.textBox7);
+            this.flowLayoutPanel16.Controls.Add(this.txtEmail);
             this.flowLayoutPanel16.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel16.Location = new System.Drawing.Point(517, 3);
             this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -612,17 +613,17 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "Email";
             // 
-            // textBox7
+            // txtEmail
             // 
-            this.textBox7.Location = new System.Drawing.Point(3, 16);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(126, 20);
-            this.textBox7.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(3, 16);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(126, 20);
+            this.txtEmail.TabIndex = 1;
             // 
             // flowLayoutPanel17
             // 
             this.flowLayoutPanel17.Controls.Add(this.label14);
-            this.flowLayoutPanel17.Controls.Add(this.textBox8);
+            this.flowLayoutPanel17.Controls.Add(this.txtTelefono);
             this.flowLayoutPanel17.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel17.Location = new System.Drawing.Point(670, 3);
             this.flowLayoutPanel17.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -639,19 +640,19 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Telefono";
             // 
-            // textBox8
+            // txtTelefono
             // 
-            this.textBox8.Location = new System.Drawing.Point(3, 16);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(129, 20);
-            this.textBox8.TabIndex = 1;
+            this.txtTelefono.Location = new System.Drawing.Point(3, 16);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(129, 20);
+            this.txtTelefono.TabIndex = 1;
             // 
             // flowLayoutPanel18
             // 
             this.flowLayoutPanel18.Controls.Add(this.label15);
-            this.flowLayoutPanel18.Controls.Add(this.textBox9);
+            this.flowLayoutPanel18.Controls.Add(this.txtTelefonoEmergencia);
             this.flowLayoutPanel18.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel18.Location = new System.Drawing.Point(10, 50);
+            this.flowLayoutPanel18.Location = new System.Drawing.Point(147, 50);
             this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(145, 39);
@@ -666,17 +667,17 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Telefono Emergencia";
             // 
-            // textBox9
+            // txtTelefonoEmergencia
             // 
-            this.textBox9.Location = new System.Drawing.Point(3, 16);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(129, 20);
-            this.textBox9.TabIndex = 1;
+            this.txtTelefonoEmergencia.Location = new System.Drawing.Point(3, 16);
+            this.txtTelefonoEmergencia.Name = "txtTelefonoEmergencia";
+            this.txtTelefonoEmergencia.Size = new System.Drawing.Size(129, 20);
+            this.txtTelefonoEmergencia.TabIndex = 1;
             // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.flowLayoutPanel19);
-            this.groupBox5.Location = new System.Drawing.Point(15, 320);
+            this.groupBox5.Location = new System.Drawing.Point(15, 302);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(822, 66);
             this.groupBox5.TabIndex = 6;
@@ -725,7 +726,7 @@
             // flowLayoutPanel21
             // 
             this.flowLayoutPanel21.Controls.Add(this.label17);
-            this.flowLayoutPanel21.Controls.Add(this.textBox10);
+            this.flowLayoutPanel21.Controls.Add(this.txtEstatura);
             this.flowLayoutPanel21.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel21.Location = new System.Drawing.Point(153, 3);
             this.flowLayoutPanel21.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -742,17 +743,17 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Estatura";
             // 
-            // textBox10
+            // txtEstatura
             // 
-            this.textBox10.Location = new System.Drawing.Point(3, 16);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(52, 20);
-            this.textBox10.TabIndex = 1;
+            this.txtEstatura.Location = new System.Drawing.Point(3, 16);
+            this.txtEstatura.Name = "txtEstatura";
+            this.txtEstatura.Size = new System.Drawing.Size(52, 20);
+            this.txtEstatura.TabIndex = 1;
             // 
             // flowLayoutPanel22
             // 
             this.flowLayoutPanel22.Controls.Add(this.label18);
-            this.flowLayoutPanel22.Controls.Add(this.textBox11);
+            this.flowLayoutPanel22.Controls.Add(this.txtPeso);
             this.flowLayoutPanel22.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel22.Location = new System.Drawing.Point(227, 3);
             this.flowLayoutPanel22.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
@@ -769,18 +770,40 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "Peso";
             // 
-            // textBox11
+            // txtPeso
             // 
-            this.textBox11.Location = new System.Drawing.Point(3, 16);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(52, 20);
-            this.textBox11.TabIndex = 1;
+            this.txtPeso.Location = new System.Drawing.Point(3, 16);
+            this.txtPeso.Name = "txtPeso";
+            this.txtPeso.Size = new System.Drawing.Size(52, 20);
+            this.txtPeso.TabIndex = 1;
+            // 
+            // btnAceptar
+            // 
+            this.btnAceptar.Location = new System.Drawing.Point(285, 398);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 7;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(428, 398);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // EdicionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 399);
+            this.ClientSize = new System.Drawing.Size(864, 444);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -843,8 +866,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Button btTomarFoto;
         private System.Windows.Forms.Button btnSeleccionarFoto;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -852,65 +873,68 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPrimerNombre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtSegundoNombre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPrimerApellido;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPersonaEmergencia;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cbEstadoCivil;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbDepartamentos;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbMunicipios;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel20;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ComboBox cbTipoSangre;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel22;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.PictureBox pbxImagen;
+        public System.Windows.Forms.TextBox txtPrimerNombre;
+        public System.Windows.Forms.TextBox txtSegundoNombre;
+        public System.Windows.Forms.TextBox txtPrimerApellido;
+        public System.Windows.Forms.TextBox txtSegundoApellido;
+        public System.Windows.Forms.RadioButton rbMasculino;
+        public System.Windows.Forms.RadioButton rbFemenino;
+        public System.Windows.Forms.DateTimePicker dtpFechaNac;
+        public System.Windows.Forms.MaskedTextBox DUI;
+        public System.Windows.Forms.TextBox txtPersonaEmergencia;
+        public System.Windows.Forms.ComboBox cbEstadoCivil;
+        public System.Windows.Forms.TextBox txtOcupacion;
+        public System.Windows.Forms.ComboBox cbDepartamentos;
+        public System.Windows.Forms.ComboBox cbMunicipios;
+        public System.Windows.Forms.TextBox txtResidencia;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtTelefonoEmergencia;
+        public System.Windows.Forms.ComboBox cbTipoSangre;
+        public System.Windows.Forms.TextBox txtEstatura;
+        public System.Windows.Forms.TextBox txtPeso;
     }
 }
