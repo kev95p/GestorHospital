@@ -134,5 +134,23 @@ namespace CacheManager
             }
         }
 
+
+        public static DataSet OBTENER_MEDICAMENTOS()
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"SELECT * FROM hospital.medicamentos";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+        }
+
     }
 }

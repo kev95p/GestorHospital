@@ -36,6 +36,10 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblmaquina = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administracionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionesBasicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,10 +52,7 @@
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
-            this.lblmaquina = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.gestionDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +115,36 @@
             this.lblUsuario.Text = "nombre";
             this.lblUsuario.Click += new System.EventHandler(this.lblUsuario_Click);
             // 
+            // toolStripStatusLabel5
+            // 
+            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+            this.toolStripStatusLabel5.Size = new System.Drawing.Size(10, 25);
+            this.toolStripStatusLabel5.Text = "|";
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel4.Image")));
+            this.toolStripStatusLabel4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(151, 25);
+            this.toolStripStatusLabel4.Text = "Estacion  de Trabajo";
+            this.toolStripStatusLabel4.Click += new System.EventHandler(this.toolStripStatusLabel4_Click_1);
+            // 
+            // lblmaquina
+            // 
+            this.lblmaquina.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmaquina.Name = "lblmaquina";
+            this.lblmaquina.Size = new System.Drawing.Size(58, 25);
+            this.lblmaquina.Text = "maquina";
+            this.lblmaquina.Click += new System.EventHandler(this.toolStripStatusLabel4_Click);
+            // 
+            // toolStripStatusLabel7
+            // 
+            this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
+            this.toolStripStatusLabel7.Size = new System.Drawing.Size(10, 25);
+            this.toolStripStatusLabel7.Text = "|";
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -141,7 +172,8 @@
             // 
             this.gestionesBasicasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionRolesToolStripMenuItem,
-            this.gestionUsuariosToolStripMenuItem});
+            this.gestionUsuariosToolStripMenuItem,
+            this.gestionDeMedicamentosToolStripMenuItem});
             this.gestionesBasicasToolStripMenuItem.Name = "gestionesBasicasToolStripMenuItem";
             this.gestionesBasicasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.gestionesBasicasToolStripMenuItem.Text = "Gestiones Basicas";
@@ -149,14 +181,14 @@
             // gestionRolesToolStripMenuItem
             // 
             this.gestionRolesToolStripMenuItem.Name = "gestionRolesToolStripMenuItem";
-            this.gestionRolesToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.gestionRolesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.gestionRolesToolStripMenuItem.Text = "Gestion Roles";
             this.gestionRolesToolStripMenuItem.Click += new System.EventHandler(this.gestionRolesToolStripMenuItem_Click);
             // 
             // gestionUsuariosToolStripMenuItem
             // 
             this.gestionUsuariosToolStripMenuItem.Name = "gestionUsuariosToolStripMenuItem";
-            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             this.gestionUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionUsuariosToolStripMenuItem_Click);
             // 
@@ -196,35 +228,12 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
-            // lblmaquina
+            // gestionDeMedicamentosToolStripMenuItem
             // 
-            this.lblmaquina.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmaquina.Name = "lblmaquina";
-            this.lblmaquina.Size = new System.Drawing.Size(58, 25);
-            this.lblmaquina.Text = "maquina";
-            this.lblmaquina.Click += new System.EventHandler(this.toolStripStatusLabel4_Click);
-            // 
-            // toolStripStatusLabel5
-            // 
-            this.toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-            this.toolStripStatusLabel5.Size = new System.Drawing.Size(10, 25);
-            this.toolStripStatusLabel5.Text = "|";
-            // 
-            // toolStripStatusLabel7
-            // 
-            this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
-            this.toolStripStatusLabel7.Size = new System.Drawing.Size(10, 25);
-            this.toolStripStatusLabel7.Text = "|";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel4.Image")));
-            this.toolStripStatusLabel4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(151, 25);
-            this.toolStripStatusLabel4.Text = "Estacion  de Trabajo";
-            this.toolStripStatusLabel4.Click += new System.EventHandler(this.toolStripStatusLabel4_Click_1);
+            this.gestionDeMedicamentosToolStripMenuItem.Name = "gestionDeMedicamentosToolStripMenuItem";
+            this.gestionDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.gestionDeMedicamentosToolStripMenuItem.Text = "Gestion de Medicamentos";
+            this.gestionDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeMedicamentosToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -274,5 +283,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripMenuItem gestionDeMedicamentosToolStripMenuItem;
     }
 }

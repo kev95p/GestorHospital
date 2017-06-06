@@ -90,8 +90,8 @@ namespace CRUDManager.Entidades
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
-            query.Append("INSERT INTO hospital.medicamentos(nombre, concentracion, presentacion, via) VALUES(");
-            query.Append("'" + Nombre + "', '" + Concentracion + "', '" + Presentacion + "', '" + Via + "'");
+            query.Append("INSERT INTO hospital.medicamentos ( nombre, concentracion, presentacion, via ) VALUES ( ");
+            query.Append(" '" + Nombre + "', '" + Concentracion + "', '" + Presentacion + "', '" + Via + "'");
             cb.CommandText = query.ToString();
 
             int rowAffected = Insert(cb);
@@ -104,7 +104,7 @@ namespace CRUDManager.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("UPDATE hospital.medicamentos SET ");
-            query.Append("nombre = '" + Nombre + "', concentracion = '" + Concentracion + "', presentacion = '" + Presentacion + "', via = " + Via + " ");
+            query.Append("nombre = '" + Nombre + "', concentracion = '" + Concentracion + "', presentacion = '" + Presentacion + "', via = '" + Via + "' ");
             query.Append("WHERE idMedicamento = " + IdMedicamento + ";");
             cb.CommandText = query.ToString();
 

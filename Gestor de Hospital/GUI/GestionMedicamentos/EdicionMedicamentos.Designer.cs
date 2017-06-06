@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbIDMedicamento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbxVia = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbPresentacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,17 +41,21 @@
             this.txbNombreMedicamento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtVia = new System.Windows.Forms.TextBox();
+            this.errorMedicamentos = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMedicamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(53, 217);
+            this.btnCancelar.Location = new System.Drawing.Point(151, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -72,7 +76,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cbxVia);
+            this.groupBox1.Controls.Add(this.txtVia);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txbPresentacion);
             this.groupBox1.Controls.Add(this.label4);
@@ -88,14 +92,6 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Medicamentos";
-            // 
-            // cbxVia
-            // 
-            this.cbxVia.FormattingEnabled = true;
-            this.cbxVia.Location = new System.Drawing.Point(88, 133);
-            this.cbxVia.Name = "cbxVia";
-            this.cbxVia.Size = new System.Drawing.Size(131, 21);
-            this.cbxVia.TabIndex = 10;
             // 
             // label5
             // 
@@ -156,12 +152,24 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(160, 217);
+            this.btnGuardar.Location = new System.Drawing.Point(54, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Aceptar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtVia
+            // 
+            this.txtVia.Location = new System.Drawing.Point(88, 133);
+            this.txtVia.Name = "txtVia";
+            this.txtVia.Size = new System.Drawing.Size(131, 20);
+            this.txtVia.TabIndex = 10;
+            // 
+            // errorMedicamentos
+            // 
+            this.errorMedicamentos.ContainerControl = this;
             // 
             // EdicionMedicamentos
             // 
@@ -176,6 +184,7 @@
             this.Text = "Edicion de Medicamentos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorMedicamentos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -184,16 +193,17 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbIDMedicamento;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbxVia;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txbPresentacion;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txbConcentracion;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbNombreMedicamento;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox txbIDMedicamento;
+        public System.Windows.Forms.TextBox txbPresentacion;
+        public System.Windows.Forms.TextBox txbConcentracion;
+        public System.Windows.Forms.TextBox txbNombreMedicamento;
+        public System.Windows.Forms.TextBox txtVia;
+        private System.Windows.Forms.ErrorProvider errorMedicamentos;
     }
 }
