@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Entidades\Medicamentos.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="OperacionesCrud.cs" />
