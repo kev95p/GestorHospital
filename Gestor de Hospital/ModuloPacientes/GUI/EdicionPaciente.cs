@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CRUDManager.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,15 @@ namespace ModuloPacientes.GUI
 {
     public partial class EdicionPaciente : Form
     {
+        public bool modificar = false;
+        public int id = 0;
         public EdicionPaciente()
         {
             InitializeComponent();
             CargarEstadoCivil();
             CargarDepartamentos();
             CargarMunicipios();
+            CargarTipoSangre();
         }
 
         private void CargarEstadoCivil()
@@ -70,9 +74,88 @@ namespace ModuloPacientes.GUI
         {
             CamaraForm frm = new CamaraForm();
             frm.ShowDialog();
-            pbxImagen.Image = frm.pbxImagen.Image;
+            pbxImagen.Image = rescalarImagen(frm.pbxImagen.Image,new Size(frm.pbxImagen.Image.Size.Width/4, frm.pbxImagen.Image.Size.Height/4));
         }
 
+        private Image rescalarImagen(Image img, Size tamaño)
+        {
+            return (new Bitmap(img, tamaño));
+        }
+
+        private void Procesar()
+        {
+            Paciente paciente = new Paciente();
+            ImagenPerfil imagen = new ImagenPerfil();
+
+            imagen.Imagen = pbxImagen.Image;
+            paciente.IdPaciente = id;
+            paciente.Imagen = imagen;
+            paciente.PrimerNombre = txtPrimerNombre.Text;
+            paciente.SegundoNombre = txtSegundoNombre.Text;
+            paciente.PrimerApellido = txtPrimerApellido.Text;
+            paciente.SegundoApellido = txtSegundoApellido.Text;
+            if (rbMasculino.Checked)
+            {
+                paciente.Sexo = "1";
+            }
+            else if(rbFemenino.Checked)
+            {
+                paciente.Sexo = "2";
+            }
+            paciente.Telefono = txtTelefono.Text;
+            paciente.Dui = DUI.Text;
+            paciente.Telefono_emergencia = txtTelefonoEmergencia.Text;
+            paciente.Persona_emergencia = txtPersonaEmergencia.Text;
+            paciente.Peso = txtPeso.Text;
+            paciente.Estatura = txtEstatura.Text;
+            paciente.Estado_civil = cbEstadoCivil.SelectedValue.ToString();
+            paciente.IdMunicipio = cbMunicipios.SelectedValue.ToString();
+            paciente.Tiposangre = cbTipoSangre.SelectedValue.ToString();
+            paciente.Residencia = txtResidencia.Text;
+            paciente.Email = txtEmail.Text;
+            paciente.FechaNac =FormatearFecha(dtpFechaNac.Text);
+            paciente.Ocupacion = txtOcupacion.Text;
+
+            if (modificar == true)
+            {
+                
+                if (paciente.actualizar())
+                {
+                    MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+            }
+            else
+            {
+                if (paciente.insertar())
+                {
+                    MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            
+                      
+        }
+
+        private string FormatearFecha(string fecha)
+        {
+            string[] partesFecha = fecha.Split('/');
+            string fechaFormateada = partesFecha[2] + "-" + partesFecha[1] + "-" + partesFecha[0];
+            return fechaFormateada;
+        }
+
+        
         private void btnSeleccionarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -89,6 +172,16 @@ namespace ModuloPacientes.GUI
             {
                 CargarMunicipios();
             }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            Procesar();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

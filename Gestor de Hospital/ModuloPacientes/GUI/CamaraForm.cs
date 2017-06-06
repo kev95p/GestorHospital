@@ -41,5 +41,10 @@ namespace ModuloPacientes.GUI
         {
             Close();
         }
+
+        private void pbxImagen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
