@@ -45,15 +45,13 @@
             this.gestionesBasicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gestionDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
-            this.gestionDeEnfermedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +126,7 @@
             this.toolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel4.Image")));
             this.toolStripStatusLabel4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(151, 25);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(152, 25);
             this.toolStripStatusLabel4.Text = "Estacion  de Trabajo";
             this.toolStripStatusLabel4.Click += new System.EventHandler(this.toolStripStatusLabel4_Click_1);
             // 
@@ -148,12 +146,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administracionToolStripMenuItem,
+            this.gestionPacientesToolStripMenuItem,
             this.verToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1140, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1140, 32);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -162,22 +163,20 @@
             this.administracionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionesBasicasToolStripMenuItem,
             this.empleadosToolStripMenuItem,
-            this.pacientesToolStripMenuItem,
             this.toolStripSeparator1,
             this.preferenciasToolStripMenuItem});
+            this.administracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("administracionToolStripMenuItem.Image")));
             this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
-            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.administracionToolStripMenuItem.Size = new System.Drawing.Size(135, 28);
             this.administracionToolStripMenuItem.Text = "Administracion";
             // 
             // gestionesBasicasToolStripMenuItem
             // 
             this.gestionesBasicasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionRolesToolStripMenuItem,
-            this.gestionUsuariosToolStripMenuItem,
-            this.gestionDeMedicamentosToolStripMenuItem,
-            this.gestionDeEnfermedadesToolStripMenuItem});
+            this.gestionUsuariosToolStripMenuItem});
             this.gestionesBasicasToolStripMenuItem.Name = "gestionesBasicasToolStripMenuItem";
-            this.gestionesBasicasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.gestionesBasicasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.gestionesBasicasToolStripMenuItem.Text = "Gestiones Basicas";
             // 
             // gestionRolesToolStripMenuItem
@@ -194,26 +193,12 @@
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             this.gestionUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionUsuariosToolStripMenuItem_Click);
             // 
-            // gestionDeMedicamentosToolStripMenuItem
-            // 
-            this.gestionDeMedicamentosToolStripMenuItem.Name = "gestionDeMedicamentosToolStripMenuItem";
-            this.gestionDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.gestionDeMedicamentosToolStripMenuItem.Text = "Gestion de Medicamentos";
-            this.gestionDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeMedicamentosToolStripMenuItem_Click);
-            // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
             this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
-            // 
-            // pacientesToolStripMenuItem
-            // 
-            this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.pacientesToolStripMenuItem.Text = "Pacientes";
-            this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -228,21 +213,22 @@
             // 
             // verToolStripMenuItem
             // 
+            this.verToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verToolStripMenuItem.Image")));
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
-            this.verToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-            this.verToolStripMenuItem.Text = "Ver";
+            this.verToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
+            this.verToolStripMenuItem.Text = "Reportes";
             // 
             // Intervalo
             // 
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
-            // gestionDeEnfermedadesToolStripMenuItem
+            // gestionPacientesToolStripMenuItem
             // 
-            this.gestionDeEnfermedadesToolStripMenuItem.Name = "gestionDeEnfermedadesToolStripMenuItem";
-            this.gestionDeEnfermedadesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.gestionDeEnfermedadesToolStripMenuItem.Text = "Gestion de Enfermedades";
-            this.gestionDeEnfermedadesToolStripMenuItem.Click += new System.EventHandler(this.gestionDeEnfermedadesToolStripMenuItem_Click);
+            this.gestionPacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionPacientesToolStripMenuItem.Image")));
+            this.gestionPacientesToolStripMenuItem.Name = "gestionPacientesToolStripMenuItem";
+            this.gestionPacientesToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
+            this.gestionPacientesToolStripMenuItem.Text = "Gestion Pacientes";
             // 
             // Principal
             // 
@@ -252,11 +238,12 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion de Hospital ";
+            this.Text = "Sistema de Gestion de Hospital";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Load);
             this.statusStrip1.ResumeLayout(false);
@@ -283,7 +270,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel lblUsuario;
         private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private System.Windows.Forms.Timer Intervalo;
         private System.Windows.Forms.ToolStripMenuItem gestionesBasicasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionRolesToolStripMenuItem;
@@ -292,7 +278,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
-        private System.Windows.Forms.ToolStripMenuItem gestionDeMedicamentosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gestionDeEnfermedadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionPacientesToolStripMenuItem;
     }
 }
