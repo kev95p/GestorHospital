@@ -48,12 +48,14 @@
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.preferenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
-            this.gestionPacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -126,7 +128,7 @@
             this.toolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel4.Image")));
             this.toolStripStatusLabel4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(152, 25);
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(151, 25);
             this.toolStripStatusLabel4.Text = "Estacion  de Trabajo";
             this.toolStripStatusLabel4.Click += new System.EventHandler(this.toolStripStatusLabel4_Click_1);
             // 
@@ -182,34 +184,41 @@
             // gestionRolesToolStripMenuItem
             // 
             this.gestionRolesToolStripMenuItem.Name = "gestionRolesToolStripMenuItem";
-            this.gestionRolesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.gestionRolesToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.gestionRolesToolStripMenuItem.Text = "Gestion Roles";
             this.gestionRolesToolStripMenuItem.Click += new System.EventHandler(this.gestionRolesToolStripMenuItem_Click);
             // 
             // gestionUsuariosToolStripMenuItem
             // 
             this.gestionUsuariosToolStripMenuItem.Name = "gestionUsuariosToolStripMenuItem";
-            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             this.gestionUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionUsuariosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(163, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
             // 
             // preferenciasToolStripMenuItem
             // 
             this.preferenciasToolStripMenuItem.Name = "preferenciasToolStripMenuItem";
-            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.preferenciasToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.preferenciasToolStripMenuItem.Text = "Preferencias";
+            // 
+            // gestionPacientesToolStripMenuItem
+            // 
+            this.gestionPacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionPacientesToolStripMenuItem.Image")));
+            this.gestionPacientesToolStripMenuItem.Name = "gestionPacientesToolStripMenuItem";
+            this.gestionPacientesToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
+            this.gestionPacientesToolStripMenuItem.Text = "Gestion Pacientes";
             // 
             // verToolStripMenuItem
             // 
@@ -223,12 +232,16 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
-            // gestionPacientesToolStripMenuItem
+            // pictureBox1
             // 
-            this.gestionPacientesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gestionPacientesToolStripMenuItem.Image")));
-            this.gestionPacientesToolStripMenuItem.Name = "gestionPacientesToolStripMenuItem";
-            this.gestionPacientesToolStripMenuItem.Size = new System.Drawing.Size(151, 28);
-            this.gestionPacientesToolStripMenuItem.Text = "Gestion Pacientes";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1140, 565);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Principal
             // 
@@ -237,6 +250,7 @@
             this.ClientSize = new System.Drawing.Size(1140, 565);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -250,6 +264,7 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +294,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripMenuItem gestionPacientesToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
