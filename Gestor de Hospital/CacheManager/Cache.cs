@@ -169,5 +169,22 @@ namespace CacheManager
             }
         }
 
+        public static DataSet OBTENER_ENFERMEDADES()
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"SELECT * FROM hospital.enfemedades;";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+        }
+
     }
 }

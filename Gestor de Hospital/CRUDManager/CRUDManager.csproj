@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Entidades\Enfermedades.cs" />
     <Compile Include="Entidades\ImagenPerfil.cs" />
     <Compile Include="Entidades\Medicamentos.cs" />
     <Compile Include="Entidades\Paciente.cs" />
