@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txbNombre = new System.Windows.Forms.TextBox();
@@ -37,17 +38,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.errorEnfermedades = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEnfermedades)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(89, 192);
+            this.btnCancelar.Location = new System.Drawing.Point(193, 192);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 0;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // label1
             // 
@@ -116,12 +120,17 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(191, 192);
+            this.btnGuardar.Location = new System.Drawing.Point(94, 192);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 8;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Aceptar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // errorEnfermedades
+            // 
+            this.errorEnfermedades.ContainerControl = this;
             // 
             // EdicionEnfermedades
             // 
@@ -134,8 +143,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EdicionEnfermedades";
             this.Text = "Edición de Enfermedades";
+            this.Load += new System.EventHandler(this.EdicionEnfermedades_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEnfermedades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -144,12 +155,13 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txbNombre;
-        private System.Windows.Forms.ComboBox cbxTipo;
-        private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnGuardar;
+        public System.Windows.Forms.TextBox txbNombre;
+        public System.Windows.Forms.ComboBox cbxTipo;
+        public System.Windows.Forms.TextBox txbID;
+        private System.Windows.Forms.ErrorProvider errorEnfermedades;
     }
 }

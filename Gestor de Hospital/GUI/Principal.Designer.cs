@@ -45,6 +45,7 @@
             this.gestionesBasicasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestionUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -52,7 +53,7 @@
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
-            this.gestionDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gestionDeEnfermedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -173,7 +174,8 @@
             this.gestionesBasicasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gestionRolesToolStripMenuItem,
             this.gestionUsuariosToolStripMenuItem,
-            this.gestionDeMedicamentosToolStripMenuItem});
+            this.gestionDeMedicamentosToolStripMenuItem,
+            this.gestionDeEnfermedadesToolStripMenuItem});
             this.gestionesBasicasToolStripMenuItem.Name = "gestionesBasicasToolStripMenuItem";
             this.gestionesBasicasToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.gestionesBasicasToolStripMenuItem.Text = "Gestiones Basicas";
@@ -191,6 +193,13 @@
             this.gestionUsuariosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.gestionUsuariosToolStripMenuItem.Text = "Gestion Usuarios";
             this.gestionUsuariosToolStripMenuItem.Click += new System.EventHandler(this.gestionUsuariosToolStripMenuItem_Click);
+            // 
+            // gestionDeMedicamentosToolStripMenuItem
+            // 
+            this.gestionDeMedicamentosToolStripMenuItem.Name = "gestionDeMedicamentosToolStripMenuItem";
+            this.gestionDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.gestionDeMedicamentosToolStripMenuItem.Text = "Gestion de Medicamentos";
+            this.gestionDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeMedicamentosToolStripMenuItem_Click);
             // 
             // empleadosToolStripMenuItem
             // 
@@ -228,12 +237,12 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
-            // gestionDeMedicamentosToolStripMenuItem
+            // gestionDeEnfermedadesToolStripMenuItem
             // 
-            this.gestionDeMedicamentosToolStripMenuItem.Name = "gestionDeMedicamentosToolStripMenuItem";
-            this.gestionDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
-            this.gestionDeMedicamentosToolStripMenuItem.Text = "Gestion de Medicamentos";
-            this.gestionDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.gestionDeMedicamentosToolStripMenuItem_Click);
+            this.gestionDeEnfermedadesToolStripMenuItem.Name = "gestionDeEnfermedadesToolStripMenuItem";
+            this.gestionDeEnfermedadesToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
+            this.gestionDeEnfermedadesToolStripMenuItem.Text = "Gestion de Enfermedades";
+            this.gestionDeEnfermedadesToolStripMenuItem.Click += new System.EventHandler(this.gestionDeEnfermedadesToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -284,5 +293,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripMenuItem gestionDeMedicamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionDeEnfermedadesToolStripMenuItem;
     }
 }

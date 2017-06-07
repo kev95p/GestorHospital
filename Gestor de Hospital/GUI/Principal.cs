@@ -129,5 +129,11 @@ namespace GUI
             GestionMedicamentos.MedicamentosVista frm = new GestionMedicamentos.MedicamentosVista();
             frm.ShowDialog();
         }
+
+        private void gestionDeEnfermedadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionEnfermedades.EnfermedadesVista frm = new GestionEnfermedades.EnfermedadesVista();
+            frm.ShowDialog();
+        }
     }
 }
