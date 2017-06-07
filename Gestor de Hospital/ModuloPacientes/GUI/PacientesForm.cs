@@ -34,14 +34,14 @@ namespace ModuloPacientes.GUI
             return image;
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnAgregar_Click_1(object sender, EventArgs e)
         {
             EdicionPaciente frm = new EdicionPaciente();
             frm.ShowDialog();
             CargarPacientes();
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
             EdicionPaciente frm = new EdicionPaciente();
             frm.modificar = true;
@@ -49,18 +49,18 @@ namespace ModuloPacientes.GUI
             frm.txtSegundoNombre.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString().Split(' ')[1];
             frm.txtPrimerApellido.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString().Split(' ')[0];
             frm.txtSegundoApellido.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString().Split(' ')[1];
-            if(dgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString() == "M")
+            if (dgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString() == "M")
             {
                 frm.rbMasculino.Checked = true;
             }
-            else if(dgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString() == "F")
+            else if (dgvPacientes.CurrentRow.Cells["Sexo"].Value.ToString() == "F")
             {
                 frm.rbFemenino.Checked = true;
             }
             frm.dtpFechaNac.Text = dgvPacientes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.cbEstadoCivil.SelectedIndex = frm.cbEstadoCivil.FindStringExact(dgvPacientes.CurrentRow.Cells["estado_civil"].Value.ToString());
-            frm.cbDepartamentos.SelectedIndex =(int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
+            frm.cbDepartamentos.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
             frm.cbMunicipios.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idDepartamento"].Value;
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.txtEmail.Text = dgvPacientes.CurrentRow.Cells["email"].Value.ToString();
@@ -73,16 +73,16 @@ namespace ModuloPacientes.GUI
             frm.txtTelefonoEmergencia.Text = dgvPacientes.CurrentRow.Cells["telefono_emergencia"].Value.ToString();
             frm.cbTipoSangre.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idTipoSangre"].Value;
             frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
-            frm.id = (int) dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
+            frm.id = (int)dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
             frm.ShowDialog();
             CargarPacientes();
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             Paciente paciente = new Paciente();
             paciente.IdPaciente = (int)dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
-            
+
             if (paciente.eliminar())
             {
                 MessageBox.Show("paciente eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -94,5 +94,6 @@ namespace ModuloPacientes.GUI
 
             }
         }
+
     }
 }
