@@ -78,7 +78,7 @@ namespace GUI.GestionEnfermedades
 
             cbxTipo.DataSource = tipos;
             cbxTipo.ValueMember = "Valor";
-            cbxTipo.DisplayMember = "Estado";
+            cbxTipo.DisplayMember = "Tipo";
 
         }
 
