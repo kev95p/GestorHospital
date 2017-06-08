@@ -56,10 +56,10 @@
             this.reportesSobrePacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.gestionIngresadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarIngresadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -157,7 +157,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administracionToolStripMenuItem,
             this.gestionPacientesToolStripMenuItem,
-            this.verToolStripMenuItem});
+            this.verToolStripMenuItem,
+            this.gestionIngresadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1140, 32);
@@ -267,15 +268,19 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
-            // pictureBox1
+            // gestionIngresadosToolStripMenuItem
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1140, 565);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.gestionIngresadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buscarIngresadoToolStripMenuItem});
+            this.gestionIngresadosToolStripMenuItem.Name = "gestionIngresadosToolStripMenuItem";
+            this.gestionIngresadosToolStripMenuItem.Size = new System.Drawing.Size(137, 28);
+            this.gestionIngresadosToolStripMenuItem.Text = "Gestion Ingresados";
+            // 
+            // buscarIngresadoToolStripMenuItem
+            // 
+            this.buscarIngresadoToolStripMenuItem.Name = "buscarIngresadoToolStripMenuItem";
+            this.buscarIngresadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.buscarIngresadoToolStripMenuItem.Text = "Buscar Ingresado";
             // 
             // Principal
             // 
@@ -284,7 +289,6 @@
             this.ClientSize = new System.Drawing.Size(1140, 565);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -298,7 +302,6 @@
             this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,10 +331,11 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripMenuItem gestionPacientesToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem citasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesSobrePacientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gestionIngresadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarIngresadoToolStripMenuItem;
     }
 }

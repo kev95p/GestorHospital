@@ -48,6 +48,7 @@
     <Compile Include="Entidades\ImagenPerfil.cs" />
     <Compile Include="Entidades\Medicamentos.cs" />
     <Compile Include="Entidades\Paciente.cs" />
+    <Compile Include="Entidades\Paciente_Enfermedad.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="OperacionesCrud.cs" />

@@ -71,6 +71,12 @@
     <Compile Include="GUI\EnfermedadesDetalles.Designer.cs">
       <DependentUpon>EnfermedadesDetalles.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EnfermedadesDetallesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EnfermedadesDetallesEdicion.Designer.cs">
+      <DependentUpon>EnfermedadesDetallesEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\PacientesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EnfermedadesDetalles.resx">
       <DependentUpon>EnfermedadesDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EnfermedadesDetallesEdicion.resx">
+      <DependentUpon>EnfermedadesDetallesEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PacientesForm.resx">
       <DependentUpon>PacientesForm.cs</DependentUpon>

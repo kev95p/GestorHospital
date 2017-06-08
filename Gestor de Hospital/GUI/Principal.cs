@@ -139,7 +139,8 @@ namespace GUI
         private void pacientesToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             ModuloPacientes.GUI.PacientesForm frm = new ModuloPacientes.GUI.PacientesForm();
-            frm.ShowDialog();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

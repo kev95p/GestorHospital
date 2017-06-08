@@ -37,16 +37,16 @@
             // 
             // pbxImagen
             // 
-            this.pbxImagen.Location = new System.Drawing.Point(12, 12);
+            this.pbxImagen.Location = new System.Drawing.Point(3, 2);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(547, 457);
+            this.pbxImagen.Size = new System.Drawing.Size(564, 480);
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             this.pbxImagen.Click += new System.EventHandler(this.pbxImagen_Click);
             // 
             // btnTomarFoto
             // 
-            this.btnTomarFoto.Location = new System.Drawing.Point(175, 486);
+            this.btnTomarFoto.Location = new System.Drawing.Point(178, 502);
             this.btnTomarFoto.Name = "btnTomarFoto";
             this.btnTomarFoto.Size = new System.Drawing.Size(75, 23);
             this.btnTomarFoto.TabIndex = 1;
@@ -56,7 +56,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(268, 486);
+            this.btnGuardar.Location = new System.Drawing.Point(271, 502);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(88, 23);
             this.btnGuardar.TabIndex = 2;
@@ -68,7 +68,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(573, 521);
+            this.ClientSize = new System.Drawing.Size(579, 548);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnTomarFoto);
             this.Controls.Add(this.pbxImagen);

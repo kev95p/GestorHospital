@@ -173,7 +173,7 @@ namespace ModuloPacientes.GUI
             paciente.Tiposangre = cbTipoSangre.SelectedValue.ToString();
             paciente.Residencia = txtResidencia.Text;
             paciente.Email = txtEmail.Text;
-            paciente.FechaNac =FormatearFecha(dtpFechaNac.Text);
+            paciente.FechaNac =SessionManager.FechaHelper.FormatearFecha(dtpFechaNac.Text);
             paciente.Ocupacion = txtOcupacion.Text;
 
             if (modificar == true)
@@ -207,14 +207,6 @@ namespace ModuloPacientes.GUI
             
                       
         }
-
-        private string FormatearFecha(string fecha)
-        {
-            string[] partesFecha = fecha.Split('/');
-            string fechaFormateada = partesFecha[2] + "-" + partesFecha[1] + "-" + partesFecha[0];
-            return fechaFormateada;
-        }
-
         
         private void btnSeleccionarFoto_Click(object sender, EventArgs e)
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EdicionPaciente));
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.btnTomarFoto = new System.Windows.Forms.Button();
             this.btnSeleccionarFoto = new System.Windows.Forms.Button();
@@ -133,9 +134,11 @@
             // pbxImagen
             // 
             this.pbxImagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxImagen.Image = ((System.Drawing.Image)(resources.GetObject("pbxImagen.Image")));
             this.pbxImagen.Location = new System.Drawing.Point(6, 19);
             this.pbxImagen.Name = "pbxImagen";
             this.pbxImagen.Size = new System.Drawing.Size(135, 131);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 

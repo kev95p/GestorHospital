@@ -60,8 +60,8 @@ namespace ModuloPacientes.GUI
             frm.dtpFechaNac.Text = dgvPacientes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.cbEstadoCivil.SelectedIndex = frm.cbEstadoCivil.FindStringExact(dgvPacientes.CurrentRow.Cells["estado_civil"].Value.ToString());
-            frm.cbDepartamentos.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
-            frm.cbMunicipios.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idDepartamento"].Value;
+            frm.cbDepartamentos.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idDepartamento"].Value;
+            frm.cbMunicipios.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.txtEmail.Text = dgvPacientes.CurrentRow.Cells["email"].Value.ToString();
             frm.txtTelefono.Text = dgvPacientes.CurrentRow.Cells["telefono"].Value.ToString();
@@ -71,7 +71,7 @@ namespace ModuloPacientes.GUI
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.txtPersonaEmergencia.Text = dgvPacientes.CurrentRow.Cells["persona_emergencia"].Value.ToString();
             frm.txtTelefonoEmergencia.Text = dgvPacientes.CurrentRow.Cells["telefono_emergencia"].Value.ToString();
-            frm.cbTipoSangre.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idTipoSangre"].Value;
+            frm.cbTipoSangre.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idTipoSangre"].Value;
             frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
             frm.id = (int)dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
             frm.ShowDialog();
@@ -114,8 +114,8 @@ namespace ModuloPacientes.GUI
             frm.dtpFechaNac.Text = dgvPacientes.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.cbEstadoCivil.SelectedIndex = frm.cbEstadoCivil.FindStringExact(dgvPacientes.CurrentRow.Cells["estado_civil"].Value.ToString());
-            frm.cbDepartamentos.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
-            frm.cbMunicipios.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idDepartamento"].Value;
+            frm.cbDepartamentos.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idDepartamento"].Value;
+            frm.cbMunicipios.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idMunicipio"].Value;
             frm.DUI.Text = dgvPacientes.CurrentRow.Cells["DUI"].Value.ToString();
             frm.txtEmail.Text = dgvPacientes.CurrentRow.Cells["email"].Value.ToString();
             frm.txtTelefono.Text = dgvPacientes.CurrentRow.Cells["telefono"].Value.ToString();
@@ -125,7 +125,7 @@ namespace ModuloPacientes.GUI
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.txtPersonaEmergencia.Text = dgvPacientes.CurrentRow.Cells["persona_emergencia"].Value.ToString();
             frm.txtTelefonoEmergencia.Text = dgvPacientes.CurrentRow.Cells["telefono_emergencia"].Value.ToString();
-            frm.cbTipoSangre.SelectedIndex = (int)dgvPacientes.CurrentRow.Cells["idTipoSangre"].Value;
+            frm.cbTipoSangre.SelectedValue = (int)dgvPacientes.CurrentRow.Cells["idTipoSangre"].Value;
             frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
             frm.id = (int)dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
             frm.ShowDialog();
@@ -135,7 +135,14 @@ namespace ModuloPacientes.GUI
 
         private void btnEnfermedades_Click(object sender, EventArgs e)
         {
-
+            EnfermedadesDetalles frm = new EnfermedadesDetalles(dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString());
+            frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
+            frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+            frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+            frm.txtEstatura.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
+            frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.ShowDialog();
         }
     }
 }
