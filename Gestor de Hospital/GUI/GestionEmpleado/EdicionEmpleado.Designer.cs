@@ -269,6 +269,7 @@
             // txtTelefono
             // 
             this.txtTelefono.Location = new System.Drawing.Point(3, 16);
+            this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 1;
@@ -280,7 +281,7 @@
             this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(116, 48);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
-            this.flowLayoutPanel8.Size = new System.Drawing.Size(131, 39);
+            this.flowLayoutPanel8.Size = new System.Drawing.Size(143, 39);
             this.flowLayoutPanel8.TabIndex = 6;
             // 
             // label7
@@ -295,8 +296,9 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(3, 16);
+            this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(125, 20);
+            this.txtEmail.Size = new System.Drawing.Size(139, 20);
             this.txtEmail.TabIndex = 1;
             // 
             // flowLayoutPanel6
@@ -304,9 +306,9 @@
             this.flowLayoutPanel6.Controls.Add(this.label5);
             this.flowLayoutPanel6.Controls.Add(this.txtDui);
             this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel6.Location = new System.Drawing.Point(253, 48);
+            this.flowLayoutPanel6.Location = new System.Drawing.Point(265, 48);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            this.flowLayoutPanel6.Size = new System.Drawing.Size(196, 39);
+            this.flowLayoutPanel6.Size = new System.Drawing.Size(180, 39);
             this.flowLayoutPanel6.TabIndex = 4;
             // 
             // label5
@@ -502,6 +504,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(3, 16);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 20);
             this.txtPassword.TabIndex = 1;
             // 

@@ -57,8 +57,8 @@ namespace GUI.GestionEmpleado
                 frm.txtSegundoApellido.Text = Apellidos[1];
 
                 frm.txtDui.Text = dgvEmpleados.CurrentRow.Cells["DUI"].Value.ToString();
-                frm.txtEmail.Text = dgvEmpleados.CurrentRow.Cells["telefono"].Value.ToString();
-                frm.txtTelefono.Text = dgvEmpleados.CurrentRow.Cells["email"].Value.ToString();
+                frm.txtEmail.Text = dgvEmpleados.CurrentRow.Cells["email"].Value.ToString();
+                frm.txtTelefono.Text = dgvEmpleados.CurrentRow.Cells["telefono"].Value.ToString();
                 frm.txtResidencia.Text = dgvEmpleados.CurrentRow.Cells["Residencia"].Value.ToString();
                 frm.cbMunicipios.SelectedValue = dgvEmpleados.CurrentRow.Cells["idMunicipio"].Value.ToString();
                 frm.cbDepartamento.SelectedValue = dgvEmpleados.CurrentRow.Cells["idDepartamento"].Value.ToString();

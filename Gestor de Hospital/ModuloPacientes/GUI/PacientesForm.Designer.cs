@@ -39,7 +39,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.btnEnfermedades = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
@@ -72,6 +72,9 @@ namespace ModuloPacientes.GUI
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnDetalles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
@@ -98,8 +101,11 @@ namespace ModuloPacientes.GUI
             this.toolStripButton2,
             this.toolStripLabel2,
             this.toolStripSeparator5,
-            this.toolStripButton3,
-            this.toolStripLabel4});
+            this.btnEnfermedades,
+            this.toolStripLabel4,
+            this.toolStripSeparator6,
+            this.toolStripButton4,
+            this.toolStripLabel3});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -114,7 +120,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(92, 44);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.toolStripButton1.Text = "Diagnosticos de Paciente";
             // 
             // toolStripLabel1
             // 
@@ -135,7 +141,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(92, 44);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.toolStripButton2.Text = "Consultas de Paciente";
             // 
             // toolStripLabel2
             // 
@@ -149,14 +155,15 @@ namespace ModuloPacientes.GUI
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(92, 6);
             // 
-            // toolStripButton3
+            // btnEnfermedades
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(92, 44);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.btnEnfermedades.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEnfermedades.Image = ((System.Drawing.Image)(resources.GetObject("btnEnfermedades.Image")));
+            this.btnEnfermedades.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEnfermedades.Name = "btnEnfermedades";
+            this.btnEnfermedades.Size = new System.Drawing.Size(92, 44);
+            this.btnEnfermedades.Text = "Enfermadades Paciente";
+            this.btnEnfermedades.Click += new System.EventHandler(this.btnEnfermedades_Click);
             // 
             // toolStripLabel4
             // 
@@ -452,6 +459,28 @@ namespace ModuloPacientes.GUI
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(106, 32);
             this.btnDetalles.Text = "Ver Detalles";
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(92, 44);
+            this.toolStripButton4.Text = "Citas Paciente";
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(92, 6);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(92, 17);
+            this.toolStripLabel3.Text = "Citas";
             // 
             // PacientesForm
             // 
@@ -518,7 +547,10 @@ namespace ModuloPacientes.GUI
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton btnEnfermedades;
         private System.Windows.Forms.ToolStripLabel toolStripLabel4;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
     }
 }

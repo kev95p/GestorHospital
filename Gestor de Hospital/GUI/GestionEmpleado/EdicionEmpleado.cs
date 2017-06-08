@@ -12,7 +12,7 @@ namespace GUI.GestionEmpleado
 {
     public partial class EdicionEmpleado : Form
     {
-        private string idEmpleado;
+        private string idEmpleado = String.Empty;
 
         public string IdEmpleado
         {
