@@ -59,6 +59,12 @@
     <Compile Include="GUI\CamaraForm.Designer.cs">
       <DependentUpon>CamaraForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DetallePacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DetallePacientes.Designer.cs">
+      <DependentUpon>DetallePacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
   <ItemGroup>
     <EmbeddedResource Include="GUI\CamaraForm.resx">
       <DependentUpon>CamaraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DetallePacientes.resx">
+      <DependentUpon>DetallePacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionPaciente.resx">
       <DependentUpon>EdicionPaciente.cs</DependentUpon>
