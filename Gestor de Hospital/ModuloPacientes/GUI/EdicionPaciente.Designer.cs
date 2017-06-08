@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.pbxImagen = new System.Windows.Forms.PictureBox();
-            this.btTomarFoto = new System.Windows.Forms.Button();
+            this.btnTomarFoto = new System.Windows.Forms.Button();
             this.btnSeleccionarFoto = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -59,12 +59,12 @@
             this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.cbEstadoCivil = new System.Windows.Forms.ComboBox();
-            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtPersonaEmergencia = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtOcupacion = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtPersonaEmergencia = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
@@ -98,6 +98,8 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,8 +113,8 @@
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel10.SuspendLayout();
-            this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel11.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.flowLayoutPanel12.SuspendLayout();
             this.flowLayoutPanel13.SuspendLayout();
@@ -137,15 +139,15 @@
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 
-            // btTomarFoto
+            // btnTomarFoto
             // 
-            this.btTomarFoto.Location = new System.Drawing.Point(147, 45);
-            this.btTomarFoto.Name = "btTomarFoto";
-            this.btTomarFoto.Size = new System.Drawing.Size(105, 23);
-            this.btTomarFoto.TabIndex = 1;
-            this.btTomarFoto.Text = "Tomar Foto";
-            this.btTomarFoto.UseVisualStyleBackColor = true;
-            this.btTomarFoto.Click += new System.EventHandler(this.btTomarFoto_Click);
+            this.btnTomarFoto.Location = new System.Drawing.Point(147, 45);
+            this.btnTomarFoto.Name = "btnTomarFoto";
+            this.btnTomarFoto.Size = new System.Drawing.Size(105, 23);
+            this.btnTomarFoto.TabIndex = 1;
+            this.btnTomarFoto.Text = "Tomar Foto";
+            this.btnTomarFoto.UseVisualStyleBackColor = true;
+            this.btnTomarFoto.Click += new System.EventHandler(this.btTomarFoto_Click);
             // 
             // btnSeleccionarFoto
             // 
@@ -161,7 +163,7 @@
             // 
             this.groupBox1.Controls.Add(this.pbxImagen);
             this.groupBox1.Controls.Add(this.btnSeleccionarFoto);
-            this.groupBox1.Controls.Add(this.btTomarFoto);
+            this.groupBox1.Controls.Add(this.btnTomarFoto);
             this.groupBox1.Location = new System.Drawing.Point(569, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(271, 166);
@@ -430,33 +432,6 @@
             this.cbEstadoCivil.Size = new System.Drawing.Size(121, 21);
             this.cbEstadoCivil.TabIndex = 1;
             // 
-            // flowLayoutPanel9
-            // 
-            this.flowLayoutPanel9.Controls.Add(this.label7);
-            this.flowLayoutPanel9.Controls.Add(this.txtPersonaEmergencia);
-            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 50);
-            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
-            this.flowLayoutPanel9.Size = new System.Drawing.Size(124, 39);
-            this.flowLayoutPanel9.TabIndex = 8;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Persona Emergencias";
-            // 
-            // txtPersonaEmergencia
-            // 
-            this.txtPersonaEmergencia.Location = new System.Drawing.Point(3, 16);
-            this.txtPersonaEmergencia.Name = "txtPersonaEmergencia";
-            this.txtPersonaEmergencia.Size = new System.Drawing.Size(110, 20);
-            this.txtPersonaEmergencia.TabIndex = 1;
-            // 
             // flowLayoutPanel11
             // 
             this.flowLayoutPanel11.Controls.Add(this.label9);
@@ -483,6 +458,33 @@
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(110, 20);
             this.txtOcupacion.TabIndex = 1;
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.label7);
+            this.flowLayoutPanel9.Controls.Add(this.txtPersonaEmergencia);
+            this.flowLayoutPanel9.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel9.Location = new System.Drawing.Point(10, 50);
+            this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
+            this.flowLayoutPanel9.Size = new System.Drawing.Size(124, 39);
+            this.flowLayoutPanel9.TabIndex = 8;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Persona Emergencias";
+            // 
+            // txtPersonaEmergencia
+            // 
+            this.txtPersonaEmergencia.Location = new System.Drawing.Point(3, 16);
+            this.txtPersonaEmergencia.Name = "txtPersonaEmergencia";
+            this.txtPersonaEmergencia.Size = new System.Drawing.Size(110, 20);
+            this.txtPersonaEmergencia.TabIndex = 1;
             // 
             // groupBox4
             // 
@@ -779,7 +781,7 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(285, 398);
+            this.btnAceptar.Location = new System.Drawing.Point(302, 383);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 7;
@@ -789,7 +791,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(428, 398);
+            this.btnCancelar.Location = new System.Drawing.Point(445, 383);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 8;
@@ -797,11 +799,35 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(758, 383);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Visible = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(677, 383);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 10;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Visible = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // EdicionPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 444);
+            this.ClientSize = new System.Drawing.Size(864, 427);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox5);
@@ -814,6 +840,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Agregar Paciente";
+            this.Load += new System.EventHandler(this.EdicionPaciente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -835,10 +862,10 @@
             this.flowLayoutPanel8.PerformLayout();
             this.flowLayoutPanel10.ResumeLayout(false);
             this.flowLayoutPanel10.PerformLayout();
-            this.flowLayoutPanel9.ResumeLayout(false);
-            this.flowLayoutPanel9.PerformLayout();
             this.flowLayoutPanel11.ResumeLayout(false);
             this.flowLayoutPanel11.PerformLayout();
+            this.flowLayoutPanel9.ResumeLayout(false);
+            this.flowLayoutPanel9.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.flowLayoutPanel12.ResumeLayout(false);
             this.flowLayoutPanel13.ResumeLayout(false);
@@ -866,7 +893,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btTomarFoto;
+        private System.Windows.Forms.Button btnTomarFoto;
         private System.Windows.Forms.Button btnSeleccionarFoto;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -936,5 +963,7 @@
         public System.Windows.Forms.ComboBox cbTipoSangre;
         public System.Windows.Forms.TextBox txtEstatura;
         public System.Windows.Forms.TextBox txtPeso;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

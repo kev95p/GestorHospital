@@ -14,6 +14,7 @@ namespace ModuloPacientes.GUI
     public partial class EdicionPaciente : Form
     {
         public bool modificar = false;
+        public bool detalle = false;
         public int id = 0;
         public EdicionPaciente()
         {
@@ -22,6 +23,65 @@ namespace ModuloPacientes.GUI
             CargarDepartamentos();
             CargarMunicipios();
             CargarTipoSangre();
+
+        }
+
+        private void DeshabilitarControles()
+        {
+            txtPrimerNombre.ReadOnly = true;
+            txtSegundoNombre.ReadOnly = true;
+            txtPrimerApellido.ReadOnly = true;
+            txtSegundoApellido.ReadOnly = true;
+            txtEmail.ReadOnly = true;
+            txtEstatura.ReadOnly = true;
+            txtOcupacion.ReadOnly = true;
+            txtPersonaEmergencia.ReadOnly = true;
+            txtPeso.ReadOnly = true;
+            txtResidencia.ReadOnly = true;
+            txtTelefono.ReadOnly = true;
+            txtTelefonoEmergencia.ReadOnly = true;
+            DUI.ReadOnly = true;
+            cbDepartamentos.Enabled = false;
+            cbEstadoCivil.Enabled = false;
+            cbMunicipios.Enabled = false;
+            cbTipoSangre.Enabled = false;
+            dtpFechaNac.Enabled = false;
+            btnSeleccionarFoto.Visible = false;
+            btnTomarFoto.Visible = false;
+            rbFemenino.Enabled = false;
+            rbMasculino.Enabled = false;
+            btnAceptar.Visible = false;
+            btnCancelar.Visible = false;
+
+        }
+
+        public void HabilitarControles()
+        {
+            txtPrimerNombre.ReadOnly = false;
+            txtSegundoNombre.ReadOnly = false;
+            txtPrimerApellido.ReadOnly = false;
+            txtSegundoApellido.ReadOnly = false;
+            txtEmail.ReadOnly = false;
+            txtEstatura.ReadOnly = false;
+            txtOcupacion.ReadOnly = false;
+            txtPersonaEmergencia.ReadOnly = false;
+            txtPeso.ReadOnly = false;
+            txtResidencia.ReadOnly = false;
+            txtTelefono.ReadOnly = false;
+            txtTelefonoEmergencia.ReadOnly = false;
+            DUI.ReadOnly = false;
+            cbDepartamentos.Enabled = true;
+            cbEstadoCivil.Enabled = true;
+            cbMunicipios.Enabled = true;
+            cbTipoSangre.Enabled = true;
+            dtpFechaNac.Enabled = true;
+            btnSeleccionarFoto.Visible = true;
+            btnTomarFoto.Visible = true;
+            rbFemenino.Enabled = true;
+            rbMasculino.Enabled = true;
+            btnAceptar.Visible = true;
+            btnCancelar.Visible = true;
+
         }
 
         private void CargarEstadoCivil()
@@ -182,6 +242,36 @@ namespace ModuloPacientes.GUI
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void EdicionPaciente_Load(object sender, EventArgs e)
+        {
+            if (modificar) this.Text = "Modificacion Paciente";
+            if (detalle)
+            {
+                Text = "Detalle Paciente";
+
+                btnSalir.Visible = true;
+                btnEditar.Visible = true;
+                DeshabilitarControles();
+                Update();
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            HabilitarControles();
+            modificar = true;
+            detalle = false;
+            Text = "Modificacion Paciente";
+            btnSalir.Visible = false;
+            btnEditar.Visible = false;
+            Update();
         }
     }
 }
