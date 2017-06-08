@@ -144,5 +144,29 @@ namespace ModuloPacientes.GUI
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.ShowDialog();
         }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            CitasDetalles frm = new CitasDetalles();
+            frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
+            frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+            frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+            frm.txtEstatura.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
+            frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.ShowDialog();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            ConsultasDetalles frm = new ConsultasDetalles();
+            frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
+            frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+            frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+            frm.txtEstatura.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
+            frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.ShowDialog();
+        }
     }
 }

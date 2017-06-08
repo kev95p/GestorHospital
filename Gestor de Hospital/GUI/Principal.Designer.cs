@@ -54,10 +54,10 @@
             this.citasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesSobrePacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
-            this.Intervalo = new System.Windows.Forms.Timer(this.components);
             this.gestionIngresadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarIngresadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
+            this.Intervalo = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -232,20 +232,20 @@
             // pacientesToolStripMenuItem
             // 
             this.pacientesToolStripMenuItem.Name = "pacientesToolStripMenuItem";
-            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pacientesToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.pacientesToolStripMenuItem.Text = "Pacientes";
             this.pacientesToolStripMenuItem.Click += new System.EventHandler(this.pacientesToolStripMenuItem_Click_1);
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
             // citasToolStripMenuItem
             // 
             this.citasToolStripMenuItem.Name = "citasToolStripMenuItem";
-            this.citasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.citasToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.citasToolStripMenuItem.Text = "Citas";
             // 
             // verToolStripMenuItem
@@ -263,11 +263,6 @@
             this.reportesSobrePacientesToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
             this.reportesSobrePacientesToolStripMenuItem.Text = "Reportes Sobre Pacientes";
             // 
-            // Intervalo
-            // 
-            this.Intervalo.Interval = 1000;
-            this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
-            // 
             // gestionIngresadosToolStripMenuItem
             // 
             this.gestionIngresadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -281,6 +276,12 @@
             this.buscarIngresadoToolStripMenuItem.Name = "buscarIngresadoToolStripMenuItem";
             this.buscarIngresadoToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.buscarIngresadoToolStripMenuItem.Text = "Buscar Ingresado";
+            this.buscarIngresadoToolStripMenuItem.Click += new System.EventHandler(this.buscarIngresadoToolStripMenuItem_Click);
+            // 
+            // Intervalo
+            // 
+            this.Intervalo.Interval = 1000;
+            this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
             // Principal
             // 

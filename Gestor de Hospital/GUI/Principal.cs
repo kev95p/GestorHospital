@@ -142,5 +142,12 @@ namespace GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void buscarIngresadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModuloPacientes.GUI.DetallePacientes frm = new ModuloPacientes.GUI.DetallePacientes();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

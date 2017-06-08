@@ -59,6 +59,18 @@
     <Compile Include="GUI\CamaraForm.Designer.cs">
       <DependentUpon>CamaraForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CitasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CitasDetalles.Designer.cs">
+      <DependentUpon>CitasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetalles.Designer.cs">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DetallePacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
   <ItemGroup>
     <EmbeddedResource Include="GUI\CamaraForm.resx">
       <DependentUpon>CamaraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CitasDetalles.resx">
+      <DependentUpon>CitasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ConsultasDetalles.resx">
+      <DependentUpon>ConsultasDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetallePacientes.resx">
       <DependentUpon>DetallePacientes.cs</DependentUpon>
