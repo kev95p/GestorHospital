@@ -186,5 +186,22 @@ namespace CacheManager
         }
 
 
+        public static DataSet OBTENER_DETALLE_PACIENTES_INGRESADOS()
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"SELECT * FROM hospital.vistapacientesingresados;";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+        }
+
     }
 }

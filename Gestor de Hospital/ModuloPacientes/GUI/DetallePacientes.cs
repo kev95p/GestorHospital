@@ -16,10 +16,24 @@ namespace ModuloPacientes.GUI
         {
             InitializeComponent();
         }
+        //nooooooooooooooooooooooooo
+        private void groupBox1_Enter(object sender, EventArgs e) { }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+
+        private void CargarDetallePacientesIngresados()
         {
+            dgvDetallePaciente.AutoGenerateColumns = false;
+            dgvDetallePaciente.DataSource = CacheManager.Cache.OBTENER_DETALLE_PACIENTES_INGRESADOS().Tables[0];
 
+        } 
+
+        private void DetallePacientes_Load(object sender, EventArgs e)
+        {
+            CargarDetallePacientesIngresados();
         }
+
+        
+
+        
     }
 }

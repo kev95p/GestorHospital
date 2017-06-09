@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetallePaciente = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNombres = new System.Windows.Forms.TextBox();
@@ -43,12 +43,13 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.idPaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.primerNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numeroHabitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idMedico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaIngreso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Habitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecharegistro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePaciente)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,16 +62,17 @@
             this.dgvDetallePaciente.AllowUserToOrderColumns = true;
             this.dgvDetallePaciente.AllowUserToResizeColumns = false;
             this.dgvDetallePaciente.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dgvDetallePaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvDetallePaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDetallePaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetallePaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idPaciente,
-            this.primerNombre,
+            this.Nombres,
+            this.Apellidos,
+            this.sexo,
             this.Motivos,
-            this.numeroHabitacion,
-            this.idMedico,
-            this.FechaIngreso,
+            this.Habitacion,
+            this.Medico,
+            this.fecharegistro,
             this.FechaAlta});
             this.dgvDetallePaciente.Location = new System.Drawing.Point(12, 130);
             this.dgvDetallePaciente.MultiSelect = false;
@@ -136,10 +138,10 @@
             this.rbtnMasculino.AutoSize = true;
             this.rbtnMasculino.Location = new System.Drawing.Point(422, 48);
             this.rbtnMasculino.Name = "rbtnMasculino";
-            this.rbtnMasculino.Size = new System.Drawing.Size(73, 17);
+            this.rbtnMasculino.Size = new System.Drawing.Size(34, 17);
             this.rbtnMasculino.TabIndex = 7;
             this.rbtnMasculino.TabStop = true;
-            this.rbtnMasculino.Text = "Masculino";
+            this.rbtnMasculino.Text = "M";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
             // 
             // rbtnFemenino
@@ -147,10 +149,10 @@
             this.rbtnFemenino.AutoSize = true;
             this.rbtnFemenino.Location = new System.Drawing.Point(501, 48);
             this.rbtnFemenino.Name = "rbtnFemenino";
-            this.rbtnFemenino.Size = new System.Drawing.Size(71, 17);
+            this.rbtnFemenino.Size = new System.Drawing.Size(31, 17);
             this.rbtnFemenino.TabIndex = 8;
             this.rbtnFemenino.TabStop = true;
-            this.rbtnFemenino.Text = "Femenino";
+            this.rbtnFemenino.Text = "F";
             this.rbtnFemenino.UseVisualStyleBackColor = true;
             // 
             // label3
@@ -206,19 +208,26 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
-            // idPaciente
+            // Nombres
             // 
-            this.idPaciente.DataPropertyName = "idPaciente";
-            this.idPaciente.HeaderText = "ID";
-            this.idPaciente.Name = "idPaciente";
-            this.idPaciente.Width = 35;
+            this.Nombres.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nombres.DataPropertyName = "Nombres";
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.Name = "Nombres";
             // 
-            // primerNombre
+            // Apellidos
             // 
-            this.primerNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.primerNombre.DataPropertyName = "primerNombre";
-            this.primerNombre.HeaderText = "Paciente";
-            this.primerNombre.Name = "primerNombre";
+            this.Apellidos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Apellidos.DataPropertyName = "Apellidos";
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.Name = "Apellidos";
+            // 
+            // sexo
+            // 
+            this.sexo.DataPropertyName = "sexo";
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.Width = 35;
             // 
             // Motivos
             // 
@@ -226,25 +235,25 @@
             this.Motivos.HeaderText = "Motivos";
             this.Motivos.Name = "Motivos";
             // 
-            // numeroHabitacion
+            // Habitacion
             // 
-            this.numeroHabitacion.DataPropertyName = "numeroHabitacion";
-            this.numeroHabitacion.HeaderText = "Habitacion";
-            this.numeroHabitacion.Name = "numeroHabitacion";
-            this.numeroHabitacion.Width = 63;
+            this.Habitacion.DataPropertyName = "Habitacion";
+            this.Habitacion.HeaderText = "Habitación";
+            this.Habitacion.Name = "Habitacion";
+            this.Habitacion.Width = 63;
             // 
-            // idMedico
+            // Medico
             // 
-            this.idMedico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.idMedico.DataPropertyName = "idMedico";
-            this.idMedico.HeaderText = "Medico";
-            this.idMedico.Name = "idMedico";
+            this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medico.DataPropertyName = "Medico";
+            this.Medico.HeaderText = "Médico";
+            this.Medico.Name = "Medico";
             // 
-            // FechaIngreso
+            // fecharegistro
             // 
-            this.FechaIngreso.DataPropertyName = "FechaIngreso";
-            this.FechaIngreso.HeaderText = "Fecha Ingreso";
-            this.FechaIngreso.Name = "FechaIngreso";
+            this.fecharegistro.DataPropertyName = "fecharegistro";
+            this.fecharegistro.HeaderText = "Fecha Ingreso";
+            this.fecharegistro.Name = "fecharegistro";
             // 
             // FechaAlta
             // 
@@ -267,6 +276,7 @@
             this.Name = "DetallePacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Pacientes";
+            this.Load += new System.EventHandler(this.DetallePacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePaciente)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -291,12 +301,13 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idPaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn primerNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numeroHabitacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idMedico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaIngreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Habitacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecharegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
     }
 }
