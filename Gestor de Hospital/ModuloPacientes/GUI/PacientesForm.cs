@@ -168,5 +168,10 @@ namespace ModuloPacientes.GUI
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.ShowDialog();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

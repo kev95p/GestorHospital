@@ -1,6 +1,6 @@
 ﻿namespace ModuloPacientes.GUI
 {
-    partial class ConsultasDetalles
+    partial class DiagnosticosDetalles
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -48,12 +47,10 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
+            this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -65,22 +62,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 161);
-            this.panel1.TabIndex = 2;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Controls.Add(this.pbxImagen);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 155);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paciente";
             // 
@@ -261,16 +250,25 @@
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
-            this.Motivos,
-            this.Fecha,
-            this.Estado});
-            this.dgvCitas.Location = new System.Drawing.Point(3, 165);
+            this.Diagnostico,
+            this.FechaCreacion});
+            this.dgvCitas.Location = new System.Drawing.Point(2, 163);
             this.dgvCitas.Name = "dgvCitas";
             this.dgvCitas.ReadOnly = true;
             this.dgvCitas.RowHeadersVisible = false;
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(610, 328);
-            this.dgvCitas.TabIndex = 3;
+            this.dgvCitas.Size = new System.Drawing.Size(611, 318);
+            this.dgvCitas.TabIndex = 4;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(492, 40);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(117, 23);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar Diagnostico";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // Medico
             // 
@@ -279,47 +277,35 @@
             this.Medico.Name = "Medico";
             this.Medico.ReadOnly = true;
             // 
-            // Motivos
+            // Diagnostico
             // 
-            this.Motivos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos.HeaderText = "Motivos";
-            this.Motivos.Name = "Motivos";
-            this.Motivos.ReadOnly = true;
+            this.Diagnostico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Diagnostico.FillWeight = 200F;
+            this.Diagnostico.HeaderText = "Diagnostico";
+            this.Diagnostico.Name = "Diagnostico";
+            this.Diagnostico.ReadOnly = true;
             // 
-            // Fecha
+            // FechaCreacion
             // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
+            this.FechaCreacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaCreacion.HeaderText = "Fecha de Creacion";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.ReadOnly = true;
             // 
-            // Estado
-            // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(507, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Agregar Consulta";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // ConsultasDetalles
+            // DiagnosticosDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(617, 493);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(621, 486);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvCitas);
-            this.Controls.Add(this.panel1);
-            this.Name = "ConsultasDetalles";
-            this.Text = "ConsultasDetalles";
-            this.panel1.ResumeLayout(false);
+            this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Name = "DiagnosticosDetalles";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Diagnosticos de Pacientes";
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -340,7 +326,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -360,10 +345,9 @@
         public System.Windows.Forms.TextBox txtPeso;
         public System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.DataGridView dgvCitas;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaCreacion;
     }
 }
