@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDetallePaciente = new System.Windows.Forms.DataGridView();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +62,8 @@
             this.dgvDetallePaciente.AllowUserToOrderColumns = true;
             this.dgvDetallePaciente.AllowUserToResizeColumns = false;
             this.dgvDetallePaciente.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dgvDetallePaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvDetallePaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetallePaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetallePaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombres,
@@ -208,6 +208,7 @@
             this.rbtnFemenino.TabStop = true;
             this.rbtnFemenino.Text = "F";
             this.rbtnFemenino.UseVisualStyleBackColor = true;
+            this.rbtnFemenino.CheckedChanged += new System.EventHandler(this.rbtnFemenino_CheckedChanged);
             // 
             // label3
             // 
