@@ -20,65 +20,73 @@ namespace ModuloPacientes.GUI
         private void groupBox1_Enter(object sender, EventArgs e) { }
 
 
-        private void CargarDetallePacientesIngresados()
-        {
-            dgvDetallePaciente.AutoGenerateColumns = false;
-            dgvDetallePaciente.DataSource = CacheManager.Cache.OBTENER_DETALLE_PACIENTES_INGRESADOS().Tables[0];
-            lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
-        } 
-
         private void DetallePacientes_Load(object sender, EventArgs e)
         {
-            CargarDetallePacientesIngresados();
+            CargarPacientesIngresados();
         }
 
-/*
-        BindingSource _Pacientes = new BindingSource();
-         private void FiltroPorNombre()
+
+        BindingSource _PACIENTES = new BindingSource();
+        private void CargarPacientesIngresados()
         {
-            if (txtNombres.TextLength == 0)
+            try
             {
-                _Pacientes.RemoveFilter();
+                _PACIENTES.DataSource = CacheManager.Cache.OBTENER_DETALLE_PACIENTES_INGRESADOS().Tables[0];
+                FiltrarNombre();
             }
-            else
+            catch
             {
-                _Pacientes.Filter = "Nombres LIKE '%" + txtNombres.Text + "%' ";
-
+                MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
 
+        private void FiltrarNombre()
+        {
+            if (txtNombres.TextLength == 0) {
+                _PACIENTES.RemoveFilter();
+            }
+            else {
+                _PACIENTES.Filter = "Nombres LIKE '%" + txtNombres.Text + "%'";
+            }
             dgvDetallePaciente.AutoGenerateColumns = false;
-            dgvDetallePaciente.DataSource = _Pacientes;
+            dgvDetallePaciente.DataSource = _PACIENTES;
             lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
         }
 
-
-        private void FiltroPorApellido()
+        private void FiltrarApellido()
         {
             if (txtApellidos.TextLength == 0)
             {
-                _Pacientes.RemoveFilter();
+                _PACIENTES.RemoveFilter();
             }
             else
             {
-                _Pacientes.Filter = "Apellidos LIKE '%" + txtApellidos.Text + "%' ";
-
+                _PACIENTES.Filter = "Apellidos LIKE '%" + txtApellidos.Text + "%'";
             }
-
             dgvDetallePaciente.AutoGenerateColumns = false;
-            dgvDetallePaciente.DataSource = _Pacientes;
-            CargarDetallePacientesIngresados();
+            dgvDetallePaciente.DataSource = _PACIENTES;
             lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
         }
 
         private void txtNombres_TextChanged(object sender, EventArgs e)
         {
-            FiltroPorNombre();
+            FiltrarNombre();
+
         }
 
         private void txtApellidos_TextChanged(object sender, EventArgs e)
         {
-            FiltroPorApellido();
+            FiltrarApellido();
+
         }
-        */
+
+
+
+
+
+
+
+
+
     }
 }
