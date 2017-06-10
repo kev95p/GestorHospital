@@ -47,12 +47,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
-            this.dgvCitas = new System.Windows.Forms.DataGridView();
-            this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvConsultas = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -62,7 +60,7 @@
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -252,53 +250,23 @@
             this.pbxImagen.TabIndex = 1;
             this.pbxImagen.TabStop = false;
             // 
-            // dgvCitas
+            // dgvConsultas
             // 
-            this.dgvCitas.AllowUserToAddRows = false;
-            this.dgvCitas.AllowUserToDeleteRows = false;
-            this.dgvCitas.AllowUserToResizeColumns = false;
-            this.dgvCitas.AllowUserToResizeRows = false;
-            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvConsultas.AllowUserToAddRows = false;
+            this.dgvConsultas.AllowUserToDeleteRows = false;
+            this.dgvConsultas.AllowUserToResizeColumns = false;
+            this.dgvConsultas.AllowUserToResizeRows = false;
+            this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
-            this.Motivos,
-            this.Fecha,
-            this.Estado});
-            this.dgvCitas.Location = new System.Drawing.Point(3, 165);
-            this.dgvCitas.Name = "dgvCitas";
-            this.dgvCitas.ReadOnly = true;
-            this.dgvCitas.RowHeadersVisible = false;
-            this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(610, 328);
-            this.dgvCitas.TabIndex = 3;
-            // 
-            // Medico
-            // 
-            this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Medico.HeaderText = "Medico";
-            this.Medico.Name = "Medico";
-            this.Medico.ReadOnly = true;
-            // 
-            // Motivos
-            // 
-            this.Motivos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos.HeaderText = "Motivos";
-            this.Motivos.Name = "Motivos";
-            this.Motivos.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
+            this.FechaConsulta});
+            this.dgvConsultas.Location = new System.Drawing.Point(3, 165);
+            this.dgvConsultas.Name = "dgvConsultas";
+            this.dgvConsultas.ReadOnly = true;
+            this.dgvConsultas.RowHeadersVisible = false;
+            this.dgvConsultas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvConsultas.Size = new System.Drawing.Size(610, 328);
+            this.dgvConsultas.TabIndex = 3;
             // 
             // button1
             // 
@@ -309,16 +277,34 @@
             this.button1.Text = "Agregar Consulta";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // Medico
+            // 
+            this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medico.DataPropertyName = "Medico";
+            this.Medico.HeaderText = "Medico";
+            this.Medico.Name = "Medico";
+            this.Medico.ReadOnly = true;
+            // 
+            // FechaConsulta
+            // 
+            this.FechaConsulta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaConsulta.DataPropertyName = "FechaConsulta";
+            this.FechaConsulta.FillWeight = 150F;
+            this.FechaConsulta.HeaderText = "Fecha de Consulta";
+            this.FechaConsulta.Name = "FechaConsulta";
+            this.FechaConsulta.ReadOnly = true;
+            // 
             // ConsultasDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 493);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dgvCitas);
+            this.Controls.Add(this.dgvConsultas);
             this.Controls.Add(this.panel1);
             this.Name = "ConsultasDetalles";
-            this.Text = "ConsultasDetalles";
+            this.Text = "Consultas de Pacientes";
+            this.Load += new System.EventHandler(this.ConsultasDetalles_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
@@ -333,7 +319,7 @@
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -359,11 +345,9 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtPeso;
         public System.Windows.Forms.PictureBox pbxImagen;
-        private System.Windows.Forms.DataGridView dgvCitas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridView dgvConsultas;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaConsulta;
     }
 }

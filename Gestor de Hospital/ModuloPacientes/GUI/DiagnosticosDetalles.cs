@@ -12,6 +12,7 @@ namespace ModuloPacientes.GUI
 {
     public partial class DiagnosticosDetalles : Form
     {
+        public string idpaciente;
         public DiagnosticosDetalles()
         {
             InitializeComponent();

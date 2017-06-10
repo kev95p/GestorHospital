@@ -12,9 +12,21 @@ namespace ModuloPacientes.GUI
 {
     public partial class CitasDetalles : Form
     {
+        public string idpaciente; 
         public CitasDetalles()
         {
             InitializeComponent();
+        }
+
+        private void  CargarCitas()
+        {
+            dgvCitas.AutoGenerateColumns = false;
+            dgvCitas.DataSource = CacheManager.CachePaciente.CITAS(idpaciente);
+        }
+
+        private void CitasDetalles_Load(object sender, EventArgs e)
+        {
+            CargarCitas();
         }
     }
 }

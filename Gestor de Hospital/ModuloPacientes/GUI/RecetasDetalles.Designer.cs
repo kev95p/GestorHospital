@@ -1,6 +1,6 @@
 ﻿namespace ModuloPacientes.GUI
 {
-    partial class CitasDetalles
+    partial class RecetasDetalles
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,14 +46,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
-            this.dgvCitas = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
+            this.dgvRecetas = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idReceta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concentracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Via = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -63,25 +68,19 @@
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 161);
-            this.panel1.TabIndex = 1;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Controls.Add(this.pbxImagen);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Location = new System.Drawing.Point(2, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 155);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Paciente";
             // 
@@ -253,43 +252,58 @@
             this.pbxImagen.TabIndex = 1;
             this.pbxImagen.TabStop = false;
             // 
-            // dgvCitas
+            // dgvRecetas
             // 
-            this.dgvCitas.AllowUserToAddRows = false;
-            this.dgvCitas.AllowUserToDeleteRows = false;
-            this.dgvCitas.AllowUserToResizeColumns = false;
-            this.dgvCitas.AllowUserToResizeRows = false;
-            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRecetas.AllowUserToAddRows = false;
+            this.dgvRecetas.AllowUserToDeleteRows = false;
+            this.dgvRecetas.AllowUserToResizeColumns = false;
+            this.dgvRecetas.AllowUserToResizeRows = false;
+            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecetas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
             this.Fecha,
-            this.Motivos,
-            this.Estado});
-            this.dgvCitas.Location = new System.Drawing.Point(3, 170);
-            this.dgvCitas.Name = "dgvCitas";
-            this.dgvCitas.ReadOnly = true;
-            this.dgvCitas.RowHeadersVisible = false;
-            this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(701, 328);
-            this.dgvCitas.TabIndex = 2;
+            this.Estado,
+            this.Descripcion,
+            this.idReceta});
+            this.dgvRecetas.Location = new System.Drawing.Point(2, 161);
+            this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.ReadOnly = true;
+            this.dgvRecetas.RowHeadersVisible = false;
+            this.dgvRecetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRecetas.Size = new System.Drawing.Size(701, 328);
+            this.dgvRecetas.TabIndex = 3;
+            this.dgvRecetas.SelectionChanged += new System.EventHandler(this.dgvRecetas_SelectionChanged);
             // 
-            // btnAgregar
+            // groupBox2
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(500, 53);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar Cita";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.dgvMedicamentos);
+            this.groupBox2.Location = new System.Drawing.Point(709, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(419, 483);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Medicamentos";
             // 
-            // btnQuitar
+            // dgvMedicamentos
             // 
-            this.btnQuitar.Location = new System.Drawing.Point(500, 85);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(92, 23);
-            this.btnQuitar.TabIndex = 4;
-            this.btnQuitar.Text = "Cancelar Cita";
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.AllowUserToDeleteRows = false;
+            this.dgvMedicamentos.AllowUserToResizeColumns = false;
+            this.dgvMedicamentos.AllowUserToResizeRows = false;
+            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Medicamento,
+            this.Concentracion,
+            this.Via,
+            this.Presentacion,
+            this.id});
+            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 36);
+            this.dgvMedicamentos.Name = "dgvMedicamentos";
+            this.dgvMedicamentos.ReadOnly = true;
+            this.dgvMedicamentos.RowHeadersVisible = false;
+            this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMedicamentos.Size = new System.Drawing.Size(407, 441);
+            this.dgvMedicamentos.TabIndex = 5;
             // 
             // Medico
             // 
@@ -303,43 +317,100 @@
             // 
             this.Fecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Fecha.DataPropertyName = "Fecha";
-            this.Fecha.FillWeight = 125F;
+            this.Fecha.FillWeight = 50F;
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
             this.Fecha.ReadOnly = true;
             // 
-            // Motivos
-            // 
-            this.Motivos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Motivos.DataPropertyName = "motivos";
-            this.Motivos.FillWeight = 200F;
-            this.Motivos.HeaderText = "Motivos";
-            this.Motivos.Name = "Motivos";
-            this.Motivos.ReadOnly = true;
-            // 
             // Estado
             // 
             this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Estado.DataPropertyName = "estado";
+            this.Estado.DataPropertyName = "Estado";
+            this.Estado.FillWeight = 50F;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
-            // CitasDetalles
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.FillWeight = 200F;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // idReceta
+            // 
+            this.idReceta.DataPropertyName = "idReceta";
+            this.idReceta.HeaderText = "idReceta";
+            this.idReceta.Name = "idReceta";
+            this.idReceta.ReadOnly = true;
+            this.idReceta.Visible = false;
+            // 
+            // Medicamento
+            // 
+            this.Medicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medicamento.DataPropertyName = "nombre";
+            this.Medicamento.HeaderText = "Medicamento";
+            this.Medicamento.Name = "Medicamento";
+            this.Medicamento.ReadOnly = true;
+            // 
+            // Concentracion
+            // 
+            this.Concentracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Concentracion.DataPropertyName = "concentracion";
+            this.Concentracion.HeaderText = "Concentracion";
+            this.Concentracion.Name = "Concentracion";
+            this.Concentracion.ReadOnly = true;
+            // 
+            // Via
+            // 
+            this.Via.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Via.DataPropertyName = "via";
+            this.Via.HeaderText = "Via";
+            this.Via.Name = "Via";
+            this.Via.ReadOnly = true;
+            // 
+            // Presentacion
+            // 
+            this.Presentacion.DataPropertyName = "presentacion";
+            this.Presentacion.HeaderText = "Presentacion";
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(506, 42);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(95, 23);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar Receta";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // RecetasDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 500);
-            this.Controls.Add(this.btnQuitar);
+            this.ClientSize = new System.Drawing.Size(1138, 491);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvCitas);
-            this.Controls.Add(this.panel1);
-            this.Name = "CitasDetalles";
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.dgvRecetas);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "RecetasDetalles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "CitasDetalles";
-            this.Load += new System.EventHandler(this.CitasDetalles_Load);
-            this.panel1.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Recetas de Paciente";
+            this.Load += new System.EventHandler(this.RecetasDetalles_Load);
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -353,14 +424,15 @@
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
@@ -379,12 +451,19 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtPeso;
         public System.Windows.Forms.PictureBox pbxImagen;
-        private System.Windows.Forms.DataGridView dgvCitas;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.DataGridView dgvRecetas;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvMedicamentos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Motivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idReceta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Concentracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Via;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button btnAgregar;
     }
 }

@@ -12,9 +12,21 @@ namespace ModuloPacientes.GUI
 {
     public partial class ConsultasDetalles : Form
     {
+        public string idpaciente;
         public ConsultasDetalles()
         {
             InitializeComponent();
+        }
+
+        private void CargarConsultas()
+        {
+            dgvConsultas.AutoGenerateColumns = false;
+            dgvConsultas.DataSource = CacheManager.CachePaciente.CONSULTAS(idpaciente);
+        }
+
+        private void ConsultasDetalles_Load(object sender, EventArgs e)
+        {
+            CargarConsultas();
         }
     }
 }

@@ -107,6 +107,12 @@
     <Compile Include="GUI\PacientesForm.Designer.cs">
       <DependentUpon>PacientesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\RecetasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\RecetasDetalles.Designer.cs">
+      <DependentUpon>RecetasDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\PacientesForm.resx">
       <DependentUpon>PacientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\RecetasDetalles.resx">
+      <DependentUpon>RecetasDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

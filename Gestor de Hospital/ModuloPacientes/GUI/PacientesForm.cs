@@ -148,6 +148,7 @@ namespace ModuloPacientes.GUI
         private void toolStripButton4_Click(object sender, EventArgs e)
         {
             CitasDetalles frm = new CitasDetalles();
+            frm.idpaciente = dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
             frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
             frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
             frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
@@ -160,6 +161,7 @@ namespace ModuloPacientes.GUI
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             ConsultasDetalles frm = new ConsultasDetalles();
+            frm.idpaciente = dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
             frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
             frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
             frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
@@ -171,7 +173,28 @@ namespace ModuloPacientes.GUI
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            DiagnosticosDetalles frm = new DiagnosticosDetalles();
+            frm.idpaciente = dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
+            frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
+            frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+            frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+            frm.txtEstatura.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
+            frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.ShowDialog();
+        }
 
+        private void btnRecetas_Click(object sender, EventArgs e)
+        {
+            RecetasDetalles frm = new RecetasDetalles();
+            frm.idpaciente = dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
+            frm.pbxImagen.Image = BlobToImage((byte[])dgvPacientes.CurrentRow.Cells["imagen"].Value);
+            frm.txtNombres.Text = dgvPacientes.CurrentRow.Cells["Nombres"].Value.ToString();
+            frm.txtApellidos.Text = dgvPacientes.CurrentRow.Cells["Apellidos"].Value.ToString();
+            frm.txtEstatura.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
+            frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
+            frm.ShowDialog();
         }
     }
 }

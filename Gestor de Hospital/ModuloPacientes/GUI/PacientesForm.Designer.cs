@@ -75,6 +75,9 @@ namespace ModuloPacientes.GUI
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnDetalles = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnRecetas = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
@@ -105,11 +108,14 @@ namespace ModuloPacientes.GUI
             this.toolStripLabel4,
             this.toolStripSeparator6,
             this.toolStripButton4,
-            this.toolStripLabel3});
+            this.toolStripLabel3,
+            this.toolStripSeparator7,
+            this.btnRecetas,
+            this.toolStripLabel5});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip2.Size = new System.Drawing.Size(95, 540);
+            this.toolStrip2.Size = new System.Drawing.Size(108, 540);
             this.toolStrip2.TabIndex = 1;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -119,7 +125,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(92, 44);
+            this.toolStripButton1.Size = new System.Drawing.Size(105, 44);
             this.toolStripButton1.Text = "Diagnosticos de Paciente";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -127,13 +133,13 @@ namespace ModuloPacientes.GUI
             // 
             this.toolStripLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(92, 17);
+            this.toolStripLabel1.Size = new System.Drawing.Size(105, 17);
             this.toolStripLabel1.Text = "Diagnostico";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(92, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(105, 6);
             // 
             // toolStripButton2
             // 
@@ -141,7 +147,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(92, 44);
+            this.toolStripButton2.Size = new System.Drawing.Size(105, 44);
             this.toolStripButton2.Text = "Consultas de Paciente";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -149,13 +155,13 @@ namespace ModuloPacientes.GUI
             // 
             this.toolStripLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(92, 17);
+            this.toolStripLabel2.Size = new System.Drawing.Size(105, 17);
             this.toolStripLabel2.Text = "Consulta";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(92, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(105, 6);
             // 
             // btnEnfermedades
             // 
@@ -163,7 +169,7 @@ namespace ModuloPacientes.GUI
             this.btnEnfermedades.Image = ((System.Drawing.Image)(resources.GetObject("btnEnfermedades.Image")));
             this.btnEnfermedades.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEnfermedades.Name = "btnEnfermedades";
-            this.btnEnfermedades.Size = new System.Drawing.Size(92, 44);
+            this.btnEnfermedades.Size = new System.Drawing.Size(105, 44);
             this.btnEnfermedades.Text = "Enfermadades Paciente";
             this.btnEnfermedades.Click += new System.EventHandler(this.btnEnfermedades_Click);
             // 
@@ -171,13 +177,13 @@ namespace ModuloPacientes.GUI
             // 
             this.toolStripLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(92, 17);
+            this.toolStripLabel4.Size = new System.Drawing.Size(105, 17);
             this.toolStripLabel4.Text = "Enfermedades";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(92, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(105, 6);
             // 
             // toolStripButton4
             // 
@@ -185,7 +191,7 @@ namespace ModuloPacientes.GUI
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(92, 44);
+            this.toolStripButton4.Size = new System.Drawing.Size(105, 44);
             this.toolStripButton4.Text = "Citas Paciente";
             this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
             // 
@@ -193,7 +199,7 @@ namespace ModuloPacientes.GUI
             // 
             this.toolStripLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(92, 17);
+            this.toolStripLabel3.Size = new System.Drawing.Size(105, 17);
             this.toolStripLabel3.Text = "Citas";
             // 
             // panel1
@@ -201,9 +207,9 @@ namespace ModuloPacientes.GUI
             this.panel1.Controls.Add(this.dgvPacientes);
             this.panel1.Controls.Add(this.toolStrip1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(95, 0);
+            this.panel1.Location = new System.Drawing.Point(108, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1114, 540);
+            this.panel1.Size = new System.Drawing.Size(1101, 540);
             this.panel1.TabIndex = 3;
             // 
             // dgvPacientes
@@ -241,7 +247,7 @@ namespace ModuloPacientes.GUI
             this.dgvPacientes.ReadOnly = true;
             this.dgvPacientes.RowHeadersVisible = false;
             this.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPacientes.Size = new System.Drawing.Size(1114, 505);
+            this.dgvPacientes.Size = new System.Drawing.Size(1101, 505);
             this.dgvPacientes.TabIndex = 5;
             // 
             // Nombres
@@ -426,7 +432,7 @@ namespace ModuloPacientes.GUI
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(1114, 35);
+            this.toolStrip1.Size = new System.Drawing.Size(1101, 35);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -484,6 +490,28 @@ namespace ModuloPacientes.GUI
             this.btnDetalles.Size = new System.Drawing.Size(106, 32);
             this.btnDetalles.Text = "Ver Detalles";
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(105, 6);
+            // 
+            // btnRecetas
+            // 
+            this.btnRecetas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRecetas.Image = ((System.Drawing.Image)(resources.GetObject("btnRecetas.Image")));
+            this.btnRecetas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRecetas.Name = "btnRecetas";
+            this.btnRecetas.Size = new System.Drawing.Size(105, 44);
+            this.btnRecetas.Text = "toolStripButton3";
+            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(105, 17);
+            this.toolStripLabel5.Text = "Recetas Medicas";
             // 
             // PacientesForm
             // 
@@ -555,5 +583,8 @@ namespace ModuloPacientes.GUI
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton btnRecetas;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
     }
 }
