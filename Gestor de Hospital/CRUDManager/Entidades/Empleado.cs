@@ -16,6 +16,7 @@ namespace CRUDManager.Entidades
         private string _primer_Apellido;
         private string _segundo_Apellido;
         private string _DUI;
+        private string _especialidad;
         private string _residencia;
         private string _email;
         private string _telefono;
@@ -179,6 +180,19 @@ namespace CRUDManager.Entidades
             }
         }
 
+        public string Especialidad
+        {
+            get
+            {
+                return _especialidad;
+            }
+
+            set
+            {
+                _especialidad = value;
+            }
+        }
+
         public bool Insertar()
         {
             CommandBuilder cb = new CommandBuilder();
@@ -196,7 +210,8 @@ namespace CRUDManager.Entidades
                 new MySqlParameter("pUsuario",Usuario.NombreUsuario),
                 new MySqlParameter("pPassword",Usuario.Password),
                 new MySqlParameter("pRol",Usuario.IdRol),
-                new MySqlParameter("pResidencia",Residencia)
+                new MySqlParameter("pResidencia",Residencia),
+                new MySqlParameter("pEspecialidad",Especialidad)
             };
             cb.StoredProcerudeName = "Insertar_Empleado";
             return (Insert(cb)>0);
@@ -220,7 +235,8 @@ namespace CRUDManager.Entidades
                 new MySqlParameter("pUsuario",Usuario.NombreUsuario),
                 new MySqlParameter("pPassword",Usuario.Password),
                 new MySqlParameter("pRol",Usuario.IdRol),
-                new MySqlParameter("pResidencia",Residencia)
+                new MySqlParameter("pResidencia",Residencia),
+                new MySqlParameter("pEspecialidad",Especialidad)
             };
             cb.StoredProcerudeName = "Actualizar_Empleado";
             return (Update(cb) > 0);

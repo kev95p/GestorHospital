@@ -33,6 +33,7 @@ namespace GUI.GestionEmpleado
             CargarDepartamentos();
             CargarMunicipios();
             CargarRoles();
+            CargarEspecialidades();
             VerificarAsignarUsuario();
         }
 
@@ -57,6 +58,19 @@ namespace GUI.GestionEmpleado
             cbMunicipios.DataSource = dv.ToTable();
             cbMunicipios.DisplayMember = "municipio";
             cbMunicipios.ValueMember = "idMunicipio";
+        }
+
+        private void CargarEspecialidades()
+        {
+            DataRow fila;
+            DataTable datos = SessionManager.DatosCargados.Instancia.Especialidades;
+            fila = datos.NewRow();
+            fila["idEspecialidad"] = "0";
+            fila["Especialidad"] = "Ninguna";
+            datos.Rows.Add(fila);
+            cbEspecialidades.DataSource = datos;
+            cbEspecialidades.DisplayMember = "Especialidad";
+            cbEspecialidades.ValueMember = "idEspecialidad";
         }
 
         private void VerificarAsignarUsuario()
@@ -92,6 +106,7 @@ namespace GUI.GestionEmpleado
             em.Usuario.NombreUsuario = txtUsuario.Text;
             em.Usuario.Password = txtPassword.Text;
             em.Usuario.IdRol = cbRol.SelectedValue.ToString();
+            em.Especialidad = Convert.ToInt32(cbEspecialidades.SelectedValue) == 0 ? "0" : cbEspecialidades.SelectedValue.ToString();
 
             if(idEmpleado == String.Empty)
             {

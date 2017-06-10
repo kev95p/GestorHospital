@@ -58,6 +58,12 @@
             this.buscarIngresadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblEmpleado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblRol = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +71,7 @@
             // statusStrip1
             // 
             this.statusStrip1.AutoSize = false;
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.lblStateImage,
@@ -74,7 +81,12 @@
             this.toolStripStatusLabel5,
             this.toolStripStatusLabel4,
             this.lblmaquina,
-            this.toolStripStatusLabel7});
+            this.toolStripStatusLabel7,
+            this.toolStripStatusLabel6,
+            this.lblEmpleado,
+            this.toolStripStatusLabel8,
+            this.toolStripStatusLabel9,
+            this.lblRol});
             this.statusStrip1.Location = new System.Drawing.Point(0, 535);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1140, 30);
@@ -109,8 +121,8 @@
             this.toolStripStatusLabel3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripStatusLabel3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel3.Image")));
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(73, 25);
-            this.toolStripStatusLabel3.Text = "Usuario ";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(80, 25);
+            this.toolStripStatusLabel3.Text = "Usuario:";
             // 
             // lblUsuario
             // 
@@ -132,8 +144,8 @@
             this.toolStripStatusLabel4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripStatusLabel4.Image")));
             this.toolStripStatusLabel4.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(152, 25);
-            this.toolStripStatusLabel4.Text = "Estacion  de Trabajo";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(155, 25);
+            this.toolStripStatusLabel4.Text = "Estacion  de Trabajo:";
             this.toolStripStatusLabel4.Click += new System.EventHandler(this.toolStripStatusLabel4_Click_1);
             // 
             // lblmaquina
@@ -171,7 +183,8 @@
             this.gestionesBasicasToolStripMenuItem,
             this.empleadosToolStripMenuItem,
             this.toolStripSeparator1,
-            this.preferenciasToolStripMenuItem});
+            this.preferenciasToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.administracionToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("administracionToolStripMenuItem.Image")));
             this.administracionToolStripMenuItem.Name = "administracionToolStripMenuItem";
             this.administracionToolStripMenuItem.Size = new System.Drawing.Size(135, 28);
@@ -283,6 +296,43 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // toolStripStatusLabel6
+            // 
+            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+            this.toolStripStatusLabel6.Size = new System.Drawing.Size(60, 25);
+            this.toolStripStatusLabel6.Text = "Empleado";
+            // 
+            // lblEmpleado
+            // 
+            this.lblEmpleado.Name = "lblEmpleado";
+            this.lblEmpleado.Size = new System.Drawing.Size(43, 25);
+            this.lblEmpleado.Text = "Admin";
+            // 
+            // toolStripStatusLabel8
+            // 
+            this.toolStripStatusLabel8.Name = "toolStripStatusLabel8";
+            this.toolStripStatusLabel8.Size = new System.Drawing.Size(10, 25);
+            this.toolStripStatusLabel8.Text = "|";
+            // 
+            // toolStripStatusLabel9
+            // 
+            this.toolStripStatusLabel9.Name = "toolStripStatusLabel9";
+            this.toolStripStatusLabel9.Size = new System.Drawing.Size(27, 25);
+            this.toolStripStatusLabel9.Text = "Rol:";
+            // 
+            // lblRol
+            // 
+            this.lblRol.Name = "lblRol";
+            this.lblRol.Size = new System.Drawing.Size(49, 25);
+            this.lblRol.Text = "nombre";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +388,11 @@
         private System.Windows.Forms.ToolStripMenuItem reportesSobrePacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestionIngresadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarIngresadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
+        private System.Windows.Forms.ToolStripStatusLabel lblEmpleado;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel9;
+        private System.Windows.Forms.ToolStripStatusLabel lblRol;
     }
 }

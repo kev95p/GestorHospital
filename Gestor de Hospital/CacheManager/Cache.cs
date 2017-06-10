@@ -16,8 +16,9 @@ namespace CacheManager
             {
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
-                string query = @"SELECT usuario
-                FROM usuarios WHERE password=md5('" + clave + "') AND usuario = '" + usuario + "'";
+                string query = @"select usuarios.usuario,roles.Rol,concat(empleados.primer_nombre,' ',empleados.segundo_nombre) as Nombre,empleados.idEmpleado 
+                                from usuarios join roles on usuarios.idrol = roles.idRol left join empleados on empleados.idEmpleado = usuarios.idEmpleado
+                                WHERE password=md5('" + clave + "') AND usuario = '" + usuario + "'";
                 cb.CommandText = query;
                 datos = cb.Select();
                 return datos;
@@ -158,6 +159,23 @@ namespace CacheManager
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"SELECT * FROM hospital.medicamentos;";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos;
+            }
+            catch
+            {
+                return new DataSet();
+            }
+        }
+
+        public static DataSet OBTENER_ESPECIALIDADES()
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"SELECT * FROM hospital.especialidades;";
                 cb.CommandText = query;
                 datos = cb.Select();
                 return datos;

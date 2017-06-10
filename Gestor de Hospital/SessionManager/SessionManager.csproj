@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuraciones.cs" />
     <Compile Include="DatosCargados.cs" />
     <Compile Include="FechaHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

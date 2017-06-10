@@ -48,6 +48,9 @@ namespace GUI
                 //guardar nombre de usuario
                 SessionManager.SessionManager sesion = SessionManager.SessionManager.GetInstance;
                 sesion.Usuario = datos.Rows[0][0].ToString();
+                sesion.Rol = datos.Rows[0][1].ToString();
+                sesion.Nombre = datos.Rows[0]["Nombre"].ToString();
+                sesion.IdEmpleado = datos.Rows[0]["idEmpleado"].ToString();
                 Close();
             }
             else

@@ -17,6 +17,7 @@ namespace GUI
     public partial class Principal : Form
     {
         volatile bool conectado = false;
+        public bool cerrarsesion = false;
         public Principal()
         {
             InitializeComponent();
@@ -30,6 +31,8 @@ namespace GUI
             //cargar usuarios label
             lblUsuario.Text = SessionManager.SessionManager.GetInstance.Usuario;
             lblmaquina.Text = Environment.MachineName.ToString();
+            lblEmpleado.Text = SessionManager.SessionManager.GetInstance.Nombre;
+            lblRol.Text = SessionManager.SessionManager.GetInstance.Rol;
 
         }
 
@@ -148,6 +151,12 @@ namespace GUI
             ModuloPacientes.GUI.DetallePacientes frm = new ModuloPacientes.GUI.DetallePacientes();
             frm.MdiParent = this;
             frm.Show();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            cerrarsesion = true;
+            Close();
         }
     }
 }

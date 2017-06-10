@@ -11,7 +11,10 @@ namespace SessionManager
         private static SessionManager instace= null;
         private static readonly object padlock = new object();
 
-        private String usuario;
+        private string usuario;
+        private string rol;
+        private string nombre;
+        private string idEmpleado;
         
 
         SessionManager()
@@ -44,6 +47,45 @@ namespace SessionManager
             set
             {
                 usuario = value;
+            }
+        }
+
+        public string Rol
+        {
+            get
+            {
+                return rol;
+            }
+
+            set
+            {
+                rol = value;
+            }
+        }
+
+        public string Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+
+            set
+            {
+                nombre = value;
+            }
+        }
+
+        public string IdEmpleado
+        {
+            get
+            {
+                return idEmpleado;
+            }
+
+            set
+            {
+                idEmpleado = value;
             }
         }
     }

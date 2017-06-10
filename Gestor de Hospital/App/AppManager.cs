@@ -8,8 +8,8 @@ namespace App
 {
     class AppManager : System.Windows.Forms.ApplicationContext 
     {
-        private GUI.Principal principal = new GUI.Principal();
-        private GUI.Login login = new GUI.Login();
+        private GUI.Principal principal;
+        private GUI.Login login;
 
         public AppManager()
         {
@@ -27,8 +27,13 @@ namespace App
             return flag;
         }
 
-        private void Login()
-        {         
+        public void Login()
+        {
+            if(principal != null)
+            {
+                principal.cerrarsesion = false;
+            }
+            login = new GUI.Login();
             MainForm = login;
             MainForm.Show();
         }
@@ -38,12 +43,21 @@ namespace App
             if (login.verificado)
             {
                 login.verificado = false;
+                principal = new GUI.Principal();
                 MainForm = principal;
                 MainForm.Show();
+
             }
             else
             {
-               base.OnMainFormClosed(sender, e);
+                if (principal.cerrarsesion)
+                {
+                    Login();
+                }else
+                {
+                  base.OnMainFormClosed(sender, e);
+                }
+               
             }
            
         }

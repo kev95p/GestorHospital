@@ -27,5 +27,80 @@ namespace CacheManager
                 return new DataTable();
             }
         }
+
+        public static DataTable CONSULTAS(string idpaciente)
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select concat(empleados.primer_nombre,' ',empleados.primer_apellido) as Medico,date_format(consultas.FechaConsulta,'%d-%m-%Y') as FechaConsulta 
+                                from consultas join empleados on consultas.idMedico = empleados.idEmpleado where consultas.idPaciente = "+idpaciente+";";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos.Tables[0];
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
+        public static DataTable CITAS(string idpaciente)
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select concat(empleados.primer_nombre,' ',empleados.primer_apellido) as Medico,date_format(citas.fechaCita,'%d-%m-%Y') as Fecha,citas.motivos,citas.estado from citas join empleados on citas.idMedico = empleados.idEmpleado
+                                    where citas.idPaciente = "+idpaciente+";";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos.Tables[0];
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
+
+        public static DataTable RECETAS(string idpaciente)
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select recetas_medicas.idReceta,concat(empleados.primer_nombre,' ',empleados.segundo_apellido) as Medico, DATE_FORMAT(recetas_medicas.FechaCreacion,'%d-%m-%y') as Fecha
+                                ,recetas_medicas.Descripcion,recetas_medicas.Estado from recetas_medicas join empleados on recetas_medicas.idMedico = empleados.idEmpleado
+                                where recetas_medicas.idPaciente = "+idpaciente+";";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos.Tables[0];
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
+        public static DataTable MEDICAMENTOS_RECETAS()
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select * from vistarecetas";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos.Tables[0];
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
+
     }
 }
