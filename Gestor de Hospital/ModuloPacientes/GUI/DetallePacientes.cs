@@ -71,13 +71,13 @@ namespace ModuloPacientes.GUI
         //sdssfsa
         private void FiltrarSexoMas()
         {
-            if (rbtnMasculino.Checked)
+            if (rbtnMasculino.Checked == false)
             {
                 _PACIENTES.RemoveFilter();
             }
             else
             {
-                _PACIENTES.Filter = "Sexo LIKE '%" + rbtnMasculino.Checked + "%'";
+                _PACIENTES.Filter = "Sexo LIKE '%" + rbtnMasculino.Text + "%'";
             }
             dgvDetallePaciente.AutoGenerateColumns = false;
             dgvDetallePaciente.DataSource = _PACIENTES;
@@ -86,23 +86,23 @@ namespace ModuloPacientes.GUI
 
         private void FiltrarSexoFem()
         {
-            if (rbtnFemenino.Checked)
+            if (rbtnFemenino.Checked == false)
                 
             {
                 _PACIENTES.RemoveFilter();
             }
             else
             {
-                _PACIENTES.Filter = "Sexo LIKE '% F %'";
+                _PACIENTES.Filter = "Sexo LIKE '%" + rbtnFemenino.Text + "%'";
             }
             dgvDetallePaciente.AutoGenerateColumns = false;
             dgvDetallePaciente.DataSource = _PACIENTES;
             lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
         }
 
-        /*     private void FiltrarFechaIngreso()
+       /*      private void FiltrarFechaIngreso()
              {
-                 if (dtpFechaIngreso.Text)
+                 if (dtpFechaIngreso.Checked == false)
                  {
                      _PACIENTES.RemoveFilter();
                  }
@@ -114,7 +114,7 @@ namespace ModuloPacientes.GUI
                  dgvDetallePaciente.DataSource = _PACIENTES;
                  lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
              }
-             */
+        */     
 
 
         private void txtNombres_TextChanged(object sender, EventArgs e)
@@ -127,11 +127,15 @@ namespace ModuloPacientes.GUI
             FiltrarApellido();
         }
 
-        //no sirve
+
         private void rbtnFemenino_CheckedChanged(object sender, EventArgs e)
         {
             FiltrarSexoFem();
         }
 
+        private void rbtnMasculino_CheckedChanged(object sender, EventArgs e)
+        {
+            FiltrarSexoMas();
+        }
     }
 }

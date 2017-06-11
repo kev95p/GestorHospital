@@ -197,6 +197,7 @@
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "M";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
+            this.rbtnMasculino.CheckedChanged += new System.EventHandler(this.rbtnMasculino_CheckedChanged);
             // 
             // rbtnFemenino
             // 
