@@ -28,5 +28,10 @@ namespace ModuloPacientes.GUI
         {
             CargarCitas();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -40,9 +40,16 @@
     <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +77,12 @@
     </Compile>
     <Compile Include="GUI\ConsultasDetalles.Designer.cs">
       <DependentUpon>ConsultasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetallesEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ConsultasDetallesEdicion.Designer.cs">
+      <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DetallePacientes.cs">
       <SubType>Form</SubType>
@@ -130,6 +143,9 @@
     <EmbeddedResource Include="GUI\ConsultasDetalles.resx">
       <DependentUpon>ConsultasDetalles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ConsultasDetallesEdicion.resx">
+      <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetallePacientes.resx">
       <DependentUpon>DetallePacientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +188,9 @@
       <Project>{d7a2fa1c-512d-48d8-bd65-e64501b942f4}</Project>
       <Name>SessionManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

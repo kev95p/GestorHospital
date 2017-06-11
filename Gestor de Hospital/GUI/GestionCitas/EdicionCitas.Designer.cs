@@ -65,7 +65,7 @@
             this.txbIDCita.Location = new System.Drawing.Point(92, 30);
             this.txbIDCita.Name = "txbIDCita";
             this.txbIDCita.ReadOnly = true;
-            this.txbIDCita.Size = new System.Drawing.Size(103, 20);
+            this.txbIDCita.Size = new System.Drawing.Size(54, 20);
             this.txbIDCita.TabIndex = 2;
             // 
             // groupBox1
@@ -124,7 +124,7 @@
             // 
             this.txbMedico.Location = new System.Drawing.Point(92, 82);
             this.txbMedico.Name = "txbMedico";
-            this.txbMedico.Size = new System.Drawing.Size(206, 20);
+            this.txbMedico.Size = new System.Drawing.Size(136, 20);
             this.txbMedico.TabIndex = 4;
             // 
             // txbPaciente
