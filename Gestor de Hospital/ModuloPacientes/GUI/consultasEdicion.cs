@@ -38,7 +38,7 @@ namespace ModuloPacientes.GUI
 
             if (consultas.Insertar())
                 {
-                    MessageBox.Show("enfermedad agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Consulta agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 else

@@ -62,12 +62,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Citas.cs" />
+    <Compile Include="Entidades\Consultas.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Enfermedades.cs" />
     <Compile Include="Entidades\ImagenPerfil.cs" />
     <Compile Include="Entidades\Medicamentos.cs" />
     <Compile Include="Entidades\Paciente.cs" />
     <Compile Include="Entidades\Paciente_Enfermedad.cs" />
+    <Compile Include="Entidades\RecetasMedicas.cs" />
     <Compile Include="Entidades\Rol.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="OperacionesCrud.cs" />

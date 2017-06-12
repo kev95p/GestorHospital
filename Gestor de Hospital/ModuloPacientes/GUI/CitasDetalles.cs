@@ -32,6 +32,7 @@ namespace ModuloPacientes.GUI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             EdicionCitas frm = new EdicionCitas();
+            frm.idPaciente = idpaciente;
             frm.ShowDialog();
         }
     }

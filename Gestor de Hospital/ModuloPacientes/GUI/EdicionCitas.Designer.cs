@@ -52,11 +52,13 @@
             // 
             // dtpFechaCitas
             // 
+            this.dtpFechaCitas.CustomFormat = "";
             this.dtpFechaCitas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaCitas.Location = new System.Drawing.Point(44, 108);
             this.dtpFechaCitas.Name = "dtpFechaCitas";
             this.dtpFechaCitas.Size = new System.Drawing.Size(104, 20);
             this.dtpFechaCitas.TabIndex = 17;
+            this.dtpFechaCitas.Value = new System.DateTime(2017, 6, 12, 16, 54, 0, 0);
             // 
             // label5
             // 
@@ -125,6 +127,7 @@
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
