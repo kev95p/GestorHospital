@@ -335,6 +335,7 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvCitas);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CitasDetalles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

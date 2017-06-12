@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace ModuloPacientes.GUI
 {
-    public partial class DiagnosticosDetalles : Form
+    public partial class EdicionDiagnosticos : Form
     {
-        public string idpaciente;
-        public DiagnosticosDetalles()
+        public EdicionDiagnosticos()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void EdicionDiagnosticos_Load(object sender, EventArgs e)
         {
-            EdicionDiagnosticos frm = new EdicionDiagnosticos();
-            frm.ShowDialog();
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

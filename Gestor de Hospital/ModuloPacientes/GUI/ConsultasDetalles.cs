@@ -28,5 +28,11 @@ namespace ModuloPacientes.GUI
         {
             CargarConsultas();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            consultasEdicion frm = new consultasEdicion();
+            frm.ShowDialog();
+        }
     }
 }

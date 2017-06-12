@@ -48,9 +48,9 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaConsulta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -268,15 +268,6 @@
             this.dgvConsultas.Size = new System.Drawing.Size(610, 328);
             this.dgvConsultas.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(507, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 32);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Agregar Consulta";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Medico
             // 
             this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -294,6 +285,16 @@
             this.FechaConsulta.Name = "FechaConsulta";
             this.FechaConsulta.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(507, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 32);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Agregar Consulta";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ConsultasDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,6 +303,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvConsultas);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultasDetalles";
             this.Text = "Consultas de Pacientes";
             this.Load += new System.EventHandler(this.ConsultasDetalles_Load);

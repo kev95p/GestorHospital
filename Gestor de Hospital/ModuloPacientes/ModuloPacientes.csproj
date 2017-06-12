@@ -102,6 +102,18 @@
     <Compile Include="GUI\DiagnosticosDetalles.Designer.cs">
       <DependentUpon>DiagnosticosDetalles.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EdicionCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionCitas.Designer.cs">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionDiagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionDiagnosticos.Designer.cs">
+      <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DiagnosticosDetalles.resx">
       <DependentUpon>DiagnosticosDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionCitas.resx">
+      <DependentUpon>EdicionCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionDiagnosticos.resx">
+      <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionPaciente.resx">
       <DependentUpon>EdicionPaciente.cs</DependentUpon>

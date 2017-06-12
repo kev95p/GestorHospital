@@ -47,13 +47,13 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvRecetas = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idReceta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
             this.Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Concentracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Via = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -274,37 +274,6 @@
             this.dgvRecetas.TabIndex = 3;
             this.dgvRecetas.SelectionChanged += new System.EventHandler(this.dgvRecetas_SelectionChanged);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dgvMedicamentos);
-            this.groupBox2.Location = new System.Drawing.Point(709, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(419, 483);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Medicamentos";
-            // 
-            // dgvMedicamentos
-            // 
-            this.dgvMedicamentos.AllowUserToAddRows = false;
-            this.dgvMedicamentos.AllowUserToDeleteRows = false;
-            this.dgvMedicamentos.AllowUserToResizeColumns = false;
-            this.dgvMedicamentos.AllowUserToResizeRows = false;
-            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Medicamento,
-            this.Concentracion,
-            this.Via,
-            this.Presentacion,
-            this.id});
-            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 36);
-            this.dgvMedicamentos.Name = "dgvMedicamentos";
-            this.dgvMedicamentos.ReadOnly = true;
-            this.dgvMedicamentos.RowHeadersVisible = false;
-            this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(407, 441);
-            this.dgvMedicamentos.TabIndex = 5;
-            // 
             // Medico
             // 
             this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -347,6 +316,37 @@
             this.idReceta.Name = "idReceta";
             this.idReceta.ReadOnly = true;
             this.idReceta.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvMedicamentos);
+            this.groupBox2.Location = new System.Drawing.Point(709, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(419, 483);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Medicamentos";
+            // 
+            // dgvMedicamentos
+            // 
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.AllowUserToDeleteRows = false;
+            this.dgvMedicamentos.AllowUserToResizeColumns = false;
+            this.dgvMedicamentos.AllowUserToResizeRows = false;
+            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Medicamento,
+            this.Concentracion,
+            this.Via,
+            this.Presentacion,
+            this.id});
+            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 36);
+            this.dgvMedicamentos.Name = "dgvMedicamentos";
+            this.dgvMedicamentos.ReadOnly = true;
+            this.dgvMedicamentos.RowHeadersVisible = false;
+            this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMedicamentos.Size = new System.Drawing.Size(407, 441);
+            this.dgvMedicamentos.TabIndex = 5;
             // 
             // Medicamento
             // 
@@ -395,6 +395,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar Receta";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // RecetasDetalles
             // 
@@ -405,6 +406,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvRecetas);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "RecetasDetalles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

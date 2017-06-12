@@ -45,5 +45,11 @@ namespace ModuloPacientes.GUI
             
            CargarMedicamentos();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            EdicionRecetaMedica frm = new EdicionRecetaMedica();
+            frm.ShowDialog();
+        }
     }
 }
