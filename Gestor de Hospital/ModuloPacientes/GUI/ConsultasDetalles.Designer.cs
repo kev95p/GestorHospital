@@ -305,6 +305,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ConsultasDetalles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultas de Pacientes";
             this.Load += new System.EventHandler(this.ConsultasDetalles_Load);
             this.panel1.ResumeLayout(false);

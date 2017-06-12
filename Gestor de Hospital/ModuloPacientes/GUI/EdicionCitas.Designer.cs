@@ -72,7 +72,7 @@
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Location = new System.Drawing.Point(44, 198);
             this.cbxEstado.Name = "cbxEstado";
-            this.cbxEstado.Size = new System.Drawing.Size(104, 21);
+            this.cbxEstado.Size = new System.Drawing.Size(177, 21);
             this.cbxEstado.TabIndex = 15;
             // 
             // label4
@@ -156,6 +156,7 @@
             this.Name = "EdicionCitas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Citas";
+            this.Load += new System.EventHandler(this.EdicionCitas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

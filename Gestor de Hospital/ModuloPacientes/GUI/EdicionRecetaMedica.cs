@@ -21,10 +21,13 @@ namespace ModuloPacientes.GUI
        //obvia esto :V
         private void label1_Click(object sender, EventArgs e) { }
         private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void EdicionRecetaMedica_Load(object sender, EventArgs e) { }
         private void label3_Click(object sender, EventArgs e) { }
         private void textBox3_TextChanged(object sender, EventArgs e) { }
 
+
+        private void EdicionRecetaMedica_Load(object sender, EventArgs e) {
+            CargarEstadoReceta();
+        }
 
         private void CargarEstadoReceta()
         {
@@ -34,12 +37,12 @@ namespace ModuloPacientes.GUI
             Estados.Columns.Add("Valor");
 
             fila = Estados.NewRow();
-            fila["Tipo"] = "Usando";
+            fila["Estado"] = "Usando";
             fila["Valor"] = "1";
             Estados.Rows.Add(fila);
 
             fila = Estados.NewRow();
-            fila["Tipo"] = "Desuso";
+            fila["Estado"] = "Desuso";
             fila["Valor"] = "2";
             Estados.Rows.Add(fila);
 

@@ -339,7 +339,8 @@
             this.Name = "CitasDetalles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "CitasDetalles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Citas";
             this.Load += new System.EventHandler(this.CitasDetalles_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
