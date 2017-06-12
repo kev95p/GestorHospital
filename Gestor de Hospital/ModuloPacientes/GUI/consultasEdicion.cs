@@ -21,5 +21,27 @@ namespace ModuloPacientes.GUI
         {
             Close();
         }
+
+
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void CargarMedicos()
+        {  
+            DataTable Medicos = new DataTable();
+            cbxDoctor.DataSource = Medicos;
+            cbxDoctor.ValueMember = "idEmpleado";
+            cbxDoctor.DisplayMember = "Medico";
+        }
+
+        private void consultasEdicion_Load(object sender, EventArgs e)
+        {
+            CargarMedicos();
+        }
+
     }
 }
