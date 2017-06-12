@@ -100,7 +100,7 @@ namespace ModuloPacientes.GUI
             lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
         }
 
-       /*      private void FiltrarFechaIngreso()
+        private void FiltrarFechaIngreso()
              {
                  if (dtpFechaIngreso.Checked == false)
                  {
@@ -114,7 +114,7 @@ namespace ModuloPacientes.GUI
                  dgvDetallePaciente.DataSource = _PACIENTES;
                  lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
              }
-        */     
+         
 
 
         private void txtNombres_TextChanged(object sender, EventArgs e)
@@ -136,6 +136,11 @@ namespace ModuloPacientes.GUI
         private void rbtnMasculino_CheckedChanged(object sender, EventArgs e)
         {
             FiltrarSexoMas();
+        }
+
+        private void dtpFechaIngreso_ValueChanged(object sender, EventArgs e)
+        {
+            FiltrarFechaIngreso();
         }
     }
 }

@@ -186,6 +186,7 @@
             this.dtpFechaIngreso.Size = new System.Drawing.Size(133, 20);
             this.dtpFechaIngreso.TabIndex = 5;
             this.dtpFechaIngreso.Value = new System.DateTime(2017, 6, 8, 0, 38, 0, 0);
+            this.dtpFechaIngreso.ValueChanged += new System.EventHandler(this.dtpFechaIngreso_ValueChanged);
             // 
             // rbtnMasculino
             // 
