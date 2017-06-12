@@ -148,6 +148,9 @@ namespace GUI.GestionEnfermedades
             Close();
         }
 
-       
+        private void cbxTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

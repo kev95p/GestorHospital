@@ -84,6 +84,12 @@
     <Compile Include="GUI\ConsultasDetallesEdicion.Designer.cs">
       <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\consultasEdicion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\consultasEdicion.Designer.cs">
+      <DependentUpon>consultasEdicion.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DetallePacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     </Compile>
     <Compile Include="GUI\EdicionPaciente.Designer.cs">
       <DependentUpon>EdicionPaciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\EdicionRecetaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionRecetaMedica.Designer.cs">
+      <DependentUpon>EdicionRecetaMedica.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\EnfermedadesDetalles.cs">
       <SubType>Form</SubType>
@@ -146,6 +158,9 @@
     <EmbeddedResource Include="GUI\ConsultasDetallesEdicion.resx">
       <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\consultasEdicion.resx">
+      <DependentUpon>consultasEdicion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DetallePacientes.resx">
       <DependentUpon>DetallePacientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionPaciente.resx">
       <DependentUpon>EdicionPaciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionRecetaMedica.resx">
+      <DependentUpon>EdicionRecetaMedica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EnfermedadesDetalles.resx">
       <DependentUpon>EnfermedadesDetalles.cs</DependentUpon>
