@@ -169,9 +169,7 @@
     <Compile Include="GUI\RecetasDetalles.Designer.cs">
       <DependentUpon>RecetasDetalles.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Visores\VisorPacientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="GUI\Visores\VisorPacientes.cs" />
     <Compile Include="GUI\Visores\VisorPacientes.Designer.cs">
       <DependentUpon>VisorPacientes.cs</DependentUpon>
     </Compile>
