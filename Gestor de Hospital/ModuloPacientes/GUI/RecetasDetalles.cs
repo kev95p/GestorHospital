@@ -49,6 +49,7 @@ namespace ModuloPacientes.GUI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             EdicionRecetaMedica frm = new EdicionRecetaMedica();
+            frm.idPAciente = idpaciente;
             frm.ShowDialog();
         }
     }

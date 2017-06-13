@@ -96,7 +96,8 @@
             // 
             // dtpFechaReceta
             // 
-            this.dtpFechaReceta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaReceta.CustomFormat = "dd-MM-yyyy";
+            this.dtpFechaReceta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaReceta.Location = new System.Drawing.Point(43, 109);
             this.dtpFechaReceta.Name = "dtpFechaReceta";
             this.dtpFechaReceta.Size = new System.Drawing.Size(104, 20);

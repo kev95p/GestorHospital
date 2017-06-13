@@ -32,7 +32,9 @@ namespace ModuloPacientes.GUI
         private void button1_Click(object sender, EventArgs e)
         {
             consultasEdicion frm = new consultasEdicion();
+            frm.IDPaciente = idpaciente;
             frm.ShowDialog();
+
         }
     }
 }

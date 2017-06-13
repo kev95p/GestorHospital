@@ -45,6 +45,7 @@
             this.btnGuardar.TabIndex = 0;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // cbxDoctor
             // 
@@ -115,6 +116,7 @@
             this.Name = "consultasEdicion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultas";
+            this.Load += new System.EventHandler(this.consultasEdicion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
