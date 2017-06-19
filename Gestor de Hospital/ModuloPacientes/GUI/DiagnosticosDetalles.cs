@@ -12,11 +12,21 @@ namespace ModuloPacientes.GUI
 {
     public partial class DiagnosticosDetalles : Form
     {
-        
         public string idpaciente;
         public DiagnosticosDetalles()
         {
             InitializeComponent();
+        }
+
+        private void CargarDiagnosticos()
+        {
+            dgvDiagnosticos.AutoGenerateColumns = false;
+            dgvDiagnosticos.DataSource = CacheManager.CachePaciente.DIAGNOSTICOS(idpaciente);
+        }
+
+        private void DiagnosticosDetalles_Load(object sender, EventArgs e)
+        {
+            CargarDiagnosticos();
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -24,6 +34,9 @@ namespace ModuloPacientes.GUI
             EdicionDiagnosticos frm = new EdicionDiagnosticos();
             frm.IDPaciente = idpaciente;
             frm.ShowDialog();
+            CargarDiagnosticos();
         }
+
+        
     }
 }

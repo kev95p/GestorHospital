@@ -46,11 +46,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
-            this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.dgvDiagnosticos = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -59,7 +59,7 @@
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosticos)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -241,46 +241,24 @@
             this.pbxImagen.TabIndex = 1;
             this.pbxImagen.TabStop = false;
             // 
-            // dgvCitas
+            // dgvDiagnosticos
             // 
-            this.dgvCitas.AllowUserToAddRows = false;
-            this.dgvCitas.AllowUserToDeleteRows = false;
-            this.dgvCitas.AllowUserToResizeColumns = false;
-            this.dgvCitas.AllowUserToResizeRows = false;
-            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDiagnosticos.AllowUserToAddRows = false;
+            this.dgvDiagnosticos.AllowUserToDeleteRows = false;
+            this.dgvDiagnosticos.AllowUserToResizeColumns = false;
+            this.dgvDiagnosticos.AllowUserToResizeRows = false;
+            this.dgvDiagnosticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiagnosticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
             this.Diagnostico,
             this.FechaCreacion});
-            this.dgvCitas.Location = new System.Drawing.Point(2, 163);
-            this.dgvCitas.Name = "dgvCitas";
-            this.dgvCitas.ReadOnly = true;
-            this.dgvCitas.RowHeadersVisible = false;
-            this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCitas.Size = new System.Drawing.Size(611, 318);
-            this.dgvCitas.TabIndex = 4;
-            // 
-            // Medico
-            // 
-            this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Medico.HeaderText = "Medico";
-            this.Medico.Name = "Medico";
-            this.Medico.ReadOnly = true;
-            // 
-            // Diagnostico
-            // 
-            this.Diagnostico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Diagnostico.FillWeight = 200F;
-            this.Diagnostico.HeaderText = "Diagnostico";
-            this.Diagnostico.Name = "Diagnostico";
-            this.Diagnostico.ReadOnly = true;
-            // 
-            // FechaCreacion
-            // 
-            this.FechaCreacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FechaCreacion.HeaderText = "Fecha de Creacion";
-            this.FechaCreacion.Name = "FechaCreacion";
-            this.FechaCreacion.ReadOnly = true;
+            this.dgvDiagnosticos.Location = new System.Drawing.Point(2, 163);
+            this.dgvDiagnosticos.Name = "dgvDiagnosticos";
+            this.dgvDiagnosticos.ReadOnly = true;
+            this.dgvDiagnosticos.RowHeadersVisible = false;
+            this.dgvDiagnosticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiagnosticos.Size = new System.Drawing.Size(611, 318);
+            this.dgvDiagnosticos.TabIndex = 4;
             // 
             // btnAgregar
             // 
@@ -292,13 +270,38 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // Medico
+            // 
+            this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medico.DataPropertyName = "Medico";
+            this.Medico.HeaderText = "Medico";
+            this.Medico.Name = "Medico";
+            this.Medico.ReadOnly = true;
+            // 
+            // Diagnostico
+            // 
+            this.Diagnostico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Diagnostico.DataPropertyName = "diagnostico";
+            this.Diagnostico.FillWeight = 200F;
+            this.Diagnostico.HeaderText = "Diagnostico";
+            this.Diagnostico.Name = "Diagnostico";
+            this.Diagnostico.ReadOnly = true;
+            // 
+            // FechaCreacion
+            // 
+            this.FechaCreacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FechaCreacion.DataPropertyName = "FechaCrecion";
+            this.FechaCreacion.HeaderText = "Fecha de Creacion";
+            this.FechaCreacion.Name = "FechaCreacion";
+            this.FechaCreacion.ReadOnly = true;
+            // 
             // DiagnosticosDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 486);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dgvCitas);
+            this.Controls.Add(this.dgvDiagnosticos);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
@@ -307,6 +310,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Diagnosticos de Pacientes";
+            this.Load += new System.EventHandler(this.DiagnosticosDetalles_Load);
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -320,7 +324,7 @@
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiagnosticos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -345,7 +349,7 @@
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txtPeso;
         public System.Windows.Forms.PictureBox pbxImagen;
-        private System.Windows.Forms.DataGridView dgvCitas;
+        private System.Windows.Forms.DataGridView dgvDiagnosticos;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
         private System.Windows.Forms.DataGridViewTextBoxColumn Diagnostico;

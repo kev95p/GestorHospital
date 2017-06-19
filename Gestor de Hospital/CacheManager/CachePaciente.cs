@@ -63,6 +63,26 @@ namespace CacheManager
             }
         }
 
+        public static DataTable DIAGNOSTICOS(string idpaciente)
+        {
+            try
+            {
+                DataSet datos = new DataSet();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select concat(empleados.primer_nombre,' ', empleados.primer_apellido) as Medico, diagnostico,  
+                                 date_format(diagnosticos.fechaCreacion,'%d-%m-%Y') as FechaCrecion
+                                 from diagnosticos join empleados on diagnosticos.idMedico = empleados.idEmpleado
+                                 where diagnosticos.idPaciente = " + idpaciente + ";";
+                cb.CommandText = query;
+                datos = cb.Select();
+                return datos.Tables[0];
+            }
+            catch
+            {
+                return new DataTable();
+            }
+        }
+
         public static DataTable CITAS(string idpaciente)
         {
             try
@@ -81,6 +101,8 @@ namespace CacheManager
             }
         }
 
+        
+        
 
         public static DataTable RECETAS(string idpaciente)
         {
