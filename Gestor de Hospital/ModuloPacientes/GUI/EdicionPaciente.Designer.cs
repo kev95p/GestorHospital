@@ -150,7 +150,7 @@
             this.btnTomarFoto.Location = new System.Drawing.Point(147, 45);
             this.btnTomarFoto.Name = "btnTomarFoto";
             this.btnTomarFoto.Size = new System.Drawing.Size(105, 23);
-            this.btnTomarFoto.TabIndex = 1;
+            this.btnTomarFoto.TabIndex = 0;
             this.btnTomarFoto.Text = "Tomar Foto";
             this.btnTomarFoto.UseVisualStyleBackColor = true;
             this.btnTomarFoto.Click += new System.EventHandler(this.btTomarFoto_Click);
@@ -160,7 +160,7 @@
             this.btnSeleccionarFoto.Location = new System.Drawing.Point(147, 86);
             this.btnSeleccionarFoto.Name = "btnSeleccionarFoto";
             this.btnSeleccionarFoto.Size = new System.Drawing.Size(105, 23);
-            this.btnSeleccionarFoto.TabIndex = 2;
+            this.btnSeleccionarFoto.TabIndex = 1;
             this.btnSeleccionarFoto.Text = "Seleccionar Foto";
             this.btnSeleccionarFoto.UseVisualStyleBackColor = true;
             this.btnSeleccionarFoto.Click += new System.EventHandler(this.btnSeleccionarFoto_Click);
@@ -183,7 +183,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(551, 166);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Informacion Personal";
             // 
@@ -229,7 +229,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(108, 20);
-            this.txtPrimerNombre.TabIndex = 1;
+            this.txtPrimerNombre.TabIndex = 0;
             // 
             // flowLayoutPanel3
             // 
@@ -256,7 +256,7 @@
             this.txtSegundoNombre.Location = new System.Drawing.Point(3, 16);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(108, 20);
-            this.txtSegundoNombre.TabIndex = 1;
+            this.txtSegundoNombre.TabIndex = 0;
             // 
             // flowLayoutPanel4
             // 
@@ -283,7 +283,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(108, 20);
-            this.txtPrimerApellido.TabIndex = 1;
+            this.txtPrimerApellido.TabIndex = 0;
             // 
             // flowLayoutPanel5
             // 
@@ -310,7 +310,7 @@
             this.txtSegundoApellido.Location = new System.Drawing.Point(3, 16);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(108, 20);
-            this.txtSegundoApellido.TabIndex = 1;
+            this.txtSegundoApellido.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -318,7 +318,7 @@
             this.groupBox3.Location = new System.Drawing.Point(3, 48);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(162, 39);
-            this.groupBox3.TabIndex = 6;
+            this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Sexo";
             // 
@@ -371,7 +371,7 @@
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 13);
-            this.label5.TabIndex = 1;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Fecha de Nacimiento";
             // 
             // dtpFechaNac
@@ -391,7 +391,7 @@
             this.flowLayoutPanel8.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(81, 39);
-            this.flowLayoutPanel8.TabIndex = 7;
+            this.flowLayoutPanel8.TabIndex = 6;
             // 
             // label6
             // 
@@ -408,7 +408,7 @@
             this.DUI.Mask = "00000000-0";
             this.DUI.Name = "DUI";
             this.DUI.Size = new System.Drawing.Size(68, 20);
-            this.DUI.TabIndex = 1;
+            this.DUI.TabIndex = 0;
             // 
             // flowLayoutPanel10
             // 
@@ -419,7 +419,7 @@
             this.flowLayoutPanel10.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(130, 41);
-            this.flowLayoutPanel10.TabIndex = 9;
+            this.flowLayoutPanel10.TabIndex = 7;
             // 
             // label8
             // 
@@ -447,7 +447,7 @@
             this.flowLayoutPanel11.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(125, 39);
-            this.flowLayoutPanel11.TabIndex = 10;
+            this.flowLayoutPanel11.TabIndex = 8;
             // 
             // label9
             // 
@@ -463,7 +463,7 @@
             this.txtOcupacion.Location = new System.Drawing.Point(3, 16);
             this.txtOcupacion.Name = "txtOcupacion";
             this.txtOcupacion.Size = new System.Drawing.Size(110, 20);
-            this.txtOcupacion.TabIndex = 1;
+            this.txtOcupacion.TabIndex = 0;
             // 
             // flowLayoutPanel9
             // 
@@ -474,7 +474,7 @@
             this.flowLayoutPanel9.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(124, 39);
-            this.flowLayoutPanel9.TabIndex = 8;
+            this.flowLayoutPanel9.TabIndex = 5;
             // 
             // label7
             // 
@@ -490,7 +490,7 @@
             this.txtPersonaEmergencia.Location = new System.Drawing.Point(3, 16);
             this.txtPersonaEmergencia.Name = "txtPersonaEmergencia";
             this.txtPersonaEmergencia.Size = new System.Drawing.Size(110, 20);
-            this.txtPersonaEmergencia.TabIndex = 1;
+            this.txtPersonaEmergencia.TabIndex = 0;
             // 
             // groupBox4
             // 
@@ -498,7 +498,7 @@
             this.groupBox4.Location = new System.Drawing.Point(15, 184);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(825, 112);
-            this.groupBox4.TabIndex = 5;
+            this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Informacion Contacto";
             // 
@@ -526,7 +526,7 @@
             this.flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
             this.flowLayoutPanel13.Size = new System.Drawing.Size(130, 41);
-            this.flowLayoutPanel13.TabIndex = 10;
+            this.flowLayoutPanel13.TabIndex = 0;
             // 
             // label10
             // 
@@ -543,7 +543,7 @@
             this.cbDepartamentos.Location = new System.Drawing.Point(3, 16);
             this.cbDepartamentos.Name = "cbDepartamentos";
             this.cbDepartamentos.Size = new System.Drawing.Size(121, 21);
-            this.cbDepartamentos.TabIndex = 1;
+            this.cbDepartamentos.TabIndex = 0;
             this.cbDepartamentos.SelectedIndexChanged += new System.EventHandler(this.cbDepartamentos_SelectedIndexChanged);
             // 
             // flowLayoutPanel14
@@ -555,7 +555,7 @@
             this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
             this.flowLayoutPanel14.Size = new System.Drawing.Size(130, 41);
-            this.flowLayoutPanel14.TabIndex = 11;
+            this.flowLayoutPanel14.TabIndex = 1;
             // 
             // label11
             // 
@@ -572,7 +572,7 @@
             this.cbMunicipios.Location = new System.Drawing.Point(3, 16);
             this.cbMunicipios.Name = "cbMunicipios";
             this.cbMunicipios.Size = new System.Drawing.Size(121, 21);
-            this.cbMunicipios.TabIndex = 1;
+            this.cbMunicipios.TabIndex = 0;
             // 
             // flowLayoutPanel15
             // 
@@ -583,7 +583,7 @@
             this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
             this.flowLayoutPanel15.Size = new System.Drawing.Size(208, 41);
-            this.flowLayoutPanel15.TabIndex = 12;
+            this.flowLayoutPanel15.TabIndex = 2;
             // 
             // label12
             // 
@@ -599,7 +599,7 @@
             this.txtResidencia.Location = new System.Drawing.Point(3, 16);
             this.txtResidencia.Name = "txtResidencia";
             this.txtResidencia.Size = new System.Drawing.Size(200, 20);
-            this.txtResidencia.TabIndex = 1;
+            this.txtResidencia.TabIndex = 0;
             // 
             // flowLayoutPanel16
             // 
@@ -610,7 +610,7 @@
             this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
             this.flowLayoutPanel16.Size = new System.Drawing.Size(140, 39);
-            this.flowLayoutPanel16.TabIndex = 13;
+            this.flowLayoutPanel16.TabIndex = 3;
             // 
             // label13
             // 
@@ -626,7 +626,7 @@
             this.txtEmail.Location = new System.Drawing.Point(3, 16);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(126, 20);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 0;
             // 
             // flowLayoutPanel17
             // 
@@ -637,7 +637,7 @@
             this.flowLayoutPanel17.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
             this.flowLayoutPanel17.Size = new System.Drawing.Size(145, 39);
-            this.flowLayoutPanel17.TabIndex = 14;
+            this.flowLayoutPanel17.TabIndex = 4;
             // 
             // label14
             // 
@@ -653,7 +653,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(3, 16);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(129, 20);
-            this.txtTelefono.TabIndex = 1;
+            this.txtTelefono.TabIndex = 0;
             // 
             // flowLayoutPanel18
             // 
@@ -664,7 +664,7 @@
             this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
             this.flowLayoutPanel18.Size = new System.Drawing.Size(145, 39);
-            this.flowLayoutPanel18.TabIndex = 15;
+            this.flowLayoutPanel18.TabIndex = 6;
             // 
             // label15
             // 
@@ -680,7 +680,7 @@
             this.txtTelefonoEmergencia.Location = new System.Drawing.Point(3, 16);
             this.txtTelefonoEmergencia.Name = "txtTelefonoEmergencia";
             this.txtTelefonoEmergencia.Size = new System.Drawing.Size(129, 20);
-            this.txtTelefonoEmergencia.TabIndex = 1;
+            this.txtTelefonoEmergencia.TabIndex = 0;
             // 
             // groupBox5
             // 
@@ -688,7 +688,7 @@
             this.groupBox5.Location = new System.Drawing.Point(15, 302);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(822, 66);
-            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Informacion Fisica";
             // 
@@ -712,7 +712,7 @@
             this.flowLayoutPanel20.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel20.Name = "flowLayoutPanel20";
             this.flowLayoutPanel20.Size = new System.Drawing.Size(130, 41);
-            this.flowLayoutPanel20.TabIndex = 12;
+            this.flowLayoutPanel20.TabIndex = 0;
             // 
             // label16
             // 
@@ -729,7 +729,7 @@
             this.cbTipoSangre.Location = new System.Drawing.Point(3, 16);
             this.cbTipoSangre.Name = "cbTipoSangre";
             this.cbTipoSangre.Size = new System.Drawing.Size(121, 21);
-            this.cbTipoSangre.TabIndex = 1;
+            this.cbTipoSangre.TabIndex = 0;
             // 
             // flowLayoutPanel21
             // 
@@ -740,7 +740,7 @@
             this.flowLayoutPanel21.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel21.Name = "flowLayoutPanel21";
             this.flowLayoutPanel21.Size = new System.Drawing.Size(61, 39);
-            this.flowLayoutPanel21.TabIndex = 13;
+            this.flowLayoutPanel21.TabIndex = 1;
             // 
             // label17
             // 
@@ -756,7 +756,7 @@
             this.txtEstatura.Location = new System.Drawing.Point(3, 16);
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.Size = new System.Drawing.Size(52, 20);
-            this.txtEstatura.TabIndex = 1;
+            this.txtEstatura.TabIndex = 0;
             // 
             // flowLayoutPanel22
             // 
@@ -767,7 +767,7 @@
             this.flowLayoutPanel22.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel22.Name = "flowLayoutPanel22";
             this.flowLayoutPanel22.Size = new System.Drawing.Size(61, 39);
-            this.flowLayoutPanel22.TabIndex = 14;
+            this.flowLayoutPanel22.TabIndex = 2;
             // 
             // label18
             // 
@@ -783,14 +783,14 @@
             this.txtPeso.Location = new System.Drawing.Point(3, 16);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(52, 20);
-            this.txtPeso.TabIndex = 1;
+            this.txtPeso.TabIndex = 0;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(302, 383);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 7;
+            this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -800,7 +800,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(445, 383);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -810,7 +810,7 @@
             this.btnSalir.Location = new System.Drawing.Point(758, 383);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
-            this.btnSalir.TabIndex = 9;
+            this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Visible = false;
@@ -821,7 +821,7 @@
             this.btnEditar.Location = new System.Drawing.Point(677, 383);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 10;
+            this.btnEditar.TabIndex = 6;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Visible = false;

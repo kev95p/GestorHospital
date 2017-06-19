@@ -107,7 +107,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(149, 323);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 0;
+            this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -128,7 +128,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(483, 207);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             // 
@@ -175,7 +175,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtPrimerNombre.TabIndex = 1;
+            this.txtPrimerNombre.TabIndex = 0;
             // 
             // flowLayoutPanel3
             // 
@@ -227,7 +227,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtPrimerApellido.TabIndex = 1;
+            this.txtPrimerApellido.TabIndex = 0;
             // 
             // flowLayoutPanel5
             // 
@@ -253,7 +253,7 @@
             this.txtSegundoApellido.Location = new System.Drawing.Point(3, 16);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(100, 20);
-            this.txtSegundoApellido.TabIndex = 1;
+            this.txtSegundoApellido.TabIndex = 0;
             // 
             // flowLayoutPanel7
             // 
@@ -263,7 +263,7 @@
             this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 48);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(107, 39);
-            this.flowLayoutPanel7.TabIndex = 5;
+            this.flowLayoutPanel7.TabIndex = 4;
             // 
             // label6
             // 
@@ -280,7 +280,7 @@
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefono.TabIndex = 1;
+            this.txtTelefono.TabIndex = 0;
             // 
             // flowLayoutPanel8
             // 
@@ -290,7 +290,7 @@
             this.flowLayoutPanel8.Location = new System.Drawing.Point(116, 48);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(143, 39);
-            this.flowLayoutPanel8.TabIndex = 6;
+            this.flowLayoutPanel8.TabIndex = 5;
             // 
             // label7
             // 
@@ -307,7 +307,7 @@
             this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(139, 20);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 0;
             // 
             // flowLayoutPanel6
             // 
@@ -317,7 +317,7 @@
             this.flowLayoutPanel6.Location = new System.Drawing.Point(265, 48);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(73, 39);
-            this.flowLayoutPanel6.TabIndex = 4;
+            this.flowLayoutPanel6.TabIndex = 6;
             // 
             // label5
             // 
@@ -334,7 +334,7 @@
             this.txtDui.Mask = "00000000-0";
             this.txtDui.Name = "txtDui";
             this.txtDui.Size = new System.Drawing.Size(68, 20);
-            this.txtDui.TabIndex = 2;
+            this.txtDui.TabIndex = 0;
             // 
             // flowLayoutPanel17
             // 
@@ -344,7 +344,7 @@
             this.flowLayoutPanel17.Location = new System.Drawing.Point(344, 48);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
             this.flowLayoutPanel17.Size = new System.Drawing.Size(130, 55);
-            this.flowLayoutPanel17.TabIndex = 10;
+            this.flowLayoutPanel17.TabIndex = 7;
             // 
             // label14
             // 
@@ -362,7 +362,7 @@
             this.cbEspecialidades.Location = new System.Drawing.Point(3, 16);
             this.cbEspecialidades.Name = "cbEspecialidades";
             this.cbEspecialidades.Size = new System.Drawing.Size(115, 21);
-            this.cbEspecialidades.TabIndex = 1;
+            this.cbEspecialidades.TabIndex = 0;
             // 
             // flowLayoutPanel9
             // 
@@ -373,7 +373,7 @@
             this.flowLayoutPanel9.Location = new System.Drawing.Point(3, 109);
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             this.flowLayoutPanel9.Size = new System.Drawing.Size(130, 71);
-            this.flowLayoutPanel9.TabIndex = 7;
+            this.flowLayoutPanel9.TabIndex = 8;
             // 
             // label8
             // 
@@ -381,7 +381,7 @@
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
-            this.label8.TabIndex = 0;
+            this.label8.TabIndex = 2;
             this.label8.Text = "Departamento";
             // 
             // cbDepartamento
@@ -391,7 +391,7 @@
             this.cbDepartamento.Location = new System.Drawing.Point(3, 16);
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(117, 21);
-            this.cbDepartamento.TabIndex = 1;
+            this.cbDepartamento.TabIndex = 0;
             this.cbDepartamento.SelectedIndexChanged += new System.EventHandler(this.cbDepartamento_SelectedIndexChanged);
             // 
             // flowLayoutPanel12
@@ -400,7 +400,7 @@
             this.flowLayoutPanel12.Location = new System.Drawing.Point(3, 43);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
             this.flowLayoutPanel12.Size = new System.Drawing.Size(117, 23);
-            this.flowLayoutPanel12.TabIndex = 10;
+            this.flowLayoutPanel12.TabIndex = 1;
             // 
             // chkAsignarUsuario
             // 
@@ -409,7 +409,7 @@
             this.chkAsignarUsuario.Location = new System.Drawing.Point(3, 3);
             this.chkAsignarUsuario.Name = "chkAsignarUsuario";
             this.chkAsignarUsuario.Size = new System.Drawing.Size(100, 17);
-            this.chkAsignarUsuario.TabIndex = 1;
+            this.chkAsignarUsuario.TabIndex = 0;
             this.chkAsignarUsuario.Text = "Asignar Usuario";
             this.chkAsignarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.chkAsignarUsuario.UseVisualStyleBackColor = true;
@@ -423,7 +423,7 @@
             this.flowLayoutPanel10.Location = new System.Drawing.Point(139, 109);
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             this.flowLayoutPanel10.Size = new System.Drawing.Size(130, 71);
-            this.flowLayoutPanel10.TabIndex = 8;
+            this.flowLayoutPanel10.TabIndex = 9;
             // 
             // label9
             // 
@@ -451,7 +451,7 @@
             this.flowLayoutPanel11.Location = new System.Drawing.Point(275, 109);
             this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             this.flowLayoutPanel11.Size = new System.Drawing.Size(174, 71);
-            this.flowLayoutPanel11.TabIndex = 9;
+            this.flowLayoutPanel11.TabIndex = 10;
             // 
             // label10
             // 
@@ -468,7 +468,7 @@
             this.txtResidencia.Multiline = true;
             this.txtResidencia.Name = "txtResidencia";
             this.txtResidencia.Size = new System.Drawing.Size(167, 50);
-            this.txtResidencia.TabIndex = 1;
+            this.txtResidencia.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -476,7 +476,7 @@
             this.groupBox2.Location = new System.Drawing.Point(15, 225);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(462, 76);
-            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos Usuario";
             // 
@@ -499,7 +499,7 @@
             this.flowLayoutPanel14.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
             this.flowLayoutPanel14.Size = new System.Drawing.Size(107, 39);
-            this.flowLayoutPanel14.TabIndex = 1;
+            this.flowLayoutPanel14.TabIndex = 0;
             // 
             // label11
             // 
@@ -507,7 +507,7 @@
             this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(43, 13);
-            this.label11.TabIndex = 0;
+            this.label11.TabIndex = 1;
             this.label11.Text = "Usuario";
             // 
             // txtUsuario
@@ -515,7 +515,7 @@
             this.txtUsuario.Location = new System.Drawing.Point(3, 16);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 0;
             // 
             // flowLayoutPanel15
             // 
@@ -525,7 +525,7 @@
             this.flowLayoutPanel15.Location = new System.Drawing.Point(116, 3);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
             this.flowLayoutPanel15.Size = new System.Drawing.Size(107, 39);
-            this.flowLayoutPanel15.TabIndex = 2;
+            this.flowLayoutPanel15.TabIndex = 1;
             // 
             // label12
             // 
@@ -533,7 +533,7 @@
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
-            this.label12.TabIndex = 0;
+            this.label12.TabIndex = 1;
             this.label12.Text = "Contraseña";
             // 
             // txtPassword
@@ -552,7 +552,7 @@
             this.flowLayoutPanel16.Location = new System.Drawing.Point(229, 3);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
             this.flowLayoutPanel16.Size = new System.Drawing.Size(217, 50);
-            this.flowLayoutPanel16.TabIndex = 3;
+            this.flowLayoutPanel16.TabIndex = 2;
             // 
             // label13
             // 

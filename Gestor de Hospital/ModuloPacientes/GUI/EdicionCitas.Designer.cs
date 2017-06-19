@@ -60,7 +60,7 @@
             this.dtpFechaCitas.Location = new System.Drawing.Point(44, 108);
             this.dtpFechaCitas.Name = "dtpFechaCitas";
             this.dtpFechaCitas.Size = new System.Drawing.Size(104, 20);
-            this.dtpFechaCitas.TabIndex = 17;
+            this.dtpFechaCitas.TabIndex = 1;
             this.dtpFechaCitas.Value = new System.DateTime(2017, 6, 12, 16, 54, 0, 0);
             // 
             // label5
@@ -78,7 +78,7 @@
             this.cbxEstado.Location = new System.Drawing.Point(44, 198);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(177, 21);
-            this.cbxEstado.TabIndex = 15;
+            this.cbxEstado.TabIndex = 3;
             // 
             // label4
             // 
@@ -95,7 +95,7 @@
             this.cbxMedico.Location = new System.Drawing.Point(46, 59);
             this.cbxMedico.Name = "cbxMedico";
             this.cbxMedico.Size = new System.Drawing.Size(177, 21);
-            this.cbxMedico.TabIndex = 13;
+            this.cbxMedico.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -120,14 +120,14 @@
             this.txtMotivos.Location = new System.Drawing.Point(44, 154);
             this.txtMotivos.Name = "txtMotivos";
             this.txtMotivos.Size = new System.Drawing.Size(179, 20);
-            this.txtMotivos.TabIndex = 21;
+            this.txtMotivos.TabIndex = 2;
             // 
             // btnGuardar
             // 
             this.btnGuardar.Location = new System.Drawing.Point(50, 266);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 22;
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -137,7 +137,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(146, 266);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 23;
+            this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

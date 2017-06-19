@@ -45,7 +45,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(53, 196);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -56,7 +56,7 @@
             this.cbxDoctor.Location = new System.Drawing.Point(52, 73);
             this.cbxDoctor.Name = "cbxDoctor";
             this.cbxDoctor.Size = new System.Drawing.Size(186, 21);
-            this.cbxDoctor.TabIndex = 3;
+            this.cbxDoctor.TabIndex = 0;
             // 
             // dtpFechaConsulta
             // 
@@ -64,7 +64,7 @@
             this.dtpFechaConsulta.Location = new System.Drawing.Point(53, 124);
             this.dtpFechaConsulta.Name = "dtpFechaConsulta";
             this.dtpFechaConsulta.Size = new System.Drawing.Size(108, 20);
-            this.dtpFechaConsulta.TabIndex = 4;
+            this.dtpFechaConsulta.TabIndex = 1;
             // 
             // label3
             // 
@@ -89,7 +89,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(163, 196);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

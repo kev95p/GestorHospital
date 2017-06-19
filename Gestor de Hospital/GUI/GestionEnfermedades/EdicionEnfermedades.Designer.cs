@@ -48,7 +48,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(193, 192);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -67,7 +67,7 @@
             this.txbNombre.Location = new System.Drawing.Point(87, 58);
             this.txbNombre.Name = "txbNombre";
             this.txbNombre.Size = new System.Drawing.Size(153, 20);
-            this.txbNombre.TabIndex = 2;
+            this.txbNombre.TabIndex = 0;
             // 
             // cbxTipo
             // 
@@ -75,7 +75,7 @@
             this.cbxTipo.Location = new System.Drawing.Point(87, 84);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(153, 21);
-            this.cbxTipo.TabIndex = 3;
+            this.cbxTipo.TabIndex = 1;
             this.cbxTipo.SelectedIndexChanged += new System.EventHandler(this.cbxTipo_SelectedIndexChanged);
             // 
             // txbID
@@ -115,7 +115,7 @@
             this.groupBox1.Location = new System.Drawing.Point(39, 30);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(278, 139);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Enfermedad";
             // 
@@ -124,7 +124,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(94, 192);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 8;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Aceptar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

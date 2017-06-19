@@ -99,7 +99,7 @@
             this.cbRol.Location = new System.Drawing.Point(97, 111);
             this.cbRol.Name = "cbRol";
             this.cbRol.Size = new System.Drawing.Size(100, 21);
-            this.cbRol.TabIndex = 6;
+            this.cbRol.TabIndex = 1;
             // 
             // label3
             // 
@@ -116,7 +116,7 @@
             this.txtClaveComprobacion.Name = "txtClaveComprobacion";
             this.txtClaveComprobacion.PasswordChar = '*';
             this.txtClaveComprobacion.Size = new System.Drawing.Size(123, 20);
-            this.txtClaveComprobacion.TabIndex = 4;
+            this.txtClaveComprobacion.TabIndex = 3;
             // 
             // label2
             // 

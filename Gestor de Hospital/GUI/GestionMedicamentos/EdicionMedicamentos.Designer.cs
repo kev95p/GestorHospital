@@ -52,7 +52,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(151, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 0;
+            this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -89,7 +89,7 @@
             this.groupBox1.Location = new System.Drawing.Point(26, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(238, 175);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Medicamentos";
             // 
@@ -98,7 +98,7 @@
             this.txtVia.Location = new System.Drawing.Point(88, 133);
             this.txtVia.Name = "txtVia";
             this.txtVia.Size = new System.Drawing.Size(131, 20);
-            this.txtVia.TabIndex = 10;
+            this.txtVia.TabIndex = 3;
             // 
             // label5
             // 
@@ -114,7 +114,7 @@
             this.txbPresentacion.Location = new System.Drawing.Point(88, 107);
             this.txbPresentacion.Name = "txbPresentacion";
             this.txbPresentacion.Size = new System.Drawing.Size(131, 20);
-            this.txbPresentacion.TabIndex = 8;
+            this.txbPresentacion.TabIndex = 2;
             // 
             // label4
             // 
@@ -130,7 +130,7 @@
             this.txbConcentracion.Location = new System.Drawing.Point(88, 81);
             this.txbConcentracion.Name = "txbConcentracion";
             this.txbConcentracion.Size = new System.Drawing.Size(131, 20);
-            this.txbConcentracion.TabIndex = 6;
+            this.txbConcentracion.TabIndex = 1;
             // 
             // label3
             // 
@@ -146,7 +146,7 @@
             this.txbNombreMedicamento.Location = new System.Drawing.Point(88, 55);
             this.txbNombreMedicamento.Name = "txbNombreMedicamento";
             this.txbNombreMedicamento.Size = new System.Drawing.Size(131, 20);
-            this.txbNombreMedicamento.TabIndex = 4;
+            this.txbNombreMedicamento.TabIndex = 0;
             // 
             // label2
             // 
@@ -162,7 +162,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(54, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Aceptar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

@@ -44,7 +44,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(59, 263);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
@@ -71,7 +71,7 @@
             this.cbxMedico.Location = new System.Drawing.Point(50, 69);
             this.cbxMedico.Name = "cbxMedico";
             this.cbxMedico.Size = new System.Drawing.Size(200, 21);
-            this.cbxMedico.TabIndex = 3;
+            this.cbxMedico.TabIndex = 0;
             // 
             // txtDiagnostico
             // 
@@ -79,7 +79,7 @@
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
             this.txtDiagnostico.Size = new System.Drawing.Size(203, 49);
-            this.txtDiagnostico.TabIndex = 4;
+            this.txtDiagnostico.TabIndex = 1;
             // 
             // label2
             // 
@@ -113,7 +113,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(152, 263);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

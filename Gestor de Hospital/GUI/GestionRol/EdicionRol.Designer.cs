@@ -59,7 +59,7 @@
             this.txtRol.Location = new System.Drawing.Point(65, 59);
             this.txtRol.Name = "txtRol";
             this.txtRol.Size = new System.Drawing.Size(100, 20);
-            this.txtRol.TabIndex = 3;
+            this.txtRol.TabIndex = 0;
             // 
             // label2
             // 
