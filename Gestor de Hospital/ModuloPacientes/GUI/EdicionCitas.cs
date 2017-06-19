@@ -76,18 +76,34 @@ namespace ModuloPacientes.GUI
 
 
 
-
-            if (citas.Insertar())
+            if (ValidarDatos())
             {
-                MessageBox.Show("Cita agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (citas.Insertar())
+                {
+                    MessageBox.Show("Cita agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
             }
         }
+
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (txtMotivos.TextLength == 0)
+            {
+                Notificador.SetError(txtMotivos, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            return Validado;
+        }
+
 
     }
 }

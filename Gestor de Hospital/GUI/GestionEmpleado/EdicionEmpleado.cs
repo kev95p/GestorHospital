@@ -99,6 +99,7 @@ namespace GUI.GestionEmpleado
             em.Primer_Apellido = txtPrimerApellido.Text;
             em.Segundo_Apellido = txtSegundoNombre.Text;
             em.Telefono = txtTelefono.Text;
+            em.DUI = txtDui.Text;
             em.Email = txtEmail.Text;
             em.Residencia = txtResidencia.Text;
             em.IdMunicipio = cbMunicipios.SelectedValue.ToString();
@@ -147,7 +148,7 @@ namespace GUI.GestionEmpleado
         {
             Boolean Validado = true;
             Notificador.Clear();
-            
+
             if (txtPrimerNombre.TextLength == 0)
             {
                 Notificador.SetError(txtPrimerNombre, "Este campo no puede quedar vacio.");
@@ -190,17 +191,20 @@ namespace GUI.GestionEmpleado
                 Notificador.SetError(txtResidencia, "Este campo no puede quedar vacio.");
                 Validado = false;
             }
-            if (txtUsuario.TextLength == 0)
-            {
-                Notificador.SetError(txtUsuario, "Este campo no puede quedar vacio.");
-                Validado = false;
-            }
-            if (txtPassword.TextLength == 0)
-            {
-                Notificador.SetError(txtPassword, "Este campo no puede quedar vacio.");
-                Validado = false;
-            }
 
+            if (chkAsignarUsuario.Checked == true)
+            {
+                if (txtUsuario.TextLength == 0)
+                {
+                    Notificador.SetError(txtUsuario, "Este campo no puede quedar vacio.");
+                    Validado = false;
+                }
+                if (txtPassword.TextLength == 0)
+                {
+                    Notificador.SetError(txtPassword, "Este campo no puede quedar vacio.");
+                    Validado = false;
+                }
+            }
             return Validado;
         }
 

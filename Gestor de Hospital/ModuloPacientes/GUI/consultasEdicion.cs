@@ -35,8 +35,9 @@ namespace ModuloPacientes.GUI
             consultas.FechaConsulta1 = SessionManager.FechaHelper.FormatearFecha(dtpFechaConsulta.Text);
 
 
-
-            if (consultas.Insertar())
+            if (ValidarDatos())
+            {
+                if (consultas.Insertar())
                 {
                     MessageBox.Show("Consulta agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
@@ -46,7 +47,22 @@ namespace ModuloPacientes.GUI
                     MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
+            }
 
+        }
+
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (dtpFechaConsulta.Checked == false)
+            {
+                Notificador.SetError(dtpFechaConsulta, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }        
+
+            return Validado;
         }
 
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cbxMedico = new System.Windows.Forms.ComboBox();
@@ -45,7 +46,9 @@
             this.Via = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -208,6 +211,10 @@
             this.id.ReadOnly = true;
             this.id.Visible = false;
             // 
+            // Notificador
+            // 
+            this.Notificador.ContainerControl = this;
+            // 
             // EdicionRecetaMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +238,7 @@
             this.Text = "Receta Médica";
             this.Load += new System.EventHandler(this.EdicionRecetaMedica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +262,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Via;
         private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }

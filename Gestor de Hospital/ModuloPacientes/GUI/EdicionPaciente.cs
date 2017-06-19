@@ -176,38 +176,41 @@ namespace ModuloPacientes.GUI
             paciente.FechaNac =SessionManager.FechaHelper.FormatearFecha(dtpFechaNac.Text);
             paciente.Ocupacion = txtOcupacion.Text;
 
-            if (modificar == true)
+            if (ValidarDatos())
             {
-                
-                if (paciente.actualizar())
+                if (modificar == true)
                 {
-                    MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+
+                    if (paciente.actualizar())
+                    {
+                        MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (paciente.insertar())
+                    {
+                        MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                    }
                 }
 
-            }
-            else
-            {
-                if (paciente.insertar())
-                {
-                    MessageBox.Show("Usuario modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-            }
-            
-                      
+            }          
         }
-        
+
+       
         private void btnSeleccionarFoto_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -217,6 +220,91 @@ namespace ModuloPacientes.GUI
                 pbxImagen.Image = new Bitmap(dlg.FileName);
             }
         }
+
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (txtPrimerNombre.TextLength == 0)
+            {
+                Notificador.SetError(txtPrimerNombre, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtSegundoNombre.TextLength == 0)
+            {
+                Notificador.SetError(txtSegundoNombre, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtPrimerApellido.TextLength == 0)
+            {
+                Notificador.SetError(txtPrimerApellido, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtSegundoApellido.TextLength == 0)
+            {
+                Notificador.SetError(txtSegundoApellido, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (DUI.MaskCompleted == false || DUI.TextLength == 0)
+            {
+                Notificador.SetError(DUI, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (rbMasculino.Checked == false && rbFemenino.Checked == false)
+            {
+                Notificador.SetError(rbFemenino, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtOcupacion.TextLength == 0)
+            {
+                Notificador.SetError(txtOcupacion, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtResidencia.TextLength == 0)
+            {
+                Notificador.SetError(txtResidencia, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtEmail.TextLength == 0)
+            {
+                Notificador.SetError(txtEmail, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtTelefono.TextLength == 0)
+            {
+                Notificador.SetError(txtTelefono, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtPersonaEmergencia.TextLength == 0)
+            {
+                Notificador.SetError(txtPersonaEmergencia, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtTelefonoEmergencia.TextLength == 0)
+            {
+                Notificador.SetError(txtTelefonoEmergencia, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtEstatura.TextLength == 0)
+            {
+                Notificador.SetError(txtEstatura, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtPeso.TextLength == 0)
+            {
+                Notificador.SetError(txtPeso, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            return Validado;
+        }
+
 
         private void cbDepartamentos_SelectedIndexChanged(object sender, EventArgs e)
         {

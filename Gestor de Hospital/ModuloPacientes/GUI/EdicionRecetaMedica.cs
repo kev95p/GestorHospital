@@ -90,19 +90,33 @@ namespace ModuloPacientes.GUI
             reme.Estado1 = cbxEstado.SelectedValue.ToString();
 
 
-
-            if (reme.Insertar())
+            if (ValidarDatos())
             {
-                MessageBox.Show("Receta agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (reme.Insertar())
+                {
+                    MessageBox.Show("Receta agregada correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
             }
         }
 
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            if (txtDescripcion.TextLength == 0)
+            {
+                Notificador.SetError(txtDescripcion, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            return Validado;
+        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
