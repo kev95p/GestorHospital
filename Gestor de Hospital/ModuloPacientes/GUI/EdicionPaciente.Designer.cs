@@ -654,6 +654,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(129, 20);
             this.txtTelefono.TabIndex = 0;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // flowLayoutPanel18
             // 
@@ -681,6 +682,7 @@
             this.txtTelefonoEmergencia.Name = "txtTelefonoEmergencia";
             this.txtTelefonoEmergencia.Size = new System.Drawing.Size(129, 20);
             this.txtTelefonoEmergencia.TabIndex = 0;
+            this.txtTelefonoEmergencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefonoEmergencia_KeyPress);
             // 
             // groupBox5
             // 
@@ -757,6 +759,7 @@
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.Size = new System.Drawing.Size(52, 20);
             this.txtEstatura.TabIndex = 0;
+            this.txtEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstatura_KeyPress);
             // 
             // flowLayoutPanel22
             // 
@@ -835,7 +838,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 427);
+            this.ClientSize = new System.Drawing.Size(882, 440);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCancelar);

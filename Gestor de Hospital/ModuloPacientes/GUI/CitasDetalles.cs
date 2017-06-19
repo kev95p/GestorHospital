@@ -34,6 +34,7 @@ namespace ModuloPacientes.GUI
             EdicionCitas frm = new EdicionCitas();
             frm.idPaciente = idpaciente;
             frm.ShowDialog();
+            CargarCitas();
         }
     }
 }

@@ -16,7 +16,7 @@ namespace ModuloPacientes.CLS
 
         private FilterInfoCollection dispositivosVideo;
         private VideoCaptureDevice fuenteVideo;
-        private bool existeDispositivo = false;
+        public bool existeDispositivo = false;
         private System.Windows.Forms.PictureBox vistaCamara;
 
         public PictureBox VistaCamara

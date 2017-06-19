@@ -48,11 +48,17 @@ namespace ModuloPacientes.GUI
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            EdicionRecetaMedica frm = new EdicionRecetaMedica();
-            frm.idPAciente = idpaciente;
-            frm.idReceta = dgvRecetas.CurrentRow.Cells["idReceta"].Value.ToString();
-            frm.ShowDialog();
-            CargarRecetas();
+            if (dgvRecetas.RowCount > 0)
+            {
+                EdicionRecetaMedica frm = new EdicionRecetaMedica();
+                frm.idPAciente = idpaciente;
+                frm.idReceta = dgvRecetas.CurrentRow.Cells["idReceta"].Value.ToString();
+                frm.ShowDialog();
+                CargarRecetas();
+            }else
+            {
+                MessageBox.Show("No hay ningun registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

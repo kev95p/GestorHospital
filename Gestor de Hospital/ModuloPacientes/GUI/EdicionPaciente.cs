@@ -133,8 +133,16 @@ namespace ModuloPacientes.GUI
         private void btTomarFoto_Click(object sender, EventArgs e)
         {
             CamaraForm frm = new CamaraForm();
-            frm.ShowDialog();
-            pbxImagen.Image = rescalarImagen(frm.pbxImagen.Image,new Size(frm.pbxImagen.Image.Size.Width/4, frm.pbxImagen.Image.Size.Height/4));
+            if (!frm.existe)
+            {
+                MessageBox.Show("Error no se encuentra camara!!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }else
+            {
+                frm.ShowDialog();
+                pbxImagen.Image = rescalarImagen(frm.pbxImagen.Image, new Size(frm.pbxImagen.Image.Size.Width / 4, frm.pbxImagen.Image.Size.Height / 4));
+            }
+          
         }
 
         private Image rescalarImagen(Image img, Size tamaño)
@@ -352,6 +360,36 @@ namespace ModuloPacientes.GUI
             btnSalir.Visible = false;
             btnEditar.Visible = false;
             Update();
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtTelefonoEmergencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+        }
+
+        private void txtEstatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != (char)46))
+            {
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

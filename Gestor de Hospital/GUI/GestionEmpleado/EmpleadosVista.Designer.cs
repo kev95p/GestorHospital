@@ -52,6 +52,7 @@
             this.idDepartamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idEspecialidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
@@ -155,7 +156,8 @@
             this.idMunicipio,
             this.idDepartamento,
             this.email,
-            this.telefono});
+            this.telefono,
+            this.idEspecialidad});
             this.dgvEmpleados.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEmpleados.Location = new System.Drawing.Point(0, 31);
             this.dgvEmpleados.MultiSelect = false;
@@ -261,6 +263,12 @@
             this.telefono.ReadOnly = true;
             this.telefono.Visible = false;
             // 
+            // idEspecialidad
+            // 
+            this.idEspecialidad.HeaderText = "idEspecialidad";
+            this.idEspecialidad.Name = "idEspecialidad";
+            this.idEspecialidad.ReadOnly = true;
+            // 
             // EmpleadosVista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,5 +319,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDepartamento;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idEspecialidad;
     }
 }

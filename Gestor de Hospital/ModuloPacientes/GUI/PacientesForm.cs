@@ -83,16 +83,21 @@ namespace ModuloPacientes.GUI
             Paciente paciente = new Paciente();
             paciente.IdPaciente = (int)dgvPacientes.CurrentRow.Cells["idPaciente"].Value;
 
-            if (paciente.eliminar())
-            {
-                MessageBox.Show("paciente eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                CargarPacientes();
-            }
-            else
-            {
-                MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if(MessageBox.Show("Esta seguro que desea eliminar el paciente?", "Advertencia", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation) == DialogResult.OK) {
+
+                if (paciente.eliminar())
+                {
+                    MessageBox.Show("Paciente eliminado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    CargarPacientes();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
 
             }
+
         }
 
         private void btnDetalles_Click(object sender, EventArgs e)
