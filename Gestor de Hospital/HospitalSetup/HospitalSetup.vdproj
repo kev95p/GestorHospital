@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_11E37BF2E92449C8A4D504B1043945B9"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_2702E34F7E8B4E34BC65D42AFAA02E12"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -275,6 +281,12 @@
         {
         "MsmKey" = "8:_603232A8E78FA60D190DDACFDDA7968E"
         "OwnerKey" = "8:_A5A1EA0C4F474947B5878CA3E549B6E8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6E3D4BB2A72E4E2FAD251E0113C7B889"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -782,6 +794,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
         "Release"
@@ -806,6 +826,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.5"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.5 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.5"
+                    }
+                }
             }
         }
     }
@@ -865,6 +893,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_11E37BF2E92449C8A4D504B1043945B9"
+            {
+            "SourcePath" = "8:..\\ModuloPacientes\\Reportes\\Rep\\Enfermedades.rpt"
+            "TargetName" = "8:Enfermedades.rpt"
+            "Tag" = "8:"
+            "Folder" = "8:_E1B1928F3D0F4B8EBE4DD4583AB7F3F8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2702E34F7E8B4E34BC65D42AFAA02E12"
@@ -1164,6 +1212,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6E3D4BB2A72E4E2FAD251E0113C7B889"
+            {
+            "SourcePath" = "8:..\\..\\..\\Iconos\\1491343662_medical_suitecase.ico"
+            "TargetName" = "8:1491343662_medical_suitecase.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E1B1928F3D0F4B8EBE4DD4583AB7F3F8"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7F12DC484B2754C6EBDF57F96AD1B531"
@@ -1746,7 +1814,7 @@
             "Target" = "8:_DDC69D273A86426681486D07C83054A7"
             "Folder" = "8:_275125574515460E839799FDA6D189CB"
             "WorkingFolder" = "8:_E1B1928F3D0F4B8EBE4DD4583AB7F3F8"
-            "Icon" = "8:"
+            "Icon" = "8:_6E3D4BB2A72E4E2FAD251E0113C7B889"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C0CB05F056A34EE2ADA0380941441E0F"

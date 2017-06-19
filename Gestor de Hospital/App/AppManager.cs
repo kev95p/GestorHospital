@@ -50,13 +50,21 @@ namespace App
             }
             else
             {
-                if (principal.cerrarsesion)
+                if (principal != null)
                 {
-                    Login();
+                    if (principal.cerrarsesion)
+                    {
+                        Login();
+                    }
+                    else
+                    {
+                        base.OnMainFormClosed(sender, e);
+                    }
                 }else
                 {
-                  base.OnMainFormClosed(sender, e);
+                    base.OnMainFormClosed(sender, e);
                 }
+
                
             }
            

@@ -279,9 +279,9 @@ namespace ModuloPacientes.Reportes.Datos {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EnfermedadesDataTable : global::System.Data.TypedTableBase<EnfermedadesRow> {
             
-            private global::System.Data.DataColumn columnnombre;
+            private global::System.Data.DataColumn columnNombre;
             
-            private global::System.Data.DataColumn columnenfermedad;
+            private global::System.Data.DataColumn columnEnfermedad;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -318,17 +318,17 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn nombreColumn {
+            public global::System.Data.DataColumn NombreColumn {
                 get {
-                    return this.columnnombre;
+                    return this.columnNombre;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn enfermedadColumn {
+            public global::System.Data.DataColumn EnfermedadColumn {
                 get {
-                    return this.columnenfermedad;
+                    return this.columnEnfermedad;
                 }
             }
             
@@ -369,11 +369,11 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EnfermedadesRow AddEnfermedadesRow(string nombre, string enfermedad) {
+            public EnfermedadesRow AddEnfermedadesRow(string Nombre, string Enfermedad) {
                 EnfermedadesRow rowEnfermedadesRow = ((EnfermedadesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        nombre,
-                        enfermedad};
+                        Nombre,
+                        Enfermedad};
                 rowEnfermedadesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEnfermedadesRow);
                 return rowEnfermedadesRow;
@@ -396,17 +396,17 @@ namespace ModuloPacientes.Reportes.Datos {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnnombre = base.Columns["nombre"];
-                this.columnenfermedad = base.Columns["enfermedad"];
+                this.columnNombre = base.Columns["Nombre"];
+                this.columnEnfermedad = base.Columns["Enfermedad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnnombre = new global::System.Data.DataColumn("nombre", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnnombre);
-                this.columnenfermedad = new global::System.Data.DataColumn("enfermedad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnenfermedad);
+                this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre);
+                this.columnEnfermedad = new global::System.Data.DataColumn("Enfermedad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEnfermedad);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -549,58 +549,58 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string nombre {
+            public string Nombre {
                 get {
                     try {
-                        return ((string)(this[this.tableEnfermedades.nombreColumn]));
+                        return ((string)(this[this.tableEnfermedades.NombreColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'nombre\' de la tabla \'Enfermedades\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Nombre\' de la tabla \'Enfermedades\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEnfermedades.nombreColumn] = value;
+                    this[this.tableEnfermedades.NombreColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string enfermedad {
+            public string Enfermedad {
                 get {
                     try {
-                        return ((string)(this[this.tableEnfermedades.enfermedadColumn]));
+                        return ((string)(this[this.tableEnfermedades.EnfermedadColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'enfermedad\' de la tabla \'Enfermedades\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Enfermedad\' de la tabla \'Enfermedades\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEnfermedades.enfermedadColumn] = value;
+                    this[this.tableEnfermedades.EnfermedadColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsnombreNull() {
-                return this.IsNull(this.tableEnfermedades.nombreColumn);
+            public bool IsNombreNull() {
+                return this.IsNull(this.tableEnfermedades.NombreColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetnombreNull() {
-                this[this.tableEnfermedades.nombreColumn] = global::System.Convert.DBNull;
+            public void SetNombreNull() {
+                this[this.tableEnfermedades.NombreColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsenfermedadNull() {
-                return this.IsNull(this.tableEnfermedades.enfermedadColumn);
+            public bool IsEnfermedadNull() {
+                return this.IsNull(this.tableEnfermedades.EnfermedadColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetenfermedadNull() {
-                this[this.tableEnfermedades.enfermedadColumn] = global::System.Convert.DBNull;
+            public void SetEnfermedadNull() {
+                this[this.tableEnfermedades.EnfermedadColumn] = global::System.Convert.DBNull;
             }
         }
         
