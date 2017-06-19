@@ -13,11 +13,14 @@ namespace ModuloPacientes.GUI
     public partial class CamaraForm : Form
     {
         CLS.CamaraWrapper camara;
+        public bool existe = false;
         public CamaraForm()
         {
             InitializeComponent();
             camara = new CLS.CamaraWrapper();
+            existe = camara.existeDispositivo;
             camara.VistaCamara = pbxImagen;
+            
             
         }
 

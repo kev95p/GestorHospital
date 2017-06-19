@@ -60,8 +60,9 @@ namespace GUI.GestionEmpleado
                 frm.txtEmail.Text = dgvEmpleados.CurrentRow.Cells["email"].Value.ToString();
                 frm.txtTelefono.Text = dgvEmpleados.CurrentRow.Cells["telefono"].Value.ToString();
                 frm.txtResidencia.Text = dgvEmpleados.CurrentRow.Cells["Residencia"].Value.ToString();
-                frm.cbMunicipios.SelectedValue = dgvEmpleados.CurrentRow.Cells["idMunicipio"].Value.ToString();
                 frm.cbDepartamento.SelectedValue = dgvEmpleados.CurrentRow.Cells["idDepartamento"].Value.ToString();
+                frm.cbMunicipios.SelectedValue = dgvEmpleados.CurrentRow.Cells["idMunicipio"].Value.ToString();         
+                     
                 if (dgvEmpleados.CurrentRow.Cells["Usuario"].Value.ToString() == "No Aplica")
                 {
                     frm.chkAsignarUsuario.CheckState = CheckState.Unchecked;

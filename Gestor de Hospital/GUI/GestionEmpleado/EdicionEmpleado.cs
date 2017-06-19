@@ -13,7 +13,8 @@ namespace GUI.GestionEmpleado
     public partial class EdicionEmpleado : Form
     {
         private string idEmpleado = String.Empty;
-
+        DataRow fila;
+        
         public string IdEmpleado
         {
             get
@@ -62,12 +63,7 @@ namespace GUI.GestionEmpleado
 
         private void CargarEspecialidades()
         {
-            DataRow fila;
             DataTable datos = SessionManager.DatosCargados.Instancia.Especialidades;
-            fila = datos.NewRow();
-            fila["idEspecialidad"] = "0";
-            fila["Especialidad"] = "Ninguna";
-            datos.Rows.Add(fila);
             cbEspecialidades.DataSource = datos;
             cbEspecialidades.DisplayMember = "Especialidad";
             cbEspecialidades.ValueMember = "idEspecialidad";
@@ -97,7 +93,7 @@ namespace GUI.GestionEmpleado
             em.Primer_Nombre = txtPrimerNombre.Text;
             em.Segundo_Nombre = txtSegundoNombre.Text;
             em.Primer_Apellido = txtPrimerApellido.Text;
-            em.Segundo_Apellido = txtSegundoNombre.Text;
+            em.Segundo_Apellido = txtSegundoApellido.Text;
             em.Telefono = txtTelefono.Text;
             em.DUI = txtDui.Text;
             em.Email = txtEmail.Text;
@@ -106,7 +102,7 @@ namespace GUI.GestionEmpleado
             em.Usuario.NombreUsuario = txtUsuario.Text;
             em.Usuario.Password = txtPassword.Text;
             em.Usuario.IdRol = cbRol.SelectedValue.ToString();
-            em.Especialidad = Convert.ToInt32(cbEspecialidades.SelectedValue) == 0 ? "0" : cbEspecialidades.SelectedValue.ToString();
+            em.Especialidad = cbEspecialidades.SelectedValue.ToString();
 
             if (ValidarDatos())
             {
@@ -232,11 +228,17 @@ namespace GUI.GestionEmpleado
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Esta seguro que desea cerrar la ve" +
-                "ntana sin guardar los cambios","Aviso",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            Close();    
+        }
+
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) && (e.KeyChar != (char)Keys.Back))
             {
-                Close();
-            }      
+                MessageBox.Show("Solo se permiten numeros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
         }
     }
 }

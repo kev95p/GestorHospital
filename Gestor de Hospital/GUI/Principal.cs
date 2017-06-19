@@ -21,6 +21,12 @@ namespace GUI
         public Principal()
         {
             InitializeComponent();
+            if(SessionManager.SessionManager.GetInstance.Rol != "Administradores")
+            {
+                gestionesBasicasToolStripMenuItem.Visible = false;
+                empleadosToolStripMenuItem.Visible = false;
+                preferenciasToolStripMenuItem.Visible = false;
+            }
         }
 
         private void Principal_Load(object sender, EventArgs e)

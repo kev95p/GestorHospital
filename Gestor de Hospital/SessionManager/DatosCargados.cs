@@ -92,6 +92,11 @@ namespace SessionManager
             roles = CacheManager.Cache.OBTENER_ROLES().Tables[0];
             tipos_sangre = CacheManager.Cache.OBTENER_TIPO_SANGRE().Tables[0];
             especialidades = CacheManager.Cache.OBTENER_ESPECIALIDADES().Tables[0];
+            DataRow fila;
+            fila = especialidades.NewRow();
+            fila["idEspecialidad"] = "0";
+            fila["Especialidad"] = "Ninguna";
+            especialidades.Rows.Add(fila);
         }
     }
 }
