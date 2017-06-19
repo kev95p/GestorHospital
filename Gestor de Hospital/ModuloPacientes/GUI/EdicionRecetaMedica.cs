@@ -19,6 +19,7 @@ namespace ModuloPacientes.GUI
 
 
         public string idPAciente;
+        public string idReceta;
 
        //obvia esto :V
         private void label1_Click(object sender, EventArgs e) { }
@@ -30,6 +31,19 @@ namespace ModuloPacientes.GUI
         private void EdicionRecetaMedica_Load(object sender, EventArgs e) {
             CargarEstadoReceta();
             CargarMedicos();
+            CargarMedicamentos();
+        }
+
+        private void CargarMedicamentos()
+        {
+            DataTable dt;
+            DataView dv;
+            dt = CacheManager.CachePaciente.MEDICAMENTOS_RECETAS();
+            dv = new DataView(dt);
+            dgvMedicamentos.AutoGenerateColumns = false;
+            dv.RowFilter = "id = " + idReceta + "";
+            dgvMedicamentos.DataSource = dv.ToTable();
+
         }
 
         private void CargarEstadoReceta()
@@ -58,10 +72,9 @@ namespace ModuloPacientes.GUI
 
         private void CargarMedicos()
         {
-            DataTable Medicos = new DataTable();
-            cbxMedico.DataSource = Medicos;
-            cbxMedico.ValueMember = "idEmpleado";
-            cbxMedico.DisplayMember = "Medico";
+            cbxMedico.DataSource = CacheManager.CachePaciente.TODOS_MEDICOS();
+            cbxMedico.ValueMember = "ID";
+            cbxMedico.DisplayMember = "Nombre";
         }
 
 

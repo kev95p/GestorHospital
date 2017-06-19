@@ -304,7 +304,10 @@
             this.Controls.Add(this.dgvConsultas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "ConsultasDetalles";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Consultas de Pacientes";
             this.Load += new System.EventHandler(this.ConsultasDetalles_Load);

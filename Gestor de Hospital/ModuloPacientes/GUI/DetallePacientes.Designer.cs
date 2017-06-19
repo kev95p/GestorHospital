@@ -180,7 +180,8 @@
             // 
             // dtpFechaIngreso
             // 
-            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaIngreso.CustomFormat = "dd-MM-yyyy";
+            this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(528, 28);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(133, 20);
@@ -266,9 +267,12 @@
             this.Controls.Add(this.dgvDetallePaciente);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "DetallePacientes";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Pacientes";
+            this.Text = "Pacientes Ingresados";
             this.Load += new System.EventHandler(this.DetallePacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePaciente)).EndInit();
             this.statusStrip1.ResumeLayout(false);

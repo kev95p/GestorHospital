@@ -98,7 +98,6 @@ namespace GUI.GestionEmpleado
             em.Segundo_Nombre = txtSegundoNombre.Text;
             em.Primer_Apellido = txtPrimerApellido.Text;
             em.Segundo_Apellido = txtSegundoNombre.Text;
-            em.DUI = txtDui.Text;
             em.Telefono = txtTelefono.Text;
             em.Email = txtEmail.Text;
             em.Residencia = txtResidencia.Text;

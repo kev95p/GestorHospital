@@ -203,7 +203,6 @@ namespace CacheManager
             }
         }
 
-
         public static DataSet OBTENER_DETALLE_PACIENTES_INGRESADOS()
         {
             try

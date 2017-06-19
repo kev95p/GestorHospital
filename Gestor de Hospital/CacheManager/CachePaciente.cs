@@ -34,7 +34,7 @@ namespace CacheManager
             {
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
-                string query = @"select empleados.idEmpleado, concat(primer_nombre, ' ' , primer_apellido) as 'Medico' from empleados, usuarios where empleados.idEmpleado = usuarios.idEmpleado and usuarios.idrol = 2;";
+                string query = @"select ID,concat(Nombres,' ',Apellidos) as Nombre from vistaempleados where vistaempleados.idrol = 2;";
                 cb.CommandText = query;
                 datos = cb.Select();
                 return datos.Tables[0];
@@ -43,10 +43,7 @@ namespace CacheManager
             {
                 return new DataTable();
             }
-        }
-
-
-        
+        } 
 
         public static DataTable CONSULTAS(string idpaciente)
         {

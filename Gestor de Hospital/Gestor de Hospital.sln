@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheManager", "CacheManage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDManager", "CRUDManager\CRUDManager.csproj", "{AD9F9521-D34A-41F6-B0BC-82299B588CCC}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "HospitalSetup", "HospitalSetup\HospitalSetup.vdproj", "{89950CED-D515-491F-8381-4A40F9794176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,13 @@ Global
 		{AD9F9521-D34A-41F6-B0BC-82299B588CCC}.Release|x64.Build.0 = Release|x64
 		{AD9F9521-D34A-41F6-B0BC-82299B588CCC}.Release|x86.ActiveCfg = Release|Any CPU
 		{AD9F9521-D34A-41F6-B0BC-82299B588CCC}.Release|x86.Build.0 = Release|Any CPU
+		{89950CED-D515-491F-8381-4A40F9794176}.Debug|Any CPU.ActiveCfg = Debug
+		{89950CED-D515-491F-8381-4A40F9794176}.Debug|Any CPU.Build.0 = Debug
+		{89950CED-D515-491F-8381-4A40F9794176}.Debug|x64.ActiveCfg = Debug
+		{89950CED-D515-491F-8381-4A40F9794176}.Debug|x86.ActiveCfg = Debug
+		{89950CED-D515-491F-8381-4A40F9794176}.Release|Any CPU.ActiveCfg = Release
+		{89950CED-D515-491F-8381-4A40F9794176}.Release|x64.ActiveCfg = Release
+		{89950CED-D515-491F-8381-4A40F9794176}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

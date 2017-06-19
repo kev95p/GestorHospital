@@ -143,6 +143,7 @@ namespace ModuloPacientes.GUI
             frm.txtSexo.Text = dgvPacientes.CurrentRow.Cells["sexo"].Value.ToString();
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.ShowDialog();
+            
         }
 
         private void toolStripButton4_Click(object sender, EventArgs e)

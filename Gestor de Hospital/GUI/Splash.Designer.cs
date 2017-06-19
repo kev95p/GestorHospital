@@ -58,6 +58,7 @@
             this.ClientSize = new System.Drawing.Size(658, 400);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Splash";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

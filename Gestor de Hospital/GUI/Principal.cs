@@ -165,5 +165,12 @@ namespace GUI
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void reportesEnfermedadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ModuloPacientes.GUI.Visores.VisorEnfermedades v = new ModuloPacientes.GUI.Visores.VisorEnfermedades();
+            v.MdiParent = this;
+            v.Show();
+        }
     }
 }

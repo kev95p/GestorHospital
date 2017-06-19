@@ -340,12 +340,12 @@
             this.Via,
             this.Presentacion,
             this.id});
-            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 36);
+            this.dgvMedicamentos.Location = new System.Drawing.Point(6, 32);
             this.dgvMedicamentos.Name = "dgvMedicamentos";
             this.dgvMedicamentos.ReadOnly = true;
             this.dgvMedicamentos.RowHeadersVisible = false;
             this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMedicamentos.Size = new System.Drawing.Size(407, 441);
+            this.dgvMedicamentos.Size = new System.Drawing.Size(407, 445);
             this.dgvMedicamentos.TabIndex = 5;
             // 
             // Medicamento
@@ -407,6 +407,7 @@
             this.Controls.Add(this.dgvRecetas);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "RecetasDetalles";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

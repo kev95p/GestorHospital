@@ -52,10 +52,10 @@ namespace ModuloPacientes.GUI
 
         private void CargarMedicos()
         {  
-            DataTable Medicos = new DataTable();
-            cbxDoctor.DataSource = Medicos;
-            cbxDoctor.ValueMember = "idEmpleado";
-            cbxDoctor.DisplayMember = "Medico";
+            
+            cbxDoctor.DataSource = CacheManager.CachePaciente.TODOS_MEDICOS();
+            cbxDoctor.ValueMember = "ID";
+            cbxDoctor.DisplayMember = "Nombre";
         }
 
         private void consultasEdicion_Load(object sender, EventArgs e)

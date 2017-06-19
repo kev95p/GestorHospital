@@ -33,6 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txbIDMedicamento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtVia = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbPresentacion = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.txbNombreMedicamento = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtVia = new System.Windows.Forms.TextBox();
             this.errorMedicamentos = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorMedicamentos)).BeginInit();
@@ -92,6 +92,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Medicamentos";
+            // 
+            // txtVia
+            // 
+            this.txtVia.Location = new System.Drawing.Point(88, 133);
+            this.txtVia.Name = "txtVia";
+            this.txtVia.Size = new System.Drawing.Size(131, 20);
+            this.txtVia.TabIndex = 10;
             // 
             // label5
             // 
@@ -160,13 +167,6 @@
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtVia
-            // 
-            this.txtVia.Location = new System.Drawing.Point(88, 133);
-            this.txtVia.Name = "txtVia";
-            this.txtVia.Size = new System.Drawing.Size(131, 20);
-            this.txtVia.TabIndex = 10;
-            // 
             // errorMedicamentos
             // 
             this.errorMedicamentos.ContainerControl = this;
@@ -180,7 +180,10 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "EdicionMedicamentos";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Edicion de Medicamentos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

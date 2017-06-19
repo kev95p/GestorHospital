@@ -34,6 +34,7 @@ namespace ModuloPacientes.GUI
             consultasEdicion frm = new consultasEdicion();
             frm.IDPaciente = idpaciente;
             frm.ShowDialog();
+            CargarConsultas();
 
         }
     }

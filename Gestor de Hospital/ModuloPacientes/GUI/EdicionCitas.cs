@@ -59,10 +59,9 @@ namespace ModuloPacientes.GUI
 
         private void CargarMedicos()
         {
-            DataTable Medicos = new DataTable();
-            cbxMedico.DataSource = Medicos;
-            cbxMedico.ValueMember = "idEmpleado";
-            cbxMedico.DisplayMember = "Medico";
+            cbxMedico.DataSource = CacheManager.CachePaciente.TODOS_MEDICOS();
+            cbxMedico.ValueMember = "ID";
+            cbxMedico.DisplayMember = "Nombre";
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -72,7 +71,7 @@ namespace ModuloPacientes.GUI
             citas.IdMedico = cbxMedico.SelectedValue.ToString();
             citas.IdPaciente = idPaciente;
             citas.FechaCita = SessionManager.FechaHelper.FormatearFecha(dtpFechaCitas.Text);
-            citas.Estado = txtMotivos.Text;
+            citas.Estado = cbxEstado.SelectedValue.ToString();
             citas.Motivos = txtMotivos.Text;
 
 

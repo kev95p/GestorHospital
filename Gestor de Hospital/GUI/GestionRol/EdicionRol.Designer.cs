@@ -120,6 +120,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "EdicionRol";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

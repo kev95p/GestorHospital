@@ -97,12 +97,6 @@
     <Compile Include="GUI\ConsultasDetalles.Designer.cs">
       <DependentUpon>ConsultasDetalles.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ConsultasDetallesEdicion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ConsultasDetallesEdicion.Designer.cs">
-      <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\consultasEdicion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,7 +163,15 @@
     <Compile Include="GUI\RecetasDetalles.Designer.cs">
       <DependentUpon>RecetasDetalles.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Visores\VisorPacientes.cs" />
+    <Compile Include="GUI\Visores\VisorEnfermedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorEnfermedades.Designer.cs">
+      <DependentUpon>VisorEnfermedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Visores\VisorPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GUI\Visores\VisorPacientes.Designer.cs">
       <DependentUpon>VisorPacientes.cs</DependentUpon>
     </Compile>
@@ -179,6 +181,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Datos\enfermedades.cs">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Datos\enfermedades.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Datos\Pacientes.cs">
       <DependentUpon>Pacientes.xsd</DependentUpon>
     </Compile>
@@ -186,6 +196,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Pacientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Rep\Enfermedades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enfermedades.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\Rep\Pacientes.cs">
       <AutoGen>True</AutoGen>
@@ -203,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ConsultasDetalles.resx">
       <DependentUpon>ConsultasDetalles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ConsultasDetallesEdicion.resx">
-      <DependentUpon>ConsultasDetallesEdicion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\consultasEdicion.resx">
       <DependentUpon>consultasEdicion.cs</DependentUpon>
@@ -240,12 +253,19 @@
     <EmbeddedResource Include="GUI\RecetasDetalles.resx">
       <DependentUpon>RecetasDetalles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Visores\VisorEnfermedades.resx">
+      <DependentUpon>VisorEnfermedades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Visores\VisorPacientes.resx">
       <DependentUpon>VisorPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Rep\Enfermedades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Enfermedades.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Rep\Pacientes.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -254,6 +274,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Reportes\Datos\enfermedades.xsc">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\Datos\enfermedades.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>enfermedades.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\Datos\enfermedades.xss">
+      <DependentUpon>enfermedades.xsd</DependentUpon>
+    </None>
     <None Include="Reportes\Datos\Pacientes.xsc">
       <DependentUpon>Pacientes.xsd</DependentUpon>
     </None>
@@ -283,5 +314,6 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

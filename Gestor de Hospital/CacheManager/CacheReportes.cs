@@ -10,20 +10,40 @@ namespace CacheManager
 {
     public static class CacheReportes
     {
-        public static DataSet PACIENTES_REPORTE(string fechainicial,string fechafinal)
+        public static DataTable PACIENTES_REPORTE(string fechainicial,string fechafinal)
         {
             try
             {
-                DataSet datos = new DataSet();
+                DataTable datos = new DataTable();
                 CommandBuilder cb = new CommandBuilder();
-                string query = @"select concat(p.Nombres,' ',p.Apellidos) as Nombre_Completo,p.FechaRegistro,p.DUI  from vistapacientes p";
+                string query = @"select concat(p.Nombres,' ',p.Apellidos) as Nombre_Completo,p.FechaRegistro,p.DUI  
+                                from vistapacientes p;";
                 cb.CommandText = query;
-                datos = cb.Select();
+                datos = cb.Select().Tables[0];
                 return datos;
             }
             catch
             {
-                return new DataSet();
+                return new DataTable();
+            }
+        }
+
+        public static DataTable ENFERMEDADES_REPORTE(string idenfermedad)
+        {
+            try
+            {
+                DataTable datos = new DataTable();
+                CommandBuilder cb = new CommandBuilder();
+                string query = @"select concat(primerNombre,' ',segundoNombre,' ',primerApellido,' ',segundoApellido) as Nombre, enfermedades.nombre 
+                                from pacientes_enfermedades inner join pacientes on pacientes_enfermedades.idPaciente = pacientes.idPaciente 
+                                inner join enfermedades on enfermedades.idenfermedad = pacientes_enfermedades.idEnfermedad where enfermedades.idenfermedad = "+idenfermedad+" ;";
+                cb.CommandText = query;
+                datos = cb.Select().Tables[0];
+                return datos;
+            }
+            catch
+            {
+                return new DataTable();
             }
         }
     }

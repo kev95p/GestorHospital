@@ -39,6 +39,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.dgvMedicamentos = new System.Windows.Forms.DataGridView();
+            this.Medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concentracion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Via = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Presentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -141,11 +148,72 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // dgvMedicamentos
+            // 
+            this.dgvMedicamentos.AllowUserToAddRows = false;
+            this.dgvMedicamentos.AllowUserToDeleteRows = false;
+            this.dgvMedicamentos.AllowUserToResizeColumns = false;
+            this.dgvMedicamentos.AllowUserToResizeRows = false;
+            this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Medicamento,
+            this.Concentracion,
+            this.Via,
+            this.Presentacion,
+            this.id});
+            this.dgvMedicamentos.Location = new System.Drawing.Point(268, 23);
+            this.dgvMedicamentos.Name = "dgvMedicamentos";
+            this.dgvMedicamentos.ReadOnly = true;
+            this.dgvMedicamentos.RowHeadersVisible = false;
+            this.dgvMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMedicamentos.Size = new System.Drawing.Size(502, 316);
+            this.dgvMedicamentos.TabIndex = 15;
+            // 
+            // Medicamento
+            // 
+            this.Medicamento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Medicamento.DataPropertyName = "nombre";
+            this.Medicamento.HeaderText = "Medicamento";
+            this.Medicamento.Name = "Medicamento";
+            this.Medicamento.ReadOnly = true;
+            // 
+            // Concentracion
+            // 
+            this.Concentracion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Concentracion.DataPropertyName = "concentracion";
+            this.Concentracion.HeaderText = "Concentracion";
+            this.Concentracion.Name = "Concentracion";
+            this.Concentracion.ReadOnly = true;
+            // 
+            // Via
+            // 
+            this.Via.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Via.DataPropertyName = "via";
+            this.Via.HeaderText = "Via";
+            this.Via.Name = "Via";
+            this.Via.ReadOnly = true;
+            // 
+            // Presentacion
+            // 
+            this.Presentacion.DataPropertyName = "presentacion";
+            this.Presentacion.HeaderText = "Presentacion";
+            this.Presentacion.Name = "Presentacion";
+            this.Presentacion.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            // 
             // EdicionRecetaMedica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 366);
+            this.ClientSize = new System.Drawing.Size(796, 368);
+            this.Controls.Add(this.dgvMedicamentos);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label6);
@@ -162,6 +230,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Receta Médica";
             this.Load += new System.EventHandler(this.EdicionRecetaMedica_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +248,11 @@
         public System.Windows.Forms.ComboBox cbxMedico;
         public System.Windows.Forms.ComboBox cbxEstado;
         public System.Windows.Forms.DateTimePicker dtpFechaReceta;
+        private System.Windows.Forms.DataGridView dgvMedicamentos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Medicamento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Concentracion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Via;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Presentacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }

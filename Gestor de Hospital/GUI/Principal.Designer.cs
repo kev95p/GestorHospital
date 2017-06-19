@@ -64,6 +64,7 @@
             this.buscarIngresadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bwCheckConnection = new System.ComponentModel.BackgroundWorker();
             this.Intervalo = new System.Windows.Forms.Timer(this.components);
+            this.reportesEnfermedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -301,7 +302,8 @@
             // verToolStripMenuItem
             // 
             this.verToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportesSobrePacientesToolStripMenuItem});
+            this.reportesSobrePacientesToolStripMenuItem,
+            this.reportesEnfermedadesToolStripMenuItem});
             this.verToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("verToolStripMenuItem.Image")));
             this.verToolStripMenuItem.Name = "verToolStripMenuItem";
             this.verToolStripMenuItem.Size = new System.Drawing.Size(98, 28);
@@ -334,10 +336,19 @@
             this.Intervalo.Interval = 1000;
             this.Intervalo.Tick += new System.EventHandler(this.Intervalo_Tick);
             // 
+            // reportesEnfermedadesToolStripMenuItem
+            // 
+            this.reportesEnfermedadesToolStripMenuItem.Name = "reportesEnfermedadesToolStripMenuItem";
+            this.reportesEnfermedadesToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.reportesEnfermedadesToolStripMenuItem.Text = "Reportes Enfermedades";
+            this.reportesEnfermedadesToolStripMenuItem.Click += new System.EventHandler(this.reportesEnfermedadesToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1140, 565);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -395,5 +406,6 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel9;
         private System.Windows.Forms.ToolStripStatusLabel lblRol;
+        private System.Windows.Forms.ToolStripMenuItem reportesEnfermedadesToolStripMenuItem;
     }
 }

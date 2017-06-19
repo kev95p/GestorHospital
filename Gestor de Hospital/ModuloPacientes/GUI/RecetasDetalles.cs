@@ -50,7 +50,9 @@ namespace ModuloPacientes.GUI
         {
             EdicionRecetaMedica frm = new EdicionRecetaMedica();
             frm.idPAciente = idpaciente;
+            frm.idReceta = dgvRecetas.CurrentRow.Cells["idReceta"].Value.ToString();
             frm.ShowDialog();
+            CargarRecetas();
         }
     }
 }
