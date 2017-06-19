@@ -12,6 +12,7 @@ namespace ModuloPacientes.GUI
 {
     public partial class DiagnosticosDetalles : Form
     {
+        
         public string idpaciente;
         public DiagnosticosDetalles()
         {
@@ -21,6 +22,7 @@ namespace ModuloPacientes.GUI
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             EdicionDiagnosticos frm = new EdicionDiagnosticos();
+            frm.IDPaciente = idpaciente;
             frm.ShowDialog();
         }
     }

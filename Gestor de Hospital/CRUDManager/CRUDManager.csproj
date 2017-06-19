@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Entidades\Citas.cs" />
     <Compile Include="Entidades\Consultas.cs" />
+    <Compile Include="Entidades\Diagnosticos.cs" />
     <Compile Include="Entidades\Empleado.cs" />
     <Compile Include="Entidades\Enfermedades.cs" />
     <Compile Include="Entidades\ImagenPerfil.cs" />

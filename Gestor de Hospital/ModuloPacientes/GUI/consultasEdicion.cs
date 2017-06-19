@@ -67,8 +67,7 @@ namespace ModuloPacientes.GUI
 
 
         private void CargarMedicos()
-        {  
-            
+        {     
             cbxDoctor.DataSource = CacheManager.CachePaciente.TODOS_MEDICOS();
             cbxDoctor.ValueMember = "ID";
             cbxDoctor.DisplayMember = "Nombre";
