@@ -108,35 +108,105 @@ namespace GUI.GestionEmpleado
             em.Usuario.IdRol = cbRol.SelectedValue.ToString();
             em.Especialidad = Convert.ToInt32(cbEspecialidades.SelectedValue) == 0 ? "0" : cbEspecialidades.SelectedValue.ToString();
 
-            if(idEmpleado == String.Empty)
+            if (ValidarDatos())
             {
-                if (em.Insertar())
+
+                if (idEmpleado == String.Empty)
                 {
-                    MessageBox.Show("Empleado agregado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                    if (em.Insertar())
+                    {
+                        MessageBox.Show("Empleado agregado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (em.Actualizar())
+                    {
+                        MessageBox.Show("Empleado modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                }
-            }
-            else
-            {
-                if (em.Actualizar())
-                {
-                    MessageBox.Show("Empleado modificado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error Inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                 }
 
             }
-
         }
+
+
+
+        private Boolean ValidarDatos()
+        {
+            Boolean Validado = true;
+            Notificador.Clear();
+            
+            if (txtPrimerNombre.TextLength == 0)
+            {
+                Notificador.SetError(txtPrimerNombre, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtSegundoNombre.TextLength == 0)
+            {
+                Notificador.SetError(txtSegundoNombre, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtPrimerApellido.TextLength == 0)
+            {
+                Notificador.SetError(txtPrimerApellido, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtSegundoApellido.TextLength == 0)
+            {
+                Notificador.SetError(txtSegundoApellido, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtTelefono.TextLength == 0)
+            {
+                Notificador.SetError(txtTelefono, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtEmail.TextLength == 0)
+            {
+                Notificador.SetError(txtEmail, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtDui.MaskCompleted == false || txtDui.TextLength == 0)
+            {
+                Notificador.SetError(txtDui, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            if (txtResidencia.TextLength == 0)
+            {
+                Notificador.SetError(txtResidencia, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtUsuario.TextLength == 0)
+            {
+                Notificador.SetError(txtUsuario, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+            if (txtPassword.TextLength == 0)
+            {
+                Notificador.SetError(txtPassword, "Este campo no puede quedar vacio.");
+                Validado = false;
+            }
+
+            return Validado;
+        }
+
+
+
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {

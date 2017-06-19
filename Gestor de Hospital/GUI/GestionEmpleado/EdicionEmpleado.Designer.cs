@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -78,6 +79,7 @@
             this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
             this.label13 = new System.Windows.Forms.Label();
             this.cbRol = new System.Windows.Forms.ComboBox();
+            this.Notificador = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -97,6 +99,7 @@
             this.flowLayoutPanel14.SuspendLayout();
             this.flowLayoutPanel15.SuspendLayout();
             this.flowLayoutPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -569,6 +572,10 @@
             this.cbRol.Size = new System.Drawing.Size(101, 21);
             this.cbRol.TabIndex = 1;
             // 
+            // Notificador
+            // 
+            this.Notificador.ContainerControl = this;
+            // 
             // EdicionEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -619,6 +626,7 @@
             this.flowLayoutPanel15.PerformLayout();
             this.flowLayoutPanel16.ResumeLayout(false);
             this.flowLayoutPanel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Notificador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -674,5 +682,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
         private System.Windows.Forms.Label label14;
         public System.Windows.Forms.ComboBox cbEspecialidades;
+        private System.Windows.Forms.ErrorProvider Notificador;
     }
 }
