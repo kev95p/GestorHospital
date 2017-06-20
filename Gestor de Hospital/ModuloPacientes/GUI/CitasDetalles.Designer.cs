@@ -49,12 +49,14 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnCompletar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -265,6 +267,7 @@
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
+            this.idCita,
             this.Fecha,
             this.Motivos,
             this.Estado});
@@ -276,6 +279,26 @@
             this.dgvCitas.Size = new System.Drawing.Size(701, 328);
             this.dgvCitas.TabIndex = 2;
             // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(500, 53);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(92, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar Cita";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(500, 85);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(92, 23);
+            this.btnQuitar.TabIndex = 4;
+            this.btnQuitar.Text = "Cancelar Cita";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
             // Medico
             // 
             this.Medico.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -283,6 +306,14 @@
             this.Medico.HeaderText = "Medico";
             this.Medico.Name = "Medico";
             this.Medico.ReadOnly = true;
+            // 
+            // idCita
+            // 
+            this.idCita.DataPropertyName = "idCita";
+            this.idCita.HeaderText = "idCita";
+            this.idCita.Name = "idCita";
+            this.idCita.ReadOnly = true;
+            this.idCita.Visible = false;
             // 
             // Fecha
             // 
@@ -310,30 +341,22 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
-            // btnAgregar
+            // btnCompletar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(500, 53);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar Cita";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(500, 85);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(92, 23);
-            this.btnQuitar.TabIndex = 4;
-            this.btnQuitar.Text = "Cancelar Cita";
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnCompletar.Location = new System.Drawing.Point(500, 114);
+            this.btnCompletar.Name = "btnCompletar";
+            this.btnCompletar.Size = new System.Drawing.Size(92, 23);
+            this.btnCompletar.TabIndex = 5;
+            this.btnCompletar.Text = "Completar Cita";
+            this.btnCompletar.UseVisualStyleBackColor = true;
+            this.btnCompletar.Click += new System.EventHandler(this.btnCompletar_Click);
             // 
             // CitasDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 500);
+            this.Controls.Add(this.btnCompletar);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.dgvCitas);
@@ -389,8 +412,10 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Medico;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Motivos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnCompletar;
     }
 }

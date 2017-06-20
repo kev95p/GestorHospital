@@ -64,6 +64,24 @@ namespace CRUDManager.Entidades
             return (Insert(cb) > 0);
         }
 
+        public bool Cancelar()
+        {
+            CommandBuilder cb = new CommandBuilder();
+            StringBuilder query = new StringBuilder();
+            query.Append("UPDATE citas SET estado = 'Cancelada' where  IdCita="+idCita+";" );
+            cb.CommandText = query.ToString();
+            return (Update(cb) > 0);
+        }
+
+        public bool Completar()
+        {
+            CommandBuilder cb = new CommandBuilder();
+            StringBuilder query = new StringBuilder();
+            query.Append("UPDATE citas SET estado = 'Completada' where  IdCita=" + idCita + ";");
+            cb.CommandText = query.ToString();
+            return (Update(cb) > 0);
+        }
+
 
 
 

@@ -36,5 +36,28 @@ namespace ModuloPacientes.GUI
             frm.ShowDialog();
             CargarCitas();
         }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
+            CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
+            c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
+            if (c.Cancelar())
+            {
+                MessageBox.Show("Cita Cancelada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CargarCitas();
+            }
+            
+        }
+
+        private void btnCompletar_Click(object sender, EventArgs e)
+        {
+            CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
+            c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
+            if (c.Completar())
+            {
+                MessageBox.Show("Cita Completada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                CargarCitas();
+            }
+        }
     }
 }

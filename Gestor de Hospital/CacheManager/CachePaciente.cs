@@ -89,7 +89,7 @@ namespace CacheManager
             {
                 DataSet datos = new DataSet();
                 CommandBuilder cb = new CommandBuilder();
-                string query = @"select concat(empleados.primer_nombre,' ',empleados.primer_apellido) as Medico,date_format(citas.fechaCita,'%d-%m-%Y') as Fecha,citas.motivos,citas.estado from citas join empleados on citas.idMedico = empleados.idEmpleado
+                string query = @"select idCita,concat(empleados.primer_nombre,' ',empleados.primer_apellido) as Medico,date_format(citas.fechaCita,'%d-%m-%Y') as Fecha,citas.motivos,citas.estado from citas join empleados on citas.idMedico = empleados.idEmpleado
                                     where citas.idPaciente = "+idpaciente+";";
                 cb.CommandText = query;
                 datos = cb.Select();
