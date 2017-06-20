@@ -121,14 +121,17 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="statusStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  </data>
   <data name="lblFilas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 17</value>
+    <value>15, 17</value>
   </data>
   <data name="lblFilas.Text" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="toolStripStatusLabel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 17</value>
+    <value>144, 17</value>
   </data>
   <data name="toolStripStatusLabel2.Text" xml:space="preserve">
     <value>Registros Encontrados</value>
@@ -161,6 +164,9 @@
   <metadata name="toolStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>133, 17</value>
   </metadata>
+  <data name="toolStrip1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  </data>
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -224,13 +230,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>69, 22</value>
+    <value>85, 28</value>
   </data>
   <data name="toolStripButton1.Text" xml:space="preserve">
     <value>Agregar</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 31</value>
   </data>
   <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -254,13 +260,13 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>78, 22</value>
+    <value>92, 28</value>
   </data>
   <data name="toolStripButton2.Text" xml:space="preserve">
     <value>Modificar</value>
   </data>
   <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 25</value>
+    <value>6, 31</value>
   </data>
   <data name="toolStripButton3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -322,7 +328,7 @@
     <value>Magenta</value>
   </data>
   <data name="toolStripButton3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 22</value>
+    <value>84, 28</value>
   </data>
   <data name="toolStripButton3.Text" xml:space="preserve">
     <value>Eliminar</value>
@@ -331,7 +337,7 @@
     <value>0, 0</value>
   </data>
   <data name="toolStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 25</value>
+    <value>540, 31</value>
   </data>
   <data name="toolStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -383,10 +389,10 @@
     <value>Fill</value>
   </data>
   <data name="dgvUsuarios.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 25</value>
+    <value>0, 31</value>
   </data>
   <data name="dgvUsuarios.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 305</value>
+    <value>540, 299</value>
   </data>
   <data name="dgvUsuarios.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
