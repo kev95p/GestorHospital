@@ -50,6 +50,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnDardeAlta = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetallePaciente)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -139,7 +140,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(108, 32);
+            this.label1.Location = new System.Drawing.Point(44, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 1;
@@ -147,7 +148,7 @@
             // 
             // txtNombres
             // 
-            this.txtNombres.Location = new System.Drawing.Point(163, 28);
+            this.txtNombres.Location = new System.Drawing.Point(99, 28);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(213, 20);
             this.txtNombres.TabIndex = 2;
@@ -156,7 +157,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(437, 32);
+            this.label2.Location = new System.Drawing.Point(373, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 4;
@@ -182,7 +183,7 @@
             // 
             this.dtpFechaIngreso.CustomFormat = "dd-MM-yyyy";
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(528, 28);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(464, 28);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
             this.dtpFechaIngreso.Size = new System.Drawing.Size(133, 20);
             this.dtpFechaIngreso.TabIndex = 5;
@@ -192,7 +193,7 @@
             // rbtnMasculino
             // 
             this.rbtnMasculino.AutoSize = true;
-            this.rbtnMasculino.Location = new System.Drawing.Point(484, 57);
+            this.rbtnMasculino.Location = new System.Drawing.Point(420, 57);
             this.rbtnMasculino.Name = "rbtnMasculino";
             this.rbtnMasculino.Size = new System.Drawing.Size(34, 17);
             this.rbtnMasculino.TabIndex = 7;
@@ -204,7 +205,7 @@
             // rbtnFemenino
             // 
             this.rbtnFemenino.AutoSize = true;
-            this.rbtnFemenino.Location = new System.Drawing.Point(563, 57);
+            this.rbtnFemenino.Location = new System.Drawing.Point(499, 57);
             this.rbtnFemenino.Name = "rbtnFemenino";
             this.rbtnFemenino.Size = new System.Drawing.Size(31, 17);
             this.rbtnFemenino.TabIndex = 8;
@@ -216,7 +217,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 61);
+            this.label3.Location = new System.Drawing.Point(373, 61);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 9;
@@ -235,7 +236,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(775, 100);
+            this.groupBox1.Size = new System.Drawing.Size(655, 100);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos ";
@@ -243,7 +244,7 @@
             // 
             // txtApellidos
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(163, 58);
+            this.txtApellidos.Location = new System.Drawing.Point(99, 58);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(213, 20);
             this.txtApellidos.TabIndex = 12;
@@ -252,17 +253,27 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(108, 61);
+            this.label4.Location = new System.Drawing.Point(44, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Apellidos";
+            // 
+            // btnDardeAlta
+            // 
+            this.btnDardeAlta.Location = new System.Drawing.Point(693, 53);
+            this.btnDardeAlta.Name = "btnDardeAlta";
+            this.btnDardeAlta.Size = new System.Drawing.Size(75, 23);
+            this.btnDardeAlta.TabIndex = 11;
+            this.btnDardeAlta.Text = "Dar le Alta";
+            this.btnDardeAlta.UseVisualStyleBackColor = true;
             // 
             // DetallePacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 412);
+            this.Controls.Add(this.btnDardeAlta);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvDetallePaciente);
             this.Controls.Add(this.groupBox1);
@@ -307,5 +318,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fecharegistro;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
         private System.Windows.Forms.ToolStripStatusLabel lblDatosEncontrados;
+        private System.Windows.Forms.Button btnDardeAlta;
     }
 }
