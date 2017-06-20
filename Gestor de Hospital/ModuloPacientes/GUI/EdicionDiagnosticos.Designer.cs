@@ -44,6 +44,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(59, 263);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -55,22 +56,25 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(47, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Médico";
             // 
             // dtpFechaDiagnostico
             // 
+            this.dtpFechaDiagnostico.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaDiagnostico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaDiagnostico.Location = new System.Drawing.Point(50, 203);
             this.dtpFechaDiagnostico.Name = "dtpFechaDiagnostico";
-            this.dtpFechaDiagnostico.Size = new System.Drawing.Size(121, 20);
+            this.dtpFechaDiagnostico.Size = new System.Drawing.Size(121, 22);
             this.dtpFechaDiagnostico.TabIndex = 2;
             // 
             // cbxMedico
             // 
+            this.cbxMedico.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMedico.FormattingEnabled = true;
             this.cbxMedico.Location = new System.Drawing.Point(50, 69);
             this.cbxMedico.Name = "cbxMedico";
@@ -79,6 +83,7 @@
             // 
             // txtDiagnostico
             // 
+            this.txtDiagnostico.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiagnostico.Location = new System.Drawing.Point(47, 120);
             this.txtDiagnostico.Multiline = true;
             this.txtDiagnostico.Name = "txtDiagnostico";
@@ -88,23 +93,26 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(47, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Diagnostico";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 187);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Fecha";
             // 
             // groupBox1
             // 
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(24, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(249, 224);
@@ -114,6 +122,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(152, 263);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -130,6 +139,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(294, 312);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label3);

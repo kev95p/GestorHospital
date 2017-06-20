@@ -79,6 +79,7 @@
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Controls.Add(this.pbxImagen);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(2, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 155);
@@ -103,7 +104,6 @@
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
             this.flowLayoutPanel2.Controls.Add(this.txtNombres);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 3);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
@@ -115,7 +115,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombres";
             // 
@@ -125,14 +125,13 @@
             this.txtNombres.Location = new System.Drawing.Point(3, 16);
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.ReadOnly = true;
-            this.txtNombres.Size = new System.Drawing.Size(149, 20);
+            this.txtNombres.Size = new System.Drawing.Size(149, 22);
             this.txtNombres.TabIndex = 1;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label2);
             this.flowLayoutPanel3.Controls.Add(this.txtApellidos);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(10, 48);
             this.flowLayoutPanel3.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
@@ -144,7 +143,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Apellidos";
             // 
@@ -154,14 +153,13 @@
             this.txtApellidos.Location = new System.Drawing.Point(3, 16);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ReadOnly = true;
-            this.txtApellidos.Size = new System.Drawing.Size(157, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(157, 22);
             this.txtApellidos.TabIndex = 1;
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.label5);
             this.flowLayoutPanel6.Controls.Add(this.txtSexo);
-            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(183, 3);
             this.flowLayoutPanel6.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
@@ -173,7 +171,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(31, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Sexo";
             // 
@@ -183,14 +181,13 @@
             this.txtSexo.Location = new System.Drawing.Point(3, 16);
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.ReadOnly = true;
-            this.txtSexo.Size = new System.Drawing.Size(72, 20);
+            this.txtSexo.Size = new System.Drawing.Size(72, 22);
             this.txtSexo.TabIndex = 1;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label3);
             this.flowLayoutPanel4.Controls.Add(this.txtEstatura);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(183, 48);
             this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
@@ -202,7 +199,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(48, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Estatura";
             // 
@@ -212,14 +209,13 @@
             this.txtEstatura.Location = new System.Drawing.Point(3, 16);
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.ReadOnly = true;
-            this.txtEstatura.Size = new System.Drawing.Size(55, 20);
+            this.txtEstatura.Size = new System.Drawing.Size(55, 22);
             this.txtEstatura.TabIndex = 1;
             // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label4);
             this.flowLayoutPanel5.Controls.Add(this.txtPeso);
-            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(271, 3);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
@@ -241,7 +237,7 @@
             this.txtPeso.Location = new System.Drawing.Point(3, 16);
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.ReadOnly = true;
-            this.txtPeso.Size = new System.Drawing.Size(41, 20);
+            this.txtPeso.Size = new System.Drawing.Size(41, 22);
             this.txtPeso.TabIndex = 1;
             // 
             // pbxImagen
@@ -395,6 +391,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(506, 42);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(95, 23);

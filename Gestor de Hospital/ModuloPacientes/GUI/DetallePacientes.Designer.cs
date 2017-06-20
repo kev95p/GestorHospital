@@ -142,7 +142,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(44, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombres";
             // 
@@ -150,7 +150,7 @@
             // 
             this.txtNombres.Location = new System.Drawing.Point(99, 28);
             this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Size = new System.Drawing.Size(213, 20);
+            this.txtNombres.Size = new System.Drawing.Size(213, 22);
             this.txtNombres.TabIndex = 2;
             this.txtNombres.TextChanged += new System.EventHandler(this.txtNombres_TextChanged);
             // 
@@ -159,7 +159,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(373, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Fecha Ingreso";
             // 
@@ -183,9 +183,9 @@
             // 
             this.dtpFechaIngreso.CustomFormat = "dd-MM-yyyy";
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaIngreso.Location = new System.Drawing.Point(464, 28);
+            this.dtpFechaIngreso.Location = new System.Drawing.Point(456, 28);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(133, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(134, 22);
             this.dtpFechaIngreso.TabIndex = 5;
             this.dtpFechaIngreso.Value = new System.DateTime(2017, 6, 8, 0, 38, 0, 0);
             this.dtpFechaIngreso.ValueChanged += new System.EventHandler(this.dtpFechaIngreso_ValueChanged);
@@ -195,7 +195,7 @@
             this.rbtnMasculino.AutoSize = true;
             this.rbtnMasculino.Location = new System.Drawing.Point(420, 57);
             this.rbtnMasculino.Name = "rbtnMasculino";
-            this.rbtnMasculino.Size = new System.Drawing.Size(34, 17);
+            this.rbtnMasculino.Size = new System.Drawing.Size(35, 17);
             this.rbtnMasculino.TabIndex = 7;
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "M";
@@ -219,7 +219,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(373, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "Sexo";
             // 
@@ -234,6 +234,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dtpFechaIngreso);
             this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(655, 100);
@@ -246,7 +247,7 @@
             // 
             this.txtApellidos.Location = new System.Drawing.Point(99, 58);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(213, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(213, 22);
             this.txtApellidos.TabIndex = 12;
             this.txtApellidos.TextChanged += new System.EventHandler(this.txtApellidos_TextChanged);
             // 
@@ -255,7 +256,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
+            this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 11;
             this.label4.Text = "Apellidos";
             // 
