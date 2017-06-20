@@ -60,6 +60,7 @@
             // 
             // statusStrip
             // 
+            this.statusStrip.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblFilas,
             this.toolStripStatusLabel1});
@@ -72,13 +73,13 @@
             // lblFilas
             // 
             this.lblFilas.Name = "lblFilas";
-            this.lblFilas.Size = new System.Drawing.Size(13, 17);
+            this.lblFilas.Size = new System.Drawing.Size(15, 17);
             this.lblFilas.Text = "0";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(124, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(144, 17);
             this.toolStripStatusLabel1.Text = "Registros Encontrados";
             // 
             // toolStrip
