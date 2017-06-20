@@ -127,6 +127,12 @@
     <Compile Include="GUI\EdicionDiagnosticos.Designer.cs">
       <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\EdicionIngresarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\EdicionIngresarPaciente.Designer.cs">
+      <DependentUpon>EdicionIngresarPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\EdicionPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionDiagnosticos.resx">
       <DependentUpon>EdicionDiagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\EdicionIngresarPaciente.resx">
+      <DependentUpon>EdicionIngresarPaciente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\EdicionPaciente.resx">
       <DependentUpon>EdicionPaciente.cs</DependentUpon>

@@ -202,5 +202,11 @@ namespace ModuloPacientes.GUI
             frm.txtPeso.Text = dgvPacientes.CurrentRow.Cells["peso"].Value.ToString();
             frm.ShowDialog();
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            GUI.EdicionIngresarPaciente frm = new EdicionIngresarPaciente();
+            frm.ShowDialog();
+        }
     }
 }

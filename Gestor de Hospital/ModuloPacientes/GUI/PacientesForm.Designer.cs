@@ -44,6 +44,9 @@ namespace ModuloPacientes.GUI
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnRecetas = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,9 +78,8 @@ namespace ModuloPacientes.GUI
             this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.btnDetalles = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnRecetas = new System.Windows.Forms.ToolStripButton();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
+            this.btnIngresar = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStrip2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
@@ -201,6 +203,28 @@ namespace ModuloPacientes.GUI
             this.toolStripLabel3.Name = "toolStripLabel3";
             this.toolStripLabel3.Size = new System.Drawing.Size(105, 17);
             this.toolStripLabel3.Text = "Citas";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(105, 6);
+            // 
+            // btnRecetas
+            // 
+            this.btnRecetas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnRecetas.Image = ((System.Drawing.Image)(resources.GetObject("btnRecetas.Image")));
+            this.btnRecetas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnRecetas.Name = "btnRecetas";
+            this.btnRecetas.Size = new System.Drawing.Size(105, 44);
+            this.btnRecetas.Text = "toolStripButton3";
+            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
+            // 
+            // toolStripLabel5
+            // 
+            this.toolStripLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripLabel5.Name = "toolStripLabel5";
+            this.toolStripLabel5.Size = new System.Drawing.Size(105, 17);
+            this.toolStripLabel5.Text = "Recetas Medicas";
             // 
             // panel1
             // 
@@ -428,6 +452,8 @@ namespace ModuloPacientes.GUI
             this.toolStripSeparator2,
             this.btnEliminar,
             this.toolStripSeparator3,
+            this.btnIngresar,
+            this.toolStripSeparator8,
             this.btnDetalles});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -491,27 +517,20 @@ namespace ModuloPacientes.GUI
             this.btnDetalles.Text = "Ver Detalles";
             this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
-            // toolStripSeparator7
+            // btnIngresar
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(105, 6);
+            this.btnIngresar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
+            this.btnIngresar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(86, 32);
+            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // btnRecetas
+            // toolStripSeparator8
             // 
-            this.btnRecetas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnRecetas.Image = ((System.Drawing.Image)(resources.GetObject("btnRecetas.Image")));
-            this.btnRecetas.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnRecetas.Name = "btnRecetas";
-            this.btnRecetas.Size = new System.Drawing.Size(105, 44);
-            this.btnRecetas.Text = "toolStripButton3";
-            this.btnRecetas.Click += new System.EventHandler(this.btnRecetas_Click);
-            // 
-            // toolStripLabel5
-            // 
-            this.toolStripLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(105, 17);
-            this.toolStripLabel5.Text = "Recetas Medicas";
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 35);
             // 
             // PacientesForm
             // 
@@ -586,5 +605,7 @@ namespace ModuloPacientes.GUI
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripButton btnRecetas;
         private System.Windows.Forms.ToolStripLabel toolStripLabel5;
+        private System.Windows.Forms.ToolStripButton btnIngresar;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
     }
 }
