@@ -35,8 +35,9 @@ namespace CacheManager
                 DataTable datos = new DataTable();
                 CommandBuilder cb = new CommandBuilder();
                 string query = @"select concat(primerNombre,' ',segundoNombre,' ',primerApellido,' ',segundoApellido) as Nombre, enfermedades.nombre as Enfermedad
+                                ,date_format(pacientes.fechaRegistro,'%d-%m-%Y') as Registro,pacientes.sexo as Sexo
                                 from pacientes_enfermedades inner join pacientes on pacientes_enfermedades.idPaciente = pacientes.idPaciente 
-                                inner join enfermedades on enfermedades.idenfermedad = pacientes_enfermedades.idEnfermedad where enfermedades.idenfermedad = "+idenfermedad+" ;";
+                                inner join enfermedades on enfermedades.idenfermedad = pacientes_enfermedades.idEnfermedad where enfermedades.idenfermedad = " + idenfermedad+" ;";
                 cb.CommandText = query;
                 datos = cb.Select().Tables[0];
                 return datos;

@@ -283,6 +283,10 @@ namespace ModuloPacientes.Reportes.Datos {
             
             private global::System.Data.DataColumn columnEnfermedad;
             
+            private global::System.Data.DataColumn columnRegistro;
+            
+            private global::System.Data.DataColumn columnSexo;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public EnfermedadesDataTable() {
@@ -334,6 +338,22 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RegistroColumn {
+                get {
+                    return this.columnRegistro;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SexoColumn {
+                get {
+                    return this.columnSexo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -369,11 +389,13 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EnfermedadesRow AddEnfermedadesRow(string Nombre, string Enfermedad) {
+            public EnfermedadesRow AddEnfermedadesRow(string Nombre, string Enfermedad, string Registro, string Sexo) {
                 EnfermedadesRow rowEnfermedadesRow = ((EnfermedadesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Nombre,
-                        Enfermedad};
+                        Enfermedad,
+                        Registro,
+                        Sexo};
                 rowEnfermedadesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEnfermedadesRow);
                 return rowEnfermedadesRow;
@@ -398,6 +420,8 @@ namespace ModuloPacientes.Reportes.Datos {
             internal void InitVars() {
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnEnfermedad = base.Columns["Enfermedad"];
+                this.columnRegistro = base.Columns["Registro"];
+                this.columnSexo = base.Columns["Sexo"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -407,6 +431,10 @@ namespace ModuloPacientes.Reportes.Datos {
                 base.Columns.Add(this.columnNombre);
                 this.columnEnfermedad = new global::System.Data.DataColumn("Enfermedad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEnfermedad);
+                this.columnRegistro = new global::System.Data.DataColumn("Registro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRegistro);
+                this.columnSexo = new global::System.Data.DataColumn("Sexo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSexo);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -581,6 +609,38 @@ namespace ModuloPacientes.Reportes.Datos {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Registro {
+                get {
+                    try {
+                        return ((string)(this[this.tableEnfermedades.RegistroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Registro\' de la tabla \'Enfermedades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEnfermedades.RegistroColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Sexo {
+                get {
+                    try {
+                        return ((string)(this[this.tableEnfermedades.SexoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Sexo\' de la tabla \'Enfermedades\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEnfermedades.SexoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNombreNull() {
                 return this.IsNull(this.tableEnfermedades.NombreColumn);
             }
@@ -601,6 +661,30 @@ namespace ModuloPacientes.Reportes.Datos {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEnfermedadNull() {
                 this[this.tableEnfermedades.EnfermedadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRegistroNull() {
+                return this.IsNull(this.tableEnfermedades.RegistroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRegistroNull() {
+                this[this.tableEnfermedades.RegistroColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSexoNull() {
+                return this.IsNull(this.tableEnfermedades.SexoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSexoNull() {
+                this[this.tableEnfermedades.SexoColumn] = global::System.Convert.DBNull;
             }
         }
         

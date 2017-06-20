@@ -268,6 +268,7 @@
             this.idEspecialidad.HeaderText = "idEspecialidad";
             this.idEspecialidad.Name = "idEspecialidad";
             this.idEspecialidad.ReadOnly = true;
+            this.idEspecialidad.Visible = false;
             // 
             // EmpleadosVista
             // 

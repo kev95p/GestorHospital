@@ -61,7 +61,7 @@ namespace CRUDManager.Entidades
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
-            query.Append("INSERT INTO hospital.enfemedades (nombre, tipo ) VALUES ( ");
+            query.Append("INSERT INTO hospital.enfermedades (nombre, tipo ) VALUES ( ");
             query.Append(" '" + Nombre + "', '" + Tipo + "' )");
             cb.CommandText = query.ToString();
 
@@ -74,9 +74,9 @@ namespace CRUDManager.Entidades
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
-            query.Append("UPDATE hospital.enfemedades SET ");
+            query.Append("UPDATE hospital.enfermedades SET ");
             query.Append("nombre = '" + Nombre + "', tipo = '" + Tipo + "' ");
-            query.Append("WHERE idenfemedades = " + Idenfemedades + ";");
+            query.Append("WHERE idenfermedades = " + Idenfemedades + ";");
             cb.CommandText = query.ToString();
 
             int rowAffected = Update(cb);
@@ -87,8 +87,8 @@ namespace CRUDManager.Entidades
         {
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
-            query.Append("DELETE FROM hospital.enfemedades ");
-            query.Append("WHERE idenfemedades = '" + Idenfemedades + "';");
+            query.Append("DELETE FROM hospital.enfermedades ");
+            query.Append("WHERE idenfermedades = '" + Idenfemedades + "';");
             cb.CommandText = query.ToString();
 
             int rowAffected = Delete(cb);

@@ -25,7 +25,7 @@ namespace GUI
             {
                 gestionesBasicasToolStripMenuItem.Visible = false;
                 empleadosToolStripMenuItem.Visible = false;
-                preferenciasToolStripMenuItem.Visible = false;
+              
             }
         }
 
@@ -52,7 +52,7 @@ namespace GUI
                     
 
                         
-                        switch (Pings.Send("192.168.1.1", timeout).Status)
+                        switch (Pings.Send("127.0.0.1", timeout).Status)
                         {
                             case IPStatus.Success:
                                 conectado = true;
@@ -177,6 +177,20 @@ namespace GUI
             ModuloPacientes.GUI.Visores.VisorEnfermedades v = new ModuloPacientes.GUI.Visores.VisorEnfermedades();
             v.MdiParent = this;
             v.Show();
+        }
+
+        private void medicamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GUI.GestionMedicamentos.MedicamentosVista frm = new GUI.GestionMedicamentos.MedicamentosVista();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void enfermedadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            GestionEnfermedades.EnfermedadesVista frm = new GestionEnfermedades.EnfermedadesVista();
+            frm.MdiParent = this;
+            frm.Show();
         }
     }
 }

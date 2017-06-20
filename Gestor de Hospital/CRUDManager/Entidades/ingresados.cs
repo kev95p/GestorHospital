@@ -114,7 +114,7 @@ namespace CRUDManager.Entidades
             CommandBuilder cb = new CommandBuilder();
             StringBuilder query = new StringBuilder();
             query.Append("INSERT INTO hospital.ingresados (idPaciente, idMedico, FechaIngreso, Motivos, numeroHabitacion ) VALUES(");
-            query.Append("'" + IdPaciente + "', '" + IdMedico + "' ,'" + FechaIngreso1 + "' , '" + Motivos1 + "','" + NumeroHabitacion + "');");
+            query.Append("" + IdPaciente + ", " + IdMedico + " ,'" + FechaIngreso1 + "' , '" + Motivos1 + "','" + NumeroHabitacion + "');");
             cb.CommandText = query.ToString();
 
             return (Insert(cb) > 0);

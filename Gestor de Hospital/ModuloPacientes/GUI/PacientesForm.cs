@@ -207,7 +207,7 @@ namespace ModuloPacientes.GUI
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             GUI.EdicionIngresarPaciente frm = new EdicionIngresarPaciente();
-            frm.idPAciente = idpaciente;
+            frm.idPAciente = dgvPacientes.CurrentRow.Cells["idPaciente"].Value.ToString();
             frm.ShowDialog();
         }
     }
