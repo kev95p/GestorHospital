@@ -267,6 +267,7 @@
             this.btnDardeAlta.TabIndex = 11;
             this.btnDardeAlta.Text = "Dar le Alta";
             this.btnDardeAlta.UseVisualStyleBackColor = true;
+            this.btnDardeAlta.Click += new System.EventHandler(this.btnDardeAlta_Click);
             // 
             // DetallePacientes
             // 

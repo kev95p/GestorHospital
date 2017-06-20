@@ -12,6 +12,7 @@ namespace ModuloPacientes.GUI
 {
     public partial class EdicionIngresarPaciente : Form
     {
+        public string idPAciente;
         public EdicionIngresarPaciente()
         {
             InitializeComponent();
@@ -58,8 +59,30 @@ namespace ModuloPacientes.GUI
             CargarMedicos();
         }
 
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
 
-        
+            CRUDManager.Entidades.ingresados ingresados = new CRUDManager.Entidades.ingresados();
+            ingresados.IdPaciente = idPAciente;
+            ingresados.IdMedico = cbxDoctor.SelectedValue.ToString();
+            ingresados.FechaIngreso1 = SessionManager.FechaHelper.FormatearFecha(dtpFechaIngreso.Text);
+            ingresados.Motivos1 = txtMotivos.Text;
+            ingresados.NumeroHabitacion = txtNHabitacion.Text;
+            
+            if (ValidarDatos())
+            {
+                if (ingresados.Insertar())
+                {
+                    MessageBox.Show("Paciente ingresado correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error inesperado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
     }
 }

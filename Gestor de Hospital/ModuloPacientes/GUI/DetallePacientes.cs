@@ -142,5 +142,10 @@ namespace ModuloPacientes.GUI
         {
             FiltrarFechaIngreso();
         }
+
+        private void btnDardeAlta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,6 +14,7 @@ namespace ModuloPacientes.GUI
 {
     public partial class PacientesForm : Form
     {
+        public string idpaciente;
         public PacientesForm()
         {
             InitializeComponent();
@@ -206,6 +207,7 @@ namespace ModuloPacientes.GUI
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             GUI.EdicionIngresarPaciente frm = new EdicionIngresarPaciente();
+            frm.idPAciente = idpaciente;
             frm.ShowDialog();
         }
     }
