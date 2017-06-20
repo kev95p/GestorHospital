@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvEnfermedades = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,8 +55,8 @@
             this.dgvEnfermedades.AllowUserToAddRows = false;
             this.dgvEnfermedades.AllowUserToDeleteRows = false;
             this.dgvEnfermedades.AllowUserToResizeColumns = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.dgvEnfermedades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.dgvEnfermedades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnfermedades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -96,6 +96,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(391, 79);
@@ -108,20 +109,19 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 60);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(385, 58);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.label5);
             this.flowLayoutPanel7.Controls.Add(this.dtpDiagnostico);
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(10, 3);
             this.flowLayoutPanel7.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            this.flowLayoutPanel7.Size = new System.Drawing.Size(118, 39);
+            this.flowLayoutPanel7.Size = new System.Drawing.Size(152, 39);
             this.flowLayoutPanel7.TabIndex = 6;
             // 
             // label5
@@ -129,7 +129,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
+            this.label5.Size = new System.Drawing.Size(116, 13);
             this.label5.TabIndex = 1;
             this.label5.Text = "Fecha de Diagnostico";
             // 
@@ -138,7 +138,7 @@
             this.dtpDiagnostico.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDiagnostico.Location = new System.Drawing.Point(3, 16);
             this.dtpDiagnostico.Name = "dtpDiagnostico";
-            this.dtpDiagnostico.Size = new System.Drawing.Size(108, 20);
+            this.dtpDiagnostico.Size = new System.Drawing.Size(127, 22);
             this.dtpDiagnostico.TabIndex = 0;
             // 
             // flowLayoutPanel2
@@ -146,7 +146,7 @@
             this.flowLayoutPanel2.Controls.Add(this.label1);
             this.flowLayoutPanel2.Controls.Add(this.cbEstado);
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(141, 3);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(175, 3);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(142, 49);
@@ -157,7 +157,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Estado";
             // 
@@ -171,6 +171,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(102, 365);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
@@ -181,6 +182,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(205, 365);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -193,6 +195,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(416, 400);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);

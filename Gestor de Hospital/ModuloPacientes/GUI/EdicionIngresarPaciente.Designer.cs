@@ -46,6 +46,7 @@
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(42, 293);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -56,6 +57,7 @@
             // 
             // cbxDoctor
             // 
+            this.cbxDoctor.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDoctor.FormattingEnabled = true;
             this.cbxDoctor.Location = new System.Drawing.Point(45, 63);
             this.cbxDoctor.Name = "cbxDoctor";
@@ -65,23 +67,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(42, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Doctor";
             // 
             // dtpFechaIngreso
             // 
+            this.dtpFechaIngreso.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaIngreso.Location = new System.Drawing.Point(45, 110);
             this.dtpFechaIngreso.Name = "dtpFechaIngreso";
-            this.dtpFechaIngreso.Size = new System.Drawing.Size(84, 20);
+            this.dtpFechaIngreso.Size = new System.Drawing.Size(84, 22);
             this.dtpFechaIngreso.TabIndex = 3;
             this.dtpFechaIngreso.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txtMotivos
             // 
+            this.txtMotivos.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivos.Location = new System.Drawing.Point(45, 155);
             this.txtMotivos.Multiline = true;
             this.txtMotivos.Name = "txtMotivos";
@@ -91,9 +96,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Fecha Ingreso";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -101,30 +107,34 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(42, 139);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Motivos";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(44, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "N° Habitación";
             // 
             // txtNHabitacion
             // 
+            this.txtNHabitacion.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNHabitacion.Location = new System.Drawing.Point(47, 226);
             this.txtNHabitacion.Name = "txtNHabitacion";
-            this.txtNHabitacion.Size = new System.Drawing.Size(82, 20);
+            this.txtNHabitacion.Size = new System.Drawing.Size(82, 22);
             this.txtNHabitacion.TabIndex = 8;
             // 
             // groupBox1
             // 
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(23, 21);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(223, 257);
@@ -134,6 +144,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(128, 293);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -150,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(267, 343);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtNHabitacion);

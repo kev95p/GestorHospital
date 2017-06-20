@@ -47,33 +47,37 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(45, 89);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 18;
             this.label6.Text = "Fecha ";
             // 
             // dtpFechaCitas
             // 
             this.dtpFechaCitas.CustomFormat = "";
+            this.dtpFechaCitas.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaCitas.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaCitas.Location = new System.Drawing.Point(44, 108);
             this.dtpFechaCitas.Name = "dtpFechaCitas";
-            this.dtpFechaCitas.Size = new System.Drawing.Size(104, 20);
+            this.dtpFechaCitas.Size = new System.Drawing.Size(104, 22);
             this.dtpFechaCitas.TabIndex = 1;
             this.dtpFechaCitas.Value = new System.DateTime(2017, 6, 12, 16, 54, 0, 0);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(41, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 13);
+            this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Estado";
             // 
             // cbxEstado
             // 
+            this.cbxEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxEstado.FormattingEnabled = true;
             this.cbxEstado.Location = new System.Drawing.Point(44, 198);
             this.cbxEstado.Name = "cbxEstado";
@@ -83,14 +87,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(43, 43);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 14;
             this.label4.Text = "Médico";
             // 
             // cbxMedico
             // 
+            this.cbxMedico.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMedico.FormattingEnabled = true;
             this.cbxMedico.Location = new System.Drawing.Point(46, 59);
             this.cbxMedico.Name = "cbxMedico";
@@ -99,6 +105,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(28, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(223, 233);
@@ -109,21 +116,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(41, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 20;
             this.label1.Text = "Motivos";
             // 
             // txtMotivos
             // 
+            this.txtMotivos.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMotivos.Location = new System.Drawing.Point(44, 154);
             this.txtMotivos.Name = "txtMotivos";
-            this.txtMotivos.Size = new System.Drawing.Size(179, 20);
+            this.txtMotivos.Size = new System.Drawing.Size(179, 22);
             this.txtMotivos.TabIndex = 2;
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(50, 266);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -134,6 +144,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(146, 266);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -150,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(280, 313);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
