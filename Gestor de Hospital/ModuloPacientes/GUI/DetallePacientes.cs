@@ -33,6 +33,7 @@ namespace ModuloPacientes.GUI
             {
                 _PACIENTES.DataSource = CacheManager.Cache.OBTENER_DETALLE_PACIENTES_INGRESADOS().Tables[0];
                 FiltrarNombre();
+                lblDatosEncontrados.Text = dgvDetallePaciente.RowCount.ToString() + " Filas Encontradas";
             }
             catch
             {
@@ -100,22 +101,6 @@ namespace ModuloPacientes.GUI
             lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
         }
 
-        private void FiltrarFechaIngreso()
-             {
-                 if (dtpFechaIngreso.Checked == false)
-                 {
-                     _PACIENTES.RemoveFilter();
-                 }
-                 else
-                 {
-                     _PACIENTES.Filter = "fecharegistro LIKE '%" + dtpFechaIngreso.Text + "%'";
-                 }
-                 dgvDetallePaciente.AutoGenerateColumns = false;
-                 dgvDetallePaciente.DataSource = _PACIENTES;
-                 lblDatosEncontrados.Text = dgvDetallePaciente.Rows.Count.ToString() + " Registros Encontrados";
-             }
-         
-
 
         private void txtNombres_TextChanged(object sender, EventArgs e)
         {
@@ -138,14 +123,26 @@ namespace ModuloPacientes.GUI
             FiltrarSexoMas();
         }
 
-        private void dtpFechaIngreso_ValueChanged(object sender, EventArgs e)
-        {
-            FiltrarFechaIngreso();
-        }
 
         private void btnDardeAlta_Click(object sender, EventArgs e)
         {
+            if (dgvDetallePaciente.RowCount > 0)
+            {
+                CRUDManager.Entidades.ingresados i = new CRUDManager.Entidades.ingresados();
+                i.IdIngresado = dgvDetallePaciente.CurrentRow.Cells["ID"].Value.ToString();
+                if (i.Eliminar())
+                {
+                    MessageBox.Show("Paciente de Alta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CargarPacientesIngresados();
+                }
+            }
+        }
 
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            _PACIENTES.RemoveFilter();
+            rbtnFemenino.Checked = false;
+            rbtnMasculino.Checked = false;
         }
     }
 }

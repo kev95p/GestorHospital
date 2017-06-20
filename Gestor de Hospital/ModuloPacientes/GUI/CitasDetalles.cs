@@ -39,24 +39,35 @@ namespace ModuloPacientes.GUI
 
         private void btnQuitar_Click(object sender, EventArgs e)
         {
-            CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
-            c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
-            if (c.Cancelar())
+            if (dgvCitas.RowCount > 0)
             {
-                MessageBox.Show("Cita Cancelada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CargarCitas();
+                CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
+                c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
+                if (c.Cancelar())
+                {
+                    MessageBox.Show("Cita Cancelada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CargarCitas();
+                }
             }
             
         }
 
         private void btnCompletar_Click(object sender, EventArgs e)
         {
-            CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
-            c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
-            if (c.Completar())
+
+        }
+
+        private void btnCompletar_Click_1(object sender, EventArgs e)
+        {
+            if (dgvCitas.RowCount > 0)
             {
-                MessageBox.Show("Cita Completada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                CargarCitas();
+                CRUDManager.Entidades.Citas c = new CRUDManager.Entidades.Citas();
+                c.IdCita = dgvCitas.CurrentRow.Cells["idCita"].Value.ToString();
+                if (c.Completar())
+                {
+                    MessageBox.Show("Cita Completada", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    CargarCitas();
+                }
             }
         }
     }

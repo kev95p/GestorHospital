@@ -133,6 +133,17 @@ namespace CRUDManager.Entidades
             return (rowAffected > 0);
         }
 
+        public bool Eliminar()
+        {
+            CommandBuilder cb = new CommandBuilder();
+            StringBuilder query = new StringBuilder();
+            query.Append("delete from ingresados where idIngresado = "+idIngresado+";");
+            cb.CommandText = query.ToString();
+
+            int rowAffected = Update(cb);
+            return (rowAffected > 0);
+        }
+
 
     }
 }

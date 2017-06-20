@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -49,13 +49,13 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvCitas = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnQuitar = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCita = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Motivos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             this.btnCompletar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -258,8 +258,8 @@
             this.dgvCitas.AllowUserToDeleteRows = false;
             this.dgvCitas.AllowUserToResizeColumns = false;
             this.dgvCitas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvCitas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
@@ -274,26 +274,6 @@
             this.dgvCitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCitas.Size = new System.Drawing.Size(701, 328);
             this.dgvCitas.TabIndex = 2;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(500, 53);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 23);
-            this.btnAgregar.TabIndex = 3;
-            this.btnAgregar.Text = "Agregar Cita";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(500, 85);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(92, 23);
-            this.btnQuitar.TabIndex = 4;
-            this.btnQuitar.Text = "Cancelar Cita";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
             // 
             // Medico
             // 
@@ -337,7 +317,7 @@
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
             // 
-            // btnCompletar
+            // btnAgregar
             // 
             this.btnAgregar.Location = new System.Drawing.Point(500, 53);
             this.btnAgregar.Name = "btnAgregar";
@@ -355,6 +335,16 @@
             this.btnQuitar.TabIndex = 4;
             this.btnQuitar.Text = "Cancelar Cita";
             this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnCompletar
+            // 
+            this.btnCompletar.Location = new System.Drawing.Point(500, 114);
+            this.btnCompletar.Name = "btnCompletar";
+            this.btnCompletar.Size = new System.Drawing.Size(92, 23);
+            this.btnCompletar.TabIndex = 0;
+            this.btnCompletar.Text = "Completar";
+            this.btnCompletar.Click += new System.EventHandler(this.btnCompletar_Click_1);
             // 
             // CitasDetalles
             // 
