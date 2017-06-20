@@ -109,7 +109,7 @@
             this.dgvRoles.AllowUserToDeleteRows = false;
             this.dgvRoles.AllowUserToResizeColumns = false;
             this.dgvRoles.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgvRoles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

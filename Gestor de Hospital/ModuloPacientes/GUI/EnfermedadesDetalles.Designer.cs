@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -270,6 +271,8 @@
             this.dgvEnfermedades.AllowUserToDeleteRows = false;
             this.dgvEnfermedades.AllowUserToResizeColumns = false;
             this.dgvEnfermedades.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvEnfermedades.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEnfermedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEnfermedades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Enfermedad,

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -47,10 +48,10 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.dgvDiagnosticos = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
             this.Medico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Diagnostico = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -247,6 +248,8 @@
             this.dgvDiagnosticos.AllowUserToDeleteRows = false;
             this.dgvDiagnosticos.AllowUserToResizeColumns = false;
             this.dgvDiagnosticos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvDiagnosticos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDiagnosticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDiagnosticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
@@ -259,16 +262,6 @@
             this.dgvDiagnosticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDiagnosticos.Size = new System.Drawing.Size(611, 318);
             this.dgvDiagnosticos.TabIndex = 4;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(492, 40);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(117, 23);
-            this.btnAgregar.TabIndex = 5;
-            this.btnAgregar.Text = "Agregar Diagnostico";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // Medico
             // 
@@ -294,6 +287,16 @@
             this.FechaCreacion.HeaderText = "Fecha de Creacion";
             this.FechaCreacion.Name = "FechaCreacion";
             this.FechaCreacion.ReadOnly = true;
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Location = new System.Drawing.Point(492, 40);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(117, 23);
+            this.btnAgregar.TabIndex = 5;
+            this.btnAgregar.Text = "Agregar Diagnostico";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // DiagnosticosDetalles
             // 

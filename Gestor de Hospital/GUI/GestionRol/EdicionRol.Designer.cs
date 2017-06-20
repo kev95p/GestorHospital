@@ -47,24 +47,24 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 97);
+            this.groupBox1.Size = new System.Drawing.Size(212, 140);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
             // 
             // txtRol
             // 
-            this.txtRol.Location = new System.Drawing.Point(65, 59);
+            this.txtRol.Location = new System.Drawing.Point(21, 85);
             this.txtRol.Name = "txtRol";
-            this.txtRol.Size = new System.Drawing.Size(100, 20);
+            this.txtRol.Size = new System.Drawing.Size(170, 20);
             this.txtRol.TabIndex = 0;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 62);
+            this.label2.Location = new System.Drawing.Point(18, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(65, 22);
+            this.txtID.Location = new System.Drawing.Point(21, 43);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(46, 20);
@@ -81,15 +81,15 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 25);
+            this.label1.Location = new System.Drawing.Point(20, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(18, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "ID de rol";
+            this.label1.Text = "ID";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(58, 126);
+            this.btnAceptar.Location = new System.Drawing.Point(46, 172);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 1;
@@ -99,7 +99,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(151, 126);
+            this.btnCancelar.Location = new System.Drawing.Point(139, 172);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
@@ -115,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 169);
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ClientSize = new System.Drawing.Size(264, 227);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
@@ -124,7 +125,7 @@
             this.Name = "EdicionRol";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Agregar Rol";
+            this.Text = "Rol";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorRol)).EndInit();

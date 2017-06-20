@@ -63,7 +63,7 @@
             this.dgvDetallePaciente.AllowUserToOrderColumns = true;
             this.dgvDetallePaciente.AllowUserToResizeColumns = false;
             this.dgvDetallePaciente.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgvDetallePaciente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDetallePaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetallePaciente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

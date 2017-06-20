@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
@@ -258,6 +260,8 @@
             this.dgvRecetas.AllowUserToDeleteRows = false;
             this.dgvRecetas.AllowUserToResizeColumns = false;
             this.dgvRecetas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvRecetas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecetas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
@@ -333,6 +337,8 @@
             this.dgvMedicamentos.AllowUserToDeleteRows = false;
             this.dgvMedicamentos.AllowUserToResizeColumns = false;
             this.dgvMedicamentos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvMedicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medicamento,

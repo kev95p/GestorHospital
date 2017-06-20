@@ -112,7 +112,7 @@
             this.dgvMedicamentos.AllowUserToDeleteRows = false;
             this.dgvMedicamentos.AllowUserToResizeColumns = false;
             this.dgvMedicamentos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.dgvMedicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMedicamentos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

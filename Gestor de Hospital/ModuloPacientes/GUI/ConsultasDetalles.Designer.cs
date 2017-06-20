@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -256,6 +257,8 @@
             this.dgvConsultas.AllowUserToDeleteRows = false;
             this.dgvConsultas.AllowUserToResizeColumns = false;
             this.dgvConsultas.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.dgvConsultas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConsultas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Medico,
