@@ -59,9 +59,10 @@
             this.groupBox1.Controls.Add(this.txtClave);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtUsuario);
-            this.groupBox1.Location = new System.Drawing.Point(33, 12);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(22, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 262);
+            this.groupBox1.Size = new System.Drawing.Size(265, 262);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
@@ -71,7 +72,7 @@
             this.txtIdUsuario.Location = new System.Drawing.Point(97, 29);
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.ReadOnly = true;
-            this.txtIdUsuario.Size = new System.Drawing.Size(40, 20);
+            this.txtIdUsuario.Size = new System.Drawing.Size(40, 22);
             this.txtIdUsuario.TabIndex = 9;
             // 
             // label5
@@ -88,7 +89,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(68, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(24, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Rol";
             // 
@@ -106,7 +107,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 206);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 26);
+            this.label3.Size = new System.Drawing.Size(64, 26);
             this.label3.TabIndex = 5;
             this.label3.Text = "Confirmar\r\nContraseña";
             // 
@@ -115,7 +116,7 @@
             this.txtClaveComprobacion.Location = new System.Drawing.Point(97, 212);
             this.txtClaveComprobacion.Name = "txtClaveComprobacion";
             this.txtClaveComprobacion.PasswordChar = '*';
-            this.txtClaveComprobacion.Size = new System.Drawing.Size(123, 20);
+            this.txtClaveComprobacion.Size = new System.Drawing.Size(123, 22);
             this.txtClaveComprobacion.TabIndex = 3;
             // 
             // label2
@@ -123,7 +124,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Contraseña";
             // 
@@ -132,7 +133,7 @@
             this.txtClave.Location = new System.Drawing.Point(97, 162);
             this.txtClave.Name = "txtClave";
             this.txtClave.PasswordChar = '*';
-            this.txtClave.Size = new System.Drawing.Size(123, 20);
+            this.txtClave.Size = new System.Drawing.Size(123, 22);
             this.txtClave.TabIndex = 2;
             // 
             // label1
@@ -140,7 +141,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
+            this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
             // 
@@ -148,12 +149,13 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(97, 67);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(100, 22);
             this.txtUsuario.TabIndex = 0;
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(84, 295);
+            this.btnAceptar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAceptar.Location = new System.Drawing.Point(79, 293);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 1;
@@ -163,7 +165,8 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(183, 295);
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(178, 293);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 2;
@@ -179,7 +182,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(352, 344);
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ClientSize = new System.Drawing.Size(314, 344);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
@@ -189,6 +193,7 @@
             this.Name = "EdicionUsuario";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar Usuario";
             this.Load += new System.EventHandler(this.AgregarUsuario_Load);
             this.groupBox1.ResumeLayout(false);

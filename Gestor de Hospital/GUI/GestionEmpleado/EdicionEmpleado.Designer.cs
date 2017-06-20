@@ -104,6 +104,7 @@
             // 
             // btnAgregar
             // 
+            this.btnAgregar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregar.Location = new System.Drawing.Point(149, 323);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +115,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(261, 323);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -125,6 +127,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(483, 207);
@@ -146,16 +149,15 @@
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel10);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel11);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(477, 188);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(477, 186);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Controls.Add(this.label1);
             this.flowLayoutPanel2.Controls.Add(this.txtPrimerNombre);
-            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(107, 39);
@@ -166,7 +168,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Primer Nombre";
             // 
@@ -174,14 +176,14 @@
             // 
             this.txtPrimerNombre.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(100, 22);
             this.txtPrimerNombre.TabIndex = 0;
             // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.Controls.Add(this.label2);
             this.flowLayoutPanel3.Controls.Add(this.txtSegundoNombre);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
             this.flowLayoutPanel3.Location = new System.Drawing.Point(116, 3);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(107, 39);
@@ -190,24 +192,23 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(7, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 13);
+            this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Segundo Nombre";
             // 
             // txtSegundoNombre
             // 
-            this.txtSegundoNombre.Location = new System.Drawing.Point(3, 16);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(4, 16);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(100, 22);
             this.txtSegundoNombre.TabIndex = 1;
             // 
             // flowLayoutPanel4
             // 
             this.flowLayoutPanel4.Controls.Add(this.label3);
             this.flowLayoutPanel4.Controls.Add(this.txtPrimerApellido);
-            this.flowLayoutPanel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel4.Location = new System.Drawing.Point(229, 3);
             this.flowLayoutPanel4.Name = "flowLayoutPanel4";
             this.flowLayoutPanel4.Size = new System.Drawing.Size(107, 39);
@@ -218,7 +219,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "Primer Apellido";
             // 
@@ -226,14 +227,13 @@
             // 
             this.txtPrimerApellido.Location = new System.Drawing.Point(3, 16);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(100, 22);
             this.txtPrimerApellido.TabIndex = 0;
             // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Controls.Add(this.label4);
             this.flowLayoutPanel5.Controls.Add(this.txtSegundoApellido);
-            this.flowLayoutPanel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel5.Location = new System.Drawing.Point(342, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(107, 39);
@@ -244,7 +244,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.Size = new System.Drawing.Size(98, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Segundo Apellido";
             // 
@@ -252,14 +252,13 @@
             // 
             this.txtSegundoApellido.Location = new System.Drawing.Point(3, 16);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(100, 20);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(100, 22);
             this.txtSegundoApellido.TabIndex = 0;
             // 
             // flowLayoutPanel7
             // 
             this.flowLayoutPanel7.Controls.Add(this.label6);
             this.flowLayoutPanel7.Controls.Add(this.txtTelefono);
-            this.flowLayoutPanel7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel7.Location = new System.Drawing.Point(3, 48);
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             this.flowLayoutPanel7.Size = new System.Drawing.Size(107, 39);
@@ -270,7 +269,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 0;
             this.label6.Text = "Telefono";
             // 
@@ -279,7 +278,7 @@
             this.txtTelefono.Location = new System.Drawing.Point(3, 16);
             this.txtTelefono.MaxLength = 10;
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(100, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(100, 22);
             this.txtTelefono.TabIndex = 0;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
@@ -287,7 +286,6 @@
             // 
             this.flowLayoutPanel8.Controls.Add(this.label7);
             this.flowLayoutPanel8.Controls.Add(this.txtEmail);
-            this.flowLayoutPanel8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel8.Location = new System.Drawing.Point(116, 48);
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             this.flowLayoutPanel8.Size = new System.Drawing.Size(143, 39);
@@ -298,7 +296,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(3, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(35, 13);
             this.label7.TabIndex = 0;
             this.label7.Text = "Email";
             // 
@@ -307,14 +305,13 @@
             this.txtEmail.Location = new System.Drawing.Point(3, 16);
             this.txtEmail.MaxLength = 30;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(139, 20);
+            this.txtEmail.Size = new System.Drawing.Size(139, 22);
             this.txtEmail.TabIndex = 0;
             // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.label5);
             this.flowLayoutPanel6.Controls.Add(this.txtDui);
-            this.flowLayoutPanel6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel6.Location = new System.Drawing.Point(265, 48);
             this.flowLayoutPanel6.Name = "flowLayoutPanel6";
             this.flowLayoutPanel6.Size = new System.Drawing.Size(73, 39);
@@ -334,7 +331,7 @@
             this.txtDui.Location = new System.Drawing.Point(3, 16);
             this.txtDui.Mask = "00000000-0";
             this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(68, 20);
+            this.txtDui.Size = new System.Drawing.Size(68, 22);
             this.txtDui.TabIndex = 0;
             // 
             // flowLayoutPanel17
@@ -352,7 +349,7 @@
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(3, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 13);
+            this.label14.Size = new System.Drawing.Size(71, 13);
             this.label14.TabIndex = 0;
             this.label14.Text = "Especialidad";
             // 
@@ -381,7 +378,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(74, 13);
+            this.label8.Size = new System.Drawing.Size(81, 13);
             this.label8.TabIndex = 2;
             this.label8.Text = "Departamento";
             // 
@@ -409,7 +406,7 @@
             this.chkAsignarUsuario.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkAsignarUsuario.Location = new System.Drawing.Point(3, 3);
             this.chkAsignarUsuario.Name = "chkAsignarUsuario";
-            this.chkAsignarUsuario.Size = new System.Drawing.Size(100, 17);
+            this.chkAsignarUsuario.Size = new System.Drawing.Size(106, 17);
             this.chkAsignarUsuario.TabIndex = 0;
             this.chkAsignarUsuario.Text = "Asignar Usuario";
             this.chkAsignarUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -431,7 +428,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "Municipio";
             // 
@@ -459,7 +456,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.Size = new System.Drawing.Size(61, 13);
             this.label10.TabIndex = 0;
             this.label10.Text = "Residencia";
             // 
@@ -474,6 +471,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.flowLayoutPanel13);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(15, 225);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(462, 76);
@@ -487,16 +485,15 @@
             this.flowLayoutPanel13.Controls.Add(this.flowLayoutPanel15);
             this.flowLayoutPanel13.Controls.Add(this.flowLayoutPanel16);
             this.flowLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(3, 16);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(3, 18);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(456, 57);
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(456, 55);
             this.flowLayoutPanel13.TabIndex = 0;
             // 
             // flowLayoutPanel14
             // 
             this.flowLayoutPanel14.Controls.Add(this.label11);
             this.flowLayoutPanel14.Controls.Add(this.txtUsuario);
-            this.flowLayoutPanel14.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel14.Location = new System.Drawing.Point(3, 3);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
             this.flowLayoutPanel14.Size = new System.Drawing.Size(107, 39);
@@ -507,7 +504,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(3, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 13);
+            this.label11.Size = new System.Drawing.Size(46, 13);
             this.label11.TabIndex = 1;
             this.label11.Text = "Usuario";
             // 
@@ -515,14 +512,13 @@
             // 
             this.txtUsuario.Location = new System.Drawing.Point(3, 16);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(100, 22);
             this.txtUsuario.TabIndex = 0;
             // 
             // flowLayoutPanel15
             // 
             this.flowLayoutPanel15.Controls.Add(this.label12);
             this.flowLayoutPanel15.Controls.Add(this.txtPassword);
-            this.flowLayoutPanel15.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel15.Location = new System.Drawing.Point(116, 3);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
             this.flowLayoutPanel15.Size = new System.Drawing.Size(107, 39);
@@ -533,7 +529,7 @@
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(3, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 13);
+            this.label12.Size = new System.Drawing.Size(64, 13);
             this.label12.TabIndex = 1;
             this.label12.Text = "Contraseña";
             // 
@@ -542,7 +538,7 @@
             this.txtPassword.Location = new System.Drawing.Point(3, 16);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // flowLayoutPanel16
@@ -560,7 +556,7 @@
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(3, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(23, 13);
+            this.label13.Size = new System.Drawing.Size(24, 13);
             this.label13.TabIndex = 0;
             this.label13.Text = "Rol";
             // 
@@ -581,17 +577,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(507, 371);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EdicionEmpleado";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agregar Empleado";
             this.groupBox1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);

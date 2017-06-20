@@ -49,6 +49,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(151, 217);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -71,7 +72,7 @@
             this.txbIDMedicamento.Location = new System.Drawing.Point(88, 29);
             this.txbIDMedicamento.Name = "txbIDMedicamento";
             this.txbIDMedicamento.ReadOnly = true;
-            this.txbIDMedicamento.Size = new System.Drawing.Size(63, 20);
+            this.txbIDMedicamento.Size = new System.Drawing.Size(63, 22);
             this.txbIDMedicamento.TabIndex = 2;
             // 
             // groupBox1
@@ -86,6 +87,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txbIDMedicamento);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(26, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(238, 175);
@@ -97,7 +99,7 @@
             // 
             this.txtVia.Location = new System.Drawing.Point(88, 133);
             this.txtVia.Name = "txtVia";
-            this.txtVia.Size = new System.Drawing.Size(131, 20);
+            this.txtVia.Size = new System.Drawing.Size(131, 22);
             this.txtVia.TabIndex = 3;
             // 
             // label5
@@ -105,7 +107,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(60, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 13);
+            this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Via";
             // 
@@ -113,7 +115,7 @@
             // 
             this.txbPresentacion.Location = new System.Drawing.Point(88, 107);
             this.txbPresentacion.Name = "txbPresentacion";
-            this.txbPresentacion.Size = new System.Drawing.Size(131, 20);
+            this.txbPresentacion.Size = new System.Drawing.Size(131, 22);
             this.txbPresentacion.TabIndex = 2;
             // 
             // label4
@@ -121,7 +123,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(13, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(71, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Presentación";
             // 
@@ -129,7 +131,7 @@
             // 
             this.txbConcentracion.Location = new System.Drawing.Point(88, 81);
             this.txbConcentracion.Name = "txbConcentracion";
-            this.txbConcentracion.Size = new System.Drawing.Size(131, 20);
+            this.txbConcentracion.Size = new System.Drawing.Size(131, 22);
             this.txbConcentracion.TabIndex = 1;
             // 
             // label3
@@ -137,7 +139,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "Concentración";
             // 
@@ -145,7 +147,7 @@
             // 
             this.txbNombreMedicamento.Location = new System.Drawing.Point(88, 55);
             this.txbNombreMedicamento.Name = "txbNombreMedicamento";
-            this.txbNombreMedicamento.Size = new System.Drawing.Size(131, 20);
+            this.txbNombreMedicamento.Size = new System.Drawing.Size(131, 22);
             this.txbNombreMedicamento.TabIndex = 0;
             // 
             // label2
@@ -153,12 +155,13 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(37, 58);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 3;
             this.label2.Text = "Nombre";
             // 
             // btnGuardar
             // 
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Location = new System.Drawing.Point(54, 217);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
@@ -175,6 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(288, 261);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -184,6 +188,7 @@
             this.Name = "EdicionMedicamentos";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Edicion de Medicamentos";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
